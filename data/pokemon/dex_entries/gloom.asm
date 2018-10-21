@@ -1,10 +1,10 @@
-	db "WEED@" ; species name
-	dw 207, 190 ; height, weight
+	db "Lionheart@" ; species name
+	dw 200, 650 ; height, weight
 
-	db   "The smell from its"
-	next "drool-like syrup"
-	next "and the pollen on"
+	db   "Its wings size"
+	next "can change in a"
+	next "second, this help"
 
-	page "its petals is so"
-	next "bad, it may make"
-	next "opponents faint.@"
+	page "him to run and"
+	next "fly faster than"
+	next "most #MON.@"

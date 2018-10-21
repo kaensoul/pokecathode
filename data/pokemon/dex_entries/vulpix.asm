@@ -1,10 +1,10 @@
-	db "FOX@" ; species name
-	dw 200, 220 ; height, weight
+	db "SnowSweeper@" ; species name
+	dw 200, 4000 ; height, weight
 
-	db   "As its body grows"
-	next "larger, its six"
-	next "warm tails become"
+	db   "It nose can sense"
+	next "movements from"
+	next "small creatures"
 
-	page "more beautiful,"
-	next "with a more luxur-"
-	next "ious coat of fur.@"
+	page "than are 20 Km"
+	next "away from it,"
+	next "even in the air.@"

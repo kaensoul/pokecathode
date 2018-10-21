@@ -1,10 +1,10 @@
-	db "FLAME@" ; species name
-	dw 507, 2000 ; height, weight
+	db "Firework@" ; species name
+	dw 400, 900 ; height, weight
 
-	db   "It uses its wings"
-	next "to fly high. The"
-	next "temperature of its"
+	db   "A really rare"
+	next "species, people"
+	next "thought than it"
 
-	page "fire increases as"
-	next "it gains exper-"
-	next "ience in battle.@"
+	page "was a legendary"
+	next "#MON until last"
+	next "year.@"

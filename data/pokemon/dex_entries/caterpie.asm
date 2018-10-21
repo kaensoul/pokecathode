@@ -1,10 +1,10 @@
-	db "WORM@" ; species name
-	dw 100, 60 ; height, weight
+	db "Larva@" ; species name
+	dw 010, 008 ; height, weight
 
-	db   "It crawls into"
-	next "foliage where it"
-	next "camouflages itself"
+	db   "It doesnt like"
+	next "fighting, neither"
+	next "is good at it."
 
-	page "among leaves that"
-	next "are the same color"
-	next "as its body.@"
+	page "It often fall"
+	next "asleep while eat-"
+	next "ting.@"

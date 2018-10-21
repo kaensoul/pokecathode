@@ -8,6 +8,8 @@
 	const UNIONCAVE1F_POKE_BALL2
 	const UNIONCAVE1F_POKE_BALL3
 	const UNIONCAVE1F_POKE_BALL4
+	const UNIONCAVE1F_ROCK1
+	const UNIONCAVE1F_ROCK2
 
 UnionCave1F_MapScripts:
 	db 0 ; scene scripts
@@ -70,154 +72,148 @@ TrainerFirebreatherRay:
 	end
 
 UnionCave1FGreatBall:
-	itemball GREAT_BALL
+	itemball TM_FISSURE
 
 UnionCave1FXAttack:
-	itemball X_ATTACK
+	itemball FIRE_STONE
 
 UnionCave1FPotion:
-	itemball POTION
+	itemball SUPER_POTION
 
 UnionCave1FAwakening:
-	itemball AWAKENING
+	itemball FULL_HEAL
 
-UnionCave1FUnusedSign:
-; unused
-	jumptext UnionCave1FUnusedSignText
-
+UnionCaveRock1:
+    jumpstd smashrock
+	
+UnionCaveRock2:
+    jumpstd smashrock
+	
 HikerRussellSeenText:
-	text "You're headed to"
-	line "AZALEA, are you?"
+	text "A rock fell and"
+	line "the short way be-"
+	cont "come a labyrinth"
 
-	para "Let my #MON see"
-	line "if you are good"
-	cont "enough to battle."
+	para "Let me kick your"
+	line "ass to release"
+	cont "this rage."
 	done
 
 HikerRussellBeatenText:
-	text "Oh, oh, oh!"
+	text "Hey man, i told"
+	line "you to lose!"
 	done
 
 HikerRussellAfterBattleText:
-	text "All right, then!"
-	line "I've decided."
+	text "I'm not a hiker"
+	line "because i like to"
+	cont "walk or climb,"
 
-	para "I'm not leaving"
-	line "until my #MON"
-	cont "get tougher!"
+	para "i'm just a middle"
+	line "age man than want"
+	cont "to look cool."
 	done
 
 PokemaniacLarrySeenText:
-	text "I roam far and"
-	line "wide in search of"
-	cont "#MON."
+	text "This was a popular"
+	line "mine years ago,"
+	cont "there must be some"
 
-	para "Are you looking"
-	line "for #MON too?"
-
-	para "Then you're my"
-	line "collecting rival!"
+	para "evolution stones"
+	line "somewhere, i only"
+	cont "need to take you"
+    cont "out of my way!"
 	done
 
 PokemaniacLarryBeatenText:
-	text "Ugh. My poor #-"
-	line "MON…"
+	text "If i could evolve"
+	line "my #MON…"
 	done
 
 PokemaniacLarryAfterBattleText:
-	text "Every Friday, you"
-	line "can hear #MON"
+	text "I could just go to"
+	line "Smog City and buy"
+	cont "evolution stones"
 
-	para "roars from deep"
-	line "inside the cave."
+	para "there, but i hate"
+	line "that place."
 	done
 
 HikerDanielSeenText:
-	text "Whoa! What a"
-	line "surprise!"
-
-	para "I didn't expect to"
-	line "see anyone here!"
+	text "Hey kiddo, want a"
+	line "bear hug?"
 	done
 
 HikerDanielBeatenText:
-	text "Whoa! I'm beaten"
-	line "big time!"
+	text "Don't be so shy!"
 	done
 
 HikerDanielAfterBattleText:
-	text "I was conned into"
-	line "buying a SLOWPOKE-"
-	cont "TAIL."
-
-	para "I feel sorry for"
-	line "the poor #MON."
+	text "If you ever need"
+	line "strong arms just"
+	cont "come here."
 	done
 
 FirebreatherBillSeenText:
-	text "ZUBAT's SUPERSONIC"
-	line "keeps confusing"
-	cont "my #MON."
-
-	para "I'm seriously"
-	line "upset about that!"
+	text "Did you come here"
+	line "to  catch Rock"
+	cont "type #MON too?"
 	done
 
 FirebreatherBillBeatenText:
-	text "I flamed out!"
+	text "SMASHED!!"
 	done
 
 FirebreatherBillAfterBattleText:
-	text "On weekends, you"
-	line "can hear strange"
+	text "There is a Fire"
+	line "GYM and a Normal"
+	cont "GYM near, Rock"
 
-	para "roars from deep in"
-	line "the cave."
+	para "#MON can be"
+	line "usefull."
 	done
 
 FirebreatherRaySeenText:
-	text "If it's light, a"
-	line "cave isn't scary."
-
-	para "If you're strong,"
-	line "#MON aren't"
-	cont "scary."
+	text "Have you seen an"
+	line "Ice-type around"
+	cont "here?"
 	done
 
 FirebreatherRayBeatenText:
-	text "FLASH!"
+	text "Don't be so cold."
 	done
 
 FirebreatherRayAfterBattleText:
-	text "It's my #MON's"
-	line "fire that lights"
-	cont "up this cave."
-	done
-
-UnionCave1FUnusedSignText:
-	text "UNION CAVE"
+	text "I was told Ice"
+	line "mons live here"
+	cont "i know i'm a fire"
+	
+	para "breather but still."
 	done
 
 UnionCave1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  5, 19, UNION_CAVE_B1F, 3
-	warp_event  3, 33, UNION_CAVE_B1F, 4
-	warp_event 17, 31, ROUTE_33, 1
-	warp_event 17,  3, ROUTE_32, 4
+	warp_event 33,  3, UNION_CAVE_B1F, 1
+	warp_event 25, 23, UNION_CAVE_B1F, 2
+	warp_event 25,  3, ROUTE_30, 1
+	warp_event 29, 27, SLOWPOKE_WELL_B2F, 2
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
-	db 9 ; object events
-	object_event  3,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerDaniel, -1
-	object_event  4, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacLarry, -1
-	object_event 11,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerRussell, -1
-	object_event 15, 27, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherRay, -1
-	object_event 14, 19, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherBill, -1
-	object_event 17, 21, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FGreatBall, EVENT_UNION_CAVE_1F_GREAT_BALL
-	object_event  4,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FXAttack, EVENT_UNION_CAVE_1F_X_ATTACK
-	object_event  4, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FPotion, EVENT_UNION_CAVE_1F_POTION
-	object_event 12, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
+	db 11 ; object events
+	object_event 13, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerDaniel, -1
+	object_event 18, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacLarry, -1
+	object_event  2, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerRussell, -1
+	object_event 32, 12, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherRay, -1
+	object_event 24, 28, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherBill, -1
+	object_event 25, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FGreatBall, EVENT_UNION_CAVE_1F_GREAT_BALL
+	object_event 19, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FXAttack, EVENT_UNION_CAVE_1F_X_ATTACK
+	object_event 32,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FPotion, EVENT_UNION_CAVE_1F_POTION
+	object_event 33, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
+	object_event 27, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveRock1, -1
+    object_event 21, 19, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveRock2, -1
+	

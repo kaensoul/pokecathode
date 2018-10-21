@@ -1,10 +1,10 @@
-	db "SEED@" ; species name
-	dw 303, 290 ; height, weight
+	db "Fruit@" ; species name
+	dw 150, 1000 ; height, weight
 
-	db   "The bulb on its"
-	next "back grows as it"
-	next "absorbs nutrients."
+	db   "It only need"
+	next "water and sunlight"
+	next "to live."
 
-	page "The bulb gives off"
-	next "a pleasant aroma"
-	next "when it blooms.@"
+	page "They give seeds"
+	next "to small creatures"
+	next "during spring.@"

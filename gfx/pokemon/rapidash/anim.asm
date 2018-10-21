@@ -8,7 +8,7 @@
 	frame 0, 07
 	setrepeat 4
 	frame 2, 12
-	frame 3, 12
+	frame 1, 12
 	dorepeat 9
 	endanim
 ; 0xd0d31

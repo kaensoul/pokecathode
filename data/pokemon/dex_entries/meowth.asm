@@ -1,10 +1,10 @@
-	db "SCRATCHCAT@" ; species name
-	dw 104, 90 ; height, weight
+	db "Signal@" ; species name
+	dw 070, 200 ; height, weight
 
-	db   "It loves things"
-	next "that sparkle. When"
-	next "it sees a shiny"
+	db   "In some big cities"
+	next "is used to help"
+	next "transit police."
 
-	page "object, the gold"
-	next "coin on its head"
-	next "shines too.@"
+	page "It uses light to"
+	next "keep others under"
+	next "control.@"

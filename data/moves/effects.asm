@@ -1,4 +1,4 @@
-MoveEffects: ; 2732e
+MoveEffects: ; used only for BANK(MoveEffects)
 
 NormalHit:
 	checkobedience
@@ -1319,8 +1319,24 @@ Conversion2:
 	checkobedience
 	usedmovetext
 	doturn
-	checkhit
-	conversion2
+	specialattackup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	specialdefenseup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	speedup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
 	endmove
 
 LockOn:

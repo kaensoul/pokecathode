@@ -39,3 +39,56 @@ IconPointers:
 	dw SlowpokeIcon
 	dw SudowoodoIcon
 	dw BigmonIcon
+    dw MopIcon
+	dw BaskIcon
+	dw EquidcoalIcon
+	dw ToxittyIcon
+	dw MarsupIcon
+	dw RackIcon
+	dw CabittIcon
+	dw TrismunkIcon
+	dw JaklopeIcon
+	dw HerrpierIcon
+	dw OctovaseIcon
+	dw OmochaIcon
+	dw HarvertopsIcon
+	dw WintberIcon
+	dw PentamelopsIcon
+	dw ZhulongIcon
+	dw EvergrowlIcon
+	dw LilflyIcon
+	dw KoaflyIcon
+	dw MopperIcon
+	dw PeayesIcon
+	dw PangoberIcon
+	dw VulcanlloIcon
+	dw BartollaIcon
+	dw KnockarooIcon
+	dw MountseIcon
+	dw HaresproutIcon
+	dw SquitriefIcon
+	dw MoosreIcon
+	dw ExsealiburIcon
+	dw CorsoctoIcon
+	dw SmolleIcon
+	dw RepteryIcon
+	dw WresnatorIcon
+	dw MoonpupIcon
+	dw NakigoeIcon
+	dw PandreeIcon
+	dw TreestrikeIcon
+	dw KibaionIcon
+	dw DandelionIcon
+	dw PsiguanaIcon
+	dw ForguanaIcon
+	dw DrianaIcon
+	dw MamaryllisIcon
+	dw TigbleIcon
+	dw BiitoraIcon
+	dw BikariIcon
+	dw LightflyIcon
+	dw SbushoIcon
+	dw BumeraldIcon
+	dw AnkyloniteIcon
+	dw ThermaqueIcon
+	

@@ -53,9 +53,9 @@ DragonsDenB1F_ClairScene:
 	opentext
 	writetext ClairText_GiveDragonbreathDragonDen
 	buttonsound
-	giveitem TM_DRAGONBREATH
+	giveitem TM_SLUDGE_BOMB
 	iffalse .BagFull
-	itemtotext TM_DRAGONBREATH, MEM_BUFFER_0
+	itemtotext TM_SLUDGE_BOMB, MEM_BUFFER_0
 	writetext NotifyReceiveDragonbreath
 	playsound SFX_ITEM
 	waitsfx

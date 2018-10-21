@@ -1,10 +1,10 @@
-	db "COCOON@" ; species name
-	dw 204, 220 ; height, weight
+	db "Fly@" ; species name
+	dw 025, 019 ; height, weight
 
-	db   "This is its pre-"
-	next "evolved form. At"
-	next "this stage, it can"
+	db   "It live around"
+	next "towns and eat"
+	next "trash. People use"
 
-	page "only harden, so it"
-	next "remains motionless"
-	next "to avoid attack.@"
+	page "them to keep their"
+	next "houses clean. It"
+	next "also love TV.@"

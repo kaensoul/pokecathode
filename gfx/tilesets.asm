@@ -45,18 +45,6 @@ TilesetIcePathColl: ; 0x1b33e
 INCLUDE "data/tilesets/ice_path_collision.asm"
 ; 0x1b43e
 
-TilesetPlayersRoomGFX: ; 0x1b43e
-INCBIN "gfx/tilesets/players_room.2bpp.lz"
-; 0x1b8fe
-
-TilesetPlayersRoomMeta: ; 0x1b8fe
-INCBIN "data/tilesets/players_room_metatiles.bin"
-; 0x1bcfe
-
-TilesetPlayersRoomColl: ; 0x1bcfe
-INCLUDE "data/tilesets/players_room_collision.asm"
-; 0x1bdfe
-
 
 SECTION "Tileset Data 2", ROMX
 
@@ -433,3 +421,14 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 TilesetAerodactylWordRoomMeta: ; 0x1e0c00
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
 ; 0x1e1000
+
+SECTION "Tileset Data 9", ROMX
+
+TilesetPlayersRoomColl:
+INCLUDE "data/tilesets/players_room_collision.asm"
+
+TilesetPlayersRoomGFX:
+INCBIN "gfx/tilesets/players_room.2bpp.lz"
+
+TilesetPlayersRoomMeta:
+INCBIN "data/tilesets/players_room_metatiles.bin"

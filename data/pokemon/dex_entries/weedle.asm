@@ -1,10 +1,10 @@
-	db "HAIRY BUG@" ; species name
-	dw 100, 70 ; height, weight
+	db "Fluffy Dog@" ; species name
+	dw 040, 020 ; height, weight
 
-	db   "The barb on top of"
-	next "its head secretes"
-	next "a strong poison."
+	db   "Their hair is"
+	next "used to absorb"
+	next "water from the"
 
-	page "It uses this toxic"
-	next "barb to protect"
-	next "itself.@"
+	page "floor. At least"
+	next "half of their"
+	next "body is hair.@"

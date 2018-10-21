@@ -1,10 +1,10 @@
-	db "SUPERPOWER@" ; species name
-	dw 207, 430 ; height, weight
+	db "Dog@" ; species name
+	dw 030, 150 ; height, weight
 
-	db   "It trains by"
-	next "lifting rocks in"
-	next "the mountains. It"
+	db   "Legends say than"
+	next "it come from the"
+	next "moon and while"
 
-	page "can even pick up a"
-	next "GRAVELER with"
-	next "ease.@"
+	page "falling to Earth"
+	next "its fur absorbed"
+	next "some clouds.@"

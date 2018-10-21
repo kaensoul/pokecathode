@@ -1,10 +1,10 @@
-	db "BUTTERFLY@" ; species name
-	dw 307, 710 ; height, weight
+	db "Hero@" ; species name
+	dw 210, 250 ; height, weight
 
-	db   "It flits from"
-	next "flower to flower,"
-	next "collecting honey."
+	db   "It protect every"
+	next "weak creature."
+	next "It try to not fly"
 
-	page "It can even"
-	next "identify distant"
-	next "flowers in bloom.@"
+	page "during battle to"
+	next "limit his power"
+	next "for a fair fight.@"

@@ -1,10 +1,10 @@
-	db "BIRD@" ; species name
-	dw 307, 660 ; height, weight
+	db "Charcoal@" ; species name
+	dw 037, 560 ; height, weight
 
-	db   "It slowly flies in"
-	next "a circular pat-"
-	next "tern, all the"
+	db   "They sleep under-"
+	next "ground, to not"
+	next "burn other mons."
 
-	page "while keeping a"
-	next "sharp lookout for"
-	next "prey.@"
+	page "They can't control"
+	next "their temperature."
+	next "Dont pet them.@"

@@ -64,10 +64,10 @@ endc
 ENDM
 
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
+	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, SOUTH | WEST
+	connection south, Route30, ROUTE_30, 0, 0, 10
 	connection west, Route29, ROUTE_29, 0, 0, 9
-	connection east, Route27, ROUTE_27, 0, 0, 9
-
+	
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5, 0, 10
 	connection east, Route29, ROUTE_29, 0, 0, 9
@@ -122,14 +122,12 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -3, 6, 12
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10, 0, 10
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0, 0, 9
-	connection east, NewBarkTown, NEW_BARK_TOWN, 0, 0, 9
+	map_attributes Route29, ROUTE_29, $05, WEST | EAST
+	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0, 0, 19
+	connection east, NewBarkTown, NEW_BARK_TOWN, 0, 0, 12
 
-	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
-	connection north, Route31, ROUTE_31, -3, 7, 13
-	connection south, CherrygroveCity, CHERRYGROVE_CITY, -3, 2, 16
+	map_attributes Route30, ROUTE_30, $05, NORTH
+	connection north, NewBarkTown, NEW_BARK_TOWN, 0, 0, 10
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10, 0, 10
@@ -662,3 +660,5 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes PebbleMart, PEBBLEMART, $00, 0
+	map_attributes PebbleGym, PEBBLEGYM, $00, 0

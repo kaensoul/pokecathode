@@ -2043,7 +2043,7 @@ BattleTowerMons4:
 
 	db PORYGON2
 	db NO_ITEM
-	db CONVERSION2, CONVERSION, PSYBEAM, THIEF
+	db CONVERSION, PSYBEAM, THIEF
 	dw 0 ; OT ID
 	dt 64000 ; Exp
 	; Stat exp

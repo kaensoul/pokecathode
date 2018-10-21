@@ -1,10 +1,10 @@
-	db "MAGNET@" ; species name
-	dw 100, 130 ; height, weight
+	db "Emerald@" ; species name
+	dw 200, 2300 ; height, weight
 
-	db   "The electricity"
-	next "emitted by the"
-	next "units on each side"
+	db   "With a skin strong"
+	next "as a jewel it was"
+	next "hard to hunt."
 
-	page "of its body cause"
-	next "it to become a"
-	next "strong magnet.@"
+	page "They had a second"
+	next "mount on their"
+	next "tails.@"

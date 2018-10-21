@@ -1,10 +1,10 @@
-	db "HERMITCRAB@" ; species name
-	dw 503, 1730 ; height, weight
+	db "Stegosaur@" ; species name
+	dw 040, 800 ; height, weight
 
-	db   "An attached"
-	next "SHELLDER won't let"
-	next "go because of the"
+	db   "It stayed immobile"
+	next "to not be seen by"
+	next "predators, but"
 
-	page "tasty flavor that"
-	next "oozes out of its"
-	next "tail.@"
+	page "other herbivores"
+	next "bited them"
+	next "by mistake.@"

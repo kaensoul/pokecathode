@@ -1,5 +1,6 @@
 LoadOverworldMonIcon: ; 8e82b
 	ld a, e
+	push af
 	call ReadMonMenuIcon
 	ld l, a
 	ld h, 0
@@ -9,8 +10,8 @@ LoadOverworldMonIcon: ; 8e82b
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	ld b, BANK(Icons)
-	ld c, 8
+	pop af
+	call GetIconBank
 	ret
 ; 8e83f
 
@@ -347,11 +348,19 @@ endr
 	ld d, [hl]
 	pop hl
 
-	lb bc, BANK(Icons), 8
+	call GetIconBank
 	call GetGFXUnlessMobile
 
 	pop hl
 	ret
+	
+GetIconBank:
+	lb bc, BANK("Mon Icons 1"), 8
+	cp SUDOWOODO ; lowest species in "Mon Icons 2"
+	ret c
+	ld b, BANK("Mon Icons 2")
+	ret
+
 ; 8ea3f
 
 GetGFXUnlessMobile: ; 8ea3f

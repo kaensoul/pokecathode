@@ -856,12 +856,12 @@ IlexForestSignpostText:
 	done
 
 Text_IlexForestShrine:
-	text "ILEX FOREST"
-	line "SHRINE…"
+	text "There is a weid"
+	line "Picture."
 
-	para "It's in honor of"
-	line "the forest's"
-	cont "protector…"
+	para "Looks like a"
+	line "Turtle with a"
+	cont "Snake on his back."
 	done
 
 Text_ShrineCelebiEvent:

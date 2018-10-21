@@ -1,10 +1,10 @@
-	db "TINYTURTLE@" ; species name
-	dw 108, 200 ; height, weight
+	db "SnowBall@" ; species name
+	dw 040, 300 ; height, weight
 
-	db   "When it feels"
-	next "threatened, it"
-	next "draws its legs"
+	db   "Trying to adapt"
+	next "to climate change"
+	next "they no longer"
 
-	page "inside its shell"
-	next "and sprays water"
-	next "from its mouth.@"
+	page "born as Ice-Type."
+	next "They fear loud"
+	next "noises.@"

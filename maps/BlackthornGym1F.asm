@@ -30,7 +30,6 @@ BlackthornGymClairScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_RISINGBADGE
-	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
 	iftrue .FightDone
 	writetext ClairIntroText
@@ -41,51 +40,22 @@ BlackthornGymClairScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR
+	setflag ENGINE_RISINGBADGE
 	opentext
-	writetext ClairText_GoToDragonsDen
+	writetext Text_ReceivedThermalBadge
+	playsound SFX_GET_BADGE
+	waitsfx
+	writetext BlackthornGymClairText_YouKeptMeWaiting
+	buttonsound
+	verbosegiveitem TM_FIRE_PUNCH
+	opentext
+	writetext BlackthornGymClairText_DescribeTM24
 	waitbutton
 	closetext
-	setevent EVENT_BEAT_COOLTRAINERM_PAUL
-	setevent EVENT_BEAT_COOLTRAINERM_CODY
-	setevent EVENT_BEAT_COOLTRAINERM_MIKE
-	setevent EVENT_BEAT_COOLTRAINERF_FRAN
-	setevent EVENT_BEAT_COOLTRAINERF_LOLA
-	clearevent EVENT_MAHOGANY_MART_OWNERS
-	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	end
 
 .FightDone:
 	writetext ClairText_TooMuchToExpect
-	waitbutton
-	closetext
-	end
-
-.AlreadyGotBadge:
-	checkevent EVENT_GOT_TM24_DRAGONBREATH
-	iftrue .GotTM24
-	writetext BlackthornGymClairText_YouKeptMeWaiting
-	buttonsound
-	giveitem TM_DRAGONBREATH
-	iffalse .BagFull
-	itemtotext TM_DRAGONBREATH, MEM_BUFFER_0
-	writetext BlackthornGymText_ReceivedTM24
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	setevent EVENT_GOT_TM24_DRAGONBREATH
-	writetext BlackthornGymClairText_DescribeTM24
-	buttonsound
-	jump .GotTM24
-
-.BagFull:
-	writetext BlackthornGymClairText_BagFull
-	waitbutton
-	closetext
-	end
-
-.GotTM24:
-	writetext BlackthornGymClairText_League
 	waitbutton
 	closetext
 	end
@@ -146,265 +116,205 @@ BlackthornGymStatue:
 .Beaten:
 	trainertotext CLAIR, CLAIR1, MEM_BUFFER_1
 	jumpstd gymstatue2
+	
+Text_ReceivedThermalBadge:
+    text "<PLAYER> received"
+	line "Thermal Badge."
+	done	
 
 ClairIntroText:
-	text "I am CLAIR."
+	text "JYO HO HO!"
 
-	para "The world's best"
-	line "dragon master."
+	para "How ya're doin"
+	line "brat?"
 
-	para "I can hold my own"
-	line "against even the"
+	para "Ya look like"
+	line "someone who love"
+	cont "fun battles and"
 
-	para "#MON LEAGUE's"
-	line "ELITE FOUR."
+	para "don't know when"
+	line "to give up, if"
+	cont "so this place"
+	cont "suit ya."
 
-	para "Do you still want"
-	line "to take me on?"
-
-	para "…Fine."
-	line "Let's do it!"
-
-	para "As a GYM LEADER,"
-	line "I will use my full"
-
-	para "power against any"
-	line "opponent!"
+	para "Zhis Snowy Town's"
+	line "GYM and im zhe"
+	cont "leader here!"
+    cont "Francis!"
+	
+	para "Here we all love"
+	line "to battle until"
+	cont "we only want to"
+	
+	para "drink and rest"
+    line "in the thermal"
+	cont "water with our"
+	cont "friends!"
 	done
 
 ClairWinText:
-	text "I lost?"
-
-	para "I don't believe"
-	line "it. There must be"
-	cont "some mistake…"
-	done
-
-ClairText_GoToDragonsDen:
-	text "I won't admit"
-	line "this."
-
-	para "I may have lost,"
-	line "but you're still"
-
-	para "not ready for the"
-	line "#MON LEAGUE."
-
-	para "I know. You should"
-	line "take the dragon"
-	cont "user challenge."
-
-	para "Behind this GYM is"
-	line "a place called"
-	cont "DRAGON'S DEN."
-
-	para "There is a small"
-	line "shrine at its"
-
-	para "center."
-	line "Go there."
-
-	para "If you can prove"
-	line "that you've lost"
-
-	para "your lazy ideals,"
-	line "I will recognize"
-
-	para "you as a trainer"
-	line "worthy of a GYM"
-	cont "BADGE!"
+	text "Nice done brat,"
+    line "ya lucky ima not"
+	cont "as young."
 	done
 
 ClairText_TooMuchToExpect:
-	text "What's the matter?"
+	text "If ya could beat"
+	line "me, then sis Irene"
+	cont "got no chance."
 
-	para "Is it too much to"
-	line "expect of you?"
+	para "Yo're a star"
+	line "kiddo."
 	done
 
 BlackthornGymClairText_YouKeptMeWaiting:
-	text "You've kept me"
-	line "waiting!"
-
-	para "Here! Take this!"
+	text "YO HO HO HO!"
+	line "You won this too."
 	done
 
 BlackthornGymText_ReceivedTM24:
 	text "<PLAYER> received"
-	line "TM24."
+	line "TM48 Fire Punch."
 	done
 
 BlackthornGymClairText_DescribeTM24:
-	text "That contains"
-	line "DRAGONBREATH."
+	text "Fire Punch is"
+	line "what it say, a"
+	cont "punch with fire,"
 
-	para "No, it doesn't"
-	line "have anything to"
-	cont "do with my breath."
-
-	para "If you don't want"
-	line "it, you don't have"
-	cont "to take it."
+	para "most #MON with"
+	line "arms can learn it,"
+	cont "and it got a"
+	cont "chance to burn."
+	
+	para "Cool, i mean Hot,"
+	line "right?"
 	done
-
-BlackthornGymClairText_BagFull:
-	text "What is this? You"
-	line "don't have room?"
-	done
-
-BlackthornGymClairText_League:
-	text "What's the matter?"
-
-	para "Aren't you headed"
-	line "to the #MON"
-	cont "LEAGUE?"
-
-	para "Don't you know"
-	line "where it is?"
-
-	para "From here, go to"
-	line "NEW BARK TOWN."
-
-	para "Then SURF east."
-	line "The route there is"
-	cont "very tough."
-
-	para "Don't you dare"
-	line "lose at the #-"
-	cont "MON LEAGUE!"
-
-	para "If you do, I'll"
-	line "feel even worse"
-
-	para "about having lost"
-	line "to you!"
-
-	para "Give it every-"
-	line "thing you've got."
-	done
-
+	
 CooltrainermPaulSeenText:
-	text "Your first battle"
-	line "against dragons?"
-
-	para "I'll show you how"
-	line "tough they are!"
+	text "We aren't cool"
+	line "trainers, we're"
+	cont "Hot Trainers!"
 	done
 
 CooltrainermPaulBeatenText:
-	text "My dragon #MON"
-	line "lost?"
+	text "I feel so hot"
+	line "right now!"
 	done
 
 CooltrainermPaulAfterBattleText:
-	text "LANCE told you"
-	line "that he'd like to"
+	text "Losing isn't that"
+	line "bad, Francis give"
+	cont "us drinks to cheer"
+	cont "up every time we"
 
-	para "see you again?"
-	line "Not a chance!"
+	para "lose a battle,"
+	line "but when we win"
+	cont "too, so whatever."
 	done
 
 CooltrainermMikeSeenText:
-	text "My chance of"
-	line "losing? Not even"
-	cont "one percent!"
+	text "Don't touch the"
+	line "water, is too"
+	cont "hot!"
 	done
 
 CooltrainermMikeBeatenText:
-	text "That's odd."
+	text "I'm going to fall"
+	line "in the pool!"
 	done
 
 CooltrainermMikeAfterBattleText:
-	text "I know my short-"
-	line "comings now."
-
-	para "Thanks for showing"
-	line "me!"
+	text "That was fun, you"
+	line "may be better than"
+	cont "the last trainer."
 	done
 
 CooltrainerfLolaSeenText:
-	text "Dragons are sacred"
-	line "#MON."
-
-	para "They are full of"
-	line "life energy."
-
-	para "If you're not"
-	line "serious, you won't"
-
-	para "be able to beat"
-	line "them."
+	text "I'm not sure i"
+	line "should call myself"
+    cont "a hot trainer, it"
+	cont "sound dirty."
 	done
 
 CooltrainerfLolaBeatenText:
-	text "Way to go!"
+	text "I think you're"
+	line "hot."
 	done
 
 CooltrainerfLolaAfterBattleText:
-	text "Dragons are weak"
-	line "against dragon-"
-	cont "type moves."
+	text "I think lava would"
+	line "fit better a Fire"
+	cont "GYM, but Francis"
+	
+	para "let his daughter"
+	line "play here."
 	done
 
 BlackthornGymGuyText:
-	text "Yo! CHAMP in"
-	line "making!"
+	text "Hey future champ,"
+	line "you look like"
+	cont "someone than will"
+    cont "win easly."
+	
+	para "Everyone know how"
+	line "to beat a Fire"
+	cont "#MON, you"
 
-	para "It's been a long"
-	line "journey, but we"
+	para "only need to throw"
+	line "some ground or"
+	cont "rocks at them,"
 
-	para "are almost done!"
-	line "Count on me!"
+	para "but you must be"
+	line "carefull with the"
+	cont "Thermaque line,"
+	cont "they know many"
 
-	para "CLAIR uses the"
-	line "mythical and sac-"
-	cont "red dragon-type"
-	cont "#MON."
+	para "different moves"
+	line "than let them beat"
+	cont "most #MON from"
+	cont "the mountine, but"
 
-	para "You can't damage"
-	line "them very easily."
-
-	para "But you know,"
-	line "they're supposed"
-
-	para "to be weak against"
-	line "ice-type moves."
+	para "they don't know"
+	line "how to beat Water"
+	cont "types, they just"
+	cont "chill with them."
 	done
 
 BlackthornGymGuyWinText:
-	text "You were great to"
-	line "beat CLAIR!"
+	text "So you did beat"
+	line "Francis, good job,"
+    cont "for someone from"
+	
+	para "a region so far"
+	line "away you know how"
+	cont "to fight with and"
 
-	para "All that's left is"
-	line "the #MON LEAGUE"
-	cont "challenge."
-
-	para "You're on the way"
-	line "to becoming the"
-	cont "#MON CHAMPION!"
+	para "against Kita's"
+	line "#MON!"
+	
+	para "But is not like"
+	line "you will be our"
+    cont "first champion"
+    cont "from Johto."	
 	done
 
 BlackthornGym1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 7 ; warp events
+	db 2 ; warp events
 	warp_event  4, 17, BLACKTHORN_CITY, 1
 	warp_event  5, 17, BLACKTHORN_CITY, 1
-	warp_event  1,  7, BLACKTHORN_GYM_2F, 1
-	warp_event  7,  9, BLACKTHORN_GYM_2F, 2
-	warp_event  2,  6, BLACKTHORN_GYM_2F, 3
-	warp_event  7,  7, BLACKTHORN_GYM_2F, 4
-	warp_event  7,  6, BLACKTHORN_GYM_2F, 5
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  3, 15, BGEVENT_READ, BlackthornGymStatue
+	bg_event  2, 15, BGEVENT_READ, BlackthornGymStatue
 	bg_event  6, 15, BGEVENT_READ, BlackthornGymStatue
 
 	db 5 ; object events
-	object_event  5,  3, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornGymClairScript, -1
-	object_event  6,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermMike, -1
-	object_event  1, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermPaul, -1
-	object_event  9,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfLola, -1
-	object_event  7, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornGymGuyScript, -1
+	object_event  0,  0, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornGymClairScript, -1
+	object_event  0,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermMike, -1
+	object_event  4,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermPaul, -1
+	object_event  9,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerCooltrainerfLola, -1
+	object_event  3, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornGymGuyScript, -1

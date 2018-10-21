@@ -3,29 +3,19 @@
 AsleepTreeMonsNite:
 	db CATERPIE
 	db METAPOD
-	db BUTTERFREE
-	db WEEDLE
-	db KAKUNA
-	db BEEDRILL
-	db SPEAROW
-	db EKANS
-	db EXEGGCUTE
-	db LEDYBA
-	db AIPOM
+	db MEOWTH
+	db PSYDUCK
+	db HORSEA
 	db -1 ; end
 
 AsleepTreeMonsDay:
-	db VENONAT
-	db HOOTHOOT
-	db NOCTOWL
-	db SPINARAK
-	db HERACROSS
+    db BEEDRILL
+	db RAPIDASH
 	db -1 ; end
 
 AsleepTreeMonsMorn:
-	db VENONAT
-	db HOOTHOOT
-	db NOCTOWL
-	db SPINARAK
-	db HERACROSS
+	db SANDSLASH
+	db POLIWAG
+	db SEEL
+	db OMASTAR
 	db -1 ; end

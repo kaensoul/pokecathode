@@ -511,10 +511,6 @@ TrySurfOW:: ; c9e7
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
-
 	ld d, SURF
 	call CheckPartyMove
 	jr c, .quit
@@ -567,9 +563,6 @@ FlyFunction: ; ca3b
 
 .TryFly: ; ca52
 ; Fly
-	ld de, ENGINE_STORMBADGE
-	call CheckBadge
-	jr c, .nostormbadge
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr z, .outdoors
@@ -590,10 +583,6 @@ FlyFunction: ; ca3b
 	ld [wDefaultSpawnpoint], a
 	call CloseWindow
 	ld a, $1
-	ret
-
-.nostormbadge
-	ld a, $82
 	ret
 
 .indoors

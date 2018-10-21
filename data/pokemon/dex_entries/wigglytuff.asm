@@ -1,10 +1,10 @@
-	db "BALLOON@" ; species name
-	dw 303, 260 ; height, weight
+	db "Champion@" ; species name
+	dw 400, 7500 ; height, weight
 
-	db   "The rich, fluffy"
-	next "fur that covers"
-	next "its body feels so"
+	db   "Always try to"
+	next "find new ways to"
+	next "improve it power."
 
-	page "good that anyone"
-	next "who feels it can't"
-	next "stop touching it.@"
+	page "It can hear radio"
+	next "transmissions and"
+	next "love music.@"

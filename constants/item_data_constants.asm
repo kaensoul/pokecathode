@@ -15,6 +15,7 @@ ITEMATTR_STRUCT_LENGTH EQU const_value
 	const KEY_ITEM ; 2
 	const BALL     ; 3
 	const TM_HM    ; 4
+	const BERRIES  ; 5
 
 ; item menu types
 ; UseItem.dw indexes (see engine/items/pack.asm)
@@ -39,13 +40,14 @@ CANT_TOSS   EQU 1 << CANT_TOSS_F
 	const BALL_POCKET     ; 1
 	const KEY_ITEM_POCKET ; 2
 	const TM_HM_POCKET    ; 3
+	const BERRY_POCKET    ; 4
 NUM_POCKETS EQU const_value
 
 MAX_ITEMS     EQU 20
 MAX_BALLS     EQU 12
 MAX_KEY_ITEMS EQU 25
 MAX_PC_ITEMS  EQU 50
-
+MAX_BERRIES   EQU 17
 
 ; mail
 MAIL_LINE_LENGTH   EQU $10
@@ -117,6 +119,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_DRAGON_BOOST
 	const HELD_DARK_BOOST
 	const HELD_STEEL_BOOST
+	const HELD_FAIRY_BOOST
 
 	const_def 70
 	const HELD_CATCH_CHANCE
@@ -150,10 +153,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const MART_GOLDENROD_2F_2
 	const MART_GOLDENROD_3F
 	const MART_GOLDENROD_4F
-	const MART_GOLDENROD_5F_1
-	const MART_GOLDENROD_5F_2
-	const MART_GOLDENROD_5F_3
-	const MART_GOLDENROD_5F_4
+	const MART_GOLDENROD_5F
 	const MART_OLIVINE
 	const MART_ECRUTEAK
 	const MART_MAHOGANY_1
@@ -175,3 +175,4 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const MART_MT_MOON
 	const MART_INDIGO_PLATEAU
 	const MART_UNDERGROUND
+	const MART_PEBBLE

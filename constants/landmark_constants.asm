@@ -8,47 +8,51 @@
 	const CHERRYGROVE_CITY  ; 03
 	const ROUTE_30          ; 04
 	const ROUTE_31          ; 05
-	const VIOLET_CITY       ; 06
-	const SPROUT_TOWER      ; 07
 	const ROUTE_32          ; 08
-	const RUINS_OF_ALPH     ; 09
+	const VIOLET_CITY       ; 06
+	const ILEX_FOREST       ; 0e
 	const UNION_CAVE        ; 0a
+	const BLACKTHORN_CITY   ; 29
+	const SLOWPOKE_WELL     ; 0d
 	const ROUTE_33          ; 0b
 	const AZALEA_TOWN       ; 0c
-	const SLOWPOKE_WELL     ; 0d
-	const ILEX_FOREST       ; 0e
+	const SPROUT_TOWER      ; 07
 	const ROUTE_34          ; 0f
-	const GOLDENROD_CITY    ; 10
-	const RADIO_TOWER       ; 11
-	const ROUTE_35          ; 12
-	const NATIONAL_PARK     ; 13
+	const RUINS_OF_ALPH     ; 09
 	const ROUTE_36          ; 14
-	const ROUTE_37          ; 15
 	const ECRUTEAK_CITY     ; 16
-	const TIN_TOWER         ; 17
-	const BURNED_TOWER      ; 18
-	const ROUTE_38          ; 19
-	const ROUTE_39          ; 1a
+	const ROUTE_35          ; 12
+	const GOLDENROD_CITY    ; 10
+	const ROUTE_37          ; 15
 	const OLIVINE_CITY      ; 1b
-	const LIGHTHOUSE        ; 1c
+	const CIANWOOD_CITY     ; 21
+	const ROUTE_38          ; 19
+	const MT_MORTAR         ; 23
+	const ROUTE_39          ; 1a
 	const BATTLE_TOWER      ; 1d
 	const ROUTE_40          ; 1e
-	const WHIRL_ISLANDS     ; 1f
 	const ROUTE_41          ; 20
-	const CIANWOOD_CITY     ; 21
 	const ROUTE_42          ; 22
-	const MT_MORTAR         ; 23
+	const RADIO_TOWER       ; 11
 	const MAHOGANY_TOWN     ; 24
 	const ROUTE_43          ; 25
 	const LAKE_OF_RAGE      ; 26
+	const WHIRL_ISLANDS     ; 1f
 	const ROUTE_44          ; 27
-	const ICE_PATH          ; 28
-	const BLACKTHORN_CITY   ; 29
-	const DRAGONS_DEN       ; 2a
+	const TIN_TOWER         ; 17
+	const NATIONAL_PARK     ; 13
 	const ROUTE_45          ; 2b
 	const DARK_CAVE         ; 2c
-	const ROUTE_46          ; 2d
 	const SILVER_CAVE       ; 2e
+	const ROUTE_46          ; 2d
+	const BURNED_TOWER      ; 18
+	const LIGHTHOUSE        ; 1c
+	const ICE_PATH          ; 28
+	const DRAGONS_DEN       ; 2a
+	
+	
+	
+	
 
 KANTO_LANDMARK EQU const_value
 	const PALLET_TOWN       ; 2f

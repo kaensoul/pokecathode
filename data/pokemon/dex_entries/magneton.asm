@@ -1,10 +1,10 @@
-	db "MAGNET@" ; species name
-	dw 303, 1320 ; height, weight
+	db "Hammer@" ; species name
+	dw 023, 600 ; height, weight
 
-	db   "When many"
-	next "MAGNETON gather"
-	next "together, the"
+	db   "They died during"
+	next "the Stone Age,"
+	next "the first humans"
 
-	page "resulting magnetic"
-	next "storm disrupts"
-	next "radio waves.@"
+	page "learned to use"
+	next "rock as weapon"
+	next "from them.@"

@@ -1,10 +1,10 @@
-	db "DRILL@" ; species name
-	dw 407, 1370 ; height, weight
+	db "Jar@" ; species name
+	dw 035, 370 ; height, weight
 
-	db   "It uses its thick"
-	next "arms, legs and"
-	next "tail to attack"
+	db   "They dont leave"
+	next "theyre shells."
+	next "It is timid and"
 
-	page "forcefully. Melee"
-	next "combat is its"
-	next "specialty.@"
+	page "and attack with"
+	next "ink to anyone."
+	next "than is close.@"

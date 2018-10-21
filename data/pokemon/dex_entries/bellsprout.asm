@@ -1,10 +1,10 @@
-	db "FLOWER@" ; species name
-	dw 204, 90 ; height, weight
+	db "Strong arm@" ; species name
+	dw 250, 1900 ; height, weight
 
-	db   "If it notices"
-	next "anything that"
-	next "moves, it"
+	db   "Its say than the"
+	next "first town ever"
+	next "build in this"
 
-	page "immediately flings"
-	next "its vine at the"
-	next "object.@"
+	page "country was thank"
+	next "to a Treestrike's"
+	next "help and power.@"

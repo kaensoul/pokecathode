@@ -109,12 +109,12 @@ JohtoWaterWildMons: ; 0x2b11d
 	db 20, TENTACOOL
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
-
-	map_id ROUTE_30
-	db 2 percent ; encounter rate
-	db 20, POLIWAG
-	db 15, POLIWAG
-	db 20, POLIWHIRL
+	
+	map_id ROUTE_29
+	db 4 percent
+	db 20, MUK
+	db 25, MUK
+	db 20, TANGELA
 
 	map_id ROUTE_31
 	db 2 percent ; encounter rate
@@ -220,9 +220,9 @@ JohtoWaterWildMons: ; 0x2b11d
 
 	map_id BLACKTHORN_CITY
 	db 4 percent ; encounter rate
-	db 15, MAGIKARP
-	db 10, MAGIKARP
-	db 5, MAGIKARP
+	db 15, STARMIE
+	db 25, STARMIE
+	db 25, MUK
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate

@@ -1,10 +1,10 @@
-	db "FLAME@" ; species name
-	dw 307, 420 ; height, weight
+	db "Hard Scale@" ; species name
+	dw 400, 600 ; height, weight
 
-	db   "If it becomes"
-	next "agitated during"
-	next "battle, it spouts"
+	db   "It got a strong"
+	next "armor than protect"
+	next "it until is ready"
 
-	page "intense flames,"
-	next "incinerating its"
-	next "surroundings.@"
+	page "to evolve. They"
+	next "try to evade hu-"
+	next "mans until then.@"

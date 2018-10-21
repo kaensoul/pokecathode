@@ -32,17 +32,21 @@ CeladonPrizeRoom_tmcounterloop:
 	jump CeladonPrizeRoom_cancel
 
 .doubleteam
+    checkitem TM_FISSURE
+	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 1500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
-	itemtotext TM_DOUBLE_TEAM, MEM_BUFFER_0
+	itemtotext TM_FISSURE, MEM_BUFFER_0
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_cancel
-	giveitem TM_DOUBLE_TEAM
+	giveitem TM_FISSURE
 	iffalse CeladonPrizeRoom_notenoughroom
 	takecoins 1500
 	jump CeladonPrizeRoom_purchased
 
 .psychic
+    checkitem TM_PSYCHIC_M
+	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 3500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	itemtotext TM_PSYCHIC_M, MEM_BUFFER_0
@@ -54,6 +58,8 @@ CeladonPrizeRoom_tmcounterloop:
 	jump CeladonPrizeRoom_purchased
 
 .hyperbeam
+    checkitem TM_HYPER_BEAM
+	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 7500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	itemtotext TM_HYPER_BEAM, MEM_BUFFER_0
@@ -75,6 +81,11 @@ CeladonPrizeRoom_purchased:
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
 	jump CeladonPrizeRoom_tmcounterloop
+	
+CeladonPrizeRoom_alreadyhavetm:
+	writetext CeladonPrizeRoom_AlreadyHaveTMText
+	waitbutton
+	jump CeladonPrizeRoom_tmcounterloop	
 
 CeladonPrizeRoom_notenoughcoins:
 	writetext CeladonPrizeRoom_NotEnoughCoinsText
@@ -109,9 +120,9 @@ CeladonPrizeRoom_TMMenuHeader:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "TM32    1500@"
-	db "TM29    3500@"
-	db "TM15    7500@"
+	db "TM32 Double Team   1500@"
+	db "TM29 Psychic       3500@"
+	db "TM15 Hyper Beam    7500@"
 	db "CANCEL@"
 
 CeladonGameCornerPrizeRoomPokemonVendor:
@@ -240,6 +251,11 @@ CeladonPrizeRoom_ConfirmPurchaseText:
 CeladonPrizeRoom_HereYouGoText:
 	text "Here you go!"
 	done
+
+CeladonPrizeRoom_AlreadyHaveTMText:
+	text "You already have"
+	line "that TM."
+	done	
 
 CeladonPrizeRoom_NotEnoughCoinsText:
 	text "You don't have"

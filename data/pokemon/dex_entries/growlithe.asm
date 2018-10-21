@@ -1,10 +1,10 @@
-	db "PUPPY@" ; species name
-	dw 204, 420 ; height, weight
+	db "Dart@" ; species name
+	dw 006, 002 ; height, weight
 
-	db   "It controls a big"
-	next "territory. If it"
-	next "detects an unknown"
+	db   "Their bright color"
+	next "is thanks to the"
+	next "poison on their"
 
-	page "smell, it roars"
-	next "loudly to force"
-	next "out the intruder.@"
+	page "skin, dumb people"
+	next "think is cute and"
+	next "die for it.@"

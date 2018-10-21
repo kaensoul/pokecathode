@@ -7,52 +7,52 @@ ENDM
 Landmarks: ; 0x1ca8c3
 ; entries correspond to constants/landmark_constants.asm
 	landmark   0,   0, SpecialMapName
-	landmark 148, 116, NewBarkTownName
-	landmark 136, 116, Route29Name
-	landmark 108, 116, CherrygroveCityName
-	landmark 108,  96, Route30Name
-	landmark 104,  76, Route31Name
-	landmark  92,  76, VioletCityName
-	landmark  93,  74, SproutTowerName
-	landmark  92, 108, Route32Name
-	landmark  84,  92, RuinsOfAlphName
-	landmark  92, 140, UnionCaveName
-	landmark  90, 140, Route33Name
-	landmark  76, 140, AzaleaTownName
-	landmark  78, 138, SlowpokeWellName
-	landmark  60, 136, IlexForestName
-	landmark  60, 128, Route34Name
-	landmark  60, 108, GoldenrodCityName
-	landmark  58, 108, RadioTowerName
-	landmark  60,  92, Route35Name
-	landmark  60,  76, NationalParkName
-	landmark  72,  76, Route36Name
-	landmark  76,  68, Route37Name
-	landmark  76,  60, EcruteakCityName
-	landmark  78,  58, TinTowerName
+	landmark 148,  52, NewBarkTownName
+	landmark 132,  52, Route29Name
+	landmark 124,  52, CherrygroveCityName
+	landmark 148,  68, Route30Name
+	landmark 116,  52, Route31Name
+	landmark 116,  68, Route32Name
+	landmark 100,  52, VioletCityName
+	landmark  92,  52, IlexForestName
+	landmark 148,  59, UnionCaveName
+	landmark 148,  76, BlackthornCityName
+	landmark 124,  76, SlowpokeWellName
+	landmark 148,  84, Route33Name
+	landmark 148,  92, AzaleaTownName
+	landmark 156,  92, SproutTowerName
+	landmark 140, 108, Route34Name
+	landmark  84,  44, RuinsOfAlphName
+	landmark  84,  58, Route36Name
+	landmark  84,  68, EcruteakCityName
+	landmark  84,  86, Route35Name
+	landmark  84, 108, GoldenrodCityName
+	landmark  94,  86, Route37Name
+	landmark 108,  86, OlivineCityName
+	landmark 140, 126, CianwoodCityName
+	landmark  70,  86, Route38Name
+	landmark  78,  90, MtMortarName
+	landmark 108, 100, Route39Name
+	landmark 108, 124, BattleTowerName
+	landmark 124, 124, Route40Name
+	landmark  84, 124, Route41Name
+	landmark  92, 140, Route42Name
+	landmark  83, 141, RadioTowerName
+	landmark  60,  92, MahoganyTownName
+	landmark  44,  95, Route43Name
+	landmark  44, 132, LakeOfRageName
+	landmark  44, 135, WhirlIslandsName
+	landmark  28,  93, Route44Name
+	landmark  28,  96, TinTowerName
+	landmark  19,  93, NationalParkName
+	landmark  43,  52, Route45Name
+	landmark  28,  52, Route46Name
+	landmark  60,  44, DarkCaveName
+	landmark  60,  46, SilverCaveName
 	landmark  74,  58, BurnedTowerName
-	landmark  60,  60, Route38Name
-	landmark  44,  64, Route39Name
-	landmark  44,  76, OlivineCityName
 	landmark  46,  78, LighthouseName
-	landmark  36,  72, BattleTowerName
-	landmark  36,  80, Route40Name
-	landmark  36, 108, WhirlIslandsName
-	landmark  36, 116, Route41Name
-	landmark  28, 116, CianwoodCityName
-	landmark 100,  60, Route42Name
-	landmark  92,  60, MtMortarName
-	landmark 116,  60, MahoganyTownName
-	landmark 116,  52, Route43Name
-	landmark 116,  44, LakeOfRageName
-	landmark 128,  60, Route44Name
-	landmark 138,  54, IcePathName
-	landmark 140,  60, BlackthornCityName
+	landmark 138,  54, IcePathName	
 	landmark 140,  52, DragonsDenName
-	landmark 140,  80, Route45Name
-	landmark 120,  88, DarkCaveName
-	landmark 132, 104, Route46Name
-	landmark 156,  84, SilverCaveName
 	landmark  60, 124, PalletTownName
 	landmark  60, 108, Route1Name
 	landmark  60,  92, ViridianCityName
@@ -104,29 +104,29 @@ Landmarks: ; 0x1ca8c3
 	landmark 148, 132, FastShipName
 ; 0x1caa43
 
-NewBarkTownName:     db "NEW BARK¯TOWN@"
-CherrygroveCityName: db "CHERRYGROVE¯CITY@"
-VioletCityName:      db "VIOLET CITY@"
-AzaleaTownName:      db "AZALEA TOWN@"
-GoldenrodCityName:   db "GOLDENROD¯CITY@"
-EcruteakCityName:    db "ECRUTEAK¯CITY@"
-OlivineCityName:     db "OLIVINE¯CITY@"
-CianwoodCityName:    db "CIANWOOD¯CITY@"
-MahoganyTownName:    db "MAHOGANY¯TOWN@"
-BlackthornCityName:  db "BLACKTHORN¯CITY@"
-LakeOfRageName:      db "LAKE OF¯RAGE@"
-SilverCaveName:      db "SILVER CAVE@"
-SproutTowerName:     db "SPROUT¯TOWER@"
-RuinsOfAlphName:     db "RUINS¯OF ALPH@"
-UnionCaveName:       db "UNION CAVE@"
-SlowpokeWellName:    db "SLOWPOKE¯WELL@"
-RadioTowerName:      db "RADIO TOWER@"
+NewBarkTownName:     db "Pebble¯Town@"
+CherrygroveCityName: db "Grass¯Town@"
+VioletCityName:      db "Cloudy¯City@"
+AzaleaTownName:      db "Sunny¯City@"
+GoldenrodCityName:   db "Smog¯City@"
+EcruteakCityName:    db "Foggy¯City@"
+OlivineCityName:     db "Meteor¯ShowerCity@"
+CianwoodCityName:    db "Hail¯City@"
+MahoganyTownName:    db "Mud¯Town@"
+BlackthornCityName:  db "Snowy¯City@"
+LakeOfRageName:      db "Sand¯Town@"
+SilverCaveName:      db "Cyber Inc.@"
+SproutTowerName:     db "East¯Shrine@"
+RuinsOfAlphName:     db "North¯Shrine@"
+UnionCaveName:       db "Mt.¯Salty eyes@"
+SlowpokeWellName:    db "Collohuasi¯Mine@"
+RadioTowerName:      db "South¯Shrine@"
 PowerPlantName:      db "POWER PLANT@"
-NationalParkName:    db "NATIONAL¯PARK@"
-TinTowerName:        db "TIN TOWER@"
+NationalParkName:    db "West¯Shrine@"
+TinTowerName:        db "#BALL¯Factory@"
 LighthouseName:      db "LIGHTHOUSE@"
-WhirlIslandsName:    db "WHIRL¯ISLANDS@"
-MtMortarName:        db "MT.MORTAR@"
+WhirlIslandsName:    db "Grind¯Cave@"
+MtMortarName:        db "New¯Cave@"
 DragonsDenName:      db "DRAGON'S¯DEN@"
 IcePathName:         db "ICE PATH@"
 NotApplicableName:   db "N/A@" ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
@@ -178,31 +178,31 @@ Route25Name:         db "ROUTE 25@"
 Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
-Route29Name:         db "ROUTE 29@"
-Route30Name:         db "ROUTE 30@"
-Route31Name:         db "ROUTE 31@"
-Route32Name:         db "ROUTE 32@"
-Route33Name:         db "ROUTE 33@"
-Route34Name:         db "ROUTE 34@"
-Route35Name:         db "ROUTE 35@"
-Route36Name:         db "ROUTE 36@"
-Route37Name:         db "ROUTE 37@"
-Route38Name:         db "ROUTE 38@"
-Route39Name:         db "ROUTE 39@"
-Route40Name:         db "ROUTE 40@"
-Route41Name:         db "ROUTE 41@"
-Route42Name:         db "ROUTE 42@"
-Route43Name:         db "ROUTE 43@"
-Route44Name:         db "ROUTE 44@"
-Route45Name:         db "ROUTE 45@"
-Route46Name:         db "ROUTE 46@"
-DarkCaveName:        db "DARK CAVE@"
-IlexForestName:      db "ILEX¯FOREST@"
+Route29Name:         db "Route 1@"
+Route30Name:         db "Route 2@"
+Route31Name:         db "Route 3@"
+Route32Name:         db "Route 4@"
+Route33Name:         db "Route 5@"
+Route34Name:         db "Route 6@"
+Route35Name:         db "Route 8@"
+Route36Name:         db "Route 7@"
+Route37Name:         db "Route 9@"
+Route38Name:         db "Route 10@"
+Route39Name:         db "Route 11@"
+Route40Name:         db "Route 12@"
+Route41Name:         db "Route 13@"
+Route42Name:         db "Route 14@"
+Route43Name:         db "Kita¯Sea@"
+Route44Name:         db "Flower¯Town@"
+Route45Name:         db "Kita Sea¯North@"
+Route46Name:         db "Rain¯City@"
+DarkCaveName:        db "Void¯Island@"
+IlexForestName:      db "Sugarloaf¯Forest@"
 BurnedTowerName:     db "BURNED¯TOWER@"
 FastShipName:        db "FAST SHIP@"
 ViridianForestName:  db "VIRIDIAN¯FOREST@"
 DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
-BattleTowerName:     db "BATTLE¯TOWER@"
+BattleTowerName:     db "Battle¯Tower@"
 SpecialMapName:      db "SPECIAL@"

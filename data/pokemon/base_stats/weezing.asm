@@ -1,12 +1,12 @@
 	db WEEZING ; 110
 
-	db  65,  90, 120,  60,  85,  70
+	db  45,  65, 40,  80,  65,  50
 	;   hp  atk  def  spd  sat  sdf
 
-	db POISON, POISON ; type
-	db 60 ; catch rate
-	db 173 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db FIGHTING, FIRE ; type
+	db 180 ; catch rate
+	db 73 ; base exp
+	db NO_ITEM, BLACKBELT ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/weezing/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	dn EGG_HUMANSHAPE, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
-	tmhm CURSE, ROLLOUT, TOXIC, ZAP_CANNON, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, THUNDER, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, FIRE_BLAST, REST, ATTRACT, THIEF, FLAMETHROWER, THUNDERBOLT
+	tmhm HEADBUTT, MEGA_PUNCH, TOXIC, HYPER_FANG, ROCK_SMASH, HIDDEN_POWER, HYPER_BEAM, PROTECT, FRUSTRATION, SOLARBEAM, IRON_TAIL, SACRED_FIRE, EARTHQUAKE, RETURN, DIG, SWAGGER, SLEEP_TALK, FIRE_BLAST, RAGE, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, SCREECH, FLAMETHROWER, STRENGTH
 	; end

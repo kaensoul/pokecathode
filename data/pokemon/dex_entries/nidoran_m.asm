@@ -1,10 +1,10 @@
-	db "POISON PIN@" ; species name
-	dw 108, 200 ; height, weight
+	db "Herring@" ; species name
+	dw 038, 200 ; height, weight
 
-	db   "It constantly"
-	next "moves its large"
-	next "ears in many"
+	db   "It love figths."
+	next "When they dont"
+	next "fight, they see"
 
-	page "directions in"
-	next "order to detect"
-	next "danger right away.@"
+	page "other Herrpier"
+	next "fighting. Dont"
+	next "touch the horn.@"

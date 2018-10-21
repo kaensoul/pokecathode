@@ -1,5 +1,4 @@
-	frame 4, 15
-	frame 5, 45
-	frame 3, 10
+	frame 1, 15
+	frame 2, 45
 	endanim
 ; 0xd1b48

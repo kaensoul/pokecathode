@@ -410,83 +410,83 @@ JohtoGrassWildMons: ; 0x2a5e9
 	map_id UNION_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 6, GEODUDE
-	db 6, SANDSHREW
-	db 5, ZUBAT
-	db 4, RATTATA
-	db 7, ZUBAT
-	db 6, ONIX
-	db 6, ONIX
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, PIDGEOTTO
+	db 3, PIDGEOTTO
+	db 3, CLEFABLE
+	db 2, PARASECT
 	; day
-	db 6, GEODUDE
-	db 6, SANDSHREW
-	db 5, ZUBAT
-	db 4, RATTATA
-	db 7, ZUBAT
-	db 6, ONIX
-	db 6, ONIX
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, PIDGEOTTO
+	db 3, PIDGEOTTO
+	db 2, PIDGEOTTO
+	db 4, ELECTABUZZ
 	; nite
-	db 6, GEODUDE
-	db 6, RATTATA
-	db 5, WOOPER
-	db 4, RATTATA
-	db 7, ZUBAT
-	db 6, ONIX
-	db 6, ONIX
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, ARBOK
+	db 2, CLEFABLE
+	db 3, CLEFABLE
+	db 4, NINETALES
 
 	map_id UNION_CAVE_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 8, GEODUDE
-	db 6, ZUBAT
-	db 8, ZUBAT
-	db 8, ONIX
-	db 6, RATTATA
-	db 8, RATTATA
-	db 8, RATTATA
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, PIDGEOTTO
+	db 3, PIDGEOTTO
+	db 3, PARASECT
+	db 2, PARASECT
 	; day
-	db 8, GEODUDE
-	db 6, ZUBAT
-	db 8, ZUBAT
-	db 8, ONIX
-	db 6, RATTATA
-	db 8, RATTATA
-	db 8, RATTATA
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, PIDGEOTTO
+	db 3, PIDGEOTTO
+	db 2, ELECTABUZZ
+	db 4, ELECTABUZZ
 	; nite
-	db 8, GEODUDE
-	db 6, ZUBAT
-	db 8, WOOPER
-	db 8, ONIX
-	db 6, RATTATA
-	db 8, RATTATA
-	db 8, RATTATA
+	db 4, ARBOK
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, CLEFABLE
+	db 2, CLEFABLE
+	db 3, NINETALES
+	db 4, NINETALES
 
 	map_id UNION_CAVE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, ZUBAT
-	db 22, GOLBAT
-	db 22, ZUBAT
-	db 21, RATICATE
-	db 20, GEODUDE
-	db 23, ONIX
-	db 23, ONIX
+	db  4, CLEFABLE
+	db  3, CLEFABLE
+	db  5, CLEFABLE
+	db  3, ZUBAT
+	db  4, ZUBAT
+	db  5, ZUBAT
+	db  4, STARMIE
 	; day
-	db 22, ZUBAT
-	db 22, GOLBAT
-	db 22, ZUBAT
-	db 21, RATICATE
-	db 20, GEODUDE
-	db 23, ONIX
-	db 23, ONIX
+	db  3, CLEFABLE
+	db  4, CLEFABLE
+	db  3, ZUBAT
+	db  5, ZUBAT
+	db  4, ZUBAT
+	db  4, STARMIE
+	db  5, STARMIE
 	; nite
-	db 22, ZUBAT
-	db 22, GOLBAT
-	db 22, QUAGSIRE
-	db 21, RATICATE
-	db 20, GEODUDE
-	db 23, ONIX
-	db 23, ONIX
+	db  4, CLEFABLE
+	db  3, CLEFABLE
+	db  5, CLEFABLE
+	db  4, ZUBAT
+	db  3, ZUBAT
+	db  4, HYPNO
+	db  3, HYPNO
 
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1193,56 +1193,56 @@ JohtoGrassWildMons: ; 0x2a5e9
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, PIDGEY
-	db 2, SENTRET
-	db 3, PIDGEY
-	db 3, SENTRET
-	db 2, RATTATA
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 2, CATERPIE
+	db 2, WEEDLE
+	db 3, WEEDLE
+	db 3, CATERPIE
+	db 2, RATICATE
+	db 2, NIDORINA
+	db 3, NIDORINA
 	; day
-	db 2, PIDGEY
-	db 2, SENTRET
-	db 3, PIDGEY
-	db 3, SENTRET
-	db 2, RATTATA
-	db 3, HOPPIP
-	db 3, HOPPIP
+	db 2, CATERPIE
+	db 2, WEEDLE
+	db 3, WEEDLE
+	db 2, CATERPIE
+	db 2, RATICATE
+	db 3, RATICATE
+	db 3, PIDGEOTTO
 	; nite
-	db 2, HOOTHOOT
-	db 2, RATTATA
-	db 3, HOOTHOOT
-	db 3, RATTATA
-	db 2, RATTATA
-	db 3, HOOTHOOT
-	db 3, HOOTHOOT
+	db 2, CATERPIE
+	db 2, BEEDRILL
+	db 3, BEEDRILL
+	db 2, CATERPIE
+	db 2, RATICATE
+	db 3, RATICATE
+	db 3, WEEDLE
 
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, LEDYBA
-	db 3, CATERPIE
-	db 4, CATERPIE
-	db 4, PIDGEY
 	db 3, WEEDLE
-	db 4, HOPPIP
-	db 4, HOPPIP
+	db 3, CATERPIE
+	db 2, PIDGEOTTO
+	db 2, WEEDLE
+	db 3, NIDORINA
+	db 2, NIDORINA
+	db 2, ARBOK
 	; day
-	db 3, PIDGEY
-	db 3, CATERPIE
-	db 4, CATERPIE
-	db 4, PIDGEY
 	db 3, WEEDLE
-	db 4, HOPPIP
-	db 4, HOPPIP
+	db 3, CATERPIE
+	db 2, PIDGEOTTO
+	db 2, FEAROW
+	db 3, FEAROW
+	db 3, PIDGEOTTO
+	db 4, CATERPIE
 	; nite
-	db 3, SPINARAK
-	db 3, HOOTHOOT
-	db 4, POLIWAG
-	db 4, HOOTHOOT
-	db 3, ZUBAT
-	db 4, HOOTHOOT
-	db 4, HOOTHOOT
+	db 3, BEEDRILL
+	db 2, BEEDRILL
+	db 2, WEEDLE
+	db 3, WEEDLE
+	db 3, ARBOK
+	db 2, ARBOK
+	db 4, BEEDRILL
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

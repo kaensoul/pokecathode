@@ -1859,6 +1859,7 @@ wItemsPocketCursor::    db
 wKeyItemsPocketCursor:: db
 wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
+wBerryPocketCursor::    db
 
 wPCItemsScrollPosition::        db
 wPartyMenuScrollPosition::      db ; unused
@@ -1866,6 +1867,7 @@ wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
 wBallsPocketScrollPosition::    db
 wTMHMPocketScrollPosition::     db
+wBerryPocketScrollPosition::    db
 
 wSwitchMon::
 wSwitchItem::
@@ -2099,7 +2101,9 @@ wOtherDecoration::    db
 wCurEnemyItem:: db
 ENDU ; d1f7
 
-	ds 3
+wOtherTrainerType:: db
+wTrainerGroupBank:: db
+	ds 1
 
 wLinkBattleRNs:: ds 10 ; d1fa
 
@@ -2243,6 +2247,7 @@ wDudeNumItems:: db
 wDudeItems:: ds 2 * 4
 wDudeItemsEnd:: db
 
+wDudeNumBerries::
 wDudeNumKeyItems:: db ; d292
 wDudeKeyItems:: ds 18
 wDudeKeyItemsEnd:: db
@@ -2361,7 +2366,7 @@ wDST:: ; d4c2
 ; bit 7: dst
 	db
 
-wGameTime::
+wGameTime:: ; used only for BANK(wGameTime)
 wGameTimeCap::     db ; d4c3
 wGameTimeHours::   dw ; d4c4
 wGameTimeMinutes:: db ; d4c6
@@ -2397,8 +2402,6 @@ wObject12Struct:: object_struct wObject12
 wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
-
-	ds 40
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2487,6 +2490,10 @@ wKeyItemsEnd::
 wNumBalls:: db ; d8d7
 wBalls:: ds MAX_BALLS * 2 + 1 ; d8d8
 wBallsEnd::
+
+wNumBerries:: db
+wBerries:: ds MAX_BERRIES * 2 + 1
+wBerriesEnd::
 
 wPCItems:: ds MAX_PC_ITEMS * 2 + 1 ; d8f1
 wPCItemsEnd::
@@ -2597,8 +2604,9 @@ wFastShipB1FSceneID::                             db ; d9bd
 wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
+wFirstRivalBattleSceneID::                        db
 
-	ds 49
+	ds 48
 
 ; fight counts
 wJackFightCount::    db ; d9f2
@@ -2972,7 +2980,7 @@ w3_dffc:: ds 4
 SECTION "GBC Video", WRAMX
 
 ; eight 4-color palettes each
-wGBCPalettes::
+wGBCPalettes:: ; used only for BANK(wGBCPalettes)
 wBGPals1:: ds 8 palettes ; d000
 wOBPals1:: ds 8 palettes ; d040
 wBGPals2:: ds 8 palettes ; d080
@@ -2983,7 +2991,7 @@ wLYOverridesEnd:: ; d190
 
 	ds 1
 
-wMagnetTrain::
+wMagnetTrain:: ; used only for BANK(wMagnetTrain)
 wMagnetTrainDirection:: db
 wMagnetTrainInitPosition:: db
 wMagnetTrainHoldPosition:: db
@@ -3081,8 +3089,7 @@ wScratchTileMap:: ds BG_MAP_WIDTH * BG_MAP_HEIGHT
 wScratchAttrMap:: ds BG_MAP_WIDTH * BG_MAP_HEIGHT
 
 NEXTU ; d000
-wDecompressScratch:: ds $80 tiles
-wDecompressEnemyFrontpic:: ds $80 tiles
+wDecompressScratch:: ds $100 tiles
 ENDU ; e000
 
 

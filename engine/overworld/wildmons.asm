@@ -917,6 +917,11 @@ RandomPhoneMon: ; 2a567
 	ld b, 0
 	add hl, bc
 	add hl, bc
+	add hl, bc
+	ld a, BANK(TrainerGroups)
+	call GetFarByte
+	ld [wTrainerGroupBank], a
+	inc hl
 	ld a, BANK(TrainerGroups)
 	call GetFarHalfword
 
@@ -924,7 +929,7 @@ RandomPhoneMon: ; 2a567
 	dec e
 	jr z, .skipped
 .skip
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
 	cp -1
@@ -933,34 +938,55 @@ RandomPhoneMon: ; 2a567
 .skipped
 
 .skip_name
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
 	cp "@"
 	jr nz, .skip_name
 
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	inc hl
-	ld bc, 2 ; level, species
-	cp TRAINERTYPE_NORMAL
-	jr z, .got_mon_length
-	ld bc, 2 + NUM_MOVES ; level, species, moves
-	cp TRAINERTYPE_MOVES
-	jr z, .got_mon_length
-	ld bc, 2 + 1 ; level, species, item
-	cp TRAINERTYPE_ITEM
-	jr z, .got_mon_length
-	; TRAINERTYPE_ITEM_MOVES
-	ld bc, 2 + 1 + NUM_MOVES ; level, species, item, moves
-.got_mon_length
+; b = trainer type
+	ld b, a
+; c = mon length
+; All trainers use 2 bytes for level and species
+	ld c, 2
+; TRAINERTYPE_DVS uses 2 more bytes
+	bit TRAINERTYPE_DVS_F, b
+	jr z, .no_dvs
+	inc c
+	inc c
+.no_dvs	
+; TRAINERTYPE_STAT_EXP uses 5 * 2 (10) more bytes
+	bit TRAINERTYPE_STAT_EXP_F, b
+	jr z, .no_stat_exp
+	ld a, 5 * 2
+	add c
+	ld c, a
+.no_stat_exp
+; TRAINERTYPE_ITEM uses 1 more byte
+	bit TRAINERTYPE_ITEM_F, b
+	jr z, .no_item
+	inc c
+.no_item
+; TRAINERTYPE_MOVES uses NUM_MOVES (4) more bytes
+	bit TRAINERTYPE_MOVES_F, b
+	jr z, .no_moves
+	ld a, NUM_MOVES
+	add c
+	ld c, a
+.no_moves
+; bc = mon length
+	xor a
+	ld b, a
 
 	ld e, 0
 	push hl
 .count_mon
 	inc e
 	add hl, bc
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	cp -1
 	jr nz, .count_mon
@@ -981,7 +1007,7 @@ RandomPhoneMon: ; 2a567
 .got_mon
 
 	inc hl ; species
-	ld a, BANK(Trainers)
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName

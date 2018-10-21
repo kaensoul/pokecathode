@@ -1,10 +1,10 @@
-	db "PSI@" ; species name
-	dw 411, 1060 ; height, weight
+	db "Musketeer@" ; species name
+	dw 170, 400 ; height, weight
 
-	db   "It has an IQ of"
-	next "5000. It calcu-"
-	next "lates many things"
+	db   "Is know as The"
+	next "red-demon of the"
+	next "dark forest."
 
-	page "in order to gain"
-	next "the edge in every"
-	next "battle.@"
+	page "Even its nose can"
+	next "cut steel like it"
+	next "was butter.@"

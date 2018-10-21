@@ -1,13 +1,14 @@
-Trainers:
 ; Trainer data structure:
-; - db "NAME@", TRAINERTYPE_* constant
+; - db "NAME@", TRAINERTYPE_* constants |ed together
 ; - 1 to 6 Pokémon:
-;    * for TRAINERTYPE_NORMAL:     db level, species
-;    * for TRAINERTYPE_ITEM:       db level, species, item
-;    * for TRAINERTYPE_MOVES:      db level, species, 4 moves
-;    * for TRAINERTYPE_ITEM_MOVES: db level, species, item, 4 moves
+;    * in all cases:              db level, species
+;    * with TRAINERTYPE_DVS:      db atk|def dv, spd|spc dv
+;    * with TRAINERTYPE_STAT_EXP: dw hp, atk, def, spd, spc
+;    * with TRAINERTYPE_ITEM:     db item
+;    * with TRAINERTYPE_MOVES:    db move 1, move 2, move 3, move 4
+;    (TRAINERTYPE_ITEM_MOVES is just TRAINERTYPE_ITEM | TRAINERTYPE_MOVES)
 ; - db -1 ; end
-
+SECTION "Enemy Trainer Parties 1", ROMX
 
 FalknerGroup:
 	; FALKNER (1)
@@ -72,29 +73,215 @@ ChuckGroup:
 
 ClairGroup:
 	; CLAIR (1)
-	db "CLAIR@", TRAINERTYPE_MOVES
-	db 37, DRAGONAIR,  THUNDER_WAVE, SURF, SLAM, DRAGONBREATH
-	db 37, DRAGONAIR,  THUNDER_WAVE, THUNDERBOLT, SLAM, DRAGONBREATH
-	db 37, DRAGONAIR,  THUNDER_WAVE, ICE_BEAM, SLAM, DRAGONBREATH
-	db 40, KINGDRA,    SMOKESCREEN, SURF, HYPER_BEAM, DRAGONBREATH
-	db -1 ; end
+	db "Francis@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 1
+	
+	db 14, PIDGEOTTO, MUD_SLAP, EMBER, NO_MOVE, NO_MOVE
+	db 14, WEEZING, KARATE_CHOP, EMBER, LICK, TAIL_WHIP
+	db 16, STARMIE, FIRE_PUNCH, POWDER_SNOW, WATER_GUN, NO_MOVE
+	db $fe
+	
+	;1
+	db 1
+	
+	db 19, POLIWAG, SMOKESCREEN, EMBER, POISON_GAS, SELFDESTRUCT
+	db 19, WEEZING, DOUBLE_KICK, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 19, PIDGEOT, MUD_SLAP, FLAME_WHEEL, NO_MOVE, NO_MOVE
+	db 23, STARMIE, FIRE_PUNCH, POWDER_SNOW, WATER_GUN, NO_MOVE
+	db $fe
+	
+	;2
+	db 1
+	
+	db 24, POLIWAG, SMOKESCREEN, EMBER, POISON_GAS, SELFDESTRUCT
+	db 24, WEEZING, MEGA_PUNCH, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 24, CHARMELEON, FIRE_SPIN, WRAP, TOXIC, PROTECT
+	db 24, PIDGEOT, DIG, FLAME_WHEEL, ROLLOUT, DEFENSE_CURL
+	db 29, MR__MIME, FIRE_PUNCH, ICE_PUNCH, WATER_GUN, NO_MOVE
+	db $fe
+	
+	;3
+	db 1
+	
+	db 27, POLIWAG, SMOKESCREEN, EMBER, POISON_GAS, SELFDESTRUCT
+	db 27, WEEZING, MEGA_PUNCH, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 27, CHARMELEON, FIRE_SPIN, WRAP, TOXIC, PROTECT
+	db 27, PIDGEOT, DIG, FLAME_WHEEL, ROLLOUT, DEFENSE_CURL
+	db 32, MR__MIME, FIRE_PUNCH, ICE_PUNCH, WHIRLPOOL, NO_MOVE
+	db $fe
+	
+	;4
+	db 1
+	
+	db 31, POLIWAG, SMOKESCREEN, EMBER, POISON_GAS, SELFDESTRUCT
+	db 31, WEEZING, MEGA_PUNCH, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 31, CHARMELEON, FIRE_SPIN, DRAGON_RAGE, TOXIC, PROTECT
+	db 31, PIDGEOT, DIG, FLAME_WHEEL, ROLLOUT, DEFENSE_CURL
+	db 34, MR__MIME, FIRE_PUNCH, ICE_PUNCH, WHIRLPOOL, NO_MOVE
+	db $fe
+	
+	;5
+	db 1
+	
+	db 31, POLIWAG, SMOKESCREEN, EMBER, TOXIC, EXPLOSION
+	db 31, WEEZING, MEGA_PUNCH, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 31, CHARMELEON, FIRE_SPIN, DRAGON_RAGE, TOXIC, PROTECT
+	db 31, PIDGEOT, DIG, FLAME_WHEEL, ROLLOUT, DEFENSE_CURL
+	db 34, MR__MIME, FIRE_PUNCH, ICE_PUNCH, WHIRLPOOL, NO_MOVE
+	db $fe
+	
+	;6
+	db 1
+	
+	db 34, POLIWHIRL, SMOKESCREEN, FLAMETHROWER, TOXIC, EXPLOSION
+	db 34, RHYHORN, MEGA_PUNCH, FIRE_PUNCH, NO_MOVE, NO_MOVE
+	db 34, CHARMELEON, FIRE_SPIN, DRAGON_RAGE, TOXIC, PROTECT
+	db 34, RATTATA, MAGNITUDE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 34, GLOOM, SOFTBOILED, DRILL_PECK, FLAMETHROWER, SWIFT
+	db 39, MR__MIME, FIRE_PUNCH, ICE_PUNCH, WHIRLPOOL, NO_MOVE
+	db $fe
+	
+	;7
+	db 1
+	
+	db 39, POLIWHIRL, LEECH_LIFE, FLAMETHROWER, TOXIC, EXPLOSION
+	db 39, RHYHORN, COMET_PUNCH, FIRE_PUNCH, SUNNY_DAY, NO_MOVE
+	db 39, CHARIZARD, FLAMETHROWER, DRAGON_RAGE, CRUNCH, SUNNY_DAY
+	db 39, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 39, GLOOM, SOFTBOILED, DRILL_PECK, FLAMETHROWER, SWIFT
+	db 44, MR__MIME, FIRE_PUNCH, ICE_PUNCH, SURF, NO_MOVE
+	db $fe
+	
+	;8
+	db 1
+	
+	db 44, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 44, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 44, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 44, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 44, GLOOM, SOFTBOILED, DRILL_PECK, FLAMETHROWER, SWIFT
+	db 50, MR__MIME, FIRE_PUNCH, ICE_PUNCH, SURF, NO_MOVE
+	db $fe
+	
+	;9
+	db 1
+	
+	db 49, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 49, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 49, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 49, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 49, GLOOM, SOFTBOILED, DRILL_PECK, FLAMETHROWER, SWIFT
+	db 55, MR__MIME, FIRE_PUNCH, ICE_PUNCH, SURF, NO_MOVE
+	db $fe
+	
+	;10
+	db 1
+	
+	db 53, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 53, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 53, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 53, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 53, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 60, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;11
+	db 1
+	
+	db 58, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 58, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 58, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 58, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 58, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 65, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;12
+	db 1
+	
+	db 63, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 63, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 63, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 63, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 63, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 70, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;13
+	db 1
+	
+	db 65, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 65, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 65, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 65, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 65, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 74, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;14
+	db 1
+	
+	db 74, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 74, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 74, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 74, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 74, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 80, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;15
+	db 1
+	
+	db 80, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 80, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 80, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, SUNNY_DAY
+	db 80, RATTATA, EARTHQUAKE, FIRE_PUNCH, ROLLOUT, DEFENSE_CURL
+	db 80, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 90, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $fe
+	
+	;16
+	db 1
+	
+	db 100, POLIWHIRL, LEECH_LIFE, FIRE_BLAST, TOXIC, EXPLOSION
+	db 100, RHYHORN, COMET_PUNCH, FLARE_BLITZ, SUNNY_DAY, EARTHQUAKE
+	db 100, CHARIZARD, FIRE_BLAST, SCREECH, CRUNCH, EARTHQUAKE
+	db 100, RATTATA, EARTHQUAKE, FIRE_PUNCH, HYPER_FANG, SUNNY_DAY
+	db 100, GLOOM, SOFTBOILED, SKY_ATTACK, FLARE_BLITZ, EXTREMESPEED
+	db 100, MR__MIME, FIRE_PUNCH, BARRAGE, WATERFALL, EARTHQUAKE
+	db $ff
 
+SECTION "Enemy Trainer Parties 2", ROMX
 
 Rival1Group:
 	; RIVAL1 (1)
-	db "?@", TRAINERTYPE_NORMAL
-	db  5, CHIKORITA
-	db -1 ; end
+	db "?@", TRAINERTYPE_VARIABLE
+	
+	db 0
+	
+	
+	db  5, BULBASAUR
+	db $ff; end
 
 	; RIVAL1 (2)
-	db "?@", TRAINERTYPE_NORMAL
-	db  5, CYNDAQUIL
-	db -1 ; end
+	db "?@", TRAINERTYPE_VARIABLE
+	
+	db 0
+	
+	
+	db  5, CHARMANDER
+	db $ff ; end
 
 	; RIVAL1 (3)
-	db "?@", TRAINERTYPE_NORMAL
-	db  5, TOTODILE
-	db -1 ; end
+	db "?@", TRAINERTYPE_VARIABLE
+	
+	db 0
+	
+	
+	db  5, SQUIRTLE
+	db $ff ; end
 
 	; RIVAL1 (4)
 	db "?@", TRAINERTYPE_NORMAL
@@ -198,6 +385,7 @@ Rival1Group:
 	db 38, FERALIGATR, RAGE, WATER_GUN, SCARY_FACE, SLASH
 	db -1 ; end
 
+SECTION "Enemy Trainer Parties 3", ROMX
 
 PokemonProfGroup:
 
@@ -280,6 +468,7 @@ ChampionGroup:
 	db 50, DRAGONITE,  FIRE_BLAST, SAFEGUARD, OUTRAGE, HYPER_BEAM
 	db -1 ; end
 
+SECTION "Enemy Trainer Parties 4", ROMX	
 
 BrockGroup:
 	; BROCK (1)
@@ -341,7 +530,7 @@ ScientistGroup:
 
 	; SCIENTIST (5)
 	db "RICH@", TRAINERTYPE_MOVES
-	db 30, PORYGON,    CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db 30, PORYGON,    CONVERSION, QUIVER_DANCE, RECOVER, TRI_ATTACK
 	db -1 ; end
 
 
@@ -354,18 +543,314 @@ ErikaGroup:
 	db 46, BELLOSSOM,  SUNNY_DAY, SYNTHESIS, PETAL_DANCE, SOLARBEAM
 	db -1 ; end
 
+SECTION "Enemy Trainer Parties 5", ROMX
 
 YoungsterGroup:
 	; YOUNGSTER (1)
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db  4, RATTATA
-	db -1 ; end
-
+	db "JOEY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  5, SANDSLASH
+	db  5, SANDSLASH
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, SANDSLASH
+	db 15, SANDSLASH
+    db $fe
+	
+	;2
+	db 0
+	
+	db 20, SANDSLASH
+	db 20, SANDSLASH
+	db 20, SANDSLASH
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, SANDSLASH
+	db 25, SANDSLASH
+	db 25, SANDSLASH
+	db $fe
+	
+	;4
+	db 0
+	
+	db 30, SANDSLASH
+	db 30, SANDSLASH
+	db 30, SANDSLASH
+	db $fe
+	
+	;5
+	db 0
+	
+	db 32, SANDSLASH
+	db 32, SANDSLASH
+	db 32, SANDSLASH
+	db 34, SANDSLASH
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, SANDSLASH
+	db 34, SANDSLASH
+	db 34, SANDSLASH
+	db 36, SANDSLASH
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, SANDSLASH
+	db 36, SANDSLASH
+	db 36, SANDSLASH
+	db 36, SANDSLASH
+	db 40, NIDORAN_F
+	db $fe
+	
+	;8
+	db 0
+	
+	db 38, SANDSLASH
+	db 38, NIDORAN_F
+	db 38, NIDORAN_F
+	db 38, NIDORAN_F
+	db 42, NIDORAN_F
+	db $fe
+	
+	;9
+	db 0
+	
+	db 40, NIDORAN_F
+	db 40, NIDORAN_F
+	db 40, NIDORAN_F
+	db 40, NIDORAN_F
+	db 40, NIDORAN_F
+	db 46, SANDSLASH
+	db $fe
+	
+	;10
+	db 0
+	
+	db 44, NIDORAN_F
+	db 44, NIDORAN_F
+	db 44, NIDORAN_F
+	db 44, NIDORAN_F
+	db 44, NIDORAN_F
+	db 50, SANDSLASH
+	db $fe
+	
+	;11
+	db 0
+	
+	db 46, NIDORAN_F
+	db 46, NIDORAN_F
+	db 46, NIDORAN_F
+	db 46, NIDORAN_F
+	db 46, NIDORAN_F
+	db 60, SANDSLASH
+	db $fe
+	
+	;12
+	db 0
+	
+	db 48, NIDORAN_F
+	db 48, NIDORAN_F
+	db 48, NIDORAN_F
+	db 48, NIDORAN_F
+	db 48, NIDORAN_F
+	db 64, SANDSLASH
+	db $fe
+	
+	;13
+	db 0
+	
+	db 50, NIDORAN_F
+	db 50, NIDORAN_F
+	db 50, NIDORAN_F
+	db 50, NIDORAN_F
+	db 50, NIDORAN_F
+	db 66, SANDSLASH
+	db $fe
+	
+	;14
+	db 0
+	
+	db 55, NIDORAN_F
+	db 55, NIDORAN_F
+	db 55, NIDORAN_F
+	db 55, NIDORAN_F
+	db 55, NIDORAN_F
+	db 70, SANDSLASH
+	db $fe
+	
+	;15
+	db 0
+	
+	db 65, NIDORAN_F
+	db 65, NIDORAN_F
+	db 65, NIDORAN_F
+	db 65, NIDORAN_F
+	db 65, NIDORAN_F
+	db 74, SANDSLASH
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, NIDORAN_F
+	db 80, NIDORAN_F
+	db 80, NIDORAN_F
+	db 85, NIDORAN_F
+	db 90, NIDORAN_F
+	db 100, SANDSLASH
+	db $ff
+	
 	; YOUNGSTER (2)
-	db "MIKEY@", TRAINERTYPE_NORMAL
-	db  2, PIDGEY
-	db  4, RATTATA
-	db -1 ; end
+	db "JIM@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 3
+	
+	db  4, BULBASAUR, NO_ITEM, TACKLE, GROWL, NO_MOVE, NO_MOVE
+	db  5, CHARMANDER, NO_ITEM, CONSTRICT, TAIL_WHIP, NO_MOVE, NO_MOVE
+	db  6, SQUIRTLE, BERRY, POUND, GROWL, NO_MOVE, NO_MOVE
+	db $fe
+	
+	;1
+	db 3
+	
+	db  8, BULBASAUR, NO_ITEM, TACKLE, GROWL, NO_MOVE, NO_MOVE
+	db  9, CHARMANDER, NO_ITEM, CONSTRICT, TAIL_WHIP, NO_MOVE, NO_MOVE
+	db 10, SQUIRTLE, BERRY, POUND, GROWL, NO_MOVE, NO_MOVE
+    db $fe
+	
+	;2
+	db 3
+	
+	db 13, BULBASAUR, NO_ITEM, VINE_WHIP, HORN_ATTACK, NO_MOVE, NO_MOVE
+	db 14, CHARMANDER, NO_ITEM, EMBER, WRAP, SMOKESCREEN, NO_MOVE
+	db 15, SQUIRTLE, BERRY, BUBBLE, POWDER_SNOW, NO_MOVE, NO_MOVE
+	db $fe
+	
+	;3
+	db 3
+	
+	db 16, IVYSAUR, NO_ITEM, VINE_WHIP, HORN_ATTACK, NO_MOVE, NO_MOVE
+	db 17, CHARMELEON, NO_ITEM, EMBER, WRAP, SMOKESCREEN, BITE
+	db 18, WARTORTLE, BERRY, WATER_GUN, POWDER_SNOW, LICK, NO_MOVE
+	db $fe
+	
+	;4
+	db 3
+	
+	db 20, IVYSAUR, NO_ITEM, VINE_WHIP, HORN_ATTACK, BITE, VICEGRIP
+	db 21, CHARMELEON, NO_ITEM, FIRE_SPIN, WRAP, SMOKESCREEN, BITE
+	db 22, WARTORTLE, BERRY, WATER_GUN, ICY_WIND, NO_MOVE, NO_MOVE
+	db $fe
+	
+	;5
+	db 3
+	
+	db 24, IVYSAUR, NO_ITEM, VINE_WHIP, ROCK_THROW, BITE, VICEGRIP
+	db 25, CHARMELEON, NO_ITEM, FIRE_SPIN, WRAP, SMOKESCREEN, BITE
+	db 26, WARTORTLE, BERRY, BUBBLEBEAM, ICY_WIND, NO_MOVE, NO_MOVE
+	db $fe
+	
+	;6
+	db 3
+	
+	db 28, IVYSAUR, NO_ITEM, VINE_WHIP, ROCK_THROW, BITE, VICEGRIP
+	db 29, CHARMELEON, NO_ITEM, FIRE_SPIN, WRAP, TOXIC, PROTECT
+	db 30, WARTORTLE, BERRY, SURF, ICE_BEAM, RAGE, NO_MOVE
+	db $fe
+	
+	;7
+	db 3
+	
+	db 31, IVYSAUR, NO_ITEM, VINE_WHIP, ROCK_THROW, BITE, VICEGRIP
+	db 32, CHARMELEON, NO_ITEM, FIRE_SPIN, DRAGON_RAGE, TOXIC, PROTECT
+	db 33, WARTORTLE, BERRY, SURF, ICE_BEAM, RAGE, NO_MOVE
+	db $fe
+	
+	;8
+	db 3
+	
+	db 36, VENUSAUR, LEFTOVERS, HORN_DRILL, ROCK_THROW, BITE, VICEGRIP
+	db 37, CHARIZARD, LEFTOVERS, FLAMETHROWER, DRAGON_RAGE, CRUNCH, SMOKESCREEN 
+	db 38, BLASTOISE, LEFTOVERS, SURF, BARRAGE, RAGE, NO_MOVE
+	db $fe
+	
+	;9
+	db 3
+	
+	db 40, VENUSAUR, LEFTOVERS, HORN_DRILL, ROCK_THROW, BITE, SPIKE_CANNON
+	db 41, CHARIZARD, LEFTOVERS, FLAMETHROWER, DRAGONBREATH, CRUNCH, SMOKESCREEN 
+	db 42, BLASTOISE, LEFTOVERS, SURF, BARRAGE, RAGE, CRUNCH
+	db $fe
+	
+	;10
+	db 3
+	
+	db 43, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, BITE, SPIKE_CANNON
+	db 44, CHARIZARD, LEFTOVERS, FLAMETHROWER, DRAGONBREATH, CRUNCH, SMOKESCREEN 
+	db 45, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;11
+	db 3
+	
+	db 46, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 47, CHARIZARD, LEFTOVERS, FLAMETHROWER, DRAGONBREATH, CRUNCH, SMOKESCREEN 
+	db 48, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;12
+	db 3
+	
+	db 49, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 50, CHARIZARD, LEFTOVERS, FLAMETHROWER, OUTRAGE, CRUNCH, SMOKESCREEN 
+	db 51, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;13
+	db 3
+	
+	db 55, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 57, CHARIZARD, LEFTOVERS, FLAMETHROWER, OUTRAGE, CRUNCH, SMOKESCREEN 
+	db 59, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;14
+	db 3
+	
+	db 65, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 69, CHARIZARD, LEFTOVERS, FLAMETHROWER, SCREECH, CRUNCH, SMOKESCREEN 
+	db 72, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;15
+	db 3
+	
+	db 74, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 78, CHARIZARD, LEFTOVERS, FLAMETHROWER, SCREECH, CRUNCH, SMOKESCREEN 
+	db 82, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $fe
+	
+	;16
+	db 3
+	
+	db 85, VENUSAUR, LEFTOVERS, HORN_DRILL, DOUBLE_EDGE, MEGAHORN, SPIKE_CANNON
+	db 90, CHARIZARD, LEFTOVERS, FLAMETHROWER, SCREECH, CRUNCH, SMOKESCREEN 
+	db 95, BLASTOISE, LEFTOVERS, WATERFALL, BARRAGE, RAGE, CROSS_CHOP
+	db $ff
 
 	; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_NORMAL
@@ -434,6 +919,7 @@ YoungsterGroup:
 	db 37, RATICATE,   HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
 	db -1 ; end
 
+SECTION "Enemy Trainer Parties 6", ROMX
 
 SchoolboyGroup:
 	; SCHOOLBOY (1)
@@ -828,11 +1314,129 @@ JanineGroup:
 
 CooltrainerMGroup:
 	; COOLTRAINERM (1)
-	db "NICK@", TRAINERTYPE_MOVES
-	db 26, CHARMANDER, EMBER, SMOKESCREEN, RAGE, SCARY_FACE
-	db 26, SQUIRTLE,   WITHDRAW, WATER_GUN, BITE, CURSE
-	db 26, BULBASAUR,  LEECH_SEED, POISONPOWDER, SLEEP_POWDER, RAZOR_LEAF
-	db -1 ; end
+	db "NICK@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 11, BEEDRILL
+	db 11, PORYGON
+	db $fe
+	
+	;1
+	db 0
+	
+	db 19, BEEDRILL
+	db 19, PORYGON
+	db $fe
+	
+	;2
+	db 0
+	
+	db 23, BEEDRILL
+	db 23, PORYGON
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, BEEDRILL
+	db 26, PORYGON
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, PIDGEY
+	db 29, OMANYTE
+	db $fe
+	
+	;5
+	db 0
+	
+	db 33, PIDGEY
+	db 33, OMANYTE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 38, PIDGEY
+	db 38, OMANYTE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 43, PIDGEY
+	db 43, OMANYTE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 47, PIDGEY
+	db 47, OMANYTE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 53, PIDGEY
+	db 53, OMANYTE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 57, PIDGEY
+	db 57, OMANYTE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 60, PIDGEY
+	db 60, OMANYTE
+	db $fe
+	
+	;12
+	db 0
+	
+	db 65, PIDGEY
+	db 65, OMANYTE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 70, PIDGEY
+	db 70, OMANYTE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 73, PIDGEY
+	db 73, PIDGEY
+	db 73, OMANYTE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 77, PIDGEY
+	db 77, PIDGEY
+	db 77, OMANYTE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 83, PIDGEY
+	db 83, PIDGEY
+	db 83, OMANYTE
+	db $ff
 
 	; COOLTRAINERM (2)
 	db "AARON@", TRAINERTYPE_NORMAL
@@ -842,11 +1446,15 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (3)
-	db "PAUL@", TRAINERTYPE_NORMAL
-	db 34, DRATINI
-	db 34, DRATINI
-	db 34, DRATINI
-	db -1 ; end
+	db "PAUL@", TRAINERTYPE_VARIABLE
+	
+	;0
+	
+	db 0
+	
+	db 11, WEEZING
+	db 12, PIDGEOTTO
+	db $ff ; end
 
 	; COOLTRAINERM (4)
 	db "CODY@", TRAINERTYPE_NORMAL
@@ -855,9 +1463,14 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	; COOLTRAINERM (5)
-	db "MIKE@", TRAINERTYPE_NORMAL
-	db 37, DRAGONAIR
-	db -1 ; end
+	db "MIKE@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, CHIKORITA
+	db 10, CHARMANDER
+    db $ff	
 
 	; COOLTRAINERM (6)
 	db "GAVEN@", TRAINERTYPE_MOVES
@@ -959,12 +1572,143 @@ CooltrainerMGroup:
 
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
-	db "GWEN@", TRAINERTYPE_NORMAL
-	db 26, EEVEE
-	db 22, FLAREON
-	db 22, VAPOREON
-	db 22, JOLTEON
-	db -1 ; end
+	db "GWEN@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, NINETALES
+	db  8, PARASECT
+	db  9, HYPNO
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, NINETALES
+	db 15, PARASECT
+	db 15, HYPNO
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, JIGGLYPUFF
+	db 20, PARASECT
+	db 20, HYPNO
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, JIGGLYPUFF
+	db 24, PARASECT
+	db 24, KRABBY
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, JIGGLYPUFF
+	db 27, PARASECT
+	db 27, KRABBY
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, JIGGLYPUFF
+	db 30, VENONAT
+	db 30, KRABBY
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, JIGGLYPUFF
+	db 34, VENONAT
+	db 34, KRABBY
+	db $fe
+	
+	;7
+	db 0
+	
+	db 39, WIGGLYTUFF
+	db 39, VENONAT
+	db 39, KRABBY
+	db $fe
+	
+	;8
+	db 0
+	
+	db 43, WIGGLYTUFF
+	db 43, VENONAT
+	db 43, KRABBY
+	db $fe
+	
+	;9
+	db 0
+	
+	db 48, WIGGLYTUFF
+	db 48, VENONAT
+	db 48, KRABBY
+	db $fe
+	
+	;10
+	db 0
+	
+	db 54, WIGGLYTUFF
+	db 54, VENOMOTH
+	db 54, KRABBY
+	db $fe
+	
+	;11
+	db 0
+	
+	db 60, WIGGLYTUFF
+	db 60, VENOMOTH
+	db 60, KRABBY
+	db $fe
+	
+	;12
+	db 0
+	
+	db 64, WIGGLYTUFF
+	db 64, VENOMOTH
+	db 64, KRABBY
+	db $fe
+	
+	;13
+	db 0
+	
+	db 68, WIGGLYTUFF
+	db 68, VENOMOTH
+	db 68, KRABBY
+	db $fe
+	
+	;14
+	db 0
+	
+	db 75, WIGGLYTUFF
+	db 75, VENOMOTH
+	db 75, KRABBY
+	db $fe
+	
+	;15
+	db 0
+	
+	db 80, WIGGLYTUFF
+	db 80, VENOMOTH
+	db 80, KRABBY
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, WIGGLYTUFF
+	db 85, VENOMOTH
+	db 85, KRABBY
+	db $ff
 
 	; COOLTRAINERF (2)
 	db "LOIS@", TRAINERTYPE_MOVES
@@ -978,10 +1722,14 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (4)
-	db "LOLA@", TRAINERTYPE_NORMAL
-	db 34, DRATINI
-	db 36, DRAGONAIR
-	db -1 ; end
+	db "LOLA@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, POLIWAG
+	db 12, PIDGEOTTO
+	db $ff ; end
 
 	; COOLTRAINERF (5)
 	db "KATE@", TRAINERTYPE_NORMAL
@@ -1046,9 +1794,143 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	; COOLTRAINERF (15)
-	db "EMMA@", TRAINERTYPE_NORMAL
-	db 28, POLIWHIRL
-	db -1 ; end
+	db "EMMA@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, RATICATE
+	db  8, NIDORINA
+	db  9, FEAROW
+	db $fe
+	
+	;1
+	db 0
+	
+	db 14, RATICATE
+	db 14, NIDORINA
+	db 16, FEAROW
+	db $fe
+	
+	;2
+	db 0
+	
+	db 18, RATICATE
+	db 18, NIDORINA
+	db 22, FEAROW
+	db $fe
+	
+	;3
+	db 0
+	
+	db 22, RATICATE
+	db 22, NIDORINA
+	db 25, FEAROW
+	db $fe
+	
+	;4
+	db 0
+	
+	db 26, RATICATE
+	db 26, NIDORINA
+	db 29, FEAROW
+	db $fe
+	
+	;5
+	db 0
+	
+	db 28, SPEAROW
+	db 28, NIDOQUEEN
+	db 33, EKANS
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, SPEAROW
+	db 34, NIDOQUEEN
+	db 37, EKANS
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, SPEAROW
+	db 38, NIDOQUEEN
+	db 40, EKANS
+	db $fe
+	
+	;8
+	db 0
+	
+	db 40, SPEAROW
+	db 40, NIDOQUEEN
+	db 43, EKANS
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, SPEAROW
+	db 44, NIDOQUEEN
+	db 49, EKANS
+	db $fe
+	
+	;10
+	db 0
+	
+	db 48, SPEAROW
+	db 48, NIDOQUEEN
+	db 53, EKANS
+	db $fe
+	
+	;11
+	db 0
+	
+	db 52, SPEAROW
+	db 52, NIDOQUEEN
+	db 54, EKANS
+	db $fe
+	
+	;12
+	db 0
+	
+	db 56, SPEAROW
+	db 56, NIDOQUEEN
+	db 59, EKANS
+	db $fe
+	
+	;13
+	db 0
+	
+	db 59, SPEAROW
+	db 59, NIDOQUEEN
+	db 65, EKANS
+	db $fe
+	
+	;14
+	db 0
+	
+	db 66, SPEAROW
+	db 66, NIDOQUEEN
+	db 70, EKANS
+	db $fe
+	
+	;15
+	db 0
+	
+	db 70, SPEAROW
+	db 70, NIDOQUEEN
+	db 76, EKANS
+	db $fe
+	
+	;16
+	db 0
+	
+	db 84, SPEAROW
+	db 84, NIDOQUEEN
+	db 93, EKANS
+	db $ff
 
 	; COOLTRAINERF (16)
 	db "CYBIL@", TRAINERTYPE_MOVES
@@ -1187,21 +2069,458 @@ BeautyGroup:
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
-	db "LARRY@", TRAINERTYPE_NORMAL
-	db 10, SLOWPOKE
-	db -1 ; end
+	db "LARRY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 6, RAICHU
+	db 6, NIDORAN_M
+	db 6, POLIWAG
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, RAICHU
+	db 15, NIDORAN_M
+	db 15, POLIWAG
+	db $fe 
+	
+	;2
+	db 0
+	
+	db 19, RAICHU
+	db 19, NIDORAN_M
+	db 19, POLIWAG
+	db $fe 
+		
+	;3
+	db 0
+	
+	db 22, RAICHU
+	db 22, NIDORAN_M
+	db 22, POLIWAG
+	db $fe 
 
+	;4
+	db 0
+	
+	db 26, RAICHU
+	db 26, NIDORAN_M
+	db 26, POLIWAG
+	db 26, MACHOP
+	db $fe 
+		
+	;5
+	db 0
+	
+	db 30, RAICHU
+	db 30, NIDORAN_M
+	db 30, POLIWAG
+	db 30, MACHOP
+	db 30, WEEPINBELL
+	db $fe
+
+	;6
+	db 0
+	
+	db 34, RAICHU
+	db 34, NIDORAN_M
+	db 34, POLIWAG
+	db 34, MACHOP
+	db 34, WEEPINBELL
+	db 34, RAPIDASH
+	db $fe 
+	
+	;7
+	db 0
+	
+	db 40, RAICHU
+	db 40, NIDORAN_M
+	db 40, POLIWAG
+	db 40, MACHOP
+	db 40, WEEPINBELL
+	db 40, RAPIDASH
+	db $fe 
+	
+	;8
+	db 0
+	
+	db 44, RAICHU
+	db 44, NIDORAN_M
+	db 44, POLIWAG
+	db 44, MACHOP
+	db 44, WEEPINBELL
+	db 44, RAPIDASH
+	db $fe 
+	
+	;9
+	db 0
+	
+	db 49, RAICHU
+	db 49, NIDORAN_M
+	db 49, POLIWAG
+	db 49, MACHOP
+	db 49, WEEPINBELL
+	db 49, RAPIDASH
+	db $fe 
+	
+	;10
+	db 0
+	
+	db 52, RAICHU
+	db 52, NIDORAN_M
+	db 52, POLIWAG
+	db 52, MACHOP
+	db 52, WEEPINBELL
+	db 52, RAPIDASH
+	db $fe 
+	
+	;11
+	db 0
+	
+	db 56, RAICHU
+	db 56, NIDORAN_M
+	db 56, POLIWAG
+	db 56, MACHOP
+	db 56, WEEPINBELL
+	db 56, RAPIDASH
+	db $fe 
+	
+	;12
+	db 0
+	
+	db 64, RAICHU
+	db 64, NIDORAN_M
+	db 64, POLIWAG
+	db 64, MACHOP
+	db 64, WEEPINBELL
+	db 64, RAPIDASH
+	db $fe 
+	
+	;13
+	db 0
+	
+	db 70, RAICHU
+	db 70, NIDORAN_M
+	db 70, POLIWAG
+	db 70, MACHOP
+	db 70, WEEPINBELL
+	db 70, RAPIDASH
+	db $fe 
+	
+	;14
+	db 0
+	
+	db 75, RAICHU
+	db 75, NIDORAN_M
+	db 75, POLIWAG
+	db 75, MACHOP
+	db 75, WEEPINBELL
+	db 75, RAPIDASH
+	db $fe 
+	
+	;15
+	db 0
+	
+	db 80, RAICHU
+	db 80, NIDORAN_M
+	db 80, POLIWAG
+	db 80, MACHOP
+	db 80, WEEPINBELL
+	db 80, RAPIDASH
+	db $fe 
+	
+	;16
+	db 0
+	
+	db 90, RAICHU
+	db 90, NIDORAN_M
+	db 90, POLIWAG
+	db 90, MACHOP
+	db 90, WEEPINBELL
+	db 90, RAPIDASH
+	db $ff
+	
 	; POKEMANIAC (2)
-	db "ANDREW@", TRAINERTYPE_NORMAL
-	db 24, MAROWAK
-	db 24, MAROWAK
-	db -1 ; end
+	db "ANDREW@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, NIDORINA
+	db  9, RAICHU
+	db  9, RATICATE
+	db $fe
+	
+	;1
+	db 0
+	
+	db  14, NIDORINA
+	db  15, RAICHU
+	db  15, RATICATE
+	db $fe
+	
+	;2
+	db 0
+	
+	db  20, NIDORINA
+	db  21, RAICHU
+	db  21, RATICATE
+	db $fe
+	
+	;3
+	db 0
+	
+	db  22, NIDORINA
+	db  24, SANDSHREW
+	db  24, SPEAROW
+	db $fe
+	
+	;4
+	db 0
+	
+	db  24, NIDOQUEEN
+	db  26, SANDSHREW
+	db  26, SPEAROW
+	db $fe
 
+	;5
+	db 0
+	
+	db  26, NIDOQUEEN
+	db  29, SANDSHREW
+	db  29, SPEAROW
+	db $fe
+	
+	;6
+	db 0
+	
+	db  29, NIDOQUEEN
+	db  32, SANDSHREW
+	db  32, SPEAROW
+	db $fe
+	
+	;7
+	db 0
+	
+	db  33, NIDOQUEEN
+	db  35, SANDSHREW
+	db  35, SPEAROW
+	db $fe
+	
+	;8
+	db 0
+	
+	db  37, PIDGEY
+	db  37, NIDOQUEEN
+	db  40, SANDSHREW
+	db  40, SPEAROW
+	db $fe
+	
+	;9
+	db 0
+	
+	db  40, PIDGEY
+	db  40, NIDOQUEEN
+	db  43, SANDSHREW
+	db  43, SPEAROW
+	db $fe
+	
+	;10
+	db 0
+	
+	db  44, PIDGEY
+	db  44, NIDOQUEEN
+	db  48, SANDSHREW
+	db  48, SPEAROW
+	db $fe
+	
+	;11
+	db 0
+	
+	db  47, PIDGEY
+	db  47, NIDOQUEEN
+	db  50, SANDSHREW
+	db  50, SPEAROW
+	db $fe
+	
+	;12
+	db 0
+	
+	db  52, PIDGEY
+	db  52, NIDOQUEEN
+	db  55, SANDSHREW
+	db  55, SPEAROW
+	db $fe
+	
+	;13
+	db 0
+	
+	db  57, PIDGEY
+	db  57, NIDOQUEEN
+	db  60, SANDSHREW
+	db  60, SPEAROW
+	db $fe
+	
+	;14
+	db 0
+	
+	db  64, PIDGEY
+	db  64, NIDOQUEEN
+	db  68, SANDSHREW
+	db  68, SPEAROW
+	db $fe
+	
+	;15
+	db 0
+	
+	db  76, PIDGEY
+	db  76, NIDOQUEEN
+	db  80, SANDSHREW
+	db  80, SPEAROW
+	db $fe
+	
+	;16
+	db 0
+	
+	db  84, PIDGEY
+	db  84, NIDOQUEEN
+	db  90, SANDSHREW
+	db  90, SPEAROW
+	db $ff
+	
 	; POKEMANIAC (3)
-	db "CALVIN@", TRAINERTYPE_NORMAL
-	db 26, KANGASKHAN
-	db -1 ; end
+	db "CALVIN@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, BEEDRILL
+	db 10, MACHOP
+	db $fe
+	
+	;1
+	db 0
+	
+	db 16, BEEDRILL
+	db 17, MACHOP
+	db $fe
+	
+	;2
+	db 0
+	
+	db 21, BEEDRILL
+	db 22, MACHOP
+	db $fe
 
+	;3
+	db 0
+	
+	db 25, PIDGEY
+	db 26, MACHOKE
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, PIDGEY
+	db 28, MACHOKE
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, PIDGEY
+	db 33, MACHOKE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, PIDGEY
+	db 36, MACHOKE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, PIDGEY
+	db 40, MACHOKE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, PIDGEY
+	db 44, MACHOKE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, ALAKAZAM
+	db 49, PIDGEY
+	db 49, MACHOKE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, ALAKAZAM
+	db 52, PIDGEY
+	db 52, MACHOKE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, ALAKAZAM
+	db 59, PIDGEY
+	db 59, MACHOKE
+	db $fe
+	
+	;12
+	db 0
+	
+	db 60, ALAKAZAM
+	db 64, PIDGEY
+	db 64, MACHOKE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, ALAKAZAM
+	db 69, PIDGEY
+	db 69, MACHOKE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, ALAKAZAM
+	db 73, PIDGEY
+	db 73, MACHOKE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, ALAKAZAM
+	db 78, PIDGEY
+	db 78, MACHOKE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, ALAKAZAM
+	db 85, PIDGEY
+	db 92, MACHOKE
+	db $ff
+	
 	; POKEMANIAC (4)
 	db "SHANE@", TRAINERTYPE_NORMAL
 	db 16, NIDORINA
@@ -1236,7 +2555,7 @@ PokemaniacGroup:
 
 	; POKEMANIAC (10)
 	db "BRENT@", TRAINERTYPE_MOVES
-	db 36, PORYGON,    RECOVER, PSYCHIC_M, CONVERSION2, TRI_ATTACK
+	db 36, PORYGON,    RECOVER, PSYCHIC_M, QUIVER_DANCE, TRI_ATTACK
 	db -1 ; end
 
 	; POKEMANIAC (11)
@@ -1529,10 +2848,156 @@ SabrinaGroup:
 
 BugCatcherGroup:
 	; BUG_CATCHER (1)
-	db "DON@", TRAINERTYPE_NORMAL
+	db "DON@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
 	db  3, CATERPIE
-	db  3, CATERPIE
-	db -1 ; end
+	db  3, HORSEA
+	db  3, GOLEM
+	db $fe
+	
+	
+	;1
+	db 0
+	
+	db  8, CATERPIE
+	db  8, HORSEA
+	db  8, GOLEM
+	db $fe
+	
+	
+	;2
+	db 0
+	
+	db  17, METAPOD
+	db  17, HORSEA
+	db  17, GOLEM
+	db $fe
+	
+	
+	;3
+	db 0
+	
+	db  20, METAPOD
+	db  20, HORSEA
+	db  20, GOLEM
+	db $fe
+	
+	
+	;4
+	db 0
+	
+	db  24, METAPOD
+	db  24, HORSEA
+	db  24, GOLEM
+	db $fe
+	
+	
+	;5
+	db 0
+	
+	db  27, METAPOD
+	db  27, HORSEA
+	db  27, GOLEM
+	db $fe
+
+	
+	;6
+	db 0
+	
+	db  30, METAPOD
+	db  30, SEADRA
+	db  30, GOLEM
+	db $fe
+	
+	
+	;7
+	db 0
+	
+	db  34, METAPOD
+	db  34, HORSEA
+	db  34, GOLEM
+	db $fe
+	
+	
+	;8
+	db 0
+	
+	db  38, METAPOD
+	db  38, HORSEA
+	db  38, GOLEM
+	db $fe
+	
+	
+	;9
+	db 0
+	
+	db  42, METAPOD
+	db  42, HORSEA
+	db  42, GOLEM
+	db $fe
+	
+	
+	;10
+	db 0
+	
+	db  47, METAPOD
+	db  47, HORSEA
+	db  47, GOLEM
+	db $fe
+	
+	
+	;11
+	db 0
+	
+	db  50, BUTTERFREE
+	db  50, GOLDEEN
+	db  50, PONYTA
+	db $fe
+	
+	
+	;12
+	db 0
+	
+	db  54, BUTTERFREE
+	db  54, GOLDEEN
+	db  54, PONYTA
+	db $fe
+	
+	
+	;13
+	db 0
+	
+	db  58, BUTTERFREE
+	db  58, GOLDEEN
+	db  58, PONYTA
+	db $fe
+	
+	;14
+	db 0
+	
+	db  69, BUTTERFREE
+	db  69, GOLDEEN
+	db  69, PONYTA
+	db $fe
+	
+	;15
+	db 0
+	
+	db  70, BUTTERFREE
+	db  70, GOLDEEN
+	db  70, PONYTA
+	db $fe
+	
+	;16
+	db 0
+	
+	db  85, BUTTERFREE
+	db  85, GOLDEEN
+	db  85, PONYTA
+	db $ff
 
 	; BUG_CATCHER (2)
 	db "ROB@", TRAINERTYPE_NORMAL
@@ -1961,10 +3426,13 @@ SwimmerFGroup:
 	db -1 ; end
 
 	; SWIMMERF (2)
-	db "PAULA@", TRAINERTYPE_NORMAL
-	db 19, STARYU
-	db 19, SHELLDER
-	db -1 ; end
+	db "PAULA@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 12, WEEZING
+	db $ff
 
 	; SWIMMERF (3)
 	db "KAYLEE@", TRAINERTYPE_NORMAL
@@ -2218,7 +3686,7 @@ SuperNerdGroup:
 
 	; SUPER_NERD (12)
 	db "NORTON@", TRAINERTYPE_MOVES
-	db 30, PORYGON,    CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db 30, PORYGON,    CONVERSION, QUIVER_DANCE, RECOVER, TRI_ATTACK
 	db -1 ; end
 
 	; SUPER_NERD (13)
@@ -2317,24 +3785,440 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (2)
-	db "RUSSELL@", TRAINERTYPE_NORMAL
-	db  4, GEODUDE
-	db  6, GEODUDE
-	db  8, GEODUDE
-	db -1 ; end
+	db "RUSSELL@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  5, PIDGEOTTO
+	db  6, CLEFABLE
+	db  7, ARBOK 
+	db $fe
+	
+	
+	;1
+	db 0
+	
+	db  13, PIDGEOTTO
+	db  14, CLEFABLE
+	db  16, ARBOK 
+	db $fe
+	
+	
+	;2
+	db 0
+	
+	db  15, PIDGEOTTO
+	db  16, CLEFABLE
+	db  19, ARBOK 
+	db $fe
+	
+	
+	;3
+	db 0
+	
+	db  20, PIDGEOT
+	db  21, CLEFABLE
+	db  23, ARBOK 
+	db  25, NINETALES
+	db $fe
+	
+	
+	;4
+	db 0
+	
+	db  24, PIDGEOT
+	db  25, VULPIX
+	db  26, PIKACHU
+	db  26, JIGGLYPUFF
+	db $fe
+	
+	
+	;5
+	db 0
+	
+	db  27, PIDGEOT
+	db  27, VULPIX
+	db  28, PIKACHU 
+	db  30, JIGGLYPUFF
+	db $fe
 
+	
+	;6
+	db 0
+	
+	db  32, RATTATA
+	db  32, VULPIX
+	db  33, PIKACHU 
+	db  33, JIGGLYPUFF
+	db $fe
+	
+	
+	;7
+	db 0
+	
+	db  35, RATTATA
+	db  36, VULPIX
+	db  38, PIKACHU 
+	db  40, WIGGLYTUFF
+	db $fe
+	
+	
+	;8
+	db 0
+	
+	db  40, RATTATA
+	db  40, VULPIX
+	db  42, PIKACHU 
+	db  45, WIGGLYTUFF
+	db $fe
+	
+	
+	;9
+	db 0
+	
+	db  45, RATTATA
+	db  45, VULPIX
+	db  46, PIKACHU 
+	db  47, WIGGLYTUFF
+	db $fe
+	
+	
+	;10
+	db 0
+	
+	db  48, RATTATA
+	db  48, VULPIX
+	db  49, PIKACHU 
+	db  50, WIGGLYTUFF
+	db $fe
+	
+	
+	;11
+	db 0
+	
+	db  50, RATTATA
+	db  50, VULPIX
+	db  51, PIKACHU 
+	db  54, WIGGLYTUFF
+	db $fe
+	
+	
+	;12
+	db 0
+	
+	db  52, RATTATA
+	db  52, VULPIX
+	db  53, PIKACHU 
+	db  56, WIGGLYTUFF
+	db $fe
+	
+	
+	;13
+	db 0
+	
+	db  56, RATTATA
+	db  56, VULPIX
+	db  58, PIKACHU 
+	db  60, WIGGLYTUFF
+	db $fe
+	
+	;14
+	db 0
+	
+	db  59, RATTATA
+	db  59, VULPIX
+	db  60, PIKACHU 
+	db  63, WIGGLYTUFF
+	db $fe
+	
+	;15
+	db 0
+	
+	db  64, RATTATA
+	db  64, VULPIX
+	db  69, PIKACHU 
+	db  74, WIGGLYTUFF
+	db $fe
+	
+	;16
+	db 0
+	
+	db  80, RATTATA
+	db  80, VULPIX
+	db  84, PIKACHU 
+	db  90, WIGGLYTUFF
+	db $ff
+	
 	; HIKER (3)
-	db "PHILLIP@", TRAINERTYPE_NORMAL
-	db 23, GEODUDE
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db -1 ; end
-
+	db "PHILLIP@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, ARBOK
+	db 10, ARBOK
+	db 10, MAGNETON
+	db $fe
+	
+	;1
+	db 0
+	
+	db 16, ARBOK
+	db 16, ARBOK
+	db 16, MAGNETON
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, ARBOK
+	db 20, ARBOK
+	db 20, MAGNETON
+	db $fe
+	
+    ;3
+	db 0
+	
+	db 23, ARBOK
+	db 23, ARBOK
+	db 23, MAGNETON
+	db $fe
+	
+	;4
+	db 0
+	
+	db 26, ARBOK
+	db 26, ARBOK
+	db 26, MAGNETON
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, PIKACHU
+	db 30, PIKACHU
+	db 30, FARFETCH_D
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, PIKACHU
+	db 34, PIKACHU
+	db 34, FARFETCH_D
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, PIKACHU
+	db 38, PIKACHU
+	db 38, FARFETCH_D
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, PIKACHU
+	db 41, PIKACHU
+	db 41, FARFETCH_D
+	db $fe
+	
+	;9
+	db 0
+	
+	db 45, PIKACHU
+	db 45, PIKACHU
+	db 45, FARFETCH_D
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, PIKACHU
+	db 49, PIKACHU
+	db 49, FARFETCH_D
+	db $fe
+	
+	;11
+	db 0
+	
+	db 52, PIKACHU
+	db 52, PIKACHU
+	db 52, FARFETCH_D
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, PIKACHU
+	db 57, PIKACHU
+	db 57, FARFETCH_D
+	db $fe
+	
+	;13
+	db 0
+	
+	db 61, PIKACHU
+	db 61, PIKACHU
+	db 61, FARFETCH_D
+	db $fe
+	
+	;14
+	db 0
+	
+	db 68, PIKACHU
+	db 68, PIKACHU
+	db 68, FARFETCH_D
+	db $fe
+	
+	;15
+	db 0
+	
+	db 74, PIKACHU
+	db 74, PIKACHU
+	db 74, FARFETCH_D
+	db $fe
+	
+	;16
+	db 0
+	
+	db 88, PIKACHU
+	db 88, PIKACHU
+	db 88, FARFETCH_D
+	db $ff
+	
 	; HIKER (4)
-	db "LEONARD@", TRAINERTYPE_NORMAL
-	db 23, GEODUDE
-	db 25, MACHOP
-	db -1 ; end
+	db "LEONARD@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, SEEL 
+	db 10, SEEL
+	db 10, SLOWBRO
+	db $fe
+	
+	;1
+	db 0
+	
+	db 20, SEEL
+	db 20, SEEL
+	db 20, SLOWBRO
+	db $fe
+	
+    ;3
+	db 0
+	
+	db 23, SEEL
+	db 23, SEEL
+	db 23, SLOWBRO
+	db $fe
+	
+	;4
+	db 0
+	
+	db 26, SEEL
+	db 26, SEEL
+	db 26, SLOWBRO
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DEWGONG
+	db 30, DEWGONG
+	db 30, MAGNEMITE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 34, DEWGONG
+	db 34, DEWGONG
+	db 34, MAGNEMITE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, DEWGONG
+	db 38, DEWGONG
+	db 38, MAGNEMITE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DEWGONG
+	db 41, DEWGONG
+	db 41, MAGNEMITE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 45, DEWGONG
+	db 45, DEWGONG
+	db 45, MAGNEMITE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, DEWGONG
+	db 49, DEWGONG
+	db 49, MAGNEMITE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 52, DEWGONG
+	db 52, DEWGONG
+	db 52, MAGNEMITE
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, DEWGONG
+	db 57, DEWGONG
+	db 57, MAGNEMITE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 61, DEWGONG
+	db 61, DEWGONG
+	db 61, MAGNEMITE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 68, DEWGONG
+	db 68, DEWGONG
+	db 68, MAGNEMITE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 74, DEWGONG
+	db 74, DEWGONG
+	db 74, MAGNEMITE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 88, DEWGONG
+	db 88, DEWGONG
+	db 88, MAGNEMITE
+	db $ff
 
 	; HIKER (5)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
@@ -2424,10 +4308,110 @@ HikerGroup:
 	db -1 ; end
 
 	; HIKER (18)
-	db "DANIEL@", TRAINERTYPE_NORMAL
-	db 11, ONIX
-	db -1 ; end
+	db "DANIEL@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 8, CLEFABLE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 16, CLEFABLE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 22, CLEFABLE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, CLEFABLE
+	db $fe
 
+	;4
+	db 0
+	
+	db 30, CLEFABLE
+	db $fe
+	
+	;5
+	db 0
+	
+	db 36, CLEFABLE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 40, CLEFABLE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 44, CLEFABLE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 50, CLEFABLE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 56, CLEFABLE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 60, CLEFABLE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 66, CLEFABLE
+	db $fe
+	
+	;12
+	db 0
+	
+	db 70, CLEFABLE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 74, CLEFABLE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 79, CLEFABLE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 84, CLEFABLE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, CLEFABLE
+	db $ff
+	
 	; HIKER (19)
 	db "PARRY@", TRAINERTYPE_MOVES
 	db 35, PILOSWINE,  EARTHQUAKE, BLIZZARD, REST, TAKE_DOWN
@@ -2574,11 +4558,146 @@ FirebreatherGroup:
 	db -1 ; end
 
 	; FIREBREATHER (5)
-	db "BILL@", TRAINERTYPE_NORMAL
-	db  6, KOFFING
-	db  6, KOFFING
-	db -1 ; end
+	db "BILL@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  6, ARBOK
+	db  7, PIDGEOTTO
+	db $fe
+	
+	;1
+	db 0
+	
+	db  16, ARBOK
+	db  17, PIDGEOT
+	db $fe
 
+	;2
+	db 0
+	
+	db 19, ARBOK
+	db 20, PIDGEOT
+	db 20, SEEL
+	db $fe
+	
+	;3
+	db 0
+	
+	db 22, PIKACHU
+	db 24, PIDGEOT
+	db 24, DEWGONG
+	db $fe
+	
+	;4
+	db 0
+	
+	db 24, PIKACHU
+	db 26, PIDGEOT
+	db 26, DEWGONG
+	db $fe
+	
+	;5
+	db 0
+	
+	db 26, PIKACHU
+	db 28, PIDGEOT
+	db 28, DEWGONG
+	db $fe
+	
+	;6
+	db 0
+	
+	db 28, PIKACHU
+	db 30, PIDGEOT
+	db 30, DEWGONG
+	db $fe
+	
+	;7
+	db 0
+	
+	db 31, PIKACHU
+	db 34, RATTATA
+	db 34, GRIMER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 38, PIKACHU
+	db 40, RATTATA
+	db 40, GRIMER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 42, PIKACHU
+	db 45, RATTATA
+	db 45, GRIMER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 45, PIKACHU
+	db 48, RATTATA
+	db 48, GRIMER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 49, PIKACHU
+	db 54, RATTATA
+	db 54, GRIMER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 55, PIKACHU
+	db 60, RATTATA
+	db 60, GRIMER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 60, PIKACHU
+	db 65, RATTATA
+	db 65, GRIMER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 65, PIKACHU
+	db 70, RATTATA
+	db 70, GRIMER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 70, PIKACHU
+	db 70, PIKACHU
+	db 80, RATTATA
+	db 80, GRIMER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, PIKACHU
+	db 80, PIKACHU
+	db 85, RATTATA
+	db 85, RATTATA
+	db 90, GRIMER
+	db 90, GRIMER
+	db $ff
+	
 	; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
 	db 11, MAGMAR
@@ -2586,10 +4705,133 @@ FirebreatherGroup:
 	db -1 ; end
 
 	; FIREBREATHER (7)
-	db "RAY@", TRAINERTYPE_NORMAL
-	db  9, VULPIX
-	db -1 ; end
-
+	db "RAY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  10, ZUBAT
+	db $fe
+	
+	;1
+	db 0
+	
+	db  18, ZUBAT
+	db $fe
+	
+	;2
+	db 0
+	
+	db  24, ZUBAT
+	db $fe
+	
+	;3
+    db 0
+	
+	db  27, ZUBAT
+	db $fe
+	
+	;4
+	db 0
+	
+	db  32, GOLBAT
+	db $fe
+	
+	;5
+	db 0
+	
+	db  32, ZUBAT
+	db  37, GOLBAT
+	db $fe
+	
+	;6
+	db 0
+	
+	db  37, ZUBAT
+	db  40, GOLBAT
+	db $fe
+	
+	;7
+	db 0
+	
+	db  40, ZUBAT
+	db  42, GOLBAT
+	db $fe
+	
+	;8
+	db 0
+	
+	db  45, GOLBAT
+	db  47, GOLBAT
+	db $fe
+	
+	;9
+	db 0
+	
+	db  50, GOLBAT
+	db  52, GOLBAT
+	db  54, GOLBAT
+	db $fe
+	
+	;10
+	db 0
+	
+	db  56, GOLBAT
+	db  59, GOLBAT
+	db  60, GOLBAT
+	db $fe
+	
+	;11
+	db 0
+	
+	db  60, GOLBAT
+	db  63, GOLBAT
+	db  68, GOLBAT
+	db $fe
+	
+	;12
+	db 0
+	
+	db  64, GOLBAT
+	db  70, GOLBAT
+	db  72, GOLBAT
+	db $fe
+	
+	;13
+	db 0
+	
+	db  74, GOLBAT
+	db  79, GOLBAT
+	db  80, GOLBAT
+	db $fe
+	
+	;14
+	db 0
+	
+	db  80, GOLBAT
+	db  84, GOLBAT
+	db  84, GOLBAT
+	db  85, GOLBAT
+	db $fe
+	
+	;15
+	db 0
+	
+	db  85, GOLBAT
+	db  89, GOLBAT
+	db  89, GOLBAT
+	db  90, GOLBAT
+	db $fe
+	
+	;16
+	db 0
+	
+	db  90, GOLBAT
+	db  90, GOLBAT
+	db  92, GOLBAT
+	db  95, GOLBAT
+	db $ff
+	
 	; FIREBREATHER (8)
 	db "LYLE@", TRAINERTYPE_NORMAL
 	db 28, KOFFING
@@ -3186,7 +5428,7 @@ SageGroup:
 	db -1 ; end
 
 	; SAGE (10)
-	db "GAKU@", TRAINERTYPE_NORMAL
+	db "GOKU@", TRAINERTYPE_NORMAL
 	db 32, NOCTOWL
 	db 32, FLAREON
 	db -1 ; end

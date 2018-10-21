@@ -1223,17 +1223,6 @@ IntroScene17: ; e4ef5 (39:4ef5)
 
 IntroScene18: ; e4f67 (39:4f67)
 ; Suicune close up.
-	ld hl, wIntroSceneFrameCounter
-	ld a, [hl]
-	inc [hl]
-	cp $60
-	jr nc, .done
-	ld a, [hSCX]
-	cp $60
-	ret z
-	add 8
-	ld [hSCX], a
-	ret
 .done
 	call NextIntroScene
 	ret

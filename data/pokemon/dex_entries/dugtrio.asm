@@ -1,10 +1,10 @@
-	db "MOLE@" ; species name
-	dw 204, 730 ; height, weight
+	db "Fossil@" ; species name
+	dw 600, 15000 ; height, weight
 
-	db   "These DIGLETT"
-	next "triplets dig over"
-	next "60 miles below sea"
+	db   "A massive #MON"
+	next "than can disapear"
+	next "in the air, this"
 
-	page "level. No one"
-	next "knows what it's"
-	next "like underground.@"
+	page "scare people, is"
+	next "a really shy spe-"
+	next "cies.@"

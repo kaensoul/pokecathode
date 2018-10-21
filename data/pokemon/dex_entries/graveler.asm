@@ -1,10 +1,10 @@
-	db "ROCK@" ; species name
-	dw 303, 2320 ; height, weight
+	db "Dryad@" ; species name
+	dw 160, 200 ; height, weight
 
-	db   "It travels by rol-"
-	next "ling on mountain"
-	next "paths. If it gains"
+	db   "They take care of"
+	next "flower gardens and"
+	next "make sure than"
 
-	page "too much speed, it"
-	next "stops by running"
-	next "into huge rocks.@"
+	page "bugs dont break"
+	next "flowers during"
+	next "pollination.@"

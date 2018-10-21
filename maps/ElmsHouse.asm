@@ -20,65 +20,63 @@ ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
 
 ElmsWifeText:
-	text "Hi, <PLAY_G>! My"
-	line "husband's always"
+	text "Prof. Kapok is"
+	line "really smart, but"
 
-	para "so busy--I hope"
-	line "he's OK."
+	para "the Prof. Yggdra-"
+	line "sil is smarter."
 
-	para "When he's caught"
-	line "up in his #MON"
-
-	para "research, he even"
-	line "forgets to eat."
+	para "He can even make"
+	line "#MON!!"
 	done
 
 ElmsSonText:
-	text "When I grow up,"
-	line "I'm going to help"
-	cont "my dad!"
+	text "Prof. Yggdrasil"
+	line "used to work on"
+	cont "Mud Town, but no"
 
-	para "I'm going to be a"
-	line "great #MON"
-	cont "professor!"
-	done
-
-ElmsHouseLabFoodText:
-; unused
-	text "There's some food"
-	line "here. It must be"
-	cont "for the LAB."
-	done
-
-ElmsHousePokemonFoodText:
-; unused
-	text "There's some food"
-	line "here. This must be"
-	cont "for #MON."
+	para "one know where he"
+	line "is now."
 	done
 
 ElmsHousePCText:
-	text "#MON. Where do"
-	line "they come from? "
+	text "Kita's Region News"
+	line "January 13, 2018."
 
-	para "Where are they"
-	line "going?"
+	para "The rare #MON"
+	line "used in that"
+	cont "famous movie last"
 
-	para "Why has no one"
-	line "ever witnessed a"
-	cont "#MON's birth?"
+	para "year was real"
+	line "after all!"
 
-	para "I want to know! I"
-	line "will dedicate my"
+	para "But not everything"
+	line "is happy news,"
 
-	para "life to the study"
-	line "of #MON!"
+	para "Prof.Yggdrasil"
+	line "Montrake's creator"
 
-	para "…"
+	para "experimented on"
+	line "#MON and"
 
-	para "It's a part of"
-	line "PROF.ELM's re-"
-	cont "search papers."
+	para "not only his own,"
+	line "two accusations"
+	
+    para "than can end with"
+	line "Yggdrasil's career"
+	
+	para "The 70 years old"
+	line "man have too much"
+	cont "to explain."
+	
+	para "Oh, this new look"
+	line "better."
+	
+	para "Gulpin's poison"
+	line "can be used to"
+	
+	para "cure cancer, read"
+	line "more on page 84!"
 	done
 
 ElmsHouse_MapEvents:
@@ -96,5 +94,5 @@ ElmsHouse_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, ElmsHouseBookshelf
 
 	db 2 ; object events
-	object_event  1,  5, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
-	object_event  5,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1
+	object_event  2,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsWife, -1
+	object_event  5,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsSon, -1

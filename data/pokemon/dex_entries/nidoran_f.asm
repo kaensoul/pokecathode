@@ -1,10 +1,10 @@
-	db "POISON PIN@" ; species name
-	dw 104, 150 ; height, weight
+	db "Ruffian@" ; species name
+	dw 150, 504 ; height, weight
 
-	db   "Small and very"
-	next "docile, it pro-"
-	next "tects itself with"
+	db   "It steal every-"
+	next "thing for no"
+	next "reason most of"
 
-	page "its small, poison-"
-	next "ous horn when"
-	next "attacked.@"
+	page "the time. It can"
+	next "carry twice it"
+	next "weight.@"

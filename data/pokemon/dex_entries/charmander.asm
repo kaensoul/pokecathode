@@ -1,10 +1,10 @@
-	db "LIZARD@" ; species name
-	dw 200, 190 ; height, weight
+	db "Smoke@" ; species name
+	dw 100, 060 ; height, weight
 
-	db   "If it's healthy,"
-	next "the flame on the"
-	next "tip of its tail"
+	db   "The fire stored"
+	next "inside consume"
+	next "their tails, but"
 
-	page "will burn vigor-"
-	next "ously, even if it"
-	next "gets a bit wet.@"
+	page "they grow back"
+	next "faster, but the"
+	next "smell is strong.@"

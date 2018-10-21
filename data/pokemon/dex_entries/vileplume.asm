@@ -1,10 +1,10 @@
-	db "FLOWER@" ; species name
-	dw 311, 410 ; height, weight
+	db "Spotlight@" ; species name
+	dw 030, 050 ; height, weight
 
-	db   "By shaking its big"
-	next "petals, it scat-"
-	next "ters toxic pollen"
+	db   "Is a nice pet,"
+	next "always happy"
+	next "and friendly"
 
-	page "into the air,"
-	next "turning the air"
-	next "yellow.@"
+	page "with everyone."
+	next "Is not good at"
+	next "flying.@"

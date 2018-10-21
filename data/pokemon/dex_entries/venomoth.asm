@@ -1,10 +1,10 @@
-	db "POISONMOTH@" ; species name
-	dw 411, 280 ; height, weight
+	db "Cockatrice@" ; species name
+	dw 500, 4200 ; height, weight
 
-	db   "The scales it"
-	next "scatters will"
-	next "paralyze anyone"
+	db   "Is one of the"
+	next "most dangerous"
+	next "#MON in the"
 
-	page "who touches them,"
-	next "making that person"
-	next "unable to stand.@"
+	page "region and very"
+	next "territorial, avoid"
+	next "eye contact.@"

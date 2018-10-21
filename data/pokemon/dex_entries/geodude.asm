@@ -1,10 +1,10 @@
-	db "ROCK@" ; species name
-	dw 104, 440 ; height, weight
+	db "Leaf@" ; species name
+	dw 008, 003 ; height, weight
 
-	db   "Proud of their"
-	next "sturdy bodies,"
-	next "they bash against"
+	db   "Live underground"
+	next "to stay safe."
+	next "Sunlight is too"
 
-	page "each other in a"
-	next "contest to prove"
-	next "whose is harder.@"
+	page "strong for them"
+	next "so they use moon-"
+	next "light to grow.@"

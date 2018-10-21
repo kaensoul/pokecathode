@@ -1,10 +1,10 @@
-	db "TADPOLE@" ; species name
-	dw 403, 1190 ; height, weight
+	db "Scorpion@" ; species name
+	dw 013, 200 ; height, weight
 
-	db   "It can use its"
-	next "well-developed"
-	next "arms and legs to"
+	db   "Its shell is as"
+	next "powerfull as iron,"
+	next "but too heavy for"
 
-	page "run on the surface"
-	next "of the water for a"
-	next "split second.@"
+	page "it to move fast"
+	next "enough to hunt"
+	next "or run.@"

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 200, 260 ; height, weight
+	db "Carrot@" ; species name
+	dw 190, 755 ; height, weight
 
-	db   "It prefers dry,"
-	next "sandy places"
-	next "because it uses"
+	db   "It move faster"
+	next "underground. It"
+	next "share their food"
 
-	page "the sand to"
-	next "protect itself"
-	next "when threatened.@"
+	page "with humans and"
+	next "other #MON to"
+	next "build bonds.@"

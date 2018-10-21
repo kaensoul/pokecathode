@@ -1,10 +1,10 @@
-	db "TADPOLE@" ; species name
-	dw 200, 270 ; height, weight
+	db "Bomb@" ; species name
+	dw 015, 009 ; height, weight
 
-	db   "The swirl on its"
-	next "belly is its"
-	next "insides showing"
+	db   "It get mad easily"
+	next "and faint after-"
+	next "ward."
 
-	page "through the skin."
-	next "It looks clearer"
-	next "after it eats.@"
+	page "It love to suck"
+	next "water from Mop's"
+	next "hair.@"

@@ -115,22 +115,22 @@ PokeComNursePokerusText:
 	done
 
 DifficultBookshelfText:
-	text "It's full of"
-	line "difficult books."
+	text "Nothing fun to"
+	line "read."
 	done
 
 PictureBookshelfText:
-	text "A whole collection"
-	line "of #MON picture"
-	cont "books!"
+	text "Should i read"
+	line "DC or Marvel?"
+	cont "Better move."
 	done
 
 MagazineBookshelfText:
-	text "#MON magazines…"
-	line "#MON PAL,"
+	text "MAD, People,"
+	line "TIME..."
 
-	para "#MON HANDBOOK,"
-	line "#MON GRAPH…"
+	para "Who read in"
+	line "current year?"
 	done
 
 TeamRocketOathText:
@@ -155,7 +155,7 @@ IncenseBurnerText:
 	done
 
 MerchandiseShelfText:
-	text "Lots of #MON"
+	text "Lots of Digimon"
 	line "merchandise!"
 	done
 
@@ -164,7 +164,7 @@ TownMapText:
 	done
 
 WindowText:
-	text "My reflection!"
+	text "Who's that qt?"
 	line "Lookin' good!"
 	done
 
@@ -188,8 +188,8 @@ HomepageText:
 	done
 
 TrashCanText:
-	text "There's nothing in"
-	line "here…"
+	text "Eeeh... I didn't"
+	line "need to see this."
 	done
 
 ; not used

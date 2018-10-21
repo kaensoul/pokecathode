@@ -1,10 +1,10 @@
-	db "POISON PIN@" ; species name
-	dw 207, 440 ; height, weight
+	db "Ear@" ; species name
+	dw 023, 145 ; height, weight
 
-	db   "It has a docile"
-	next "nature. If it is"
-	next "threatened with"
+	db   "It has a gentle"
+	next "nature. They"
+	next "help people lost"
 
-	page "attack, it raises"
-	next "the barbs that are"
-	next "all over its body.@"
+	page "on their forest."
+	next "Theyre horns arent"
+	next "strong, at all.@"

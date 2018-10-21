@@ -1,10 +1,10 @@
-	db "SUPERPOWER@" ; species name
-	dw 411, 1550 ; height, weight
+	db "Werewolf@" ; species name
+	dw 300, 1400 ; height, weight
 
-	db   "This tough #MON"
-	next "always stays in"
-	next "the zone. Its"
+	db   "It absorb power"
+	next "from the Moon."
+	next "They seem to be"
 
-	page "muscles become"
-	next "thicker after"
-	next "every battle.@"
+	page "able to control"
+	next "water to some"
+	next "degree.@"

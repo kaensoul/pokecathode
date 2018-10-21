@@ -1,10 +1,10 @@
-	db "BAT@" ; species name
-	dw 207, 170 ; height, weight
+	db "Ice pick@" ; species name
+	dw 100, 500 ; height, weight
 
-	db   "During the day, it"
-	next "gathers with"
-	next "others and hangs"
+	db   "Can climb a verti-"
+	next "cal surface with-"
+	next "out issue."
 
-	page "from the ceilings"
-	next "of old buildings"
-	next "and caves.@"
+	page "Its horns dont"
+	next "melt easly and the"
+	next "cold heal them.@"

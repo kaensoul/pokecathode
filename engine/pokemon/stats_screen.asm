@@ -759,7 +759,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ret
 
 .PlaceOTInfo: ; 4e1cc (13:61cc)
-	ld de, IDNoString
+    ld de, IDNoString
 	hlcoord 0, 9
 	call PlaceString
 	ld de, OTString
@@ -784,6 +784,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld a, "♂"
 	jr z, .got_gender
 	ld a, "♀"
+	ret
 .got_gender
 	hlcoord 9, 13
 	ld [hl], a

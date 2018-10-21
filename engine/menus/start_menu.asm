@@ -598,6 +598,9 @@ HasNoItems: ; 129d5
 	ld a, [wNumBalls]
 	and a
 	ret nz
+	ld a, [wNumBerries]
+	and a
+	ret nz
 	ld hl, wTMsHMs
 	ld b, NUM_TMS + NUM_HMS
 .loop
@@ -1881,7 +1884,15 @@ PlaceMoveData: ; 13256
 	call PlaceString
 	ld a, [wCurMove]
 	ld b, a
-	hlcoord 2, 12
+	farcall GetMoveCategoryName
+	hlcoord 1, 11
+	ld de, wStringBuffer1
+	call PlaceString
+	ld a, [wCurMove]
+	ld b, a
+	hlcoord 1, 12
+	ld [hl], "/"
+	inc hl
 	predef PrintMoveType
 	ld a, [wCurMove]
 	dec a
@@ -1912,10 +1923,10 @@ PlaceMoveData: ; 13256
 ; 132ba
 
 String_MoveType_Top: ; 132ba
-	db "┌─────┐@"
+	db "┌────────┐@"
 ; 132c2
 String_MoveType_Bottom: ; 132c2
-	db "│TYPE/└@"
+	db "│        └@"
 ; 132ca
 String_MoveAtk: ; 132ca
 	db "ATK/@"

@@ -1,10 +1,10 @@
-	db "TINY BIRD@" ; species name
-	dw 100, 40 ; height, weight
+	db "Scary@" ; species name
+	dw 250, 065 ; height, weight
 
-	db   "It rapidly flaps"
-	next "its wings in the"
-	next "grass, stirring up"
+	db   "It hunt at night"
+	next "using their fake"
+	next "eyes to cause fear"
 
-	page "a dust cloud that"
-	next "drives insect prey"
-	next "out into the open.@"
+	page "stunning small"
+	next "#MON. It also"
+	next "attack in dreams.@"

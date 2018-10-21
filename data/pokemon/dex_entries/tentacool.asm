@@ -1,10 +1,10 @@
-	db "JELLYFISH@" ; species name
-	dw 211, 1000 ; height, weight
+	db "Sad@" ; species name
+	dw 040, 350 ; height, weight
 
-	db   "As it floats along"
-	next "on the waves, it"
-	next "uses its toxic"
+	db   "It can see the"
+	next "future and show"
+	next "it with the orbs"
 
-	page "feelers to stab"
-	next "anything it"
-	next "touches.@"
+	page "all over his body,"
+	next "but can only see"
+	next "bad futures.@"

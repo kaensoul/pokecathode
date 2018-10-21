@@ -1,10 +1,10 @@
-	db "PIG MONKEY@" ; species name
-	dw 108, 620 ; height, weight
+	db "Sprout@" ; species name
+	dw 025, 040 ; height, weight
 
-	db   "It lives in groups"
-	next "in the treetops."
-	next "If it loses sight"
+	db   "Use the 3 spheres"
+	next "around it to see"
+	next "every direction."
 
-	page "of its group, it"
-	next "becomes infuriated"
-	next "by its loneliness.@"
+	page "Can only move on"
+	next "ground and grass,"
+	next "slowly.@"

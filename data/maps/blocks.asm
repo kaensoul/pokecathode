@@ -1,14 +1,5 @@
 SECTION "Map Blocks 1", ROMX
 
-Route32_Blocks:
-	INCBIN "maps/Route32.blk"
-
-Route40_Blocks:
-	INCBIN "maps/Route40.blk"
-
-Route36_Blocks:
-	INCBIN "maps/Route36.blk"
-
 Route44_Blocks:
 	INCBIN "maps/Route44.blk"
 
@@ -319,6 +310,7 @@ Route14_Blocks:
 BetaSproutTower8_Blocks:
 	INCBIN "maps/unused/BetaSproutTower8.blk"
 
+PebbleMart_Blocks:	
 OlivineMart_Blocks:
 EcruteakMart_Blocks:
 BlackthornMart_Blocks:
@@ -448,15 +440,6 @@ VioletKylesHouse_Blocks:
 
 BetaCave_Blocks:
 	INCBIN "maps/unused/BetaCave.blk"
-
-UnionCaveB1F_Blocks:
-	INCBIN "maps/UnionCaveB1F.blk"
-
-UnionCaveB2F_Blocks:
-	INCBIN "maps/UnionCaveB2F.blk"
-
-UnionCave1F_Blocks:
-	INCBIN "maps/UnionCave1F.blk"
 
 NationalPark_Blocks:
 NationalParkBugContest_Blocks:
@@ -1045,3 +1028,28 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+	
+SECTION "Map Blocks 4", ROMX
+
+
+UnionCaveB1F_Blocks:
+	INCBIN "maps/UnionCaveB1F.blk"
+
+UnionCaveB2F_Blocks:
+	INCBIN "maps/UnionCaveB2F.blk"
+
+UnionCave1F_Blocks:
+	INCBIN "maps/UnionCave1F.blk"
+	
+Route32_Blocks:
+	INCBIN "maps/Route32.blk"	
+	
+Route40_Blocks:
+	INCBIN "maps/Route40.blk"	
+
+Route36_Blocks:
+	INCBIN "maps/Route36.blk"
+	
+PebbleGym_Blocks:
+    INCBIN "maps/PebbleGym.blk"	
+	

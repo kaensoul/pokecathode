@@ -1,10 +1,10 @@
-	db "SEED@" ; species name
-	dw 204, 150 ; height, weight
+	db "Horn@" ; species name
+	dw 070, 300 ; height, weight
 
-	db   "While it is young,"
-	next "it uses the"
-	next "nutrients that are"
+	db   "Ancient species,"
+	next "it was restored"
+	next "years ago."
 
-	page "stored in the"
-	next "seeds on its back"
-	next "in order to grow.@"
+	page "After some gene-"
+	next "rations it lose"
+	next "the rock type.@"

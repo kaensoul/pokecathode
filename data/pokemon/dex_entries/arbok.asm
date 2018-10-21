@@ -1,10 +1,10 @@
-	db "COBRA@" ; species name
-	dw 1106, 1430 ; height, weight
+	db "Pebble@" ; species name
+	dw 090, 450 ; height, weight
 
-	db   "To intimidate"
-	next "foes, it spreads"
-	next "its chest wide and"
+	db   "They dont like"
+	next "to be alone."
+	next "If you find one"
 
-	page "makes eerie sounds"
-	next "by expelling air"
-	next "from its mouth.@"
+	page "then another 30"
+	next "should appear"
+	next "soon.@"

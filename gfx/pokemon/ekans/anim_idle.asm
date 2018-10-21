@@ -1,8 +1,8 @@
-	setrepeat 5
-	frame 4, 02
-	frame 5, 02
-	frame 4, 02
-	frame 0, 02
+	setrepeat 2
+	frame 1, 25
+	frame 0, 24
+	frame 1, 24
+	frame 0, 24
 	dorepeat 1
 	endanim
 ; 0xd199c

@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 303, 650 ; height, weight
+	db "Squirrel@" ; species name
+	dw 035, 025 ; height, weight
 
-	db   "Adept at climbing"
-	next "trees, it rolls"
-	next "into a spiny ball,"
+	db   "They like trash,"
+	next "if people leave"
+	next "trash in the"
 
-	page "then attacks its"
-	next "enemies from"
-	next "above.@"
+	page "forest, they"
+	next "store it inside"
+	next "their tail.@"

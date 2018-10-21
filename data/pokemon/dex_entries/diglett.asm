@@ -1,10 +1,10 @@
-	db "MOLE@" ; species name
-	dw 8, 20 ; height, weight
+	db "Leftovers@" ; species name
+	dw 038, 020 ; height, weight
 
-	db   "It digs under-"
-	next "ground and chews"
-	next "on tree roots,"
+	db   "Is the spirit"
+	next "of ancient sea"
+	next "#MON. It haunt"
 
-	page "sticking its head"
-	next "out only when the"
-	next "sun isn't bright.@"
+	page "people than fish"
+	next "too much, and"
+	next "stop after a week.@"

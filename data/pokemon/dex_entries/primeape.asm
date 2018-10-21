@@ -1,10 +1,10 @@
-	db "PIG MONKEY@" ; species name
-	dw 303, 710 ; height, weight
+	db "Forest@" ; species name
+	dw 400, 2000 ; height, weight
 
-	db   "It will beat up"
-	next "anyone who makes"
-	next "it mad, even if it"
+	db   "It can grow to"
+	next "absurd levels if"
+	next "there is enough"
 
-	page "has to chase them"
-	next "until the end of"
-	next "the world.@"
+	page "space, big ones"
+	next "are confused with"
+	next "actual forests.@"

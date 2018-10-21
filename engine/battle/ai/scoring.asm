@@ -1,4 +1,4 @@
-AIScoring: ; 38591
+AIScoring: ; used only for BANK(AIScoring)
 
 AI_Basic: ; 38591
 ; Don't do anything redundant:
@@ -196,6 +196,7 @@ AI_Types: ; 38635
 	push de
 	push bc
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and MOVE_TYPE_MASK
 	ld d, a
 	ld hl, wEnemyMonMoves
 	ld b, wEnemyMonMovesEnd - wEnemyMonMoves + 1
@@ -210,6 +211,7 @@ AI_Types: ; 38635
 
 	call AIGetEnemyMove
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and MOVE_TYPE_MASK
 	cp d
 	jr z, .checkmove2
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
@@ -348,7 +350,7 @@ AI_Smart: ; 386be
 	dbw EFFECT_ENCORE,           AI_Smart_Encore
 	dbw EFFECT_PAIN_SPLIT,       AI_Smart_PainSplit
 	dbw EFFECT_SNORE,            AI_Smart_Snore
-	dbw EFFECT_CONVERSION2,      AI_Smart_Conversion2
+	dbw EFFECT_CONVERSION2,      AI_Smart_QuiverDance
 	dbw EFFECT_LOCK_ON,          AI_Smart_LockOn
 	dbw EFFECT_DEFROST_OPPONENT, AI_Smart_DefrostOpponent
 	dbw EFFECT_SLEEP_TALK,       AI_Smart_SleepTalk
@@ -1167,15 +1169,31 @@ AI_Smart_SpDefenseUp2: ; 38aed
 	jr nc, .asm_38b10
 
 ; 80% chance to greatly encourage this move if
-; enemy's Special Defense level is lower than +2, and the player is of a special type.
+; enemy's Special Defense level is lower than +2,
+; and the player's Pokémon is Special-oriented.
 	cp $9
 	ret nc
 
-	ld a, [wBattleMonType1]
-	cp SPECIAL
-	jr nc, .asm_38b09
-	ld a, [wBattleMonType2]
-	cp SPECIAL
+	push hl
+; Get the pointer for the player's Pokémon's base Attack
+	ld a, [wBattleMonSpecies]
+	ld hl, BaseData + BASE_ATK
+	ld bc, BASE_DATA_SIZE
+	call AddNTimes
+; Get the Pokémon's base Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	ld d, a
+; Get the pointer for the player's Pokémon's base Special Attack
+	ld bc, BASE_SAT - BASE_ATK
+	add hl, bc
+; Get the Pokémon's base Special Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
+	pop hl
+; If its base Attack is greater than its base Special Attack,
+; don't encourage this move.
+	cp d
 	ret c
 
 .asm_38b09
@@ -1481,6 +1499,7 @@ AI_Smart_Encore: ; 38c3b
 
 	push hl
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and MOVE_TYPE_MASK
 	ld hl, wEnemyMonType1
 	predef CheckTypeMatchup
 
@@ -1755,37 +1774,56 @@ AI_Smart_Thief: ; 38d93
 ; 38d98
 
 
-AI_Smart_Conversion2: ; 38d98
-	ld a, [wLastPlayerMove]
-	and a
-	jr nz, .asm_38dc9
+AI_Smart_QuiverDance: ; 38d98
+	; Discourage this move if enemy's HP is lower than 50%.
+	call AICheckEnemyHalfHP
+	jr nc, .asm_38b10
+
+; Discourage this move if enemy's special defense level is higher than +3.
+	ld a, [wEnemySDefLevel]
+	cp $b
+	jr nc, .asm_38b10
+
+; 80% chance to greatly encourage this move if
+; enemy's Special Defense level is lower than +2,
+; and the player's Pokémon is Special-oriented.
+	cp $9
+	ret nc
 
 	push hl
-	dec a
-	ld hl, Moves + MOVE_TYPE
-	ld bc, MOVE_LENGTH
+; Get the pointer for the player's Pokémon's base Attack
+	ld a, [wBattleMonSpecies]
+	ld hl, BaseData + BASE_ATK
+	ld bc, BASE_DATA_SIZE
 	call AddNTimes
-
-	ld a, BANK(Moves)
+; Get the Pokémon's base Attack
+	ld a, BANK(BaseData)
 	call GetFarByte
-	ld [wPlayerMoveStruct + MOVE_TYPE], a
-
-	xor a
-	ld [hBattleTurn], a
-
-	callfar BattleCheckTypeMatchup
-
-	ld a, [wd265]
-	cp $a
+	ld d, a
+; Get the pointer for the player's Pokémon's base Special Attack
+	ld bc, BASE_SAT - BASE_ATK
+	add hl, bc
+; Get the Pokémon's base Special Attack
+	ld a, BANK(BaseData)
+	call GetFarByte
 	pop hl
-	jr c, .asm_38dc9
-	ret z
-
-	call AI_50_50
+; If its base Attack is greater than its base Special Attack,
+; don't encourage this move.
+    
+	cp d
 	ret c
 
+.asm_38b09
+	call AI_80_20
+	ret c
+	dec [hl]
 	dec [hl]
 	ret
+
+.asm_38b10
+	inc [hl]
+	ret
+; 38b12
 
 .asm_38dc9
 	call Random
@@ -1944,11 +1982,6 @@ AI_Smart_Curse: ; 38e5c
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jr z, .asm_38e92
-	cp SPECIAL
-	ret nc
-	ld a, [wBattleMonType2]
-	cp SPECIAL
-	ret nc
 	call AI_80_20
 	ret c
 	dec [hl]

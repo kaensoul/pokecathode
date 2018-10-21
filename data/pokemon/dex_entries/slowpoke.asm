@@ -1,10 +1,10 @@
-	db "DOPEY@" ; species name
-	dw 311, 790 ; height, weight
+	db "Firefly@" ; species name
+	dw 050, 150 ; height, weight
 
-	db   "It is always so"
-	next "absent-minded that"
-	next "it won't react,"
+	db   "It communicate"
+	next "using electric"
+	next "signals. In big"
 
-	page "even if its"
-	next "flavorful tail is"
-	next "bitten.@"
+	page "cities and power"
+	next "plants they lose"
+	next "control.@"

@@ -1172,9 +1172,9 @@ Pokedex_DrawDexEntryScreenBG: ; 407fd
 .Unused: ; 4084f
 	db $5c, $5d, -1 ; No.
 .Height: ; 40852
-	db "HT  ?", $5e, "??", $5f, -1 ; HT  ?'??"
+	db "HT   ???m", -1 ; WT   ???lb
 .Weight: ; 4085c
-	db "WT   ???lb", -1 ; WT   ???lb
+	db "WT   ???kg", -1 ; WT   ???lb
 .MenuItems: ; 40867
 	db $3b, " PAGE AREA CRY PRNT", -1
 

@@ -1,10 +1,10 @@
-	db "FLYCATCHER@" ; species name
-	dw 507, 340 ; height, weight
+	db "Sunflower@" ; species name
+	dw 140, 540 ; height, weight
 
-	db   "Once ingested into"
-	next "this #MON's"
-	next "body, even the"
+	db   "If there isnt"
+	next "enough food to"
+	next "eat, it stop"
 
-	page "hardest object"
-	next "will melt into"
-	next "nothing.@"
+	page "moving and eat"
+	next "sunlight, but be-"
+	next "come vulnerable.@"

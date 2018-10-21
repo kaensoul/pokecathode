@@ -6,6 +6,8 @@
 	const UNIONCAVEB1F_POKE_BALL1
 	const UNIONCAVEB1F_BOULDER
 	const UNIONCAVEB1F_POKE_BALL2
+	const UNIONCAVEB1F_ROCK1
+	const UNIONCAVEB1F_RECEPTIONIST
 
 UnionCaveB1F_MapScripts:
 	db 0 ; scene scripts
@@ -55,120 +57,131 @@ TrainerHikerLeonard:
 	waitbutton
 	closetext
 	end
+	
+SecretarySaltyScript:
+    faceplayer
+    opentext
+    writetext Healingtext
+	special HealParty
+    playsound SFX_POTION
+	waitsfx
+	closetext
+	end
+
+UnionCaveB1FRock1:
+    jumpstd smashrock	
 
 UnionCaveB1FTMSwift:
-	itemball TM_SWIFT
+	itemball TM_CONVERSION
 
 UnionCaveB1FXDefend:
-	itemball X_DEFEND
+	itemball THUNDERSTONE
 
 UnionCaveB1FBoulder:
 	jumpstd strengthboulder
 
 HikerPhillipSeenText:
-	text "It's been a while"
-	line "since I last saw"
-	cont "another person."
-
-	para "Don't be shy."
-	line "Let's battle!"
+	text "I have been lose"
+	line "here since i was"
+	cont "ten."
 	done
 
 HikerPhillipBeatenText:
-	text "Uurggh…"
+	text "I miss mom."
 	done
 
 HikerPhillipAfterBattleText:
-	text "I've been lost for"
-	line "a long time…"
+	text "I just wanted some"
+	line "adventures, now"
+	cont "i don't remember"
 
-	para "I don't mind it"
-	line "here, but I am"
-	cont "soooo hungry!"
+	para "what sunlight is."
 	done
 
 HikerLeonardSeenText:
-	text "What do you know!"
-	line "A visitor!"
+	text "I'm training to"
+	line "beat Francis!"
 	done
 
 HikerLeonardBeatenText:
-	text "Wahahah! You're a"
-	line "feisty one!"
+	text "I just wanted"
+	line "EXP. points."
 	done
 
 HikerLeonardAfterBattleText:
-	text "I live down here."
+	text "Francis ace is a"
+	line "weird monkey"
+	cont "#MON than not"
 
-	para "You can, too, if"
-	line "you'd like."
+	para "only use Fire and"
+	line "Ice moves, it can"
+	cont "also use Water."
 
-	para "There's plenty of"
-	line "room, you see."
+	para "I mean, it kinda"
+	line "make sence, i"
+	cont "guess."
 	done
 
 PokemaniacAndrewSeenText:
-	text "Who's there?"
-
-	para "Leave me and my"
-	line "#MON alone!"
+	text "WHERE THE HECK"
+	line "IS THE EXIT?!"
 	done
 
 PokemaniacAndrewBeatenText:
-	text "Go…"
-	line "Go away!"
+	text "AAAAAAAAHH!"
 	done
 
 PokemaniacAndrewAfterBattleText:
-	text "Just me and my"
-	line "#MON. I'm de-"
-	cont "lirious with joy."
+	text "IF I DON'T LEAVE"
+	line "THIS PLACE SOON!"
+	
+	para "I GOING TO KILL"
+	line "MYSELF!"
 	done
 
 PokemaniacCalvinSeenText:
-	text "I came all the way"
-	line "here to conduct my"
-	cont "#MON research."
-
-	para "Let me demonstrate"
-	line "my findings in a"
-	cont "real battle!"
+	text "Oe, batoru?"
 	done
 
 PokemaniacCalvinBeatenText:
-	text "You demonstrated"
-	line "on me!"
+	text "N-Nani?!"
 	done
 
 PokemaniacCalvinAfterBattleText:
-	text "I should compile"
-	line "and announce my"
-	cont "study findings."
+	text "Kisama, orewa no"
+	line "krosearu se."
+	done
 
-	para "I might even be-"
-	line "come famous like"
-	cont "PROF.ELM."
+Healingtext:
+    text "Need help?"
+    line "I work for the"
+    cont "#MON League."
+
+    para "Let me use some"
+    line "potions and elixir"
+    cont "on your friends."	
 	done
 
 UnionCaveB1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
-	warp_event  3,  3, RUINS_OF_ALPH_OUTSIDE, 7
-	warp_event  3, 11, RUINS_OF_ALPH_OUTSIDE, 8
-	warp_event  7, 19, UNION_CAVE_1F, 1
-	warp_event  3, 33, UNION_CAVE_1F, 2
-	warp_event 17, 31, UNION_CAVE_B2F, 1
+	db 4 ; warp events
+	warp_event 17,  5, UNION_CAVE_1F, 1
+	warp_event 15, 31, UNION_CAVE_1F, 2
+	warp_event 13, 19, UNION_CAVE_B2F, 1
+	warp_event 15, 27, UNION_CAVE_B2F, 2
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
-	db 7 ; object events
-	object_event  9,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerPhillip, -1
-	object_event 16,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerLeonard, -1
-	object_event  5, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacAndrew, -1
-	object_event 17, 30, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacCalvin, -1
-	object_event  2, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCaveB1FTMSwift, EVENT_UNION_CAVE_B1F_TM_SWIFT
-	object_event  7, 10, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveB1FBoulder, -1
-	object_event 17, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCaveB1FXDefend, EVENT_UNION_CAVE_B1F_X_DEFEND
+	db 9 ; object events
+	object_event 13, 15, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerHikerPhillip, -1
+	object_event  6, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerLeonard, -1
+	object_event  8, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacAndrew, -1
+	object_event 14, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacCalvin, -1
+	object_event 17, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCaveB1FTMSwift, EVENT_UNION_CAVE_B1F_TM_SWIFT
+	object_event 15, 13, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveB1FBoulder, -1
+	object_event 15, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, UnionCaveB1FXDefend, EVENT_UNION_CAVE_B1F_X_DEFEND
+    object_event 12, 11, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionCaveB1FRock1, -1
+	object_event 16,  4, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SecretarySaltyScript, -1

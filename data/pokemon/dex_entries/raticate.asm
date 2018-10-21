@@ -1,10 +1,10 @@
-	db "RAT@" ; species name
-	dw 204, 410 ; height, weight
+	db "Cat@" ; species name
+	dw 030, 045 ; height, weight
 
-	db   "The webs on its"
-	next "hind legs enable"
-	next "it to cross"
+	db   "Is really smart,"
+	next "often steal food"
+	next "from new trainers."
 
-	page "rivers. It search-"
-	next "es wide areas for"
-	next "food.@"
+	page "Dont annoy them,"
+	next "their nails "
+	next "contain poison.@"

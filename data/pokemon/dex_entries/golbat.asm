@@ -1,10 +1,10 @@
-	db "BAT@" ; species name
-	dw 503, 1210 ; height, weight
+	db "Mountain@" ; species name
+	dw 600, 4000 ; height, weight
 
-	db   "When it plunges"
-	next "its fangs into its"
-	next "prey, it instantly"
+	db   "It cant climb like"
+	next "Glagon and need to"
+	next "find open areas to"
 
-	page "draws and gulps"
-	next "down more than ten"
-	next "ounces of blood.@"
+	page "live. It froze to"
+	next "stay safe, even"
+	next "for centuries.@"

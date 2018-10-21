@@ -1,10 +1,10 @@
-	db "MUSHROOM@" ; species name
-	dw 303, 650 ; height, weight
+	db "Baby@" ; species name
+	dw 020, 005 ; height, weight
 
-	db   "When nothing's"
-	next "left to extract"
-	next "from the bug, the"
+	db   "Was found for the"
+	next "firts time on a"
+	next "Pidgey nest in a"
 
-	page "mushrooms on its"
-	next "back leave spores"
-	next "on the bug's egg.@"
+	page "far region. It"
+	next "parents dont take"
+	next "care of them.@"

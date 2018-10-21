@@ -1,10 +1,10 @@
-	db "SEED@" ; species name
-	dw 607, 2210 ; height, weight
+	db "Armor@" ; species name
+	dw 400, 15000 ; height, weight
 
-	db   "As it warms it-"
-	next "self and absorbs"
-	next "the sunlight, its"
+	db   "Their scales are"
+	next "harder than steel."
+	next "That powerfull armor"
 
-	page "flower petals"
-	next "release a pleasant"
-	next "fragrance.@"
+	page "was used to protect "
+	next "them from Tyrantrum"
+	next "and Aerodactyl.@"

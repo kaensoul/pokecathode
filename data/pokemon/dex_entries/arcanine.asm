@@ -1,10 +1,10 @@
-	db "LEGENDARY@" ; species name
-	dw 603, 3420 ; height, weight
+	db "Poison Leg@" ; species name
+	dw 100, 400 ; height, weight
 
-	db   "An ancient picture"
-	next "scroll shows that"
-	next "people were"
+	db   "Live deep into the"
+	next "forest, there it"
+	next "sing sad songs,"
 
-	page "attracted to its"
-	next "movement as it ran"
-	next "through prairies.@"
+	page "it prey lose the"
+	next "will to run and"
+	next "give up.@"

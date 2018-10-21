@@ -1,10 +1,10 @@
-	db "SHELLFISH@" ; species name
-	dw 503, 1890 ; height, weight
+	db "Christmas@" ; species name
+	dw 300, 7000 ; height, weight
 
-	db   "It firmly plants"
-	next "its feet on the"
-	next "ground before"
+	db   "It love people,"
+	next "is often used to"
+	next "rescue people in"
 
-	page "shooting water"
-	next "from the jets on"
-	next "its back.@"
+	page "snow mountains"
+	next "and the arctic"
+	next "ocean.@"

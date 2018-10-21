@@ -1,10 +1,9 @@
-	frame 1, 05
-	frame 2, 10
-	frame 3, 10
-	frame 4, 10
-	frame 3, 10
-	frame 1, 10
-	frame 0, 10
-	frame 5, 10
+	frame 1, 25
+	frame 2, 20
+	frame 1, 20
+	frame 2, 20
+	frame 1, 20
+	frame 0, 20
+	frame 2, 20
 	endanim
 ; 0xd0a64

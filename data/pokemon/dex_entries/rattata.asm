@@ -1,10 +1,10 @@
-	db "RAT@" ; species name
-	dw 100, 80 ; height, weight
+	db "Elder@" ; species name
+	dw 300, 8000 ; height, weight
 
-	db   "This #MON's"
-	next "impressive vital-"
-	next "ity allows it to"
+	db   "Is really wise,"
+	next "many #MON"
+	next "follow it."
 
-	page "live anywhere. It"
-	next "also multiplies"
-	next "very quickly.@"
+	page "They can predict"
+	next "earthquakes and"
+	next "volcanic eruptions@"

@@ -1,12 +1,12 @@
 	db SEEL ; 086
 
-	db  65,  45,  55,  45,  45,  70
+	db  35,  50,  60,  65,  40,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, WATER ; type
-	db 190 ; catch rate
-	db 100 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db ROCK, FLYING ; type
+	db 200 ; catch rate
+	db 50 ; base exp
+	db EVERSTONE, HARD_STONE ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/seel/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_1, EGG_GROUND ; egg groups
+	dn EGG_DRAGON, EGG_MINERAL ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, SURF, WHIRLPOOL, WATERFALL, ICE_BEAM
+	tmhm CONVERSION, HEADBUTT, CURSE, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, SCRATCH, HIDDEN_POWER, SUNNY_DAY, VICEGRIP, HYPER_BEAM, PROTECT, FRUSTRATION, SACRED_FIRE, EARTHQUAKE, RETURN, DIG, FISSURE, SWAGGER, SANDSTORM, FIRE_BLAST, REST, ATTRACT, THIEF, RAZOR_WIND, SCREECH, FLAMETHROWER, FLY, STRENGTH
 	; end

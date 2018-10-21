@@ -1,10 +1,10 @@
-	db "FAIRY@" ; species name
-	dw 403, 880 ; height, weight
+	db "Mole@" ; species name
+	dw 070, 900 ; height, weight
 
-	db   "Said to live in"
-	next "quiet, remote"
-	next "mountains, this"
+	db   "It make tunnels"
+	next "and fill them"
+	next "with snow. They"
 
-	page "type of fairy has"
-	next "a strong aversion"
-	next "to being seen.@"
+	page "love hugs and"
+	next "always try to"
+	next "stay close.@"

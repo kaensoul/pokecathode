@@ -1,10 +1,10 @@
-	db "DUCK@" ; species name
-	dw 507, 1690 ; height, weight
+	db "Honey@" ; species name
+	dw 160, 600 ; height, weight
 
-	db   "It swims grace-"
-	next "fully along on the"
-	next "quiet, slow-moving"
+	db   "Friendly creature,"
+	next "protect flowers"
+	next "and help polli-"
 
-	page "rivers and lakes"
-	next "of which it is so"
-	next "fond.@"
+	page "nation. It gain"
+	next "energy from sun-"
+	next "light.@"

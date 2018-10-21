@@ -1,10 +1,10 @@
-	db "PSI@" ; species name
-	dw 211, 430 ; height, weight
+	db "Axe@" ; species name
+	dw 180, 2000 ; height, weight
 
-	db   "It hypnotizes"
-	next "itself so that it"
-	next "can teleport away"
+	db   "It tail can cut"
+	next "rocks without"
+	next "effort and its"
 
-	page "when it senses"
-	next "danger, even"
-	next "if it is asleep.@"
+	page "armor can endure"
+	next "hits from strong"
+	next "#MON.@"

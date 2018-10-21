@@ -21,27 +21,30 @@ BlackthornMartBlackBeltScript:
 	jumptextfaceplayer BlackthornMartBlackBeltText
 
 BlackthornMartCooltrainerMText:
-	text "You can't buy MAX"
-	line "REVIVE, but it"
+	text "I need Burn and"
+	line "Ice heal for the"
+	cont "GYM."
 
-	para "fully restores a"
-	line "fainted #MON."
+	para "They should sell"
+	line "Full Heal but i"
+	cont "guess companies"
 
-	para "Beware--it won't"
-	line "restore PP, the"
-
-	para "POWER POINTS"
-	line "needed for moves."
+	para "don't care about"
+	line "our city."
 	done
 
 BlackthornMartBlackBeltText:
-	text "MAX REPEL keeps"
-	line "weak #MON away"
-	cont "from you."
+	text "Smog City is the"
+	line "best place to buy"
+	cont "stuff but the air"
 
-	para "It's the longest"
-	line "lasting of the"
-	cont "REPEL sprays."
+	para "smell like a"
+	line "Koffing and the"
+	cont "people act like a"
+	
+	para "bunch of Wiindigoo"
+	line "so i try to stay"
+	cont "away from there."
 	done
 
 BlackthornMart_MapEvents:

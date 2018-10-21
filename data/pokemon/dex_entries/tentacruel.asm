@@ -1,10 +1,10 @@
-	db "JELLYFISH@" ; species name
-	dw 503, 1210 ; height, weight
+	db "Fortune@" ; species name
+	dw 140, 1200 ; height, weight
 
-	db   "When its 80 feel-"
-	next "ers absorb water,"
-	next "it stretches to"
+	db   "The sphere behind"
+	next "see the past, the"
+	next "sphere over it"
 
-	page "become like a net"
-	next "to entangle its"
-	next "prey.@"
+	page "see the future"
+	next "and the last one"
+	next "see the world.@"

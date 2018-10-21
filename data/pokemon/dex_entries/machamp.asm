@@ -1,10 +1,10 @@
-	db "SUPERPOWER@" ; species name
-	dw 503, 2870 ; height, weight
+	db "Forester@" ; species name
+	dw 100, 800 ; height, weight
 
-	db   "With four arms"
-	next "that react more"
-	next "quickly than it"
+	db   "It keep the"
+	next "forest safe from"
+	next "fire and trash."
 
-	page "can think, it can"
-	next "execute many"
-	next "punches at once.@"
+	page "They travel long"
+	next "distances to get"
+	next "water for trees.@"

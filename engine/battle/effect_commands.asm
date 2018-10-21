@@ -1341,6 +1341,7 @@ BattleCommand_Stab: ; 346d2
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and MOVE_TYPE_MASK
 	ld [wTypeMatchup], a
 
 	push hl
@@ -1388,6 +1389,7 @@ BattleCommand_Stab: ; 346d2
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and MOVE_TYPE_MASK
 	ld b, a
 	ld hl, TypeMatchups
 
@@ -1514,6 +1516,7 @@ CheckTypeMatchup: ; 347d3
 	push bc
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and MOVE_TYPE_MASK
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -3259,6 +3262,7 @@ BattleCommand_DamageCalc: ; 35612
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and MOVE_TYPE_MASK
 	cp b
 	jr nz, .DoneItem
 
@@ -3864,9 +3868,7 @@ BattleCommand_SleepTarget: ; 35e5c
 	jp nz, PrintDidntAffect2
 
 	ld hl, DidntAffect1Text
-	call .CheckAIRandomFail
-	jr c, .fail
-
+	
 	ld a, [de]
 	and a
 	jr nz, .fail
@@ -3907,35 +3909,6 @@ BattleCommand_SleepTarget: ; 35e5c
 	jp StdBattleTextBox
 
 ; 35ece
-
-
-.CheckAIRandomFail: ; 35ece
-	; Enemy turn
-	ld a, [hBattleTurn]
-	and a
-	jr z, .dont_fail
-
-	; Not in link battle
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_fail
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_fail
-
-	; Not locked-on by the enemy
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_fail
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	ret c
-
-.dont_fail
-	xor a
-	ret
 
 ; 35eee
 
@@ -4013,27 +3986,6 @@ BattleCommand_Poison: ; 35f2c
 	and a
 	jr nz, .failed
 
-	ld a, [hBattleTurn]
-	and a
-	jr z, .dont_sample_failure
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_sample_failure
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .failed
-
-.dont_sample_failure
 	call CheckSubstituteOpp
 	jr nz, .failed
 	ld a, [wAttackMissed]
@@ -4715,41 +4667,12 @@ BattleCommand_StatDown: ; 362e3
 ; Sharply lower the stat if applicable.
 	ld a, [wLoweredStat]
 	and $f0
-	jr z, .ComputerMiss
+	jr z, .GotAmountToLower
 	dec b
-	jr nz, .ComputerMiss
+	jr nz, .GotAmountToLower
 	inc b
 
-.ComputerMiss:
-; Computer opponents have a 25% chance of failing.
-	ld a, [hBattleTurn]
-	and a
-	jr z, .DidntMiss
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .DidntMiss
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .DidntMiss
-
-; Lock-On still always works.
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .DidntMiss
-
-; Attacking moves that also lower accuracy are unaffected.
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_ACCURACY_DOWN_HIT
-	jr z, .DidntMiss
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .Failed
-
-.DidntMiss:
+.GotAmountToLower
 	call CheckSubstituteOpp
 	jr nz, .Failed
 
@@ -6363,28 +6286,7 @@ BattleCommand_Paralyze: ; 36dc7
 	jp StdBattleTextBox
 
 .no_item_protection
-	ld a, [hBattleTurn]
-	and a
-	jr z, .dont_sample_failure
-
-	ld a, [wLinkMode]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	jr nz, .dont_sample_failure
-
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_LOCK_ON, a
-	jr nz, .dont_sample_failure
-
-	call BattleRandom
-	cp 25 percent + 1 ; 25% chance AI fails
-	jr c, .failed
-
-.dont_sample_failure
-	ld a, BATTLE_VARS_STATUS_OPP
+ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	and a
 	jr nz, .failed
@@ -6440,6 +6342,7 @@ CheckMoveTypeMatchesTarget: ; 36e5b
 
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and MOVE_TYPE_MASK
 	cp NORMAL
 	jr z, .normal
 
@@ -7394,7 +7297,7 @@ PlayOpponentBattleAnim: ; 37e54
 
 
 CallBattleCore: ; 37e73
-	ld a, BANK(BattleCore)
+	ld a, BANK("Battle Core")
 	rst FarCall
 	ret
 
@@ -7467,7 +7370,7 @@ GetMoveData: ; 37ead
 	ld hl, Moves
 	ld bc, MOVE_LENGTH
 	call AddNTimes
-	ld a, Bank(Moves)
+	ld a, BANK(Moves)
 	jp FarCopyBytes
 
 ; 37ebb

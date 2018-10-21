@@ -1,10 +1,10 @@
-	db "TADPOLE@" ; species name
-	dw 303, 440 ; height, weight
+	db "Parasyte@" ; species name
+	dw 050, 350 ; height, weight
 
-	db   "Though it is"
-	next "skilled at walk-"
-	next "ing, it prefers to"
+	db   "#MON Rangers"
+	next "keep their popu-"
+	next "lation on check,"
 
-	page "live underwater"
-	next "where there is"
-	next "less danger.@"
+	page "because they cause"
+	next "forest fire while"
+	next "fighting.@"

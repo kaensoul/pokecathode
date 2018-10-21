@@ -1,10 +1,10 @@
-	db "PSI@" ; species name
-	dw 403, 1250 ; height, weight
+	db "Mosquito@" ; species name
+	dw 040, 100 ; height, weight
 
-	db   "When it closes its"
-	next "eyes, twice as"
-	next "many alpha parti-"
+	db   "It suck blood from"
+	next "other #MON"
+	next "while they are"
 
-	page "cles come out of"
-	next "the surface of its"
-	next "body.@"
+	page "asleep, but often"
+	next "just eat berries,"
+	next "is safer.@"

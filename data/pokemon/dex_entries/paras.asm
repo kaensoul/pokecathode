@@ -1,10 +1,10 @@
-	db "MUSHROOM@" ; species name
-	dw 100, 120 ; height, weight
+	db "Pure Soul@" ; species name
+	dw 200, 650 ; height, weight
 
-	db   "The tochukaso"
-	next "growing on this"
-	next "#MON's back"
+	db   "It fly during"
+	next "most of his life,"
+	next "only stop to eat"
 
-	page "orders it to"
-	next "extract juice from"
-	next "tree trunks.@"
+	page "and sleep. It look"
+	next "like a star during"
+	next "night.@"

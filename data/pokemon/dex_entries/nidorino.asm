@@ -1,10 +1,10 @@
-	db "POISON PIN@" ; species name
-	dw 211, 430 ; height, weight
+	db "Gladius@" ; species name
+	dw 430, 5400 ; height, weight
 
-	db   "It is easily"
-	next "agitated and uses"
-	next "its horn for"
+	db   "King of the sea"
+	next "in this country."
+	next "It can destroy a"
 
-	page "offense as soon as"
-	next "it notices an"
-	next "attacker.@"
+	page "naval ship with a"
+	next "single hit and"
+	next "outrun torpedos.@"

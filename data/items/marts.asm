@@ -9,10 +9,7 @@ Marts: ; 160a9
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
 	dw MartGoldenrod4F
-	dw MartGoldenrod5F1
-	dw MartGoldenrod5F2
-	dw MartGoldenrod5F3
-	dw MartGoldenrod5F4
+	dw MartGoldenrod5F
 	dw MartOlivine
 	dw MartEcruteak
 	dw MartMahogany1
@@ -34,6 +31,7 @@ Marts: ; 160a9
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
+	dw MartPebble
 .End
 ; 160ed
 
@@ -143,33 +141,7 @@ MartGoldenrod4F: ; 16134
 	db -1 ; end
 ; 1613b
 
-MartGoldenrod5F1: ; 1613b
-	db 3 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db -1 ; end
-; 16140
-
-MartGoldenrod5F2: ; 16140
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_HEADBUTT
-	db -1 ; end
-; 16146
-
-MartGoldenrod5F3: ; 16146
-	db 4 ; # items
-	db TM_THUNDERPUNCH
-	db TM_FIRE_PUNCH
-	db TM_ICE_PUNCH
-	db TM_ROCK_SMASH
-	db -1 ; end
-; 1614c
-
-MartGoldenrod5F4: ; 1614c
+MartGoldenrod5F: ; 1613b
 	db 5 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
@@ -177,7 +149,7 @@ MartGoldenrod5F4: ; 1614c
 	db TM_HEADBUTT
 	db TM_ROCK_SMASH
 	db -1 ; end
-; 16153
+; 16140
 
 MartOlivine: ; 16153
 	db 9 ; # items
@@ -233,14 +205,14 @@ MartMahogany2: ; 16170
 
 MartBlackthorn: ; 1617b
 	db 9 ; # items
-	db GREAT_BALL
-	db ULTRA_BALL
-	db HYPER_POTION
-	db MAX_POTION
-	db FULL_HEAL
-	db REVIVE
-	db MAX_REPEL
-	db X_DEFEND
+	db POKE_BALL
+	db POTION
+	db REPEL
+	db ANTIDOTE
+	db AWAKENING
+	db PARLYZ_HEAL
+	db BURN_HEAL
+	db ICE_HEAL
 	db X_ATTACK
 	db -1 ; end
 ; 16186
@@ -339,12 +311,9 @@ MartCeladon2F2: ; 161c2
 ; 161ce
 
 MartCeladon3F: ; 161ce
-	db 5 ; # items
-	db TM_HIDDEN_POWER
-	db TM_SUNNY_DAY
+	db 2 ; # items
+	db TM_SCRATCH
 	db TM_PROTECT
-	db TM_RAIN_DANCE
-	db TM_SANDSTORM
 	db -1 ; end
 ; 161d5
 
@@ -441,3 +410,12 @@ DefaultMart: ; 16214
 	db POTION
 	db -1 ; end
 ; 16218
+
+MartPebble:
+    db 4
+    db POKE_BALL
+	db POTION
+	db ANTIDOTE
+	db PARLYZ_HEAL
+	db -1
+	

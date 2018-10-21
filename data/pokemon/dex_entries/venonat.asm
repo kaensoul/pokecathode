@@ -1,10 +1,10 @@
-	db "INSECT@" ; species name
-	dw 303, 660 ; height, weight
+	db "Lazy@" ; species name
+	dw 100, 660 ; height, weight
 
-	db   "The small bugs it"
-	next "eats appear only"
-	next "at night, so it"
+	db   "It doesnt care"
+	next "about anything,"
+	next "that make it hard"
 
-	page "sleeps in a hole"
-	next "in a tree until"
-	next "night falls.@"
+	page "to train for new"
+	next "trainers. Sleep"
+	next "around 20 hours.@"

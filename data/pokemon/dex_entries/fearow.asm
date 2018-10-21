@@ -1,10 +1,10 @@
-	db "BEAK@" ; species name
-	dw 311, 840 ; height, weight
+	db "Bag@" ; species name
+	dw 045, 016 ; height, weight
 
-	db   "It uses its long"
-	next "beak to attack. It"
-	next "has a surprisingly"
+	db   "They born faster"
+	next "than most #MON,"
+	next "but their legs and"
 
-	page "long reach, so it"
-	next "must be treated"
-	next "with caution.@"
+	page "eyes dont work."
+	next "They train their"
+	next "weak arms daily.@"

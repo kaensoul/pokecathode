@@ -13,7 +13,7 @@ BlackthornDragonSpeechHouseGrannyScript:
 BlackthornDragonSpeechHouseDratiniScript:
 	opentext
 	writetext BlackthornDragonSpeechHouseDratiniText
-	cry DRATINI
+	cry STARMIE
 	waitbutton
 	closetext
 	end
@@ -27,22 +27,15 @@ BlackthornDragonSpeechHouseMagazineBookshelf:
 	jumpstd magazinebookshelf
 
 BlackthornDragonSpeechHouseGrannyText:
-	text "A clan of trainers"
-	line "who can freely"
+	text "Did you know than"
+	line "the water over"
+	cont "Thermadril's head"
 
-	para "command dragons"
-	line "live right here in"
-	cont "BLACKTHORN."
-
-	para "As a result, there"
-	line "are many legends"
-
-	para "about dragons in"
-	line "this town."
+	para "is mostly liqueur?"
 	done
 
 BlackthornDragonSpeechHouseDratiniText:
-	text "DRATINI: Draa!"
+	text "The!"
 	done
 
 BlackthornDragonSpeechHouse_MapEvents:
@@ -58,4 +51,4 @@ BlackthornDragonSpeechHouse_MapEvents:
 
 	db 2 ; object events
 	object_event  2,  3, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornDragonSpeechHouseGrannyScript, -1
-	object_event  5,  5, SPRITE_EKANS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornDragonSpeechHouseDratiniScript, -1
+	object_event  5,  5, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornDragonSpeechHouseDratiniScript, -1

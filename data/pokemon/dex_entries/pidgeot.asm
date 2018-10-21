@@ -1,10 +1,10 @@
-	db "BIRD@" ; species name
-	dw 411, 870 ; height, weight
+	db "Pangolin@" ; species name
+	dw 090, 900 ; height, weight
 
-	db   "Its outstanding"
-	next "vision allows it"
-	next "to spot splashing"
+	db   "Is friendly with"
+	next "everyone. Small"
+	next "#MON sleep"
 
-	page "MAGIKARP, even"
-	next "while flying at"
-	next "3300 feet.@"
+	page "close to them,"
+	next "to stay warm and"
+	next "safe.@"

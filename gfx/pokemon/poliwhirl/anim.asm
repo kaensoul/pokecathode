@@ -1,9 +1,6 @@
-	frame 1, 07
-	frame 2, 05
-	setrepeat 2
-	frame 3, 10
-	frame 4, 10
-	dorepeat 3
-	frame 2, 16
+	frame 1, 17
+	frame 2, 15
+	frame 1, 10
+	frame 2, 10
 	endanim
 ; 0xd0c42

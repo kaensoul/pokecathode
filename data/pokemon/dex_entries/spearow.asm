@@ -1,10 +1,10 @@
-	db "TINY BIRD@" ; species name
-	dw 100, 40 ; height, weight
+	db "Infection@" ; species name
+	dw 190, 1500 ; height, weight
 
-	db   "To protect its"
-	next "territory, it"
-	next "flies around"
+	db   "They arent good"
+	next "pets. You need"
+	next "to be a good"
 
-	page "ceaselessly,"
-	next "making high-"
-	next "pitched cries.@"
+	page "trainer or they"
+	next "could try to"
+	next "attack you.@"

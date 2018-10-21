@@ -1,10 +1,10 @@
 	db PONYTA ; 077
 
-	db  50,  85,  55,  90,  65,  65
+	db  60,  115,  65,  159,  25,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
-	db 190 ; catch rate
+	db BUG, BUG ; type
+	db 20 ; catch rate
 	db 152 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
@@ -13,9 +13,9 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/ponyta/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	db GROWTH_SLOW ; growth rate
+	dn EGG_BUG, EGG_GROUND ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, FLAMETHROWER
+	tmhm HEADBUTT, CURSE, TOXIC, ROCK_SMASH, SCRATCH, HIDDEN_POWER, VICEGRIP, PROTECT, GIGA_DRAIN, PSYWAVE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, GUILLOTINE, CUT, STRENGTH
 	; end

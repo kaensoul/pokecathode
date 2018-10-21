@@ -1,10 +1,10 @@
-	db "DRILL@" ; species name
-	dw 403, 1320 ; height, weight
+	db "Big Horn@" ; species name
+	dw 200, 805 ; height, weight
 
-	db   "The hard scales"
-	next "that cover its"
-	next "strong body serve"
+	db   "It run 12 hours"
+	next "every day and"
+	next "can hear other"
 
-	page "as excellent"
-	next "protection from"
-	next "any attack.@"
+	page "#MON than are"
+	next "2km away. It"
+	next "protect Berries.@"

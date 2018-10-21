@@ -1,11 +1,11 @@
 	db KAKUNA ; 014
 
-	db  45,  25,  50,  35,  25,  25
+    db  94,  100,  84,  87,  69,  74
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, POISON ; type
+	db NORMAL, WATER ; type
 	db 120 ; catch rate
-	db 71 ; base exp
+	db 150 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/kakuna/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_BUG, EGG_BUG ; egg groups
+	dn EGG_GROUND, EGG_GROUND ; egg groups
 
 	; tm/hm learnset
-	tmhm
+	tmhm HEADBUTT, CURSE, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, HYPER_BEAM, PROTECT, RAIN_DANCE, FRUSTRATION, IRON_TAIL, RETURN, DIG, SHADOW_BALL, SWAGGER, SLEEP_TALK, RAGE, LOVELY_KISS, REST, ATTRACT, THIEF, ICE_BEAM, LOVE_CANNON, SURF, STRENGTH, WHIRLPOOL, WATERFALL
 	; end

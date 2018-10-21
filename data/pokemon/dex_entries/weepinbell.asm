@@ -1,10 +1,10 @@
-	db "FLYCATCHER@" ; species name
-	dw 303, 140 ; height, weight
+	db "Hairy@" ; species name
+	dw 040, 140 ; height, weight
 
-	db   "When it's hungry,"
-	next "it swings its"
-	next "razor-sharp"
+	db   "Love to play with"
+	next "its tail. Is not"
+	next "smart, it only"
 
-	page "leaves, slicing up"
-	next "any unlucky object"
-	next "nearby for food.@"
+	page "want to play,"
+	next "eat and sleep"
+	next "every day.@"

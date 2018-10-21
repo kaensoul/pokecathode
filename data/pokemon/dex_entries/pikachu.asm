@@ -1,10 +1,10 @@
-	db "MOUSE@" ; species name
-	dw 104, 130 ; height, weight
+	db "Mouse@" ; species name
+	dw 200, 2300 ; height, weight
 
-	db   "When it is anger-"
-	next "ed, it immediately"
-	next "discharges the"
+	db   "They force Rack to"
+	next "bring them food"
+	next "from nearby towns."
 
-	page "energy stored in"
-	next "the pouches in its"
-	next "cheeks.@"
+	page "Around 100 Rack"
+	next "obey each Mountse"
+	next "in a colony.@"

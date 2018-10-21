@@ -1,12 +1,12 @@
 	db RAPIDASH ; 078
 
-	db  65, 100,  70, 105,  80,  80
+	db  55, 34,  26, 45,  69,  60
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
-	db 60 ; catch rate
-	db 192 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db BUG, ELECTRIC ; type
+	db 200 ; catch rate
+	db 32 ; base exp
+	db NO_ITEM, YLW_APRICORN ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/rapidash/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_BUG, EGG_FAIRY ; egg groups
 
 	; tm/hm learnset
-	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, FLAMETHROWER
+	tmhm CONVERSION, TOXIC, HIDDEN_POWER, SUNNY_DAY, PROTECT, GIGA_DRAIN, PSYWAVE, FRUSTRATION, SOLARBEAM, THUNDER, RETURN, PSYCHIC_M, SWAGGER, SLEEP_TALK, LOVELY_KISS, THUNDERBOLT, REST, ATTRACT, RAZOR_WIND, LOVE_CANNON, FLASH
 	; end
