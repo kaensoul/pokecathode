@@ -88,10 +88,10 @@ ReadTrainerPartyPieces:
 	ld l, e
 
 call GetNextTrainerDataByte
-    ld [wOtherTrainerType], a
+    ld a, [wOtherTrainerType]
 
 ; variable?
-    bit TRAINERTYPE_VARIABLE, a
+    bit TRAINERTYPE_VARIABLE_F, a
     jr z, .not_variable
     ; get badge count in c
     push hl
