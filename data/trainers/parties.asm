@@ -12,7 +12,7 @@ SECTION "Enemy Trainer Parties 1", ROMX
 
 FalknerGroup:
 	; FALKNER (1)
-	db "FALKNER@", 4
+	db "FALKNER@", TRAINERTYPE_VARIABLE
 	
 	;0
     db  1
@@ -78,7 +78,7 @@ ChuckGroup:
 
 ClairGroup:
 	; CLAIR (1)
-	db "Francis@", 4
+	db "Francis@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 1
@@ -262,7 +262,7 @@ SECTION "Enemy Trainer Parties 2", ROMX
 
 Rival1Group:
 	; RIVAL1 (1)
-	db "?@", 4
+	db "?@", TRAINERTYPE_VARIABLE
 	
 	db 0
 	
@@ -271,7 +271,7 @@ Rival1Group:
 	db $ff; end
 
 	; RIVAL1 (2)
-	db "?@", 4
+	db "?@", TRAINERTYPE_VARIABLE
 	
 	db 0
 	
@@ -280,7 +280,7 @@ Rival1Group:
 	db $ff ; end
 
 	; RIVAL1 (3)
-	db "?@", 4
+	db "?@", TRAINERTYPE_VARIABLE
 	
 	db 0
 	
@@ -552,7 +552,7 @@ SECTION "Enemy Trainer Parties 5", ROMX
 
 YoungsterGroup:
 	; YOUNGSTER (1)
-	db "JOEY@", 4
+	db "JOEY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -719,7 +719,7 @@ YoungsterGroup:
 	db $ff
 
 	;
-	db "ROD@", 4
+	db "ROD@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db  0
@@ -730,7 +730,7 @@ YoungsterGroup:
 	db $ff ; end
 	
 	; YOUNGSTER (2)
-	db "JIM@", 4
+	db "JIM@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 3
@@ -894,7 +894,7 @@ YoungsterGroup:
 	db $ff ; end
 
 	; YOUNGSTER (7)
-	db "JOEY@", 4
+	db "JOEY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -1061,7 +1061,7 @@ YoungsterGroup:
 	db $ff
 
 	; YOUNGSTER (8)
-	db "JOEY@", 4
+	db "JOEY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -1250,7 +1250,7 @@ YoungsterGroup:
 	db $ff ; end
 
 	; YOUNGSTER (13)
-	db "JOEY@", 4
+	db "JOEY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -1417,7 +1417,7 @@ YoungsterGroup:
 	db $ff
 
 	; YOUNGSTER (14)
-	db "JOEY@", 4
+	db "JOEY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -1973,7 +1973,7 @@ JanineGroup:
 
 CooltrainerMGroup:
 	; COOLTRAINERM (1)
-	db "NICK@", 4
+	db "NICK@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -2105,7 +2105,7 @@ CooltrainerMGroup:
 	db $ff ; end
 
 	; COOLTRAINERM (3)
-	db "PAUL@", 4
+	db "PAUL@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -2227,13 +2227,129 @@ CooltrainerMGroup:
 	db $ff
 	
 	; COOLTRAINERM (4)
-	db "CODY@", TRAINERTYPE_NORMAL
-	db 34, HORSEA
-	db 36, SEADRA
-	db $ff ; end
+	db "CODY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, RHYDON
+	db  8, ODDISH
+	db $fe
+	
+	;1
+	db 0
+	
+	db  12, RHYDON
+	db  12, ODDISH
+	db $fe
+	
+	;2
+	db 0
+	
+	db  18, RHYDON
+	db  18, ODDISH
+	db $fe
+	
+	;3
+	db 0
+	
+	db  23, RHYDON
+	db  23, ODDISH
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, RHYDON
+	db 27, ODDISH
+	db $fe
 
+	;5
+	db 0
+	
+	db 28, RHYDON
+	db 28, ODDISH
+	db $fe
+	
+	;6
+	db 0
+	
+	db 30, RHYDON
+	db 30, ODDISH
+	db $fe
+	
+	;7
+	db 0
+	
+	db 34, CHANSEY
+	db 34, GLOOM
+	db $fe
+	
+	;8
+	db 0
+	
+	db 39, CHANSEY
+	db 39, GLOOM
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, CHANSEY
+	db 44, GLOOM
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, CHANSEY
+	db 49, GLOOM
+	db $fe
+	
+	;11
+	db 0
+	
+	db 53, CHANSEY
+	db 53, GLOOM
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, CHANSEY
+	db 57, GLOOM
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, CHANSEY
+	db 62, GLOOM
+	db $fe
+	
+	;14
+	db 0
+	
+	db 65, CHANSEY
+	db 65, GLOOM
+	db $fe
+	
+	;15
+	db 0
+	
+	db 73, CHANSEY
+	db 73, GLOOM
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, CHANSEY
+	db 80, GLOOM
+	db $ff
+	
 	; COOLTRAINERM (5)
-	db "MIKE@", 4
+	db "MIKE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -2454,7 +2570,7 @@ CooltrainerMGroup:
 
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
-	db "GWEN@", 4
+	db "GWEN@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -2599,17 +2715,22 @@ CooltrainerFGroup:
 	db $ff ; end
 
 	; COOLTRAINERF (3)
-	db "FRAN@", TRAINERTYPE_NORMAL
-	db 37, SEADRA
-	db $ff ; end
-
-	; COOLTRAINERF (4)
-	db "LOLA@", 4
+	db "FRAN@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
 	
-	db  9, POLIWAG
+	db  8, CLEFABLE
+	db  8, STARMIE
+	db $fe ; end
+
+	; COOLTRAINERF (4)
+	db "LOLA@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, POLIWAG
 	db 12, PIDGEOTTO
 	db $fe
 	
@@ -2788,7 +2909,7 @@ CooltrainerFGroup:
 	db $ff ; end
 
 	; COOLTRAINERF (15)
-	db "EMMA@", 4
+	db "EMMA@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -3063,7 +3184,7 @@ BeautyGroup:
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
-	db "LARRY@", 4
+	db "LARRY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -3387,7 +3508,7 @@ PokemaniacGroup:
 	db $ff
 	
 	; POKEMANIAC (3)
-	db "CALVIN@", 4
+	db "CALVIN@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -3843,7 +3964,7 @@ SabrinaGroup:
 
 BugCatcherGroup:
 	; BUG_CATCHER (1)
-	db "DON@", 4
+	db "DON@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -4008,7 +4129,7 @@ BugCatcherGroup:
 	db $ff ; end
 
 	; BUG_CATCHER (4)
-	db "WADE@", 4
+	db "WADE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -4193,7 +4314,7 @@ BugCatcherGroup:
 	db $ff ; end
 
 	; BUG_CATCHER (10)
-	db "WADE@", 4
+	db "WADE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -4349,7 +4470,7 @@ BugCatcherGroup:
 	db $ff   	
 
 	; BUG_CATCHER (11)
-	db "WADE@", 4
+	db "WADE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -4520,7 +4641,7 @@ BugCatcherGroup:
 	db $ff ; end
 
 	; BUG_CATCHER (15)
-	db "WADE@", 4
+	db "WADE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -4676,7 +4797,7 @@ BugCatcherGroup:
 	db $ff   	
 
 	; BUG_CATCHER (16)
-	db "WADE@", 4
+	db "WADE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -5161,7 +5282,7 @@ SwimmerFGroup:
 	db $ff ; end
 
 	; SWIMMERF (2)
-	db "PAULA@", 4
+	db "PAULA@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -5599,7 +5720,7 @@ GuitaristGroup:
 	db 34, ELECTABUZZ
 	db $ff ; end
 	
-	db "ABE@", 4
+	db "ABE@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -5628,7 +5749,7 @@ HikerGroup:
 	db $ff ; end
 
 	; HIKER (2)
-	db "RUSSELL@", 4
+	db "RUSSELL@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -5794,7 +5915,7 @@ HikerGroup:
 	db $ff
 	
 	; HIKER (3)
-	db "PHILLIP@", 4
+	db "PHILLIP@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -5933,7 +6054,7 @@ HikerGroup:
 	db $ff
 	
 	; HIKER (4)
-	db "LEONARD@", 4
+	db "LEONARD@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -6151,7 +6272,7 @@ HikerGroup:
 	db $ff ; end
 
 	; HIKER (18)
-	db "DANIEL@", 4
+	db "DANIEL@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -6401,7 +6522,7 @@ FirebreatherGroup:
 	db $ff ; end
 
 	; FIREBREATHER (5)
-	db "BILL@", 4
+	db "BILL@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
@@ -6548,7 +6669,7 @@ FirebreatherGroup:
 	db $ff ; end
 
 	; FIREBREATHER (7)
-	db "RAY@", 4
+	db "RAY@", TRAINERTYPE_VARIABLE
 	
 	;0
 	db 0
