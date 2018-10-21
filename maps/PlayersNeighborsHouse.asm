@@ -24,58 +24,55 @@ PlayersNeighborsHouseRadioScript:
 	end
 
 PlayersNeighborsDaughterText:
-	text "This place was"
-	line "quiet until that"
+	text "Gracias a esos"
+	line "nerds que regalan"
+	cont "#MON, este"
+	cont "pueblo se llenó"
 
-	para "woman come here"
-	line "and started to"
-	cont "give rare 'mons"
-
-	para "and free stuff to"
-	line "freaking everyone."
-
-	para "Now we have idiots"
-	line "like Jim ruining"
-    cont "the city."
+	para "de estupidos"
+	line "citadinos como"
+	cont "Jim."
 	done
 
 PlayersNeighborText:
-	text "Do you like music?"
-	line "There is a popular"
+	text "¿Te gusta la"
+	line "música?"
 
-	para "guitarist and"
-	line "singer know as"
-	cont "Emma, she used to"
+	para "Una cantante y"
+	line "guitarrista muy"
+	cont "popular vivía"
+	cont "aquí."
 
-	para "live here and was"
-	line "the GYM Leader but"
-	cont "she left to join"
+	para "Era Emma la GYM"
+	line "Líder."
 
-	para "the Elite Four."
-	line "The GYM should be"
-	cont "closed now but a"
+	para "Pero era demasiado"
+	line "fuerte y la gente"
+	cont "ni intentaba"
+	cont "luchar."
 	
-	para "bunch of kids took"
-	line "over the building"
-	cont "and play there."
+	para "Se fue cuando el"
+	line "Alto Mando la"
+	cont "invitó a unirse."
+	
+	para "Creo que unos"
+	line "niños viven en"
+	cont "el GYM ahora."
 	done
 
 PlayerNeighborRadioText1:
-	text "Garl:The theme"
-	line "D.O.G.A.R.S. is"
-	cont "still on top!"
+	text "Tía: ¡El tema"
+	line "D.O.G.A.R.S."
+	cont "sigue en lo alto!"
 	
-	para "Dude: Is there no"
-	line "one than can beat"
-	cont "Roxie?!"
+	para "Tío:¡¿Es que"
+	line "nadie puede contra"
+	cont "Hiedra?!"
 	
-	para "Garl: Well, Emma's"
-	line "theme, Lighting"
-	cont "Raikou is popular"
-	
-	para "around here, but"
-	line "cant catch aten-"
-	cont "tion worldwide…"
+	para "Tía: Al menos en"
+	line "Kita, el tema"
+	cont "Raikou Relampago"
+	cont "promete mucho."
 	done 
 
 PlayersNeighborsHouse_MapEvents:

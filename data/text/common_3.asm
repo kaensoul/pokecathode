@@ -1,28 +1,16 @@
 _OakText6::
-	text "Now, what did you"
-	line "say your name was?"
+	text "Registra tu nombre"
+	line "en la ficha de"
+	cont "Entrenador."
 	prompt
 
 _OakText7::
-	text "<PLAYER>, are you"
-	line "ready?"
+	text "<PLAYER>, nos"
+	line "veremos muy pronto"
 
-	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
-
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
-
-	para "A world of dreams"
-	line "and adventures"
-
-	para "with #MON"
-	line "awaits! Let's go!"
-
-	para "I'll be seeing you"
-	line "later!"
+	para "un mundo de"
+	line "aventuras te"
+	cont "espera."
 	done
 
 UnknownText_0x1c40e6::
@@ -185,30 +173,28 @@ UnknownText_0x1c4525::
 	done
 
 UnknownText_0x1c454b::
-	text "Would you like to"
-	line "save the game?"
+	text "¿Guardar la"
+	line "partida?"
 	done
 
 UnknownText_0x1c456d::
-	text "SAVING… DON'T TURN"
-	line "OFF THE POWER."
+	text "Guardando muchos"
+	line "Datos."
 	done
 
 UnknownText_0x1c4590::
-	text "<PLAYER> saved"
-	line "the game."
+	text "<PLAYER> guardó"
+	line "la partida."
 	done
 
 UnknownText_0x1c45a3::
-	text "There is already a"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "¿Sobrescribir"
+	line "datos?"
 	done
 
 UnknownText_0x1c45d9::
-	text "There is another"
-	line "save file. Is it"
-	cont "OK to overwrite?"
+	text "¿Sobrescribir"
+	line "datos?"
 	done
 
 UnknownText_0x1c460d::
@@ -217,15 +203,15 @@ UnknownText_0x1c460d::
 	prompt
 
 UnknownText_0x1c462a::
-	text "When you change a"
-	line "#MON BOX, data"
-	cont "will be saved. OK?"
+	text "Al cambiar de"
+	line "caja se necesita"
+	cont "guardar, ¿Ok?"
 	done
 
 UnknownText_0x1c465f::
-	text "Each time you move"
-	line "a #MON, data"
-	cont "will be saved. OK?"
+	text "Al mover #MON"
+	line "se necesita"
+	cont "guardar, ¿Ok?"
 	done
 
 UnknownText_0x1c4693::
@@ -255,7 +241,7 @@ UnknownText_0x1c4706::
 	done
 
 UnknownText_0x1c4719::
-	text "<PLAYER> received"
+	text "<PLAYER> recibió"
 	line "@"
 	text_from_ram wStringBuffer4
 	text "."
@@ -279,60 +265,62 @@ UnknownText_0x1c474b::
 	prompt
 
 UnknownText_0x1c475f::
-	text "I see all."
-	line "I know all…"
+	text "Con el tarot"
+	line "puedo saber la"
 
-	para "Certainly, I know"
-	line "of your #MON!"
+	para "historia de tu"
+	line "#MON."
 	done
 
 UnknownText_0x1c4797::
-	text "Whaaaat? I can't"
-	line "tell a thing!"
+	text "No conseguiste"
+	line "este #MON de"
 
-	para "How could I not"
-	line "know of this?"
+	para "forma legal o"
+	line "viene de una"
+	cont "dimensión dife-"
+	cont "rente."
 	done
 
 UnknownText_0x1c47d4::
-	text "Hm… I see you met"
+	text "Conociste a"
 	line "@"
 	text_from_ram wSeerNickname
-	text " here:"
+	text " en:"
 	cont "@"
 	text_from_ram wSeerCaughtLocation
 	text "!"
 	prompt
 
 UnknownText_0x1c47fa::
-	text "The time was"
+	text "Durante"
 	line "@"
 	text_from_ram wSeerTimeOfDay
 	text "!"
 
-	para "Its level was @"
+	para "A nivel @"
 	text_from_ram wSeerCaughtLevelString
 	text "!"
 
-	para "Am I good or what?"
+	para "Amo estas cartas."
 	prompt
 
 UnknownText_0x1c4837::
 	text "Hm… @"
 	text_from_ram wSeerNickname
 	text_start
-	line "came from @"
+	line "viene de @"
 	text_from_ram wSeerOTName
 	text_start
-	cont "in a trade?"
+	cont "¿Intercambio?"
 
 	para "@"
 	text_from_ram wSeerCaughtLocation
 	text_start
-	line "was where @"
+	line "fue donde @"
 	text_from_ram wSeerOTName
 	text_start
-	cont "met @"
+	cont "conoció @"
 	text_from_ram wSeerNickname
 	text "!"
 	prompt
@@ -356,12 +344,9 @@ UnknownText_0x1c487f::
 	prompt
 
 UnknownText_0x1c491d::
-	text "Hey!"
-
-	para "That's an EGG!"
-
-	para "You can't say that"
-	line "you've met it yet…"
+	text "Es un huevo,"
+    line "aun no se"
+	cont "conocen."
 	done
 
 UnknownText_0x1c4955::
@@ -445,32 +430,32 @@ UnknownText_0x1c4ae5::
 	done
 
 UnknownText_0x1c4b92::
-	text "Congratulations!"
-	line "Your @"
+	text "¡Increíble!"
+	line "Tu @"
 	text_from_ram wStringBuffer2
 	db "@@"
 
 UnknownText_0x1c4baf::
 	text_start
 
-	para "evolved into"
+	para "evolucionó en"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "!"
 	done
 
 UnknownText_0x1c4bc5::
-	text "Huh? @"
+	text "¿Huh? @"
 	text_from_ram wStringBuffer2
 	text_start
-	line "stopped evolving!"
+	line "¡Se detuvo!"
 	prompt
 
 UnknownText_0x1c4be3::
-	text "What? @"
+	text "¿Qué? @"
 	text_from_ram wStringBuffer2
 	text_start
-	line "is evolving!"
+	line "¡Evoluciona!"
 	done
 
 UnknownText_0x1c4bfd::
@@ -642,37 +627,37 @@ UnknownText_0x1c4f3e::
 	done
 
 UnknownText_0x1c4f62::
-	text "Welcome! How may I"
-	line "help you?"
+	text "¡Bienvenido!"
+	line "¿Como te puedo"
+	cont "ayudar?"
 	done
 
 UnknownText_0x1c4f80::
-	text "Here you are."
-	line "Thank you!"
+	text "Aquí tienes,"
+	line "¡Gracias!"
 	done
 
 UnknownText_0x1c4f9a::
-	text "You don't have"
-	line "enough money."
+	text "No tienes el"
+	line "dinero suficiente."
 	done
 
 UnknownText_0x1c4fb7::
-	text "You can't carry"
-	line "any more items."
+	text "Necesitas más"
+	line "espacio."
 	done
 
 UnknownText_0x1c4fd7::
-	text "Sorry, I can't buy"
-	line "that from you."
+	text "No podría comprar"
+	line "eso."
 	prompt
 
 UnknownText_0x1c4ff9::
-	text "Please come again!"
+	text "¡Vuelva pronto!"
 	done
 
 UnknownText_0x1c500d::
-	text "Can I do anything"
-	line "else for you?"
+	text "¿Algo más?"
 	done
 
 UnknownText_0x1c502e::
@@ -938,7 +923,7 @@ UnknownText_0x1c564a::
 
 UnknownText_0x1c5660::
 	text_from_ram wMonOrItemNameBuffer
-	text " learned"
+	text " aprendió"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "!@"
@@ -947,12 +932,12 @@ UnknownText_0x1c5660::
 	db "@@"
 
 UnknownText_0x1c5678::
-	text "Which move should"
-	next "be forgotten?"
+	text "¿Que movimiento"
+	next "debería olvidar?"
 	done
 
 UnknownText_0x1c5699::
-	text "Stop learning"
+	text "¿No aprender"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "?"
@@ -961,7 +946,7 @@ UnknownText_0x1c5699::
 UnknownText_0x1c56af::
 	text_from_ram wMonOrItemNameBuffer
 	text_start
-	line "did not learn"
+	line "No aprendio"
 	cont "@"
 	text_from_ram wStringBuffer2
 	text "."
@@ -969,48 +954,50 @@ UnknownText_0x1c56af::
 
 UnknownText_0x1c56c9::
 	text_from_ram wMonOrItemNameBuffer
-	text " is"
-	line "trying to learn"
+	text " está"
+	line "tratando de"
+	cont "aprender"
 	cont "@"
 	text_from_ram wStringBuffer2
 	text "."
 
-	para "But @"
+	para "Pero @"
 	text_from_ram wMonOrItemNameBuffer
 	text_start
-	line "can't learn more"
-	cont "than four moves."
+	line "no puede conocer"
+	cont "más de cuatro"
+	cont "moviemientos."
 
-	para "Delete an older"
-	line "move to make room"
-	cont "for @"
+	para "Olvidar otro"
+	line "para hacer espacio"
+	cont "para @"
 	text_from_ram wStringBuffer2
 	text "?"
 	done
 
 UnknownText_0x1c5740::
-	text "1, 2 and…@"
+	text "1, 2 y…@"
 	interpret_data
 	db "@@"
 
 UnknownText_0x1c574e::
-	text " Poof!@"
+	text " ¡Poof!@"
 	interpret_data
 	text_start
 
 	para "@"
 	text_from_ram wMonOrItemNameBuffer
-	text " forgot"
+	text " olvidó"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "."
 
-	para "And…"
+	para "y…"
 	prompt
 
 UnknownText_0x1c5772::
-	text "HM moves can't be"
-	line "forgotten now."
+	text "HM no se pueden"
+	line "olvidar."
 	prompt
 
 UnknownText_0x1c5793::
@@ -1225,21 +1212,21 @@ Text_Waitbutton_2::
 
 UnknownText_0x1c5b38::
 	text_from_ram wMonOrItemNameBuffer
-	text " was"
-	line "sent to BILL's PC."
+	text " Fue"
+	line "enviado al PC."
 	prompt
 
 UnknownText_0x1c5b53::
 	text_from_ram wEnemyMonNick
-	text "'s data"
-	line "was newly added to"
-	cont "the #DEX.@"
+	text "se esta"
+	line "registrando en tu"
+	cont "#DEX.@"
 	sound_slot_machine_start
 	text_waitbutton
 	db "@@"
 
 UnknownText_0x1c5b7f::
-	text "Give a nickname to"
+	text "¿Nombrar a"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "?"
@@ -1247,10 +1234,10 @@ UnknownText_0x1c5b7f::
 
 UnknownText_0x1c5b9a::
 	text_from_ram wStringBuffer1
-	text "'s"
+	text ", ganó"
 	line "@"
 	text_from_ram wStringBuffer2
-	text " rose."
+	text "."
 	prompt
 
 UnknownText_0x1c5bac::
@@ -1259,9 +1246,9 @@ UnknownText_0x1c5bac::
 	prompt
 
 Text_RepelUsedEarlierIsStillInEffect::
-	text "The REPEL used"
-	line "earlier is still"
-	cont "in effect."
+	text "El efecto de"
+	line "Repelente aun"
+	cont "está en curso."
 	prompt
 
 UnknownText_0x1c5bf9::
@@ -1297,29 +1284,29 @@ UnknownText_0x1c5c7b::
 	db "@@"
 
 Text_RaiseThePPOfWhichMove::
-	text "Raise the PP of"
-	line "which move?"
+	text "¿Aumentar los"
+	line "PP de qué?"
 	done
 
 Text_RestoreThePPOfWhichMove::
-	text "Restore the PP of"
-	line "which move?"
+	text "¿Restaurar los"
+	line "PP de qué?"
 	done
 
 Text_PPIsMaxedOut::
 	text_from_ram wStringBuffer2
-	text "'s PP"
-	line "is maxed out."
+	text "tiene"
+	line "PP máximos."
 	prompt
 
 Text_PPsIncreased::
 	text_from_ram wStringBuffer2
-	text "'s PP"
-	line "increased."
+	text "ganó"
+	line "PP."
 	prompt
 
 UnknownText_0x1c5cf1::
-	text "PP was restored."
+	text "PP restaurados."
 	prompt
 
 UnknownText_0x1c5d03::
@@ -1344,9 +1331,8 @@ UnknownText_0x1c5d50::
 	prompt
 
 UnknownText_0x1c5d6e::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+	text "No es momento"
+	line "para tonterías."
 	prompt
 
 UnknownText_0x1c5d97::
@@ -1355,22 +1341,22 @@ UnknownText_0x1c5d97::
 	prompt
 
 UnknownText_0x1c5db6::
-	text "It won't have any"
-	line "effect."
+	text "No tendrá"
+	line "efecto."
 	prompt
 
 UnknownText_0x1c5dd0::
-	text "The trainer"
-	line "blocked the BALL!"
+	text "La #BALL"
+	line "no funcionó."
 	prompt
 
 UnknownText_0x1c5def::
-	text "Don't be a thief!"
+	text "¡Robar es malo!"
 	prompt
 
 UnknownText_0x1c5e01::
-	text "Cycling isn't"
-	line "allowed here."
+	text "Podría romper"
+	line "algo."
 	prompt
 
 UnknownText_0x1c5e1d::
@@ -1410,57 +1396,57 @@ UnknownText_0x1c5e90::
 
 UnknownText_0x1c5ea8::
 	text_from_ram wStringBuffer1
-	text " knows"
+	text " sabe"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "."
 	prompt
 
 UnknownText_0x1c5eba::
-	text "That #MON knows"
-	line "only one move."
+	text "Ese #MON"
+	line "conoce un solo"
+	cont "movimiento."
 	done
 
 UnknownText_0x1c5eda::
-	text "Oh, make it forget"
+	text "Olvidar"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "?"
 	done
 
 UnknownText_0x1c5ef5::
-	text "Done! Your #MON"
-	line "forgot the move."
+	text "Listo, ni el"
+	line "nombre recuerda."
 	done
 
 UnknownText_0x1c5f17::
-	text "An EGG doesn't"
-	line "know any moves!"
+	text "¡No seas"
+	line "tonto!"
 	done
 
 UnknownText_0x1c5f36::
-	text "No? Come visit me"
-	line "again."
+	text "¿No? como"
+	line "sea."
 	done
 
 UnknownText_0x1c5f50::
-	text "Which move should"
-	line "it forget, then?"
+	text "¿Olvidar otro"
+	line "movimiento?"
 	prompt
 
 UnknownText_0x1c5f74::
-	text "Um… Oh, yes, I'm"
-	line "the MOVE DELETER."
+	text "Puede hacer que"
+	line "los #MON"
 
-	para "I can make #MON"
-	line "forget moves."
+	para "olviden movimien-"
+	line "tos."
 
-	para "Shall I make a"
-	line "#MON forget?"
+	para "¿Te ayudo?"
 	done
 
 UnknownText_0x1c5fd1::
-	text "Which #MON?"
+	text "¿Cual #MON?"
 	prompt
 
 Text_DSTIsThatOK::

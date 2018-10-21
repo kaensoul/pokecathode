@@ -65,9 +65,7 @@ FrancisWife:
 .GiveFly
     writetext FWifetextgivefly
     waitbutton
-    closetext
     verbosegiveitem HM_FLY
-    opentext
     writetext ExplainFly	
 	waitbutton
 	closetext
@@ -79,156 +77,197 @@ FisherBar:
 NurseBar:
     jumptextfaceplayer Nursebartext	
 	
+BarBook:
+    jumptext BarBookText	
+	
+BarBookText:
+    text "El Informador de"
+    line "Kita."
+     
+    para "29 de Abril del"
+    line "2018."
+
+    para "La Interpol cree"
+    line "el misterioso"
+    cont "grupo de hackers"
+    cont "Team Cyber,"	
+	
+	para "podría tener su"
+	line "centro de opera-"
+	cont "ciones en nuestra"
+	cont "región."
+	
+	para "Team Cyber no es"
+	line "un peligro para"
+	cont "la gente común,"
+	
+	para "Por el momento"
+	line "han robado única-"
+	cont "mente información"
+	
+	para "de las base de"
+	line "datos de empresas"
+	cont "y organizaciones."
+	
+	para "En el 2013 ellos"
+	line "atacaron Silph"
+	cont "S.A."
+	
+	para "Y el año pasado"
+	line "aprovecharon toda"
+	cont "la confusión que"
+	
+    para "se generó en"
+	line "Alola para robar"
+	cont "información con-"
+	cont "fidencial de la"
+	cont "Organización"
+	cont "Aeter."
+	done
+	
 Thertext:
     text "Mama…"
 	done
 	
 FWifetext:
-    text "I'm the owner,"
-    line "i would say have"
-    cont "fun, but a young"
+    text "Soy la dueña y no"
+    line "dejaré que un"
+    cont "peque beba aquí,"
 
-    para "kid shouldn't go"
-    line "to these kind of"
-    cont "places, and with"
+    para "no me mientas, no"
+    line "pasas de los 16."
 
-    para "that face is "
-    line "obvious you're" 
-    cont "only 16yo."
+    para "Mira, si derrotas"
+    line "a mi esposo te" 
+    cont "dare un premio"
+	
+	para "para que no digas"
+	line "que soy una veija"
+	cont "desagradable."
 	done
 	
 FWifetext2:
-    text "Irene and Francis"
-	line "are too different"
-	cont "now, but when the"
+    text "Francis e Irene"
+	line "son muy diferentes"
+	cont "ahora, pero cuando"
 	
-	para "3 of us where kids"
-	line "we all had crazy"
-	cont "adventures, like"
+	para "éramos jovenes"
+	line "esos 2 eran igual"
+	cont "de locos."
 	
-	para "the time Irene"
-	line "stole an Eagatrice"
-	cont "egg and we had to"
-	cont "run for our lives!"
+	para "Irene una vez"
+	line "robó el huevo de" 
+	cont "un Eagatrice y"
+	cont "casi morimos."
 	
-	para "Now she act like"
-	line "some kind of snow"
-	cont "saint."
+	para "Pero ahora actua"
+	line "como una clase"
+	cont "de santa de las"
+	cont "nieves o algo."
 	done
 	
 FWifetextgivefly:
-    text "So you defeated"
-    line "Francis, i know"
-    cont "he already give"
-    cont "you a reward but"
-
-    para "i want to show"
-    line "you something"
-    cont "even cooler."
+    text "Veo que derrotas-"
+    line "te a mi amor, ten"
+    cont "un premio."
     done
 
 ExplainFly:
-    text "With the HM Fly"
-    line "you can go to"
-    cont "every place you"
-	cont "know."
+    text "Enseñale el camino"
+    line "a cualquier ciudad"
+    cont "que conozcas a tus"
     	
-	para "Is also a strong"
-	line "move in battle."
+	para "#MON y ellos"
+	line "te llevarán"
+	cont "volando."
 	done
 	
 Manbartext:
-    text "If you're going"
-    line "to drink then"
-    cont "do it like a"
-    cont "gentleman."
+    text "Beber alcohol no"
+    line "es algo malo si"
+    cont "bebes responsable-"
+    cont "mente."
     done
 
 Fishetext:
-    text "What are you doing"
-	line "here kid? sorry,"
-	cont "but i wont sell"
-	cont "drinks to you."
+    text "No me mires, no"
+	line "vendo a menores."
 	done
   	
 	
 CooltrainermCodySeenText:
-	text "Wha ya zhink ya"
-	line "doin brah?"
+	text "Hey ya, ¿keres"
+	line "peleaaa?"
 	done
 
 CooltrainermCodyBeatenText:
-	text "Man im so drunk."
+	text "Estoy muy mal."
 	done
 	
 
 CooltrainermCodyAfterBattleText:
-	text "Don't do what i"
-	line "did, drinking"
-	cont "zhis much aint"
-    cont "good…"
+	text "Vine por una"
+	line "Maquina Oculta"
+	cont "que permite Volar"
 	
-	para "I only come here"
-	line "for the HM Fly,"
-	cont "but they wont"
+	para "pero me dicen"
+	line "que necesito una"
+	cont "medalla para que"
+	cont "me la den."
 	
-	para "give it to me"
-	line "without Thermal"
-	cont "Badge."
+	para "Y no soy bueno"
+	line "luchando."
 	done
 	
 
 CooltrainerfFranSeenText:
-	text "Hey cute one,"
-	line "come here!"
+	text "¡Oye, cosa linda"
+	line "ven a mí!"
 	done
 
 CooltrainerfFranBeatenText:
-	text "I wanna kiss"
-	line "you."
+	text "Quiero besarte."
 	done
 
 CooltrainerfFranAfterBattleText:
-	text "I don't remember"
-	line "where i'am."
-	
-	para "Wanna drink"
-	line "something, cutie?"
+	text "Estos lugares son"
+	line "buenos para cono-"
+	cont "cer gente."
 	done
 	
 BBtext:
-    text "A blue haired brat"
-    line "come and tried to"
-    cont "buy a beer, he"
+    text "Un niñato de pelo"
+    line "azul vino y trató"
+    cont "de comprar una"
 
-    para "even tried to act"
-    line "like an old man."
+    para "cerveza y fingió"
+    line "ser adulto para"
+	cont "conseguirla."
 
-    para "I had to take him"
-    line "out."	
+    para "Fue sencillo"
+    line "sacarlo de aquí."	
     done
 	
 Nursebartext: 
-    text "I hate my job,"
-	line "i don't want to"
-	cont "go to the Center."
+    text "Odio mi trabajo,"
+	line "no quiero volver"
+	cont "al centro."
 
-    para "Helping #MON is"
-    line "nice and all but"
-    cont "i cant smile the"
-	cont "whole day."
+    para "No es que no me"
+    line "guste ayudar a"
+    cont "los #MON,"
 	
-	para "And sometimes the"
-	line "trainers act like"
-	cont "idiots…"
+	para "pero tener que"
+	line "sonreir todo el"
+	cont "día es difícil."
 	
-	para "There was a girl"
-	line "with a Scarffere"
-	cont "scarf than was"
+	para "Hoy una niña con"
+	line "bufanda de Scarf-"
+	cont "fere me trató muy"
 	
-	para "so rude with me"
-	line "and her own"
-	cont "#MON…"
+	para "mal y no me gustó"
+	line "como trataba a"
+	cont "sus #MON."
 	done
 	
 BlackthornGym2F_MapEvents:
@@ -240,7 +279,8 @@ BlackthornGym2F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  8,  3, BGEVENT_READ, BarBook
 
 	db 8 ; object events
 	object_event  3, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermCody, -1

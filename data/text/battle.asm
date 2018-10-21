@@ -1,7 +1,7 @@
 BattleText:: ; used only for BANK(BattleText)
 
 BattleText_PlayerPickedUpPayDayMoney: ; 0x80730
-	text "<PLAYER> picked up"
+	text "¡<PLAYER> ganó"
 	line "¥@"
 	deciram wPayDayMoney, 3, 6
 	text "!"
@@ -9,26 +9,26 @@ BattleText_PlayerPickedUpPayDayMoney: ; 0x80730
 ; 0x80746
 
 WildPokemonAppearedText: ; 0x80746
-	text "Wild @"
+	text "¡Un @"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "appeared!"
+	line "salvaje apareció!"
 	prompt
 ; 0x8075c
 
 HookedPokemonAttackedText: ; 0x8075c
-	text "The hooked"
+	text "¡Tu pesca"
 	line "@"
 	text_from_ram wEnemyMonNick
 	text_start
-	cont "attacked!"
+	cont "se resiste!"
 	prompt
 ; 0x80778
 
 PokemonFellFromTreeText: ; 0x80778
 	text_from_ram wEnemyMonNick
-	text " fell"
-	line "out of the tree!"
+	text " calló"
+	line "de un árbol."
 	prompt
 ; 0x80793
 
@@ -41,74 +41,77 @@ WildCelebiAppearedText: ; 0x80793
 ; 0x807a9
 
 WantsToBattleText:: ; 0x807a9
-	text "<ENEMY>"
-	line "wants to battle!"
+	text "¡<ENEMY>"
+	line "quiere luchar!"
 	prompt
 ; 0x807bd
 
 BattleText_WildFled: ; 0x807bd
-	text "Wild @"
+	text "¡ @"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "fled!"
+	line "escapó!"
 	prompt
 ; 0x807cf
 
 BattleText_EnemyFled: ; 0x807cf
-	text "Enemy @"
+	text "¡ @"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "fled!"
+	line "huyó!"
 	prompt
 ; 0x807e2
 
 HurtByPoisonText: ; 0x807e2
-	text "<USER>"
-	line "is hurt by poison!"
+	text "¡<USER>"
+	line "sufre por el"
+	cont "veneno!"
 	prompt
 ; 0x807f8
 
 HurtByBurnText: ; 0x807f8
-	text "<USER>'s"
-	line "hurt by its burn!"
+	text "¡<USER>"
+	line "sufre por la"
+	cont "quemadura!"
 	prompt
 ; 0x8080e
 
 LeechSeedSapsText: ; 0x8080e
-	text "LEECH SEED saps"
-	line "<USER>!"
+	text "¡La energía de"
+	line "<USER> es"
+	cont "drenada!"
 	prompt
 ; 0x80822
 
 HasANightmareText: ; 0x80822
-	text "<USER>"
-	line "has a NIGHTMARE!"
+	text "¡<USER> tiene"
+	line "una pesadilla!"
 	prompt
 ; 0x80836
 
 HurtByCurseText: ; 0x80836
-	text "<USER>'s"
-	line "hurt by the CURSE!"
+	text "¡<USER> está"
+	line "maldito!"
 	prompt
 ; 0x8084d
 
 SandstormHitsText: ; 0x8084d
-	text "The SANDSTORM hits"
-	line "<USER>!"
+	text "¡La arena lastima"
+	line "a <USER>!"
 	prompt
 ; 0x80864
 
 PerishCountText: ; 0x80864
-	text "<USER>'s"
-	line "PERISH count is @"
+	text "<USER> va a"
+	line "caer en @"
 	deciram wd265, 1, 1
-	text "!"
+	text "turnos!"
 	prompt
 ; 0x80880
 
 BattleText_TargetRecoveredWithItem: ; 0x80880
 	text "<TARGET>"
-	line "recovered with"
+	line "se recupera con"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "."
@@ -117,7 +120,7 @@ BattleText_TargetRecoveredWithItem: ; 0x80880
 
 BattleText_UserRecoveredPPUsing: ; 0x80899
 	text "<USER>"
-	line "recovered PP using"
+	line "recuperó PP con"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "."
@@ -125,15 +128,16 @@ BattleText_UserRecoveredPPUsing: ; 0x80899
 ; 0x808b6
 
 BattleText_TargetWasHitByFutureSight: ; 0x808b6
-	text "<TARGET>"
-	line "was hit by FUTURE"
-	cont "SIGHT!"
+	text "¡<TARGET> fue"
+	line "golpeado por una"
+	cont "fuerza extraña!"
 	prompt
 ; 0x808d2
 
 BattleText_SafeguardFaded: ; 0x808d2
-	text "<USER>'s"
-	line "SAFEGUARD faded!"
+	text "¡<USER> ya"
+	line "no es inmune a"
+	cont "cambios de estado!"
 	prompt
 ; 0x808e7
 
@@ -152,63 +156,64 @@ BattleText_MonsReflectFaded: ; 0x80905
 ; 0x8091f
 
 BattleText_RainContinuesToFall: ; 0x8091f
-	text "Rain continues to"
-	line "fall."
+	text "Llueve en el"
+	line "campo de batalla."
 	prompt
 ; 0x80938
 
 BattleText_TheSunlightIsStrong: ; 0x80938
-	text "The sunlight is"
-	line "strong."
+	text "El Sol brilla"
+	line "con fuerza."
 	prompt
 ; 0x80951
 
 BattleText_TheSandstormRages: ; 0x80951
-	text "The SANDSTORM"
-	line "rages."
+	text "Una Tormenta de"
+	line "Arena nos ataca."
 	prompt
 ; 0x80967
 
 BattleText_TheRainStopped: ; 0x80967
-	text "The rain stopped."
+	text "La lluvia se"
+	line "calma."
 	prompt
 ; 0x8097a
 
 BattleText_TheSunlightFaded: ; 0x8097a
-	text "The sunlight"
-	line "faded."
+	text "Ya no esta el"
+	line "día soleado."
 	prompt
 ; 0x8098f
 
 BattleText_TheSandstormSubsided: ; 0x8098f
-	text "The SANDSTORM"
-	line "subsided."
+	text "La Tormenta de"
+	line "Arena desapareció."
 	prompt
 ; 0x809a8
 
 BattleText_EnemyMonFainted: ; 0x809a8
-	text "Enemy @"
+	text "¡@"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "fainted!"
+	line "se debilitó!"
 	prompt
 ; 0x809be
 
 GotMoneyForWinningText:
-	text "<PLAYER> got ¥@"
+	text "<PLAYER> ganó ¥@"
 	deciram wBattleReward, 3, 6
 	text_start
-	line "for winning!"
+	line "por ganar."
 	prompt
 
 BattleText_EnemyWasDefeated: ; 0x809da
-	text "<ENEMY>"
-	line "was defeated!"
+	text "¡<ENEMY>"
+	line "perdió!"
 	prompt
 ; 0x809eb
 
 TiedAgainstText: ; 0x809eb
-	text "Tied against"
+	text "¡Empataste contra"
 	line "<ENEMY>!"
 	prompt
 ; 0x809fc
@@ -239,12 +244,13 @@ BattleText_0x80a4f: ; 0x80a4f
 BattleText_MonFainted: ; 0x80a75
 	text_from_ram wBattleMonNick
 	text_start
-	line "fainted!"
+	line "!Se debilitó!"
 	prompt
 ; 0x80a83
 
 BattleText_UseNextMon: ; 0x80a83
-	text "Use next #MON?"
+	text "¿Usar otro"
+	line "#MON?"
 	done
 ; 0x80a93
 
@@ -263,19 +269,20 @@ LostAgainstText: ; 0x80ab9
 
 BattleText_EnemyIsAboutToUseWillPlayerChangeMon: ; 0x80aca
 	text "<ENEMY>"
-	line "is about to use"
+	line "llama a"
 	cont "@"
 	text_from_ram wEnemyMonNick
 	text "."
 
-	para "Will <PLAYER>"
-	line "change #MON?"
+	para "<PLAYER>,"
+	line "¿Cambias de"
+	cont "#MON?"
 	done
 ; 0x80af8
 
 BattleText_EnemySentOut: ; 0x80af8
-	text "<ENEMY>"
-	line "sent out"
+	text "¡<ENEMY>"
+	line "elige a"
 	cont "@"
 	text_from_ram wEnemyMonNick
 	text "!"
@@ -283,30 +290,30 @@ BattleText_EnemySentOut: ; 0x80af8
 ; 0x80b0b
 
 BattleText_TheresNoWillToBattle: ; 0x80b0b
-	text "There's no will to"
-	line "battle!"
+	text "¡No quiere"
+	line "luchar!"
 	prompt
 ; 0x80b26
 
 BattleText_AnEGGCantBattle: ; 0x80b26
-	text "An EGG can't"
-	line "battle!"
+	text "¡Es muy joven"
+	line "para luchar!"
 	prompt
 ; 0x80b3b
 
 BattleText_CantEscape2: ; 0x80b3b
-	text "Can't escape!"
+	text "¡Sin huir!"
 	prompt
 ; 0x80b49
 
 BattleText_TheresNoEscapeFromTrainerBattle: ; 0x80b49
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
+	text "¡No puedes huir"
+	line "de una batalla"
+	cont "oficial!"
 	prompt
 
 BattleText_GotAwaySafely: ; 0x80b77
-	text "Got away safely!"
+	text "¡Huiste!"
 	prompt
 
 BattleText_UserFledUsingAStringBuffer1: ; 0x80b89
@@ -319,19 +326,20 @@ BattleText_UserFledUsingAStringBuffer1: ; 0x80b89
 ; 0x80ba0
 
 BattleText_CantEscape: ; 0x80ba0
-	text "Can't escape!"
+	text "¡No puedes"
+	line "huir!"
 	prompt
 ; 0x80bae
 
 BattleText_UserHurtBySpikes: ; 0x80bae
-	text "<USER>'s"
-	line "hurt by SPIKES!"
+	text "¡<USER> se"
+	line "lastimo!"
 	prompt
 ; 0x80bc2
 
 RecoveredUsingText: ; 0x80bc2
-	text "<TARGET>"
-	line "recovered using a"
+	text "<TARGET> se"
+	line "recuperó usando"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "!"
@@ -348,54 +356,54 @@ BattleText_UsersStringBuffer1Activated: ; 0x80bde
 ; 0x80bf3
 
 BattleText_ItemsCantBeUsedHere: ; 0x80bf3
-	text "Items can't be"
-	line "used here."
+	text "¡No se puede"
+	line "usar ahora!"
 	prompt
 ; 0x80c0d
 
 BattleText_MonIsAlreadyOut: ; 0x80c0d
 	text_from_ram wBattleMonNick
 	text_start
-	line "is already out."
+	line "esta luchando."
 	prompt
 ; 0x80c22
 
 BattleText_MonCantBeRecalled: ; 0x80c22
 	text_from_ram wBattleMonNick
 	text_start
-	line "can't be recalled!"
+	line "no puede volver."
 	prompt
 ; 0x80c39
 
 BattleText_TheresNoPPLeftForThisMove: ; 0x80c39
-	text "There's no PP left"
-	line "for this move!"
+	text "No puedes usar"
+	line "este ataque."
 	prompt
 ; 0x80c5b
 
 BattleText_TheMoveIsDisabled: ; 0x80c5b
-	text "The move is"
-	line "DISABLED!"
+	text "¡Movimiento"
+	line "bloqueado!"
 	prompt
 ; 0x80c72
 
 BattleText_MonHasNoMovesLeft: ; 0x80c72
 	text_from_ram wBattleMonNick
 	text_start
-	line "has no moves left!"
+	line "no puede atacar."
 	done
 ; 0x80c8a
 
 BattleText_TargetsEncoreEnded: ; 0x80c8a
-	text "<TARGET>'s"
-	line "ENCORE ended!"
+	text "<TARGET> ya"
+	line "no repite."
 	prompt
 ; 0x80c9c
 
 BattleText_StringBuffer1GrewToLevel: ; 0x80c9c
 	text_from_ram wStringBuffer1
-	text " grew to"
-	line "level @"
+	text " subió a"
+	line "Nv @"
 	deciram wCurPartyLevel, 1, 3
 	text "!@"
 	sound_dex_fanfare_50_79
@@ -403,99 +411,98 @@ BattleText_StringBuffer1GrewToLevel: ; 0x80c9c
 ; 0x80cb9
 
 BattleText_WildMonIsEating: ; 0x80cba
-	text "Wild @"
+	text " @"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "is eating!"
+	line "esta comiendo."
 	prompt
 ; 0x80cd1
 
 BattleText_WildMonIsAngry: ; 0x80cd1
-	text "Wild @"
+	text " @"
 	text_from_ram wEnemyMonNick
 	text_start
-	line "is angry!"
+	line "esta molesto."
 	prompt
 ; 0x80ce7
 
 FastAsleepText: ; 0x80ce7
 	text "<USER>"
-	line "is fast asleep!"
+	line "no despierta."
 	prompt
 ; 0x80cfa
 
 WokeUpText: ; 0x80cfa
-	text "<USER>"
-	line "woke up!"
+	text "¡<USER>"
+	line "se despertó!"
 	prompt
 ; 0x80d06
 
 FrozenSolidText: ; 0x80d06
-	text "<USER>"
-	line "is frozen solid!"
+	text "¡<USER> no"
+	line "se puede mover!"
 	prompt
 ; 0x80d1a
 
 FlinchedText: ; 0x80d1a
-	text "<USER>"
-	line "flinched!"
+	text "¡<USER>"
+	line "retrocedió!"
 	prompt
 ; 0x80d27
 
 MustRechargeText: ; 0x80d27
 	text "<USER>"
-	line "must recharge!"
+	line "esta agotado."
 	prompt
 ; 0x80d39
 
 DisabledNoMoreText: ; 0x80d39
-	text "<USER>'s"
-	line "disabled no more!"
+	text "<USER> ya"
+	line "puede atacar."
 	prompt
 ; 0x80d4f
 
 IsConfusedText: ; 0x80d4f
-	text "<USER>"
-	line "is confused!"
+	text "¡<USER>"
+	line "esta confuso!"
 	prompt
 ; 0x80d5f
 
 HurtItselfText: ; 0x80d5f
-	text "It hurt itself in"
-	line "its confusion!"
+	text "¡Tropezó!"
 	prompt
 ; 0x80d81
 
 ConfusedNoMoreText: ; 0x80d81
-	text "<USER>'s"
-	line "confused no more!"
+	text "<USER> ya"
+	line "no esta confuso."
 	prompt
 ; 0x80d97
 
 BecameConfusedText: ; 0x80d97
 	text "<TARGET>"
-	line "became confused!"
+	line "fue confundido."
 	prompt
 ; ItemHealedConfusion
 
 BattleText_ItemHealedConfusion: ; ItemHealedConfusion
-	text "A @"
+	text "Un @"
 	text_from_ram wStringBuffer1
-	text " rid"
-	line "<TARGET>"
-	cont "of its confusion."
+	text " liberó"
+	line "a <TARGET>"
+	cont "de la confusión."
 	prompt
 ; 0x80dcc
 
 AlreadyConfusedText: ; 0x80dcc
-	text "<TARGET>'s"
-	line "already confused!"
+	text "<TARGET>"
+	line "estaba confundido."
 	prompt
 ; 0x80de2
 
 BattleText_UsersHurtByStringBuffer1: ; 0x80de2
-	text "<USER>'s"
-	line "hurt by"
+	text "¡<USER>"
+	line "fue dañado por"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "!"
@@ -503,8 +510,8 @@ BattleText_UsersHurtByStringBuffer1: ; 0x80de2
 ; 0x80df5
 
 BattleText_UserWasReleasedFromStringBuffer1: ; 0x80df5
-	text "<USER>"
-	line "was released from"
+	text "¡<USER>"
+	line "se liberó de"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "!"
@@ -512,27 +519,27 @@ BattleText_UserWasReleasedFromStringBuffer1: ; 0x80df5
 ; 0x80e11
 
 UsedBindText: ; 0x80e11
-	text "<USER>"
-	line "used BIND on"
+	text "¡<USER>"
+	line "tiene a"
 	cont "<TARGET>!"
 	prompt
 ; 0x80e24
 
 WhirlpoolTrapText: ; 0x80e24
-	text "<TARGET>"
-	line "was trapped!"
+	text "¡<TARGET>"
+	line "fue atrapado!"
 	prompt
 ; 0x80e34
 
 FireSpinTrapText: ; 0x80e34
-	text "<TARGET>"
-	line "was trapped!"
+	text "¡<TARGET>"
+	line "fue atrapado!"
 	prompt
 ; 0x80e44
 
 WrappedByText: ; 0x80e44
-	text "<TARGET>"
-	line "was WRAPPED by"
+	text "¡<TARGET>"
+	line "es apretado por"
 	cont "<USER>!"
 	prompt
 ; 0x80e59
@@ -545,14 +552,14 @@ ClampedByText: ; 0x80e59
 ; 0x80e6e
 
 StoringEnergyText: ; 0x80e6e
-	text "<USER>"
-	line "is storing energy!"
+	text "¡<USER>"
+	line "carga energía!"
 	prompt
 ; 0x80e84
 
 UnleashedEnergyText: ; 0x80e84
-	text "<USER>"
-	line "unleashed energy!"
+	text "¡<USER>"
+	line "libera energía!"
 	prompt
 ; 0x80e99
 
@@ -566,85 +573,85 @@ HungOnText: ; 0x80e99
 ; 0x80eb0
 
 EnduredText: ; 0x80eb0
-	text "<TARGET>"
-	line "ENDURED the hit!"
+	text "¡<TARGET>"
+	line "no quiere caer!"
 	prompt
 ; 0x80ec4
 
 InLoveWithText: ; 0x80ec4
-	text "<USER>"
-	line "is in love with"
+	text "¡<USER>"
+	line "ama a"
 	cont "<TARGET>!"
 	prompt
 ; 0x80eda
 
 InfatuationText: ; 0x80eda
-	text "<USER>'s"
-	line "infatuation kept"
-	cont "it from attacking!"
+	text "¡<USER> no"
+	line "puede contra el"
+	cont "poder del amor!"
 	prompt
 ; 0x80f02
 
 DisabledMoveText: ; 0x80f02
-	text "<USER>'s"
+	text "<USER> tiene"
 	line "@"
 	text_from_ram wStringBuffer1
-	text " is"
-	cont "DISABLED!"
+	text " anulado"
+	cont "por el momento."
 	prompt
 ; 0x80f19
 
 LoafingAroundText: ; 0x80f19
 	text_from_ram wBattleMonNick
-	text " is"
-	line "loafing around."
+	text " no"
+	line "quiere atacar."
 	prompt
 ; 0x80f31
 
 BeganToNapText: ; 0x80f31
 	text_from_ram wBattleMonNick
-	text " began"
-	line "to nap!"
+	text " fue"
+	line "a dormir."
 	prompt
 ; 0x80f44
 
 WontObeyText: ; 0x80f44
 	text_from_ram wBattleMonNick
-	text " won't"
-	line "obey!"
+	text " no te"
+	line "quiere escuchar."
 	prompt
 ; 0x80f54
 
 TurnedAwayText: ; 0x80f54
 	text_from_ram wBattleMonNick
-	text " turned"
-	line "away!"
+	text " te"
+	line "ignora."
 	prompt
 ; 0x80f66
 
 IgnoredOrdersText: ; 0x80f66
 	text_from_ram wBattleMonNick
-	text " ignored"
-	line "orders!"
+	text " va"
+	line "a luchar solo."
 	prompt
 ; 0x80f7b
 
 IgnoredSleepingText: ; 0x80f7b
 	text_from_ram wBattleMonNick
-	text " ignored"
-	line "orders…sleeping!"
+	text " prefiere"
+	line "dormir."
 	prompt
 ; 0x80f99
 
 NoPPLeftText: ; 0x80f99
-	text "But no PP is left"
-	line "for the move!"
+	text "Ya no tiene"
+	line "PP."
 	prompt
 ; 0x80fba
 
 HasNoPPLeftText: ; 0x80fba
-	text "<USER>"
-	line "has no PP left for"
+	text "<USER> ya"
+	line "no tiene PP para"
 	cont "@"
 	text_from_ram wStringBuffer2
 	text "!"
@@ -652,57 +659,56 @@ HasNoPPLeftText: ; 0x80fba
 ; 0x80fd7
 
 WentToSleepText: ; 0x80fd7
-	text "<USER>"
-	line "went to sleep!"
+	text "¡<USER>"
+	line "fue a dormir!"
 	done
 ; 0x80fe9
 
 RestedText: ; 0x80fe9
 	text "<USER>"
-	line "fell asleep and"
-	cont "became healthy!"
+	line "Descansa para"
+	cont "otra ronda."
 	done
 ; 0x8100c
 
 RegainedHealthText: ; 0x8100c
 	text "<USER>"
-	line "regained health!"
+	line "esta sanando."
 	prompt
 ; 0x81020
 
 AttackMissedText: ; 0x81020
-	text "<USER>'s"
-	line "attack missed!"
+	text "<USER>"
+	line "falló."
 	prompt
 ; 0x81033
 
 AttackMissed2Text: ; 0x81033
-	text "<USER>'s"
-	line "attack missed!"
+	text "<USER>"
+	line "falló."
 	prompt
 ; 0x81046
 
 CrashedText: ; 0x81046
-	text "<USER>"
-	line "kept going and"
-	cont "crashed!"
+	text "¡<USER>"
+	line "se lastimó!"
 	prompt
 ; 0x81061
 
 UnaffectedText: ; 0x81061
-	text "<TARGET>'s"
-	line "unaffected!"
+	text "¡<TARGET> no"
+	line "fue afectado!"
 	prompt
 ; 0x81071
 
 DoesntAffectText: ; 0x81071
-	text "It doesn't affect"
+	text "¡No funciona en"
 	line "<TARGET>!"
 	prompt
 ; 0x81086
 
 CriticalHitText: ; 0x81086
-	text "A critical hit!"
+	text "¡Un golpe crítico!"
 	prompt
 ; 0x81097
 
@@ -712,14 +718,14 @@ OneHitKOText: ; 0x81097
 ; 0x810aa
 
 SuperEffectiveText: ; 0x810aa
-	text "It's super-"
-	line "effective!"
+	text "¡Es super"
+	line "efectivo!"
 	prompt
 ; 0x810c1
 
 NotVeryEffectiveText: ; 0x810c1
-	text "It's not very"
-	line "effective…"
+	text "No es muy"
+	line "efectivo…"
 	prompt
 ; 0x810da
 
@@ -731,26 +737,27 @@ TookDownWithItText: ; 0x810da
 ; 0x810f3
 
 RageBuildingText: ; 0x810f3
-	text "<USER>'s"
-	line "RAGE is building!"
+	text "¡<USER>"
+	line "esta furioso!"
 	prompt
 ; 0x81109
 
 GotAnEncoreText: ; 0x81109
-	text "<TARGET>"
-	line "got an ENCORE!"
+	text "¡<TARGET> va"
+	line "a repetir!"
 	prompt
 ; 0x8111b
 
 SharedPainText: ; 0x8111b
-	text "The battlers"
-	line "shared pain!"
+	text "¡Comparten"
+	line "dolor!"
 	prompt
 ; 0x81136
 
 TookAimText: ; 0x81136
 	text "<USER>"
-	line "took aim!"
+	line "apunta a su"
+	cont "victima."
 	prompt
 ; 0x81143
 
@@ -764,9 +771,9 @@ SketchedText: ; 0x81143
 ; 0x81156
 
 DestinyBondEffectText: ; 0x81156
-	text "<USER>'s"
-	line "trying to take its"
-	cont "opponent with it!"
+	text "<USER> va"
+	line "a intentar un"
+	cont "empate."
 	prompt
 ; 0x8117f
 
@@ -782,92 +789,86 @@ SpiteEffectText: ; 0x8117f
 ; 0x811a0
 
 BellChimedText: ; 0x811a0
-	text "A bell chimed!"
+	text "¡Suenan campanas!"
 	line ""
 	prompt
 ; 0x811b1
 
 FellAsleepText: ; 0x811b1
-	text "<TARGET>"
-	line "fell asleep!"
+	text "¡<TARGET>"
+	line "duerme!"
 	prompt
 ; 0x811c1
 
 AlreadyAsleepText: ; 0x811c1
-	text "<TARGET>'s"
-	line "already asleep!"
+	text "<TARGET> ya"
+	line "estaba dormido."
 	prompt
 ; 0x811d5
 
 WasPoisonedText: ; 0x811d5
-	text "<TARGET>"
-	line "was poisoned!"
+	text "¡<TARGET>"
+	line "fue envenenado!"
 	prompt
 ; 0x811e6
 
 BadlyPoisonedText: ; 0x811e6
-	text "<TARGET>'s"
-	line "badly poisoned!"
+	text "¡<TARGET>"
+	line "fue intoxicado!"
 	prompt
 ; 0x811fa
 
 AlreadyPoisonedText: ; 0x811fa
-	text "<TARGET>'s"
-	line "already poisoned!"
+	text "<TARGET> ya"
+	line "estaba envenenado."
 	prompt
 ; 0x81210
 
 SuckedHealthText: ; 0x81210
-	text "Sucked health from"
-	line "<TARGET>!"
+	text "¡Robaron energía"
+	line "a <TARGET>!"
 	prompt
 ; 0x81227
 
 DreamEatenText: ; 0x81227
-	text "<TARGET>'s"
-	line "dream was eaten!"
+	text "<TARGET> sufre"
+	line "en sus sueños."
 	prompt
 ; 0x8123c
 
 WasBurnedText: ; 0x8123c
-	text "<TARGET>"
-	line "was burned!"
+	text "¡<TARGET>"
+	line "se quema!"
 	prompt
 ; 0x8124b
 
 DefrostedOpponentText: ; 0x8124b
-	text "<TARGET>"
-	line "was defrosted!"
+	text "¡<TARGET>"
+	line "se descongeló!"
 	prompt
 ; 0x8125d
 
 WasFrozenText: ; 0x8125d
-	text "<TARGET>"
-	line "was frozen solid!"
+	text "¡<TARGET>"
+	line "esta bajo hielo!"
 	prompt
 ; 0x81272
 
 WontRiseAnymoreText: ; 0x81272
-	text "<USER>'s"
-	line "@"
-	text_from_ram wStringBuffer2
-	text " won't"
-	cont "rise anymore!"
+	text "¡No tiene"
+	line "efecto!"
 	prompt
 ; 0x8128f
 
 WontDropAnymoreText: ; 0x8128f
-	text "<TARGET>'s"
-	line "@"
-	text_from_ram wStringBuffer2
-	text " won't"
-	cont "drop anymore!"
+	text "¡No tiene"
+	line "efecto!"
 	prompt
 ; 0x812ac
 
 FledFromBattleText:: ; 0x812ac
-	text "<USER>"
-	line "fled from battle!"
+	text "¡<USER>"
+	line "escapó!"
 	prompt
 ; 0x812c1
 
@@ -884,28 +885,29 @@ BlownAwayText: ; 0x812d2
 ; 0x812e5
 
 PlayerHitTimesText: ; 0x812e5
-	text "Hit @"
+	text "¡Golpeó @"
 	deciram wPlayerDamageTaken, 1, 1
-	text " times!"
+	text " veces!"
 	prompt
 ; 0x812f8
 
 EnemyHitTimesText: ; 0x812f8
-	text "Hit @"
+	text "¡Atacó @"
 	deciram wEnemyDamageTaken, 1, 1
-	text " times!"
+	text " veces!"
 	prompt
 ; 0x8130b
 
 MistText: ; 0x8130b
-	text "<USER>'s"
-	line "shrouded in MIST!"
+	text "<USER>"
+	line "se cubre con MIST."
 	prompt
 ; 0x81321
 
 ProtectedByMistText: ; 0x81321
-	text "<TARGET>'s"
-	line "protected by MIST."
+	text "<TARGET>"
+	line "se protege con"
+	cont "MIST."
 	prompt
 ; 0x81338
 
@@ -917,45 +919,45 @@ GettingPumpedText: ; 0x81338
 ; 0x8134d
 
 RecoilText: ; 0x8134d
-	text "<USER>'s"
-	line "hit with recoil!"
+	text "¡<USER>"
+	line "también se daña!"
 	prompt
 ; 0x81362
 
 MadeSubstituteText: ; 0x81362
-	text "<USER>"
-	line "made a SUBSTITUTE!"
+	text "¡<USER>"
+	line "hizo un sustituto!"
 	prompt
 ; 0x81378
 
 HasSubstituteText: ; 0x81378
-	text "<USER>"
-	line "has a SUBSTITUTE!"
+	text "¡<USER>"
+	line "tiene sustituto!"
 	prompt
 ; 0x8138d
 
 TooWeakSubText: ; 0x8138d
-	text "Too weak to make"
-	line "a SUBSTITUTE!"
+	text "No puede crear"
+	line "un sustituto."
 	prompt
 ; 0x813ad
 
 SubTookDamageText: ; 0x813ad
-	text "The SUBSTITUTE"
-	line "took damage for"
-	cont "<TARGET>!"
+	text "El sustituto"
+	line "recibió el daño"
+	cont "de <TARGET>!"
 	prompt
 ; 0x813d0
 
 SubFadedText: ; 0x813d0
-	text "<TARGET>'s"
-	line "SUBSTITUTE faded!"
+	text "<TARGET> perdió"
+	line "su sustituto."
 	prompt
 ; 0x813e6
 
 LearnedMoveText: ; 0x813e6
 	text "<USER>"
-	line "learned"
+	line "aprendió"
 	cont "@"
 	text_from_ram wStringBuffer1
 	text "!"
@@ -963,29 +965,28 @@ LearnedMoveText: ; 0x813e6
 ; 0x813f8
 
 WasSeededText: ; 0x813f8
-	text "<TARGET>"
-	line "was seeded!"
+	text "¡<TARGET>"
+	line "tiene semillas!"
 	prompt
 ; 0x81407
 
 EvadedText: ; 0x81407
-	text "<TARGET>"
-	line "evaded the attack!"
+	text "¡<TARGET>"
+	line "esquivó!"
 	prompt
 ; 0x8141d
 
 WasDisabledText: ; 0x8141d
-	text "<TARGET>'s"
-	line "@"
+	text "<TARGET> tiene"
+	line "su @"
 	text_from_ram wStringBuffer1
-	text " was"
-	cont "DISABLED!"
+	text " desactivado."
 	prompt
 ; 0x81435
 
 CoinsScatteredText: ; 0x81435
-	text "Coins scattered"
-	line "everywhere!"
+	text "¡Monedas por"
+	line "todos lados!"
 	prompt
 ; 0x81452
 
@@ -1014,41 +1015,41 @@ TransformedText: ; 0x81499
 ; 0x814b4
 
 LightScreenEffectText: ; 0x814b4
-	text "<USER>'s"
-	line "SPCL.DEF rose!"
+	text "¡<USER> gana"
+	line "SPCL.DEF!"
 	prompt
 ; 0x814c7
 
 ReflectEffectText: ; 0x814c7
-	text "<USER>'s"
-	line "DEFENSE rose!"
+	text "¡<USER> gana"
+	line "DEFENSE!"
 	prompt
 ; 0x814d9
 
 NothingHappenedText: ; 0x814d9
-	text "But nothing"
-	line "happened."
+	text "¿Fue un"
+	line "ataque?"
 	prompt
 ; 0x814f0
 
 ButItFailedText: ; 0x814f0
-	text "But it failed!"
+	text "¡Falló!"
 	prompt
 ; 0x81500
 
 ItFailedText: ; 0x81500
-	text "It failed!"
+	text "?Falló!"
 	prompt
 ; 0x8150c
 
 DidntAffect1Text: ; 0x8150c
-	text "It didn't affect"
+	text "¡No afectó a"
 	line "<TARGET>!"
 	prompt
 ; 0x81520
 
 DidntAffect2Text: ; 0x81520
-	text "It didn't affect"
+	text "¡No afectó a"
 	line "<TARGET>!"
 	prompt
 ; 0x81534
@@ -1066,21 +1067,20 @@ DraggedOutText: ; 0x81544
 ; 0x81558
 
 ParalyzedText: ; 0x81558
-	text "<TARGET>'s"
-	line "paralyzed! Maybe"
-	cont "it can't attack!"
+	text "¡<TARGET>"
+	line "esta paralizado!"
 	prompt
 ; 0x8157d
 
 FullyParalyzedText: ; 0x8157d
-	text "<USER>'s"
-	line "fully paralyzed!"
+	text "<USER> no"
+	line "puede moverse."
 	prompt
 ; 0x81592
 
 AlreadyParalyzedText: ; 0x81592
-	text "<TARGET>'s"
-	line "already paralyzed!"
+	text "<TARGET>"
+	line "estaba paralizado."
 	prompt
 ; 0x815a9
 
@@ -1116,42 +1116,40 @@ CantEscapeNowText: ; 0x815f7
 
 StartedNightmareText: ; 0x8160b
 	text "<TARGET>"
-	line "started to have a"
-	cont "NIGHTMARE!"
+	line "tiene pesadillas."
 	prompt
 ; 0x8162b
 
 WasDefrostedText: ; 0x8162b
 	text "<USER>"
-	line "was defrosted!"
+	line "se descongeló."
 	prompt
 ; 0x8163d
 
 PutACurseText: ; 0x8163d
 	text "<USER>"
-	line "cut its own HP and"
+	line "usa HP para"
 
-	para "put a CURSE on"
+	para "maldecir a"
 	line "<TARGET>!"
 	prompt
 ; 0x81665
 
 ProtectedItselfText: ; 0x81665
 	text "<USER>"
-	line "PROTECTED itself!"
+	line "se proteje."
 	prompt
 ; 0x8167a
 
 ProtectingItselfText: ; 0x8167a
-	text "<TARGET>'s"
-	line "PROTECTING itself!"
+	text "<TARGET>"
+	line "esta protejido."
 	done
 ; 0x81691
 
 SpikesText: ; 0x81691
-	text "SPIKES scattered"
-	line "all around"
-	cont "<TARGET>!"
+	text "¡Púas por todos"
+	line "lados!"
 	prompt
 ; 0x816b1
 
@@ -1163,8 +1161,8 @@ IdentifiedText: ; 0x816b1
 ; 0x816c2
 
 StartPerishText: ; 0x816c2
-	text "Both #MON will"
-	line "faint in 3 turns!"
+	text "Van a caer en"
+	line "3 turnos."
 	prompt
 ; 0x816e4
 
@@ -1181,8 +1179,8 @@ BracedItselfText: ; 0x816f9
 ; 0x8170b
 
 FellInLoveText: ; 0x8170b
-	text "<TARGET>"
-	line "fell in love!"
+	text "¡<TARGET>"
+	line "ama a alguien!"
 	prompt
 ; 0x8171c
 

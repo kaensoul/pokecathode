@@ -114,18 +114,18 @@ Text_StringBuffer2ExpPoints::
 	prompt
 
 Text_GoMon::
-	text "Go! @@"
+	text "¡Pelea @@!"
 
 Text_DoItMon::
-	text "Do it! @@"
+	text "¡Hazlo @@!"
 
 Text_GoForItMon::
-	text "Go for it,"
-	line "@@"
+	text "¡Yo elijo a,"
+	line "@@!"
 
 Text_YourFoesWeakGetmMon::
-	text "Your foe's weak!"
-	line "Get'm, @@"
+	text "¡Es tuyo!"
+	line "¡Ataca, @@"
 
 Text_BattleMonNick01::
 	text_from_ram wBattleMonNick
@@ -137,51 +137,51 @@ Text_BattleMonNickComma::
 	text ",@@"
 
 Text_ThatsEnoughComeBack::
-	text " that's"
-	line "enough! Come back!@@"
+	text " alto,"
+	line "¡regresa!@@"
 
 Text_OKComeBack::
-	text " OK!"
-	line "Come back!@@"
+	text " OK,"
+	line "¡vuelve!@@"
 
 Text_GoodComeBack::
-	text " good!"
-	line "Come back!@@"
+	text " muy bien,"
+	line "¡descansa!@@"
 
 Text_ComeBack::
-	text " come"
-	line "back!"
+	text " vuelve"
+	line "aquí."
 	done
 
 UnknownText_0x1c0373::
-	text "Booted up a TM."
+	text "Activaste un TM."
 	prompt
 
 UnknownText_0x1c0384::
-	text "Booted up an HM."
+	text "Activaste un HM."
 	prompt
 
 UnknownText_0x1c0396::
-	text "It contained"
+	text "Contiene"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "."
 
-	para "Teach @"
+	para "¿Dar @"
 	text_from_ram wStringBuffer2
 	text_start
-	line "to a #MON?"
+	line "a un #MON?"
 	done
 
 UnknownText_0x1c03c2::
 	text_from_ram wStringBuffer2
-	text " is"
-	line "not compatible"
+	text " no"
+	line "es compatible"
 	cont "with @"
 	text_from_ram wStringBuffer1
 	text "."
 
-	para "It can't learn"
+	para "No puede aprender"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "."
@@ -196,7 +196,7 @@ UnknownText_0x1c03fa::
 	prompt
 
 UnknownText_0x1c0421::
-	text "You received"
+	text "¡Recibiste"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "!"
@@ -287,78 +287,77 @@ _BadgeRequiredText::
 	prompt
 
 UnknownText_0x1c05c8::
-	text "Can't use that"
-	line "here."
+	text "No puedes usar eso"
+	line "aquí."
 	prompt
 
 UnknownText_0x1c05dd::
 	text_from_ram wStringBuffer2
-	text " used"
-	line "CUT!"
+	text " usó"
+	line "CUT."
 	prompt
 
 UnknownText_0x1c05ec::
-	text "There's nothing to"
-	line "CUT here."
+	text "Nada que cortar."
 	prompt
 
 UnknownText_0x1c0609::
-	text "A blinding FLASH"
-	line "lights the area!@"
+	text "¡Se iluminó el"
+	line "área!@"
 	text_waitbutton
 	db "@@"
 
 _UsedSurfText::
 	text_from_ram wStringBuffer2
-	text " used"
+	text " usó"
 	line "SURF!"
 	done
 
 _CantSurfText::
-	text "You can't SURF"
-	line "here."
+	text "No puedes"
+	line "Surfear aquí."
 	prompt
 
 _AlreadySurfingText::
-	text "You're already"
-	line "SURFING."
+	text "Ya estas en el"
+	line "agua."
 	prompt
 
 _AskSurfText::
-	text "The water is calm."
-	line "Want to SURF?"
+	text "¿Quieres Surfear"
+	line "un rato?"
 	done
 
 UnknownText_0x1c068e::
 	text_from_ram wStringBuffer2
-	text " used"
+	text " usó"
 	line "WATERFALL!"
 	done
 
 UnknownText_0x1c06a3::
-	text "Wow, it's a huge"
-	line "waterfall."
+	text "Agua cae con"
+	line "fuerza."
 	done
 
 UnknownText_0x1c06bf::
-	text "Do you want to use"
+	text "¿Quieres usar"
 	line "WATERFALL?"
 	done
 
 UnknownText_0x1c06de::
 	text_from_ram wStringBuffer2
-	text " used"
+	text " usó"
 	line "DIG!"
 	done
 
 UnknownText_0x1c06ed::
-	text "<PLAYER> used an"
+	text "<PLAYER> usó"
 	line "ESCAPE ROPE."
 	done
 
 UnknownText_0x1c0705::
-	text "Can't use that"
-	line "here."
+	text "No puedes usar"
+	line "eso aquí."
 	done
 
 UnknownText_0x1c071a::
@@ -367,118 +366,111 @@ UnknownText_0x1c071a::
 	done
 
 UnknownText_0x1c073b::
-	text "Can't use that"
-	line "here."
+	text "No puedes usar"
+	line "eso aquí."
 
 	para ""
 	done
 
 UnknownText_0x1c0751::
-	text "A #MON is using"
-	line "STRENGTH already."
+	text "Ya estas usando"
+	line "STRENGTH."
 	prompt
 
 UnknownText_0x1c0774::
 	text_from_ram wStringBuffer2
-	text " used"
+	text " usó"
 	line "STRENGTH!"
 	done
 
 UnknownText_0x1c0788::
 	text_from_ram wStringBuffer1
-	text " can"
-	line "move boulders."
+	text " puede"
+	line "mover rocas."
 	prompt
 
 UnknownText_0x1c07a0::
-	text "A #MON may be"
-	line "able to move this."
+	text "Podría moverlo un"
+	line "#MON,"
 
-	para "Want to use"
-	line "STRENGTH?"
+	para "¿Usar STRENGTH?"
 	done
 
 UnknownText_0x1c07d8::
-	text "Boulders may now"
-	line "be moved!"
+	text "¡Puedes mover"
+	line "rocas!"
 	done
 
 UnknownText_0x1c07f4::
-	text "A #MON may be"
-	line "able to move this."
+	text "Un #MON"
+	line "podría moverlo."
 	done
 
 UnknownText_0x1c0816::
 	text_from_ram wStringBuffer2
-	text " used"
+	text " usó"
 	line "WHIRLPOOL!"
 	prompt
 
 UnknownText_0x1c082b::
-	text "It's a vicious"
-	line "whirlpool!"
-
-	para "A #MON may be"
-	line "able to pass it."
+	text "El agua esta"
+	line "fuera de control."
 	done
 
 UnknownText_0x1c0864::
-	text "A whirlpool is in"
-	line "the way."
+	text "Nada que no"
+	line "puedas controlar."
 
-	para "Want to use"
+	para "¿Usar"
 	line "WHIRLPOOL?"
 	done
 
 UnknownText_0x1c0897::
 	text_from_ram wStringBuffer2
-	text " did a"
-	line "HEADBUTT!"
+	text " usó"
+	line "HEADBUTT."
 	prompt
 
 UnknownText_0x1c08ac::
-	text "Nope. Nothing…"
+	text "Nope. Nada…"
 	done
 
 UnknownText_0x1c08bc::
-	text "A #MON could be"
-	line "in this tree."
+	text "Rastros de un"
+	line "#MON."
 
-	para "Want to HEADBUTT"
-	line "it?"
+	para "¿Usar HEADBUTT?"
 	done
 
 UnknownText_0x1c08f0::
 	text_from_ram wStringBuffer2
-	text " used"
-	line "ROCK SMASH!"
+	text " usó"
+	line "ROCK SMASH."
 	prompt
 
 UnknownText_0x1c0906::
-	text "Maybe a #MON"
-	line "can break this."
+	text "Tiene grietas."
 	done
 
 UnknownText_0x1c0924::
-	text "This rock looks"
-	line "breakable."
+	text "Un buen golpe"
+	line "sería suficiente."
 
-	para "Want to use ROCK"
+	para "¿Usar ROCK"
 	line "SMASH?"
 	done
 
 UnknownText_0x1c0958::
-	text "Oh!"
-	line "A bite!"
+	text "¡Oh!"
+	line "¡Se mueve!"
 	prompt
 
 UnknownText_0x1c0965::
-	text "Not even a nibble!"
+	text "¡Que aburrido!"
 	prompt
 
 UnknownText_0x1c0979::
-	text "Looks like there's"
-	line "nothing here."
+	text "Nada de nada."
 	prompt
 
 UnknownText_0x1c099a::
@@ -501,19 +493,19 @@ UnknownText_0x1c09c7::
 	done
 
 UnknownText_0x1c09dd::
-	text "This tree can be"
-	line "CUT!"
+	text "Un arbusto esta"
+	line "en tu camino."
 
-	para "Want to use CUT?"
+	para "¿Usar CUT?"
 	done
 
 UnknownText_0x1c0a05::
-	text "This tree can be"
-	line "CUT!"
+	text "Debería cortar"
+	line "esto."
 	done
 
 UnknownText_0x1c0a1c::
-	text "<PLAYER> found"
+	text "¡<PLAYER> encontró"
 	line "@"
 	text_from_ram wStringBuffer3
 	text "!"
@@ -526,11 +518,10 @@ UnknownText_0x1c0a2c::
 	done
 
 UnknownText_0x1c0a4e::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text "¡<PLAYER> no"
+	line "tiene #MON!"
 
-	para "<PLAYER> whited"
-	line "out!"
+	para "¡GAME OVER!"
 	done
 
 UnknownText_0x1c0a77::
@@ -547,15 +538,14 @@ UnknownText_0x1c0aa9::
 UnknownText_0x1c0acc::
 	text_from_ram wStringBuffer3
 	text_start
-	line "fainted!"
+	line "se debilitó."
 	prompt
 
 UnknownText_0x1c0ada::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text "¡<PLAYER> no"
+	line "tiene #MON!"
 
-	para "<PLAYER> whited"
-	line "out!"
+	para "¡GAME OVER!"
 	prompt
 
 UnknownText_0x1c0b03::
@@ -613,9 +603,8 @@ UnknownText_0x1c0bd8::
 	prompt
 
 UnknownText_0x1c0bee::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+	text "No es tiempo"
+	line "de tonterias."
 	prompt
 
 Text_YouDontHaveAMon::
@@ -624,7 +613,7 @@ Text_YouDontHaveAMon::
 	prompt
 
 UnknownText_0x1c0c2e::
-	text "Registered the"
+	text "Registraste"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "."
@@ -650,8 +639,8 @@ Text_YouCantUseItInABattle::
 	prompt
 
 Text_AreYouABoyOrAreYouAGirl::
-	text "Are you a boy?"
-	line "Or are you a girl?"
+	text "¿Eres un chico?."
+	line "¿O una chica?"
 	done
 
 UnknownText_0x1c0cc6::
@@ -886,8 +875,8 @@ UnknownText_0x1c0fdd::
 
 Text_WasSentToBillsPC::
 	text_from_ram wStringBuffer1
-	text " was"
-	line "sent to BILL's PC."
+	text " fue"
+	line "enviado al PC."
 	prompt
 
 UnknownText_0x1c1006::
@@ -1062,13 +1051,13 @@ UnknownText_0x1c1328::
 	prompt
 
 UnknownText_0x1c1353::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "PC publico del"
+	line "Centro #MON."
 	prompt
 
 UnknownText_0x1c1368::
-	text "What do you want"
-	line "to do?"
+	text "¿Que debería"
+	line "hacer?"
 	done
 
 _PlayersPCHowManyWithdrawText::
@@ -1077,7 +1066,7 @@ _PlayersPCHowManyWithdrawText::
 	done
 
 _PlayersPCWithdrewItemsText::
-	text "Withdrew @"
+	text "Sacó @"
 	deciram wItemQuantityChangeBuffer, 1, 2
 	text_start
 	line "@"
@@ -1086,21 +1075,20 @@ _PlayersPCWithdrewItemsText::
 	prompt
 
 _PlayersPCNoRoomWithdrawText::
-	text "There's no room"
-	line "for more items."
+	text "No hay espacio."
 	prompt
 
 UnknownText_0x1c13df::
-	text "No items here!"
+	text "Esta vacío."
 	prompt
 
 _PlayersPCHowManyDepositText::
-	text "How many do you"
-	line "want to deposit?"
+	text "¿Cuantos debería"
+	line "guardar?"
 	done
 
 _PlayersPCDepositItemsText::
-	text "Deposited @"
+	text "Gardaste @"
 	deciram wItemQuantityChangeBuffer, 1, 2
 	text_start
 	line "@"
@@ -1109,40 +1097,37 @@ _PlayersPCDepositItemsText::
 	prompt
 
 _PlayersPCNoRoomDepositText::
-	text "There's no room to"
-	line "store items."
+	text "No tengo más"
+	line "espacio."
 	prompt
 
 UnknownText_0x1c144d::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "PC publico del"
+	line "Centro #MON."
 	prompt
 
 UnknownText_0x1c1462::
-	text "Access whose PC?"
+	text "¿Que debería"
+	line "hacer?"
 	done
 
 UnknownText_0x1c1474::
-	text "BILL's PC"
-	line "accessed."
+	text "Sistema de"
+	line "almacenamiento"
 
-	para "#MON Storage"
-	line "System opened."
+	para "virtual de"
+	line "#MON."
 	prompt
 
 UnknownText_0x1c14a4::
-	text "Accessed own PC."
-
-	para "Item Storage"
-	line "System opened."
+	text "Mi cuenta,"
+	line "puedo dejar"
+	cont "objetos."
 	prompt
 
 UnknownText_0x1c14d2::
-	text "PROF.OAK's PC"
-	line "accessed."
-
-	para "#DEX Rating"
-	line "System opened."
+	text "Evaluador"
+	line "de #DEX."
 	prompt
 
 UnknownText_0x1c1505::
@@ -1151,147 +1136,107 @@ UnknownText_0x1c1505::
 	done
 
 _OakPCText1::
-	text "Want to get your"
-	line "#DEX rated?"
+	text "¿Evaluar mi"
+	line "#DEX?"
 	done
 
 _OakPCText2::
-	text "Current #DEX"
-	line "completion level:"
+	text "Ahora mismo"
+	line "tengo"
 	prompt
 
 _OakPCText3::
 	text_from_ram wStringBuffer3
-	text " #MON seen"
+	text " #MON vistos"
 	line "@"
 	text_from_ram wStringBuffer4
-	text " #MON owned"
+	text " #MON propios"
 
-	para "PROF.OAK's"
-	line "Rating:"
+	para "Opinión:"
 	done
 
 _OakRating01::
-	text "Look for #MON"
-	line "in grassy areas!"
+	text "Busca en la"
+	line "hierba alta."
 	done
 
 _OakRating02::
-	text "Good. I see you"
-	line "understand how to"
-	cont "use # BALLS."
+	text "Trata de buscar"
+	line "#MON en los"
+	cont "árboles."
 	done
 
 _OakRating03::
-	text "You're getting"
-	line "good at this."
-
-	para "But you have a"
-	line "long way to go."
+	text "Busca nuevas"
+	line "formas de evo-"
+	cont "lucionar #MON."
 	done
 
 _OakRating04::
-	text "You need to fill"
-	line "up the #DEX."
-
-	para "Catch different"
-	line "kinds of #MON!"
+	text "Trata de buscar"
+	line "más variedad."
 	done
 
 _OakRating05::
-	text "You're trying--I"
-	line "can see that."
-
-	para "Your #DEX is"
-	line "coming together."
+	text "Sigue con el"
+	line "gran esfuerzo."
 	done
 
 _OakRating06::
-	text "To evolve, some"
-	line "#MON grow,"
-
-	para "others use the"
-	line "effects of STONES."
+	text "Busca #MON"
+	line "sobre el agua."
 	done
 
 _OakRating07::
-	text "Have you gotten a"
-	line "fishing ROD? You"
-
-	para "can catch #MON"
-	line "by fishing."
+	text "Trata de pescar"
+	line "con frecuencia."
 	done
 
 _OakRating08::
-	text "Excellent! You"
-	line "seem to like col-"
-	cont "lecting things!"
+	text "Visita áreas"
+	line "viejas en nuevos"
+	cont "horarios."
 	done
 
 _OakRating09::
-	text "Some #MON only"
-	line "appear during"
-
-	para "certain times of"
-	line "the day."
+	text "Sigue así."
 	done
 
 _OakRating10::
-	text "Your #DEX is"
-	line "filling up. Keep"
-	cont "up the good work!"
+	text "Ya falta poco."
 	done
 
 _OakRating11::
-	text "I'm impressed."
-	line "You're evolving"
+	text "Los #MON"
+	line "artificiales ya"
 
-	para "#MON, not just"
-	line "catching them."
+	para "aparecen en la"
+	line "#DEX, trata de"
+	cont "encontrarlos."
 	done
 
 _OakRating12::
-	text "Have you met KURT?"
-	line "His custom BALLS"
-	cont "should help."
+	text "La meta es 170."
 	done
 
 _OakRating13::
-	text "Wow. You've found"
-	line "more #MON than"
-
-	para "the last #DEX"
-	line "research project."
+	text "Buen trabajo."
 	done
 
 _OakRating14::
-	text "Are you trading"
-	line "your #MON?"
-
-	para "It's tough to do"
-	line "this alone!"
+	text "Buen trabajo."
 	done
 
 _OakRating15::
-	text "Wow! You've hit"
-	line "200! Your #DEX"
-	cont "is looking great!"
+	text "Buen trabajo."
 	done
 
 _OakRating16::
-	text "You've found so"
-	line "many #MON!"
-
-	para "You've really"
-	line "helped my studies!"
+	text "Buen trabajo."
 	done
 
 _OakRating17::
-	text "Magnificent! You"
-	line "could become a"
-
-	para "#MON professor"
-	line "right now!"
+	text "Buen trabajo."
 	done
 
 _OakRating18::
@@ -1311,8 +1256,7 @@ _OakRating19::
 	done
 
 _OakPCText4::
-	text "The link to PROF."
-	line "OAK's PC closed."
+	text "Fin de la sesión."
 	done
 
 UnknownText_0x1c19cd::
@@ -1378,9 +1322,8 @@ UnknownText_0x1c1adf::
 	prompt
 
 UnknownText_0x1c1b03::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that!"
+	text "No debo hacer"
+	line "estupideces."
 	done
 
 UnknownText_0x1c1b2c::
@@ -1398,10 +1341,10 @@ UnknownText_0x1c1b2c::
 	prompt
 
 UnknownText_0x1c1b57::
-	text "Made @"
+	text "Ahora @"
 	text_from_ram wMonOrItemNameBuffer
 	text_start
-	line "hold @"
+	line "tiene @"
 	text_from_ram wStringBuffer2
 	text "."
 	prompt
@@ -1413,38 +1356,36 @@ UnknownText_0x1c1b6f::
 
 UnknownText_0x1c1b8e::
 	text_from_ram wMonOrItemNameBuffer
-	text " isn't"
-	line "holding anything."
+	text " no"
+	line "trae objetos."
 	prompt
 
 UnknownText_0x1c1baa::
-	text "Item storage space"
-	line "full."
+	text "Sin espacio."
 	prompt
 
 UnknownText_0x1c1bc4::
-	text "Took @"
+	text "Quito @"
 	text_from_ram wStringBuffer1
 	text_start
-	line "from @"
+	line "de @"
 	text_from_ram wMonOrItemNameBuffer
 	text "."
 	prompt
 
 UnknownText_0x1c1bdc::
 	text_from_ram wMonOrItemNameBuffer
-	text " is"
-	line "already holding"
+	text " ya"
+	line "tiene un"
 
 	para "@"
 	text_from_ram wStringBuffer1
 	text "."
-	line "Switch items?"
+	line "¿cambiar?"
 	done
 
 UnknownText_0x1c1c09::
-	text "This item can't be"
-	line "held."
+	text "No va a funcionar."
 	prompt
 
 UnknownText_0x1c1c22::
@@ -1480,61 +1421,47 @@ UnknownText_0x1c1cc4::
 	prompt
 
 UnknownText_0x1c1ce3::
-	text "Not enough HP!"
+	text "¡Faltan HP!"
 	prompt
 
 UnknownText_0x1c1cf3::
-	text "An item in your"
-	line "PACK may be"
-
-	para "registered for use"
-	line "on SELECT Button."
+	text "Asigna un objeto"
+	line "clave a SELECT."
 	done
 
 _OakText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "¡Hola!"
+	line "Bienvenido a la"
+	cont "región Kita."
 
-	para "Welcome to the"
-	line "world of #MON!"
-
-	para "My name is OAK."
-
-	para "People call me the"
-	line "#MON PROF."
+	para "Me llamo Ann Kapok"
+	line "y soy investiga-"
+	cont "dora #MON."
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#MON.@@"
+	text "La región Kita"
+	line "esta llena de"
+	cont "#MON que no se"
+	cont "pueden ver en"
+	cont "otros lugares.@@"
 
 _OakText3::
 	text_waitbutton
 	db "@@"
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
+	text "Como futuro"
+	line "entrenador debes"
+	cont "estar ansioso por"
 
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "probar en batalla"
+	line "todos estos únicos"
+	cont "#MON."
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
-
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
-
-	para "That's why I study"
-	line "#MON every day."
+	text "Ven a mi laboratio"
+	line "y te haré entraga"
+	cont "de uno propio."
 	prompt

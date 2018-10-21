@@ -17,29 +17,29 @@ CherrygroveGymSpeechHouseBookshelf:
 	jumpstd picturebookshelf
 
 CherrygroveGymSpeechHousePokefanMText:
-	text "You're trying to"
-	line "see how good you"
+	text "Los niños de hoy"
+	line "creen que pueden"
+	cont "ganar usando nada"
+	cont "mas que ataques,"
 
-	para "are as a #MON"
-	line "trainer?"
+	para "los movimientos de"
+	line "apoyo como Quiver"
+	cont "Dance y Nasty Plot"
 
-	para "You better visit"
-	line "the #MON GYMS"
-
-	para "all over JOHTO and"
-	line "collect BADGES."
+	para "pueden dar una"
+	line "gran ventaja al"
+	cont "que piensa bien"
+	cont "sus acciones."
 	done
 
 CherrygroveGymSpeechHouseBugCatcherText:
-	text "When I get older,"
-	line "I'm going to be a"
-	cont "GYM LEADER!"
+	text "Quiero que mi"
+	line "Grichick aprenda a"
+	cont "usar Flare Blitz,"
 
-	para "I make my #MON"
-	line "battle with my"
-
-	para "friend's to make"
-	line "them tougher!"
+	para "¡Nadie nos podrá"
+	line "detener con tanto"
+	cont "poder!"
 	done
 
 CherrygroveGymSpeechHouse_MapEvents:
@@ -56,5 +56,5 @@ CherrygroveGymSpeechHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, CherrygroveGymSpeechHouseBookshelf
 
 	db 2 ; object events
-	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveGymSpeechHousePokefanMScript, -1
+	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveGymSpeechHousePokefanMScript, -1
 	object_event  5,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveGymSpeechHouseBugCatcherScript, -1

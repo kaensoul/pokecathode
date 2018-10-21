@@ -28,14 +28,9 @@ VioletGymFalknerScript:
 	waitsfx
 	setflag ENGINE_ZEPHYRBADGE
 	checkcode VAR_BADGES
-	scall VioletGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
-	setevent EVENT_BEAT_BIRD_KEEPER_ROD
-	setevent EVENT_BEAT_BIRD_KEEPER_ABE
-	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
-	specialphonecall SPECIALCALL_ASSISTANT
 	writetext UnknownText_0x685c8
 	buttonsound
 	verbosegiveitem TM_HIDDEN_POWER
@@ -53,19 +48,8 @@ VioletGymFalknerScript:
 	closetext
 	end
 
-VioletGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
-
 TrainerBirdKeeperRod:
-	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
+	trainer YOUNGSTER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -76,7 +60,7 @@ TrainerBirdKeeperRod:
 	end
 
 TrainerBirdKeeperAbe:
-	trainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
+	trainer GUITARIST, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -111,172 +95,148 @@ VioletGymStatue:
 	jumpstd gymstatue2
 
 UnknownText_0x68473:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
+	text "¿Otro retador?"
 
-	para "People say you can"
-	line "clip flying-type"
+	para "El abuelo me dijo"
+	line "que pocos tienen"
+	cont "el valor de luchar"
 
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
+	para "contra los líderes"
+	line "de Kita, pero eres"
+	cont "el tercer retador"
+    cont "esta semana."
+	
+    para "Que molesto."
 
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
+	para "Como sea, soy Nate"
+	line "líder de Cloudy"
+	cont "City."
 
-	para "I'll show you the"
-	line "real power of the"
-
-	para "magnificent bird"
-	line "#MON!"
+	para "¡Espero que no me"
+	line "hagas perder el"
+	cont "tiempo!"
 	done
 
 UnknownText_0x6854a:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
-
-	para "All right."
-	line "Take this."
-
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+	text "Denme un respiro…"
 	done
 
 UnknownText_0x685af:
-	text "<PLAYER> received"
-	line "ZEPHYRBADGE."
+	text "¡<PLAYER> recibió"
+	line "la medalla"
+	cont "Vigilante!"
 	done
 
 UnknownText_0x685c8:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
+	text "Estoy en muy mala"
+	line "racha, algún día"
+	cont "conseguiré mi"
+	cont "revancha."
 
-	para "It also enables"
-	line "#MON to use"
-
-	para "FLASH, if they"
-	line "have it, anytime."
-
-	para "Here--take this"
-	line "too."
+	para "Ten esto como"
+	line "muestra de amis-"
+	cont "tad."
 	done
 
 UnknownText_0x68648:
-	text "By using a TM, a"
-	line "#MON will"
+	text "Tus #MON"
+	line "tienen un gran"
+	cont "potencial, espero"
+	cont "que esta TM ayude"
 
-	para "instantly learn a"
-	line "new move."
-
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
-
-	para "TM31 contains"
-	line "MUD-SLAP."
-
-	para "It reduces the"
-	line "enemy's accuracy"
-
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	para "a liberar ese"
+	line "poder antes de"
+	cont "nuestro próximo"
+	cont "encuentro."
 	done
 
 UnknownText_0x68735:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
+	text "Escuché de un"
+	line "torneo donde los"
+	cont "mejores del país"
 
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
+	para "lucharan el"
+	line "próximo año."
 
-	para "I'm going to train"
-	line "harder to become"
+	para "¿O debería decir"
+	line "lucharemos?"
 
-	para "the greatest bird"
-	line "master!"
+	para "Creo que extraño"
+	line "luchar libremente"
+	cont "como en la secun-"
+	cont "daria."
 	done
 
 BirdKeeperRodSeenText:
-	text "The keyword is"
-	line "guts!"
-
-	para "Those here are"
-	line "training night and"
-
-	para "day to become bird"
-	line "#MON masters."
-
-	para "Come on!"
+	text "¿Crees poder"
+	line "contra los más"
+	cont "rudos de la acade-"
+	cont "mia #MON?"
 	done
 
 BirdKeeperRodBeatenText:
-	text "Gaaah!"
+	text "Espero que Nate no"
+	line "se enoje conmigo."
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
-	line "are for real!"
+	text "Nosotros éramos"
+	line "los héroes en la"
+	cont "academia, aunque"
 
-	para "Don't get cocky"
-	line "just because you"
-	cont "beat me!"
+	para "pásabamos todo el"
+	line "tiempo en deten-"
+	cont "ción."
 	done
 
 BirdKeeperAbeSeenText:
-	text "Let me see if you"
-	line "are good enough to"
-	cont "face FALKNER!"
+	text "¡Oye escoria,"
+	line "ven y pelea"
+	cont "maldito!"
 	done
 
 BirdKeeperAbeBeatenText:
-	text "This can't be"
-	line "true!"
+	text "¡¿Pe-pero"
+	line "qué?!"
 	done
 
 BirdKeeperAbeAfterBattleText:
-	text "This is pathetic,"
-	line "losing to some"
-	cont "rookie trainer…"
+	text "Diablos, tendré"
+	line "que entrenar"
+	cont "más."
 	done
 
 VioletGymGuyText:
-	text "Hey! I'm no train-"
-	line "er but I can give"
-	cont "some advice!"
+	text "¡Hey futuro"
+	line "campeón!"
 
-	para "Believe me!"
-	line "If you believe, a"
+	para "Todos aquí usan"
+	line "#MON tipo"
+	cont "Normal,"
 
-	para "championship dream"
-	line "can come true."
+	para "la neutralidad de"
+	line "estos #MON"
+	cont "puede ser un pro-"
+	cont "blema,"
 
-	para "You believe?"
-	line "Then listen."
+	para "Los Tipo Lucha son"
+	line "los únicos que"
+	cont "causan buen daño a"
+	cont "los Normales."
 
-	para "The grass-type is"
-	line "weak against the"
-
-	para "flying-type. Keep"
-	line "this in mind."
+	para "Pero claro, no es"
+	line "como que usen"
+	cont "únicamente tipos"
+	cont "puros."
 	done
 
 VioletGymGuyWinText:
-	text "Nice battle! Keep"
-	line "it up, and you'll"
-
-	para "be the CHAMP in no"
-	line "time at all!"
+	text "No es normal ver"
+	line "a alguien ganar"
+    cont "como tu lo haces."
+	
+	para "Serás una estrella"
+	line "muy pronto."
 	done
 
 VioletGym_MapEvents:
@@ -294,6 +254,6 @@ VioletGym_MapEvents:
 
 	db 4 ; object events
 	object_event  5,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
-	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
-	object_event  2, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
+	object_event  1,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
+	object_event  8,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBirdKeeperAbe, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletGymGuyScript, -1

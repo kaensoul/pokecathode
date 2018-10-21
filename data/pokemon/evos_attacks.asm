@@ -1716,21 +1716,23 @@ KrabbyEvosAttacks:
 	db 0 ; no more level-up moves
 
 KinglerEvosAttacks:
+    db EVOLVE_HAPPINESS, TR_NITE, VOLTORB
 	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, LEER
-	db 1, VICEGRIP
-	db 5, LEER
-	db 12, VICEGRIP
-	db 16, HARDEN
-	db 23, STOMP
-	db 27, GUILLOTINE
-	db 38, PROTECT
-	db 49, CRABHAMMER
+	db 1, POUND
+	db 1, TAIL_WHIP
+	db 7, LICK
+	db 10, SPITE 
+	db 15, BONE_CLUB
+	db 19, DOUBLESLAP
+	db 23, MEAN_LOOK
+	db 27, BONE_RUSH
+	db 30, CURSE
+	db 38, SHADOW_BALL
+	db 45, BONEMERANG
+	db 49, AEROBLAST
 	db 0 ; no more level-up moves
 
 VoltorbEvosAttacks:
-	db EVOLVE_LEVEL, 30, ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 9, SCREECH
@@ -2163,18 +2165,21 @@ GyaradosEvosAttacks:
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
+    db EVOLVE_ITEM, LEAF_STONE, DITTO
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
-	db 1, GROWL
-	db 1, SING
-	db 8, MIST
-	db 15, BODY_SLAM
-	db 22, CONFUSE_RAY
-	db 29, PERISH_SONG
-	db 36, ICE_BEAM
-	db 43, RAIN_DANCE
-	db 50, SAFEGUARD
-	db 57, HYDRO_PUMP
+	db 1, TACKLE
+	db 1, TAIL_WHIP
+	db 5, CHARM
+	db 12, LEECH_SEED
+	db 15, SWEET_SCENT
+	db 19, DOUBLESLAP
+	db 22, PAY_DAY
+	db 25, SLEEP_POWDER
+	db 30, GROWTH
+	db 36, GIGA_DRAIN
+	db 40, BATON_PASS
+	db 45, SYNTHESIS
+	db 50, BODY_SLAM
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:
@@ -2261,7 +2266,6 @@ PorygonEvosAttacks:
 	db 0 ; no more level-up moves
 
 OmanyteEvosAttacks:
-	db EVOLVE_LEVEL, 40, OMASTAR
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
@@ -2274,21 +2278,22 @@ OmanyteEvosAttacks:
 	db 0 ; no more level-up moves
 
 OmastarEvosAttacks:
+    db EVOLVE_ITEM, MOON_STONE, KABUTO
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
-	db 1, WITHDRAW
-	db 1, BITE
-	db 13, BITE
-	db 19, WATER_GUN
-	db 31, LEER
-	db 37, PROTECT
-	db 40, SPIKE_CANNON
-	db 54, ANCIENTPOWER
-	db 65, HYDRO_PUMP
+	db 1, STRING_SHOT
+	db 4, POISON_STING
+	db 6, BITE
+	db 10, SPIDER_WEB
+	db 14, ABSORB
+	db 19, STUN_SPORE
+	db 22, ACID
+	db 27, PIN_MISSILE
+	db 32, BATON_PASS
+	db 36, LEECH_LIFE
+	db 45, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
-	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, HARDEN
@@ -2301,17 +2306,20 @@ KabutoEvosAttacks:
 	db 0 ; no more level-up moves
 
 KabutopsEvosAttacks:
+    db EVOLVE_LEVEL, 20, AERODACTYL
 	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, HARDEN
-	db 1, ABSORB
-	db 10, ABSORB
-	db 19, LEER
-	db 28, SAND_ATTACK
-	db 37, ENDURE
-	db 40, SLASH
-	db 51, MEGA_DRAIN
-	db 65, ANCIENTPOWER
+	db 1, PECK
+	db 2, TACKLE
+	db 4, DEFENSE_CURL
+	db 7, LOW_KICK
+	db 10, FOCUS_ENERGY
+	db 15, ROLLOUT
+	db 20, TAKE_DOWN
+	db 25, SOFTBOILED
+	db 29, DRILL_PECK
+	db 34, HI_JUMP_KICK
+	db 40, AGILITY
+	db 50, BATON_PASS
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:

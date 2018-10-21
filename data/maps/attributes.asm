@@ -68,14 +68,11 @@ ENDM
 	connection south, Route30, ROUTE_30, 0, 0, 10
 	connection west, Route29, ROUTE_29, 0, 0, 9
 	
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
-	connection north, Route30, ROUTE_30, 5, 0, 10
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $05, WEST | EAST
+	connection west, Route31, ROUTE_31, 0, 0, 10
 	connection east, Route29, ROUTE_29, 0, 0, 9
 
-	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
-	connection south, Route32, ROUTE_32, 0, 0, 10
-	connection west, Route36, ROUTE_36, 0, 0, 9
-	connection east, Route31, ROUTE_31, 9, 0, 9
+	map_attributes VioletCity, VIOLET_CITY, $0f, 0
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
 	connection west, Route34, ROUTE_34, -3, 15, 12
@@ -129,12 +126,12 @@ ENDM
 	map_attributes Route30, ROUTE_30, $05, NORTH
 	connection north, NewBarkTown, NEW_BARK_TOWN, 0, 0, 10
 
-	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
-	connection south, Route30, ROUTE_30, 10, 0, 10
-	connection west, VioletCity, VIOLET_CITY, -3, 6, 12
+	map_attributes Route31, ROUTE_31, $05, SOUTH | EAST
+	connection south, Route32, ROUTE_32, 0, 0, 10
+	connection east, CherrygroveCity, CHERRYGROVE_CITY, 0, 0, 10
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
-	connection north, VioletCity, VIOLET_CITY, 0, 0, 13
+	connection north, Route31, ROUTE_31, 0, 0, 10
 	connection south, Route33, ROUTE_33, 0, 0, 10
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST

@@ -8,35 +8,36 @@ CherrygroveEvolutionSpeechHouse_MapScripts:
 	db 0 ; callbacks
 
 CherrygroveEvolutionSpeechHouseYoungsterScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseYoungsterText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveEvolutionSpeechHouseYoungsterText
+	
 
 CherrygroveEvolutionSpeechHouseLassScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseLassText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveEvolutionSpeechHouseLassText
+
 
 CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 CherrygroveEvolutionSpeechHouseYoungsterText:
-	text "#MON gain expe-"
-	line "rience in battle"
-
-	para "and change their"
-	line "form."
+	text "¿De donde vienes"
+	line "la TM se pueden"
+	cont "usar más de una"
+	cont "vez como aquí?"
 	done
 
 CherrygroveEvolutionSpeechHouseLassText:
-	text "#MON change?"
+	text "Mi papi dice la"
+	line "clave de triunfar"
+	cont "es más que subir"
 
-	para "I would be shocked"
-	line "if one did that!"
+	para "de nivel a tus"
+	line "#MON, tienes"
+	cont "que enseñarles"
+	cont "movimientos,"
+	
+	para "como Love Cannon"
+	line "que usa mi idola"
+	cont "Fiona."
 	done
 
 CherrygroveEvolutionSpeechHouse_MapEvents:
@@ -53,5 +54,5 @@ CherrygroveEvolutionSpeechHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, CherrygroveEvolutionSpeechHouseBookshelf
 
 	db 2 ; object events
-	object_event  3,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveEvolutionSpeechHouseLassScript, -1
-	object_event  2,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveEvolutionSpeechHouseYoungsterScript, -1
+	object_event  3,  5, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveEvolutionSpeechHouseLassScript, -1
+	object_event  2,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveEvolutionSpeechHouseYoungsterScript, -1

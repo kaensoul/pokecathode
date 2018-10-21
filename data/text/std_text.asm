@@ -1,21 +1,24 @@
 NurseMornText:
-	text "Good morning!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "¡Bienvenido al"
+	line "Centro #MON"
+	cont "en esta calida"
+	cont "mañana!"
 	done
 
 NurseDayText:
-	text "Hello!"
-	line "Welcome to our"
-	cont "#MON CENTER."
+	text "¡Bienvenido al"
+	line "centro #MON!"
 	done
 
 NurseNiteText:
-	text "Good evening!"
-	line "You're out late."
+	text "Buenas noches,"
+	line "atendemos las"
+	cont "24 horas."
 
-	para "Welcome to our"
-	line "#MON CENTER."
+	para "Ni te imaginas"
+	line "lo mucho que"
+	cont "espero el cambio"
+	cont "de turno."
 	done
 
 PokeComNurseMornText:
@@ -50,30 +53,24 @@ PokeComNurseNiteText:
 	done
 
 NurseAskHealText:
-	text "We can heal your"
-	line "#MON to perfect"
-	cont "health."
-
-	para "Shall we heal your"
-	line "#MON?"
+	text "¿Necesitan tus"
+	line "#MON un"
+	cont "descanso?"
 	done
 
 NurseTakePokemonText:
-	text "OK, may I see your"
-	line "#MON?"
+	text "Será rápido."
 	done
 
 NurseReturnPokemonText:
-	text "Thank you for"
-	line "waiting."
-
-	para "Your #MON are"
-	line "fully healed."
+	text "Listo, tus amigos"
+	line "ya se sienten a"
+	cont "la perfección."
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
+	text "¡Vuelve siempre"
+	line "que quieras!"
 	done
 
 ; not used
@@ -82,55 +79,68 @@ NurseGoodbyeText:
 	done
 
 NursePokerusText:
-	text "Your #MON"
-	line "appear to be"
+	text "¡Oh!"
 
-	para "infected by tiny"
-	line "life forms."
+	para "Al parecer tus"
+	line "compañeros tienen"
+	cont "#RUS."
 
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
+	para "Aunque el nombre"
+	line "suene a virus,"
 
-	para "But we can't tell"
-	line "you anything more"
-
-	para "at a #MON"
-	line "CENTER."
+	para "se a descubierto"
+	line "que los #MON"
+	cont "infectados por"
+    cont "el #RUS crecen"
+	
+	para "más rápido que"
+	line "los demás."
+	
+	para "Se les puede"
+	line "llamar parásitos"
+	cont "beneficiosos o"
+	cont "simbiontes."
 	done
 
 PokeComNursePokerusText:
-	text "Your #MON"
-	line "appear to be"
+	text "¡Oh!"
 
-	para "infected by tiny"
-	line "life forms."
+	para "Al parecer tus"
+	line "compañeros tienen"
+	cont "#RUS."
 
-	para "Your #MON are"
-	line "healthy and seem"
-	cont "to be fine."
+	para "Aunque el nombre"
+	line "suene a virus,"
 
-	para "But we can't tell"
-	line "you anything more."
+	para "se a descubierto"
+	line "que los #MON"
+	cont "infectados por"
+    cont "el #RUS crecen"
+	
+	para "más rápido que"
+	line "los demás."
+	
+	para "Se les puede"
+	line "llamar parásitos"
+	cont "beneficiosos o"
+	cont "simbiontes."
 	done
 
 DifficultBookshelfText:
-	text "Nothing fun to"
-	line "read."
+	text "Nada interesante."
 	done
 
 PictureBookshelfText:
-	text "Should i read"
-	line "DC or Marvel?"
-	cont "Better move."
+	text "No hay tiempo"
+	line "para historietas."
 	done
 
 MagazineBookshelfText:
 	text "MAD, People,"
 	line "TIME..."
 
-	para "Who read in"
-	line "current year?"
+	para "¿Quien lee en el"
+	line "mundo moderno?"
 	done
 
 TeamRocketOathText:
@@ -155,21 +165,21 @@ IncenseBurnerText:
 	done
 
 MerchandiseShelfText:
-	text "Lots of Digimon"
-	line "merchandise!"
+	text "Productos de"
+	line "Silph S.A."
 	done
 
 TownMapText:
-	text "It's the TOWN MAP."
+	text "Es un mapa."
 	done
 
 WindowText:
-	text "Who's that qt?"
-	line "Lookin' good!"
+	text "Debo hacer algo"
+	line "con mi cabello."
 	done
 
 TVText:
-	text "It's a TV."
+	text "Esta apagada."
 	done
 
 HomepageText:
@@ -285,11 +295,13 @@ GymStatue_CityGymText:
 	done
 
 GymStatue_WinningTrainersText:
-	text "LEADER: @"
+	text "Lider: @"
 	text_from_ram wStringBuffer4
 	text_start
-	para "WINNING TRAINERS:"
-	line "<PLAYER>"
+	para "Ganadores:"
+	line "<RIVAL>"
+	cont "Lisargy"
+	cont "<PLAYER>"
 	done
 
 CoinVendor_WelcomeText:
@@ -352,37 +364,34 @@ BugContestPrizeNoRoomText:
 	done
 
 HappinessText3:
-	text "Wow! You and your"
-	line "#MON are really"
-	cont "close!"
+	text "Se ve que tu y"
+	line "ese #MON se"
+	cont "llevan bien."
 	done
 
 HappinessText2:
-	text "#MON get more"
-	line "friendly if you"
+	text "Un #MON al"
+	line "principio del"
 
-	para "spend time with"
-	line "them."
+	para "equipo se encariña"
+	line "rápido."
 	done
 
 HappinessText1:
-	text "You haven't tamed"
-	line "your #MON."
-
-	para "If you aren't"
-	line "nice, it'll pout."
+	text "Tu #MON"
+	line "no parece feliz."
 	done
 
 RegisteredNumber1Text:
-	text "<PLAYER> registered"
+	text "<PLAYER> registró"
 	line "@"
 	text_from_ram wStringBuffer3
-	text "'s number."
+	text "en el #GEAR."
 	done
 
 RegisteredNumber2Text:
-	text "<PLAYER> registered"
+	text "<PLAYER> registró"
 	line "@"
 	text_from_ram wStringBuffer3
-	text "'s number."
+	text "en el #GEAR."
 	done

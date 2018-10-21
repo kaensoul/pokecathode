@@ -8,7 +8,7 @@ PebbleGym_MapScripts:
 	db 0 ; callbacks
 	
 TrainerYoungsterMikey:
-	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
+	trainer YOUNGSTER, JIML, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -44,82 +44,78 @@ WindownSign:
     jumptext WindownText	
 	
 YoungsterMikeySeenText:
-	text "Welcome to the"
-	line "best GYM in the"
-	cont "whole region."
+	text "¡Bienvenido al"
+	line "mejor GYM en la"
+	cont "región!"
 
-	para "I'm Jim the big"
-	line "bad leader!"
+	para "¡Soy Jim el"
+	line "Líder de verdad!"
 	
-	para "Some people say"
-	line "than im not good"
-	cont "enough to be a"
+	para "No creas a esos"
+	line "tontos que dicen"
+	cont "que no soy mas"
+	cont "que un hablador,"
 	
-	para "leader, but dont"
-	line "let idiots or"
-	cont "the #MON"
-	
-	para "League trick you"
-	line "im the stronger"
-	cont "trainer in Kita!"
+	para "¡Ni la Liga"
+	line "#MON puede"
+	cont "frenar al gran"
+	cont "JIM!"
 	done
 
 YoungsterMikeyBeatenText:
-	text "Don't cheat"
-	line "bro, sorry but"
-	cont "i wont give a"
+	text "Wow viejo, eso"
+	line "es jugar sucio,"
 	
-	para "badge to a"
-	line "cheater."
+	para "No doy medallas"
+	line "a tramposos."
 	done
 
 YoungsterMikeyAfterText:
-	text "Dont talk to me"
-	line "or my mon ever"
-	cont "again."
+	text "Lo siento,"
+	line "pero como líder"
+	cont "no apruebo las"
+	cont "trampas."
 	done
 
 BugCatcherDonSeenText:
-	text "Jim pay me"
-	line "20 coins for"
-	cont "doing this!"
+	text "¡Jim me pagó"
+	line "20 monedas por"
+	cont "pelear!"
 	done
 
 BugCatcherDonBeatenText:
-	text "Wait, i lose"
-	line "money?!"
+	text "Espera,"
+	line "¿Perdí dinero?"
 	done
 
 BugCatcherDonAfterText:
-	text "Jim dont even"
-	line "have badges."
+	text "Jim ni medallas"
+	line "tiene."
 
-	para "The old Leader"
-	line "took everything"
-	cont "with her."
+	para "La lider anterior"
+	line "se llevó todo."
 	done	
 	
 GymText:
-    text "Jim is the best"
-    line "and no one can"
-    cont "beat him."
+    text "¡Nadie puede"
+    line "vencer justamente"
+    cont "a Jim!"
     done	
 	
 WindownText:
-    text "Is broken."
+    text "Esta roto."
 	
-	para "So Jim used this"
-    line "Windown to enter"
-    cont "the first time."
+	para "Jim debió usar"
+    line "esta ventana"
+    cont "para entrar."
     done	
 	
 Girltext:
-    text "Jim told me than"
-    line "we will take turns"
-    cont "to be the leaders."
+    text "Jim tomó prestado"
+    line "a mi Crimske,"
 	
-	para "But that was over"
-	line "a month ago."
+    para "Prestado hace un"
+	line "mes."
 	done
 
     	

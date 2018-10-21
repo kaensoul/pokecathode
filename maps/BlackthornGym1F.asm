@@ -118,185 +118,183 @@ BlackthornGymStatue:
 	jumpstd gymstatue2
 	
 Text_ReceivedThermalBadge:
-    text "<PLAYER> received"
-	line "Thermal Badge."
+    text "<PLAYER> recibió"
+	line "la Medalla"
+	cont "Thermal."
 	done	
 
 ClairIntroText:
-	text "JYO HO HO!"
+	text "¡JYO HO HO!"
 
-	para "How ya're doin"
-	line "brat?"
+	para "¿Qué cuentas"
+	line "chaval?"
 
-	para "Ya look like"
-	line "someone who love"
-	cont "fun battles and"
+	para "Te vez como"
+	line "alguien que dis-"
+	cont "fruta de batallas"
 
-	para "don't know when"
-	line "to give up, if"
-	cont "so this place"
-	cont "suit ya."
-
-	para "Zhis Snowy Town's"
-	line "GYM and im zhe"
-	cont "leader here!"
-    cont "Francis!"
+	para "intensas y no"
+	line "sabe cuando tirar"
+	cont "la toalla."
 	
-	para "Here we all love"
-	line "to battle until"
-	cont "we only want to"
+	para "¡Este lugar es"
+	line "Perfecto pa' tí!"
+
+	para "¡El GYM de Snowy"
+	line "City es el lugar"
+	cont "y Francis el"
+    cont "hombre!"
 	
-	para "drink and rest"
-    line "in the thermal"
-	cont "water with our"
-	cont "friends!"
+	para "Lucha hasta des-"
+	line "fallecer y bebe"
+	cont "hasta atragantar."
+	
+	para "¡Luchemos chaval!"
 	done
 
 ClairWinText:
-	text "Nice done brat,"
-    line "ya lucky ima not"
-	cont "as young."
+	text "HYA HA HAHA"
+    line "Bien hecho chaval."
 	done
 
 ClairText_TooMuchToExpect:
-	text "If ya could beat"
-	line "me, then sis Irene"
-	cont "got no chance."
+	text "Me hubiera gustado"
+	line "luchar contra ti"
+	cont "cuando era joven."
 
-	para "Yo're a star"
-	line "kiddo."
+	para "Mi 'mana Irene"
+	line "no tendría oportu-"
+	cont "nidad contra tí."
+	
+	para "Serás una estralla"
+	line "chaval."
 	done
 
 BlackthornGymClairText_YouKeptMeWaiting:
-	text "YO HO HO HO!"
-	line "You won this too."
+	text "¡YO HO HO HO!"
+	line "Ten esto campeón."
 	done
 
 BlackthornGymText_ReceivedTM24:
-	text "<PLAYER> received"
+	text "<PLAYER> recibió"
 	line "TM48 Fire Punch."
 	done
 
 BlackthornGymClairText_DescribeTM24:
-	text "Fire Punch is"
-	line "what it say, a"
-	cont "punch with fire,"
+	text "Un Puño Fuego es"
+	line "un Puño con Fuego,"
+	cont "¿Qué más?"
 
-	para "most #MON with"
-	line "arms can learn it,"
-	cont "and it got a"
-	cont "chance to burn."
-	
-	para "Cool, i mean Hot,"
-	line "right?"
+	para "A de quemar, pos"
+	line "es con fuego,"
+	cont "¡HYA HA HAHA!"
 	done
 	
 CooltrainermPaulSeenText:
-	text "We aren't cool"
-	line "trainers, we're"
+	text "¡No somos Cool"
+	line "trainers, somos"
 	cont "Hot Trainers!"
 	done
 
 CooltrainermPaulBeatenText:
-	text "I feel so hot"
-	line "right now!"
+	text "Que calor, bro."
 	done
 
 CooltrainermPaulAfterBattleText:
-	text "Losing isn't that"
-	line "bad, Francis give"
-	cont "us drinks to cheer"
-	cont "up every time we"
+	text "No me importa"
+	line "perder, luego nos"
+	cont "anima Francis con"
+	cont "unos tragos."
 
-	para "lose a battle,"
-	line "but when we win"
-	cont "too, so whatever."
+	para "Nos da también"
+	line "al ganar, por lo"
+	cont "que da igual."
 	done
 
 CooltrainermMikeSeenText:
-	text "Don't touch the"
-	line "water, is too"
-	cont "hot!"
+	text "¡No toques el"
+	line "agua, esta muy"
+	cont "caliente!"
 	done
 
 CooltrainermMikeBeatenText:
-	text "I'm going to fall"
-	line "in the pool!"
+	text "¡Ahhhhh!"
+	line "¡Caigo al agua!"
 	done
 
 CooltrainermMikeAfterBattleText:
-	text "That was fun, you"
-	line "may be better than"
-	cont "the last trainer."
+	text "La verdad, el agua"
+	line "caliente es"
+	cont "relajante."
 	done
 
 CooltrainerfLolaSeenText:
-	text "I'm not sure i"
-	line "should call myself"
-    cont "a hot trainer, it"
-	cont "sound dirty."
+	text "Se supone que nos"
+	line "deberiamos llamar"
+    cont "Hot-trainers,"
+	
+	para "pero como que"
+	line "suena sucio,"
+	cont "¿No?"
 	done
 
 CooltrainerfLolaBeatenText:
-	text "I think you're"
-	line "hot."
+	text "Creo que eres"
+	line "caliente."
 	done
 
 CooltrainerfLolaAfterBattleText:
-	text "I think lava would"
-	line "fit better a Fire"
-	cont "GYM, but Francis"
+	text "Algo de lava"
+	line "tal vez sería"
+	cont "mejor para un GYM"
+	cont "tipo fuego."
 	
-	para "let his daughter"
-	line "play here."
+	para "Pero Francis deja"
+	line "a su hija jugar"
+	cont "aquí."
 	done
 
 BlackthornGymGuyText:
-	text "Hey future champ,"
-	line "you look like"
-	cont "someone than will"
-    cont "win easly."
+	text "Oye, futuro cam-"
+	line "peón, este GYM"
+	cont "no podrá contra"
+    cont "usted."
 	
-	para "Everyone know how"
-	line "to beat a Fire"
-	cont "#MON, you"
+	para "Todo mundo sabe"
+	line "que el Agua y la"
+	cont "Tierra pueden"
+    cont "apagar el fuego,"
+	
+	para "las Rocas son"
+	line "otra opción."
 
-	para "only need to throw"
-	line "some ground or"
-	cont "rocks at them,"
+	para "Pero recuerda que"
+	line "Thermaque puede"
+	cont "usar Agua para"
+	cont "defenderse."
 
-	para "but you must be"
-	line "carefull with the"
-	cont "Thermaque line,"
-	cont "they know many"
+	para "Eso les ayuda a"
+	line "sobrevivir en"
+	cont "las montañas."
 
-	para "different moves"
-	line "than let them beat"
-	cont "most #MON from"
-	cont "the mountine, but"
-
-	para "they don't know"
-	line "how to beat Water"
-	cont "types, they just"
-	cont "chill with them."
+	para "Pero no tienen"
+	line "idea de como"
+	cont "luchar contra las"
+	cont "criaturas marinas."
 	done
 
 BlackthornGymGuyWinText:
-	text "So you did beat"
-	line "Francis, good job,"
-    cont "for someone from"
+	text "Te dije que"
+	line "Francis no sería"
+    cont "rival para usted,"
+	cont "campeón."
 	
-	para "a region so far"
-	line "away you know how"
-	cont "to fight with and"
+	para "Me recuerdas a"
+	line "ese otro chico"
+	cont "de Johto que se"
 
-	para "against Kita's"
-	line "#MON!"
-	
-	para "But is not like"
-	line "you will be our"
-    cont "first champion"
-    cont "from Johto."	
+	para "hizo campeón de"
+	line "Kita."
 	done
 
 BlackthornGym1F_MapEvents:

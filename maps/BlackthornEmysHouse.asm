@@ -27,7 +27,7 @@ BlackthornHouseThermaque:
 	end	
 	
 Thermaquehousetext:
-    text "Maque ma?"
+    text "¿Maque ma?"
     done	
 
 BlackthornEmysHouse_MapEvents:

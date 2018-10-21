@@ -10,17 +10,7 @@
 Route31_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .CheckMomCall
-
-.CheckMomCall:
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iffalse .DoMomCall
-	return
-
-.DoMomCall:
-	specialphonecall SPECIALCALL_WORRIED
-	return
+	db 0 ; callbacks
 
 TrainerBugCatcherWade1:
 	trainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
@@ -181,68 +171,7 @@ TrainerBugCatcherWade1:
 	end
 
 Route31MailRecipientScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_TM50_NIGHTMARE
-	iftrue .DescribeNightmare
-	checkevent EVENT_GOT_KENYA
-	iftrue .TryGiveKenya
-	writetext Text_Route31SleepyMan
-	waitbutton
-	closetext
-	end
-
-.TryGiveKenya:
-	writetext Text_Route31SleepyManGotMail
-	buttonsound
-	checkpokemail ReceivedSpearowMailText
-	ifequal POKEMAIL_WRONG_MAIL, .WrongMail
-	ifequal POKEMAIL_REFUSED, .Refused
-	ifequal POKEMAIL_NO_MAIL, .NoMail
-	ifequal POKEMAIL_LAST_MON, .LastMon
-	; POKEMAIL_CORRECT
-	writetext Text_Route31HandOverMailMon
-	buttonsound
-	writetext Text_Route31ReadingMail
-	buttonsound
-	setevent EVENT_GAVE_KENYA
-	verbosegiveitem TM_ICE_BEAM
-	iffalse .NoRoomForItems
-	setevent EVENT_GOT_TM50_NIGHTMARE
-.DescribeNightmare:
-	writetext Text_Route31DescribeNightmare
-	waitbutton
-.NoRoomForItems:
-	closetext
-	end
-
-.WrongMail:
-	writetext Text_Route31WrongMail
-	waitbutton
-	closetext
-	end
-
-.NoMail:
-	writetext Text_Route31MissingMail
-	waitbutton
-	closetext
-	end
-
-.Refused:
-	writetext Text_Route31DeclinedToHandOverMail
-	waitbutton
-	closetext
-	end
-
-.LastMon:
-	writetext Text_Route31CantTakeLastMon
-	waitbutton
-	closetext
-	end
-
-ReceivedSpearowMailText:
-	db   "DARK CAVE leads"
-	next "to another road@"
+	jumptextfaceplayer Text_Route31SleepyMan
 
 Route31YoungsterScript:
 	jumptextfaceplayer Route31YoungsterText
@@ -260,180 +189,137 @@ Route31FruitTree:
 	fruittree FRUITTREE_ROUTE_31
 
 Route31Potion:
-	itemball POTION
+	itemball FULL_HEAL
 
 Route31PokeBall:
-	itemball POKE_BALL
+	itemball GREAT_BALL
 
 Route31CooltrainerMText:
-	text "DARK CAVE…"
+	text "¡¿LUCHAR?!"
 
-	para "If #MON could"
-	line "light it up, I'd"
-	cont "explore it."
+	para "Ni de broma, ya"
+	line "perdí 4 veces"
+	cont "hoy."
+	
+	para "Cuando tienes un"
+	line "mal día lo mejor"
+	cont "es pensar en"
+	cont "otras cosas y"
+	cont "y no estresarse."
+	
+	para "Antes me enojaba"
+	line "mucho al luchar"
+	cont "pero ahora trato"
+	cont "de hacerlo por"
+	cont "diversión."
 	done
 
 BugCatcherWade1SeenText:
-	text "I caught a bunch"
-	line "of #MON. Let me"
-	cont "battle with you!"
+	text "¡Aquí está el"
+	line "gran héroe que"
+	cont "lucha por la"
+	cont "justicia!"
+	
+	para "¡El poderoso"
+	line "BEE-MASK!"
 	done
 
 BugCatcherWade1BeatenText:
-	text "Awwwww…"
+	text "¡¿Como pudo el"
+	line "malvado AidasMan"
+	cont "derrotar a nuestro"
+	cont "héroe Bee-Mask?!"
 	done
 
 BugCatcherWade1AfterText:
-	text "You can catch"
-	line "#MON even if"
-
-	para "you have six with"
-	line "you."
-
-	para "If you catch one,"
-	line "it'll go to your"
-	cont "BOX automatically."
+	text "Quiero ser tan"
+	line "fuerte como el"
+	cont "Bee-Mask real."
 	done
 
 Text_Route31SleepyMan:
-	text "… Hnuurg… Huh?"
+	text "Derrotar a Nate"
+	line "es más difícil de"
+	cont "lo que pensaba."
 
-	para "I walked too far"
-	line "today looking for"
-	cont "#MON."
+	para "Mi Pandree no"
+	line "pudo resistir los"
+	cont "ataques Voladores"
+    cont "de Birnal."
+	
+	para "Mientras que Rack"
+	line "fue destruido por"
+	cont "el Agua de Mop."
 
-	para "My feet hurt and"
-	line "I'm sleepy…"
-
-	para "If I were a wild"
-	line "#MON, I'd be"
-	cont "easy to catch…"
-
-	para "…Zzzz…"
-	done
-
-Text_Route31SleepyManGotMail:
-	text "…Zzzz… Huh?"
-
-	para "What's that? You"
-	line "have MAIL for me?"
-	done
-
-Text_Route31HandOverMailMon:
-	text "<PLAYER> handed"
-	line "over the #MON"
-	cont "holding the MAIL."
-	done
-
-Text_Route31ReadingMail:
-	text "Let's see…"
-
-	para "…DARK CAVE leads"
-	line "to another road…"
-
-	para "That's good to"
-	line "know."
-
-	para "Thanks for bring-"
-	line "ing this to me."
-
-	para "My friend's a good"
-	line "guy, and you're"
-	cont "swell too!"
-
-	para "I'd like to do"
-	line "something good in"
-	cont "return too!"
-
-	para "I know! I want you"
-	line "to have this!"
-	done
-
-Text_Route31DescribeNightmare:
-	text "TM50 is NIGHTMARE."
-
-	para "It's a wicked move"
-	line "that steadily cuts"
-
-	para "the HP of a sleep-"
-	line "ing enemy."
-
-	para "Ooooh…"
-	line "That's scary…"
-
-	para "I don't want to"
-	line "have bad dreams."
-	done
-
-Text_Route31WrongMail:
-	text "This MAIL isn't"
-	line "for me."
-	done
-
-Text_Route31MissingMail:
-	text "Why is this #-"
-	line "MON so special?"
-
-	para "It doesn't have"
-	line "any MAIL."
-	done
-
-Text_Route31DeclinedToHandOverMail:
-	text "What? You don't"
-	line "want anything?"
-	done
-
-Text_Route31CantTakeLastMon:
-	text "If I take that"
-	line "#MON from you,"
-
-	para "what are you going"
-	line "to use in battle?"
+	para "Voy a intentar"
+	line "derrotar a Pluto"
+	cont "con mi Bask,"
+	
+	para "Aunque tal vez"
+	line "deba pasar por el"
+	cont "bosque y atrapar"
+	cont "un Aedes primero."
 	done
 
 Route31YoungsterText:
-	text "I found a good"
-	line "#MON in DARK"
-	cont "CAVE."
+	text "Dicen que un super"
+	line "raro #MON"
+	cont "vive aquí pero"
 
-	para "I'm going to raise"
-	line "it to take on"
-	cont "FALKNER."
+	para "llevo mucho tiempo"
+	line "buscando y nada."
 
-	para "He's the leader of"
-	line "VIOLET CITY's GYM."
+	para "Es cosa de suerte,"
+	line "supongo."
+	
+	para "Se ve como una"
+	line "bola de pelos con"
+	cont "hojas sobre su"
+	cont "cabeza."
+	
+	para "¿Atraparlo?"
+	
+	para "Nah, es para ganar"
+	line "EXP rápidamente."
 	done
 
 Route31SignText:
-	text "ROUTE 31"
+	text "Route 3"
+	
+	para "Uniendo caminos."
 
-	para "VIOLET CITY -"
-	line "CHERRYGROVE CITY"
+	para "E:Grass Town"
+	line "O:Cloudy City"
+	cont "S:Meteorfall City"
 	done
 
 DarkCaveSignText:
-	text "DARK CAVE"
+	text "Entrada a"
+	line "Cloudy City."
+	
+	para "No busquen"
+	line "problemas."
+	cont "          -Nate"
 	done
 
 Route31_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 2 ; warp events
 	warp_event  4,  6, ROUTE_31_VIOLET_GATE, 3
 	warp_event  4,  7, ROUTE_31_VIOLET_GATE, 4
-	warp_event 34,  5, DARK_CAVE_VIOLET_ENTRANCE, 1
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  7,  5, BGEVENT_READ, Route31Sign
-	bg_event 31,  5, BGEVENT_READ, DarkCaveSign
+	bg_event 36,  8, BGEVENT_READ, Route31Sign
+	bg_event  5,  5, BGEVENT_READ, DarkCaveSign
 
 	db 7 ; object events
-	object_event 17,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
-	object_event  9,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
-	object_event 21, 13, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherWade1, -1
-	object_event 33,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
-	object_event 16,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
-	object_event 29,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
-	object_event 19, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
+	object_event  6,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31MailRecipientScript, -1
+	object_event 32,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31YoungsterScript, -1
+	object_event 11,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherWade1, -1
+	object_event 25, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31CooltrainerMScript, -1
+	object_event  0, 13, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route31FruitTree, -1
+	object_event 31,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
+	object_event  4, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL

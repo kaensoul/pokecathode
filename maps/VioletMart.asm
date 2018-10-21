@@ -21,29 +21,50 @@ VioletMartCooltrainerMScript:
 	jumptextfaceplayer VioletMartCooltrainerMText
 
 VioletMartGrannyText:
-	text "When you first"
-	line "catch a #MON,"
-	cont "it may be weak."
+	text "El oficial ya era"
+	line "trabador, pero"
+	cont "desde que su hijo"
 
-	para "But it will even-"
-	line "tually grow to be"
-	cont "strong."
+	para "se convirtió en"
+	line "líder trabaja el"
+	cont "doble."
 
-	para "It's important to"
-	line "treat #MON with"
-	cont "love."
+	para "Supongo que no"
+	line "quiere parecer un"
+	cont "debíl anciano"
+	cont "como yo."
+	
+	para "Creo que tanto"
+	line "trabajo le esta"
+	cont "afectando la"
+	cont "cabeza, ya dice"
+	cont "cosas raras y"
+	cont "todo."
+	
+	para "Aunque supongo"
+	line "que ya era de"
+	cont "los que decían"
+	cont "tonterías antes."
 	done
 
 VioletMartCooltrainerMText:
-	text "#MON can hold"
-	line "items like POTION"
-	cont "and ANTIDOTE."
+	text "Estoy en mi tiempo"
+	line "libre pero no dejo"
+	cont "de trabajar."
 
-	para "But they don't"
-	line "appear to know how"
+	para "Unos chicos raros"
+	line "intenraron robar"
+	cont "#MON a los"
+	cont "clientes el otro"
+	cont "día."
 
-	para "to use manmade"
-	line "items."
+	para "Según testigos"
+	line "parecían llevar"
+	cont "armaduras."
+	
+	para "pero tengo la"
+	line "corazonada de que"
+	cont "¡eran robots!"
 	done
 
 VioletMart_MapEvents:
@@ -60,4 +81,4 @@ VioletMart_MapEvents:
 	db 3 ; object events
 	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletMartClerkScript, -1
 	object_event  7,  6, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletMartGrannyScript, -1
-	object_event  5,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletMartCooltrainerMScript, -1
+	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletMartCooltrainerMScript, -1

@@ -90,105 +90,109 @@ UnionCaveRock2:
     jumpstd smashrock
 	
 HikerRussellSeenText:
-	text "A rock fell and"
-	line "the short way be-"
-	cont "come a labyrinth"
-
-	para "Let me kick your"
-	line "ass to release"
-	cont "this rage."
+	text "¡Este lugar se"
+	line "convirtió en un"
+	cont "laberinto!"
 	done
 
 HikerRussellBeatenText:
-	text "Hey man, i told"
-	line "you to lose!"
+	text "Me pierdo y"
+	line "pierdo."
 	done
 
 HikerRussellAfterBattleText:
-	text "I'm not a hiker"
-	line "because i like to"
-	cont "walk or climb,"
+	text "No soy escalador"
+	line "por el gusto a"
+	cont "escalar,"
 
-	para "i'm just a middle"
-	line "age man than want"
-	cont "to look cool."
+	para "simplemente soy"
+	line "un hombre de me-"
+	cont "diana edad que"
+	cont "quiere verse cool."
 	done
 
 PokemaniacLarrySeenText:
-	text "This was a popular"
-	line "mine years ago,"
-	cont "there must be some"
+	text "Este lugar era"
+	line "parte de una mina."
 
-	para "evolution stones"
-	line "somewhere, i only"
-	cont "need to take you"
-    cont "out of my way!"
+	para "¡Si te quitaras"
+	line "de mi camino"
+	cont "podría encontrar"
+    cont "piedras raras!"
 	done
 
 PokemaniacLarryBeatenText:
-	text "If i could evolve"
-	line "my #MON…"
+	text "Necesito evolucio-"
+	line "nar a mis #-"
+	cont "MON…"
 	done
 
 PokemaniacLarryAfterBattleText:
-	text "I could just go to"
-	line "Smog City and buy"
-	cont "evolution stones"
-
-	para "there, but i hate"
-	line "that place."
+	text "Podría comprar"
+	line "piedras en Smog"
+	cont "City, pero ese"
+	cont "lugar apesta."
 	done
 
 HikerDanielSeenText:
-	text "Hey kiddo, want a"
-	line "bear hug?"
+	text "Oye lindura,"
+	line "¿Quieres un"
+	cont "abrazo de oso?"
 	done
 
 HikerDanielBeatenText:
-	text "Don't be so shy!"
+	text "¡No seas tímido!"
 	done
 
 HikerDanielAfterBattleText:
-	text "If you ever need"
-	line "strong arms just"
-	cont "come here."
+	text "Si alguna vez"
+	line "necesitas los"
+	cont "fuertes brasos de"
+	
+	para "un hombre real"
+	line "ven a mi."
 	done
 
 FirebreatherBillSeenText:
-	text "Did you come here"
-	line "to  catch Rock"
-	cont "type #MON too?"
+	text "¿También vienes"
+	line "por #MON"
+	cont "tipo Roca?"
 	done
 
 FirebreatherBillBeatenText:
-	text "SMASHED!!"
+	text "¡¡SMASHED!!"
 	done
 
 FirebreatherBillAfterBattleText:
-	text "There is a Fire"
-	line "GYM and a Normal"
-	cont "GYM near, Rock"
+	text "Los tipo Roca y"
+	line "Tierra serán de"
+	cont "gran ayuda en el"
 
-	para "#MON can be"
-	line "usefull."
+	para "GYM de Snowy"
+	line "City."
 	done
 
 FirebreatherRaySeenText:
-	text "Have you seen an"
-	line "Ice-type around"
-	cont "here?"
+	text "¿Viste algún"
+	line "tipo Hielo en el"
+	cont "camino?"
 	done
 
 FirebreatherRayBeatenText:
-	text "Don't be so cold."
+	text "No seas tan frío."
 	done
 
 FirebreatherRayAfterBattleText:
-	text "I was told Ice"
-	line "mons live here"
-	cont "i know i'm a fire"
+	text "El cartel decía"
+	line "algo sobre frío"
+	cont "extremo, pero no"
 	
-	para "breather but still."
+	para "veo muchos tipo"
+	line "Hielo aun."
+	
+	para "¡Se que soy un"
+	line "Escupe Fuego"
+	cont "pero igual!"
 	done
 
 UnionCave1F_MapEvents:

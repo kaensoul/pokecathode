@@ -17,47 +17,49 @@ MrPokemonsHouse_ForeignMagazines:
 	jumptext MrPokemonsHouse_ForeignMagazinesText
 
 MrPokemonIntroText1:
-	text "We are going to"
-	line "the Battle Tower"
-	cont "soon, is full of"
+	text "Iremos a Battle"
+	line "Tower muy pronto,"
+	cont "el mejor lugar"
 
-	para "strong trainers."
+	para "para encontrar"
+	line "entrenadores"
+	cont "fuertes."
 	done
 
 MrPokemonIntroText2:
-	text "I need Cut to"
-	line "explore new areas"
-	cont "and i heard than"
+	text "Necesito la"
+	line "habilidad para"
+	cont "Cortar obstáculos"
 	
-	para "there is an upgra-"
-	line "ded version with"
-	cont "more power than"
+	para "para explorar"
+	line "nuevas áreas."
 	
-	para "the international"
-	line "HM CUT here in"
-	cont "Kita."
+	para "Además se que en"
+	line "Kita se usa una"
+	cont "técnica más"
 	
-	para "I want to meet"
-	line "strong trainers,"
-	cont "because they must"
+	para "poderosa que las"
+	line "demás regiones."
 	
-	para "know where i can"
-	line "find it."
+	para "Iré donde hay"
+	line "entrenadores"
+	cont "fuertes para en-"
+	cont "contrarla."
 	done
 
 MrPokemonsHouse_ForeignMagazinesText:
-	text "Some folders with"
-	line "pics, the first"
+	text "Algunas carpetas"
+	line "con imágenes."
 
-	para "one say Fiona"
-	line "the purrfect idol"
-	cont "and the other"
+	para "Una dice: Fiona"
+	line "la idol purfecta."
 	
-	para "Laila the random"
-	line "idol."
+	para "y la otra:"
+	line "Laila la idol"
+	cont "random."
 	
-	para "2TB of nothing"
-	line "but pics."
+	para "2TB con nada más"
+	line "que imágenes."
 	done
 
 

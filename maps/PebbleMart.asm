@@ -21,36 +21,29 @@ PebbleMartFisherScript:
 	jumptextfaceplayer PebbleMartFisherText
 
 PebbleMartGrampsText:
-	text "This Mart is"
-	line "younger than you."
+	text "Esta tienda es"
+	line "más joven que tú."
 
-	para "Now than many"
-	line "kids start their"
+	para "Como muchos niños"
+	line "empiezan su viaje"
+	cont "aquí, mi hijo"
 
-	para "adventure here,"
-	line "my son decided to"
-	
-	para "open a shop and"
-	line "sell basic stuff"
-    cont "to trainers."
+	para "abrió esta tienda"
+	line "para vender cosas"
+	cont "baratas a todos."
 	done
 
 PebbleMartFisherText:
-	text "Another adventurer"
-	line "i see, you should"
+	text "Pareces un chico"
+	line "listo."
 
-	para "go to Cloudy City"
-	line "and get a fishing"
+	para "Ve a Cloudy City"
+	line "y consigue una"
+	cont "caña de pescar,"
 	
-	para "rod. Many strong"
-	line "#MON live"
-	
-	para "underwater..."
-	line "But i guess you"
-	
-	para "can't fish in a"
-    line "place like this"
-    cont "anyway."	
+	para "muchos #MON"
+	line "fuertes viven"
+	cont "bajo el agua."
 	done
 
 PebbleMart_MapEvents:

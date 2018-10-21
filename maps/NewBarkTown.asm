@@ -91,68 +91,67 @@ Movement_TeacherRunsToYou2_NBT:
 	step_end
 
 Text_GearIsImpressive:
-	text "Where are you"
-	line "from, kid?"
+	text "¿De donde vienes?"
 
-	para "Johto?,"
-	line "where in the world"
-	cont "is that?"
+	para "¿Johto?,"
+	line "¿Donde es eso?"
 	done
 
 Text_WaitPlayer:
-	text "I shouldn't leave"
-	line "without a #MON."
+	text "No me debería ir"
+	line "sin #MON."
 	done
 
 NewBarkTownSignText:
 	text "Pebble Town"
 
-	para "Some softness in"
-	line "a rocky mountain."
+	para "Algo de suavidad"
+	line "en una montaña"
+	cont "rocosa."
 	done
 
 NewBarkTownPlayersHouseSignText:
-	text "Pebble INN"
+	text "Posada Pebble."
 	done
 
 NewBarkTownElmsLabSignText:
-	text "Kapok's #MON LAB"
+	text "Laboratorio"
+	line "#MON."
 	done
 
 NewBarkTownElmsHouseSignText:
-	text "Jim's GYM"
-	next "A real GYM!"
+	text "GYM de JIM"
+	next "¡Un GYM real!"
 	done
 	
 Text_CTF:
-    text "New trainer," 
-	next "right? Well you"
+    text "¿Entrenador" 
+	next "novato?"
 
-	para "should know than"
-	line "the south path"
-	cont "is long and dan-"
+	para "Si no quieres"
+	line "pasar peligro"
+	cont "ve por el oeste."
 	
-	para "gerous, meanwhile"
-	line "the west path is"
-	cont "kid friendly."
+	para "Al sur de aquí"
+	line "muchos novatos"
+	cont "se rinden."
 	done
 	
 Text_CTM:
-    text "Dont take Jim"
-    next "seriously, the"
+    text "No tomes a Jim"
+    line "enserio, la Liga"
+	cont "sabe que es"
 
-    para "#MON league"
-	line "know he is too"
-	cont "weak to be a"
-	
-	para "Leader like Nate"
-	line "or Francis."
+    para "muy débil para"
+	line "ser un Líder"
+	cont "como Nate o"
+	cont "Francis."
 	done
 
 Fattext:
-   text "Technology is ok"
-   next "i guess, nothing"
-   cont "impressive."
+   text "La tecnología es"
+   next "decente supongo,"
+   cont "no la gran cosa."
    done   
 	
 NewBarkTown_MapEvents:

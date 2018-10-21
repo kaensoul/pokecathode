@@ -93,115 +93,125 @@ UnionCaveB2FHyperPotion:
 	itemball GREAT_BALL
 
 CooltrainermNickSeenText:
-	text "A cool trainer"
-	line "go where is cool"
-	cont "to stay cool."
+	text "Un entrenador"
+	line "cool va donde"
+	cont "es cool para"
+	
+	para "seguir siendo"
+	line "cool."
 	done
 
 CooltrainermNickBeatenText:
-	text "Not cool."
+	text "No cool, viejo."
 	done
 
 CooltrainermNickAfterBattleText:
-	text "You're cooler"
-	line "than me."
+	text "Eres más cool"
+	line "que yo."
 	done
 
 CooltrainerfGwenSeenText:
-	text "I found rare"
-	line "#MON around"
-	cont "here."
+	text "Ni te imaginas"
+	line "los #MON"
+	cont "raros que atrapé"
+	cont "aquí."
 	done
 
 CooltrainerfGwenBeatenText:
-	text "How did you beat"
-	line "my rare #MON?"
+	text "¿Como derrotaste"
+	line "a mi #MON"
+	cont "raro?"
 	done
 
 CooltrainerfGwenAfterBattleText:
-	text "I hate Rack, a"
-	line "common #MON"
+	text "Odio a Rack,"
+	line "un #MON"
+	cont "común no debería"
 	
-	para "shouldn't be so"
-	line "strong."
+	para "ser tan fuerte"
+	line "o genial."
 	done
 
 CooltrainerfEmmaSeenText:
-	text "If i win you will"
-	line "take me to the"
-	cont "Cinema!"
+	text "¡Si gano tendre-"
+	line "mos una cita!"
 	done
 
 CooltrainerfEmmaBeatenText:
-	text "You don't like"
-	line "cute girls?"
+	text "¿No te gustan"
+	line "las chicas lindas?"
 	done
 
 CooltrainerfEmmaAfterBattleText:
-	text "Well, is not like"
-	line "i like you or"
-	cont "anything!"
+	text "¡Bu-bueno, no"
+	line "es como si me"
+	cont "gustaras ni nada!"
 	done
 	
 WantChillma:
-    text "Man i got this"
-    line "weird bear in"
-    cont "Pebble Town but"
+    text "En Pebble Town"
+    line "me dieron este"
+    cont "feo oso,"
 
-    para "i can't win a"
-    line "single battle, a"
-    cont "cute trainer like"
+    para "¡que ni ganar"
+    line "puede!"
 	
-    para "me should only"
-    line "use strong and"
-	cont "cool #MON!"
+    para "Una hermosa dama"
+    line "como yo debería"
+	cont "utilizar única-"
+	cont "mente los mejores"
 	
-	para "I don't want it,"
-	line "could you take it"
-	cont "away from me?"
+	para "#MON, no"
+	line "perder tiempo"
+	cont "con esto."
+	
+	para "¿Me harías el"
+	line "favor de des-"
+	cont "hacerte de él"
+	cont "por mí?"
 	done
 	
 Givechillma:
-    text "Good, for some"
-	line "reason it keep"
-	cont "going after me if"
+    text "Bien, por alguna"
+	line "razón si intento"
+	cont "soltarlo trata"
 	
-	para "i try to release"
-	line "it, so annoying."
+	para "de seguirme, que"
+	line "fastidioso."
 	done 
 	
 Butwhy:
-    text "Huh? Do you dare"
-	line "say no to me?"
-	cont "If my father was"
+    text "¿Qué?"
+	line "¿Osás decirme que"
+	cont "no?"
 	
-	para "here you would be"
-	line "dead right now."
+	para "Mi padre te"
+	line "mataría de estar"
+	cont "aquí."
 	done
 	
 Recichillma:
-    text "<PLAYER> received"
+    text "¡<PLAYER> recibió"
 	line "Chillma!"
 	done	
     	
 Needspace:
-    text "Looks like your"
-    line "pocket is full"
-    cont "of trash already."
+    text "Parece ser que"
+    line "no tienes espacio"
+    cont "para mas basura."
 	
-	para "Please make space"
-	line "and take away this"
-	cont "useless beast."
+	para "Vuelve luego para"
+	line "llevarte esta"
+	cont "bestia inútil."
     done	
 		
 Postgive:
-    text "I'm going to"
-	line "Sinnoh soon, there"
-	cont "my father will"
+    text "Pronto iré a"
+	line "Sinnoh, ahí mi"
+	cont "padre me dará un"
 	
-	para "give me a real"
-	line "#MON like"
-	cont "Garchomp."
+	para "#MON real como"
+	line "Garchomp."
 	done
 		
 UnionCaveB2F_MapEvents:

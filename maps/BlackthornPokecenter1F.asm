@@ -31,77 +31,83 @@ BlackthornPokecenter1FThermaque:
 	end	
 	
 BlackthornPokecenter1FCooltrainerMText
-    text "Thermaque is"
-    line "loved here, they"
-	cont "rescue lost people"
+    text "Thermaque es"
+    line "amado aquí, ya que"
+	cont "rescatan gente"
 	
-	para "in the mountine"
-	line "and keep everyone"
-	cont "here warm during"
-	cont "winter."
+	para "perdida en las"
+	line "montañas y nos"
+	cont "mantienen calenti-"
+	cont "tos en invierno."
 	done
 	
 THERMAQUEPCText:
-    text "Que?"
+    text "¿Que?"
     done	
 
 BlackthornPokecenter1FGentlemanText:
-	text "Thermaque is an"
-	line "unique #MON,"
-	cont "inside its body"
+	text "Thermaque es un"
+	line "#MON único,"
+	cont "dentro de su"
+	cont "cuerpo es tan"
 
-	para "is as hot as any"
-	line "other Fire-Type"
-    cont "but its fur can"
+	para "caliente como"
+	line "cualquier otro"
+    cont "tipo Fuego pero"
 
-	para "generate snow,"
-	line "the snow melt"
-	cont "fast, this make"
-
-	para "water appear over"
-	line "its head and when"
-	cont "many Thermaque get"
+	para "sobre su pelaje se"
+	line "genera Hielo."
 	
-	para "close they make"
-	line "pools with rocks"
-	cont "and fill it with"
-	
-	para "that water, and"
-	line "finally bath there"
-	cont "with humans and"
-	cont "other #MON."
+	para "Como es de esperar"
+	line "el hielo se derri-"
+	cont "te, creando Agua,"
+
+	para "con la cual luego"
+	line "crean baños terma-"
+	cont "les donde disfru-"
+	cont "tan con personas"
+	cont "y otros #MON."
 	done
 
 BlackthornPokecenter1FTwinText:
-	text "You must know how"
-	line "much people here"
-	cont "love Thermaque."
+	text "Supongo que ya"
+	line "sabes lo mucho"
+	cont "que amamos a los" 
+	cont "Thermaque aquí."
 
-	para "But the one than"
-	line "love them the most"
-	cont "is papa Francis,"
+	para "Pero quien ama más"
+	line "a esas lindas"
+	cont "bolas de pelo es"
+	cont "mi papi."
 
-	para "he told me than"
-	line "when he was as"
-	cont "small as me a"
+	para "Me dijo que cuando"
+	line "era tan chiquito"
+	cont "como yo, el fue"
 	
-	para "Thermaque recued"
-	line "him after an"
-	cont "Earthqauke in the"
-	cont "mountine."
+	para "rescatado por un"
+	line "Thermaque tras un"
+	cont "Terremoto en las"
+	cont "montañas."
 	
-	para "That Thermaque is"
-	line "his partner now!"
+	para "¡Y desde entonces"
+	line "son compañeros!"
 	
-	para "Thermaque evolved"
-	line "and papa got old"
-    cont "but they're still"
-    cont "together." 
+	para "Thermaque ya"
+	line "evolucionó y mi"
+    cont "papi se hizo"
+    cont "viejito y panzón," 
 	
-	para "If you had 15"
-	line "badges you would"
-	cont "be able to fight"
-	cont "papa's best friend!"
+	para "pero aun así luchan"
+	line "tan bien como"
+	cont "cuando eran del"
+	cont "Alto Mando."
+	
+	para "Tal vez algún día"
+	line "puedas ver al"
+	cont "mejor amigo de papi"
+	
+	para "sólo necesitas 15"
+	line "medallas."
 	done
 
 BlackthornPokecenter1F_MapEvents:
@@ -121,6 +127,6 @@ BlackthornPokecenter1F_MapEvents:
 	object_event  5,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FGentlemanScript, -1
 	object_event  1,  4, SPRITE_TWIN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FTwinScript, -1
 	object_event  7,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FCooltrainerMScript, -1
-    object_event  5,  4, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FThermaque, -1
+    object_event  5,  4, SPRITE_STARMIE, SPRITEMOVEDATA_POKEMON, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BlackthornPokecenter1FThermaque, -1
 
 	

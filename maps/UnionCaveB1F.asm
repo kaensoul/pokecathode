@@ -81,50 +81,53 @@ UnionCaveB1FBoulder:
 	jumpstd strengthboulder
 
 HikerPhillipSeenText:
-	text "I have been lose"
-	line "here since i was"
-	cont "ten."
+	text "Me perdí aquí"
+	line "cuando tenía 10."
 	done
 
 HikerPhillipBeatenText:
-	text "I miss mom."
+	text "Extraño a mi"
+	line "mamá."
 	done
 
 HikerPhillipAfterBattleText:
-	text "I just wanted some"
-	line "adventures, now"
-	cont "i don't remember"
+	text "Solo quería ir de"
+	line "aventuras, pero"
+	cont "ahora ni la luz"
 
-	para "what sunlight is."
+	para "del Sol puedo"
+	line "recordar."
 	done
 
 HikerLeonardSeenText:
-	text "I'm training to"
-	line "beat Francis!"
+	text "¡Entreno para"
+	line "derrotar a"
+	cont "Francis!"
 	done
 
 HikerLeonardBeatenText:
-	text "I just wanted"
-	line "EXP. points."
+	text "Ni un punto de"
+	line "EXP."
 	done
 
 HikerLeonardAfterBattleText:
-	text "Francis ace is a"
-	line "weird monkey"
-	cont "#MON than not"
+	text "Francis usa un"
+	line "mono muy raro"
+	cont "que controla la"
 
-	para "only use Fire and"
-	line "Ice moves, it can"
-	cont "also use Water."
+	para "temperatura, con"
+	line "ataques de Hielo"
+	cont "y Fuego,"
 
-	para "I mean, it kinda"
-	line "make sence, i"
-	cont "guess."
+	para "Además puede usar"
+	line "ataques de agua"
+	cont "al derretir sus"
+	cont "propios ataques."
 	done
 
 PokemaniacAndrewSeenText:
-	text "WHERE THE HECK"
-	line "IS THE EXIT?!"
+	text "¡¿DONDE CARAJOS"
+	line "ESTA LA SALIDA?!"
 	done
 
 PokemaniacAndrewBeatenText:
@@ -132,11 +135,10 @@ PokemaniacAndrewBeatenText:
 	done
 
 PokemaniacAndrewAfterBattleText:
-	text "IF I DON'T LEAVE"
-	line "THIS PLACE SOON!"
-	
-	para "I GOING TO KILL"
-	line "MYSELF!"
+	text "¡SI NO SALGO DE"
+	line "AQUÍ PRONTO, ME"
+	cont "VOY A VOLVER"
+	cont "LOCO!"
 	done
 
 PokemaniacCalvinSeenText:
@@ -153,13 +155,16 @@ PokemaniacCalvinAfterBattleText:
 	done
 
 Healingtext:
-    text "Need help?"
-    line "I work for the"
-    cont "#MON League."
+    text "¡Hola!"
+    line "Trabajo para la"
+    cont "Liga #MON."
 
-    para "Let me use some"
-    line "potions and elixir"
-    cont "on your friends."	
+    para "Tengo pociones y"
+    line "elixires para"
+    cont "curar a tus"
+    cont "amigos."
+	
+	para "¡Buena suerte!"
 	done
 
 UnionCaveB1F_MapEvents:

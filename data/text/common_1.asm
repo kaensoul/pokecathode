@@ -1,30 +1,27 @@
 _FruitBearingTreeText::
-	text "It's a fruit-"
-	line "bearing tree."
+	text "Un árbol frutal."
 	done
 
 _HeyItsFruitText::
-	text "Hey! It's"
+	text "¡Esto es un(a)"
 	line "@"
 	text_from_ram wStringBuffer3
 	text "!"
 	done
 
 _ObtainedFruitText::
-	text "Obtained"
+	text "Obtuviste"
 	line "@"
 	text_from_ram wStringBuffer3
 	text "!"
 	done
 
 _FruitPackIsFullText::
-	text "But the PACK is"
-	line "full…"
+	text "Mochila llena."
 	done
 
 _NothingHereText::
-	text "There's nothing"
-	line "here…"
+	text "Nada interesante."
 	done
 
 UnknownText_0x1bc06b::
@@ -151,61 +148,54 @@ UnknownText_0x1bc288::
 	text "CARD FOLDER open.@@"
 
 UnknownText_0x1bc29c::
-	text "<……><……><……><……><……><……>"
-	line "<……><……><……><……><……><……>"
-
-	para "Zzz… Hm? Wha…?"
-	line "You woke me up!"
-
-	para "Will you check the"
-	line "clock for me?"
+	text "Resgistra la"
+	line "hora de llegada."
 	prompt
 
 UnknownText_0x1bc2eb::
-	text "What time is it?"
+	text "Hora:"
 	done
 
 UnknownText_0x1bc2fd::
-	text "What?@@"
+	text "Es@@"
 
 UnknownText_0x1bc305::
-	text "?"
+	text ","
 	done
 
 UnknownText_0x1bc308::
-	text "How many minutes?"
+	text "Minutos exactos:"
 	done
 
 UnknownText_0x1bc31b::
-	text "Whoa!@@"
+	text "Son@@"
 
 UnknownText_0x1bc323::
-	text "?"
+	text ","
 	done
 
 UnknownText_0x1bc326::
-	text "!"
-	line "I overslept!"
+	text " Se hace" 
+	line "tarde."
 	done
 
 UnknownText_0x1bc336::
-	text "!"
-	line "Yikes! I over-"
-	cont "slept!"
+	text " Se hace" 
+	line "tarde."
 	done
 
 UnknownText_0x1bc34f::
-	text "!"
-	line "No wonder it's so"
-	cont "dark!"
+	text " Se hace" 
+	line "tarde."
 	done
 
 UnknownText_0x1bc369::
-	text "What day is it?"
+	text "¿Qué día es?"
 	done
 
 UnknownText_0x1bc37a::
-	text ", is it?"
+	text "," 
+	line "¿correcto?"
 	done
 
 UnknownText_0x1bc384::
@@ -310,7 +300,7 @@ UnknownText_0x1bc546::
 	prompt
 
 UnknownText_0x1bc55d::
-	text "It's the TOWN MAP."
+	text "Es un mapa."
 	done
 
 UnknownText_0x1bc570::
@@ -1629,206 +1619,176 @@ UnknownText_0x1bdaa7::
 	done
 
 UnknownText_0x1bdaa9::
-	text "I'm the DAY-CARE"
-	line "MAN. Want me to"
-	cont "raise a #MON?"
+	text "¿Necesitas que"
+	line "cuidemos tu"
+	cont "#MON?"
 	done
 
 UnknownText_0x1bdad8::
-	text "I'm the DAY-CARE"
-	line "MAN. Do you know"
-	cont "about EGGS?"
-
-	para "I was raising"
-	line "#MON with my"
-	cont "wife, you see."
-
-	para "We were shocked to"
-	line "find an EGG!"
-
-	para "How incredible is"
-	line "that?"
-
-	para "So, want me to"
-	line "raise a #MON?"
+    text "¿Necesitas que"
+	line "cuidemos tu"
+	cont "#MON?"
 	done
 
 UnknownText_0x1bdb85::
-	text "I'm the DAY-CARE"
-	line "LADY."
-
-	para "Should I raise a"
-	line "#MON for you?"
+	text "¿Necesitas que"
+	line "cuidemos tu"
+	cont "#MON?"
 	done
 
 UnknownText_0x1bdbbb::
-	text "I'm the DAY-CARE"
-	line "LADY. Do you know"
-	cont "about EGGS?"
-
-	para "My husband and I"
-	line "were raising some"
-	cont "#MON, you see."
-
-	para "We were shocked to"
-	line "find an EGG!"
-
-	para "How incredible"
-	line "could that be?"
-
-	para "Should I raise a"
-	line "#MON for you?"
+	text "¿Necesitas que"
+	line "cuidemos tu"
+	cont "#MON?"
 	done
 
 UnknownText_0x1bdc79::
-	text "What should I"
-	line "raise for you?"
+	text "¿Cual?"
 	prompt
 
 UnknownText_0x1bdc97::
-	text "Oh? But you have"
-	line "just one #MON."
+	text "No puedes estar"
+	line "sin un #MON."
 	prompt
 
 UnknownText_0x1bdcb8::
-	text "Sorry, but I can't"
-	line "accept an EGG."
+	text "Prometiste"
+	line "cuidar el huevo."
 	prompt
 
 UnknownText_0x1bdcda::
-	text "Remove MAIL before"
-	line "you come see me."
+	text "No aceptamos"
+	line "#MON con"
+	cont "correo."
 	prompt
 
 UnknownText_0x1bdcff::
-	text "If you give me"
-	line "that, what will"
-	cont "you battle with?"
+	text "Necesitas un"
+	line "#MON para ser"
+	cont "entrenador."
 	prompt
 
 UnknownText_0x1bdd30::
-	text "OK. I'll raise"
-	line "your @"
+	text "Dejame cuidar a"
+	line "tu @"
 	text_from_ram wStringBuffer1
 	text "."
 	prompt
 
 UnknownText_0x1bdd4b::
-	text "Come back for it"
-	line "later."
+	text "Pero no lo"
+	line "hagas esperar"
+	cont "mucho."
 	done
 
 UnknownText_0x1bdd64::
-	text "Are we geniuses or"
-	line "what? Want to see"
-	cont "your @"
+	text "¿Quieres ver a"
+	line "tu @"
 	text_from_ram wStringBuffer1
 	text "?"
 	done
 
 UnknownText_0x1bdd96::
-	text "Your @"
+	text "Tu @"
 	text_from_ram wStringBuffer1
 	text_start
-	line "has grown a lot."
+	line "creció mucho."
 
-	para "By level, it's"
-	line "grown by @"
+	para "Su nivel aumento"
+	line "por @"
 	deciram wStringBuffer2 + 1, 1, 3
 	text "."
 
-	para "If you want your"
-	line "#MON back, it"
-	cont "will cost ¥@"
+	para "La tarifa que"
+	line "debes pagar por"
+	cont "él es ¥@"
 	deciram wStringBuffer2 + 2, 3, 4
 	text "."
 	done
 
 UnknownText_0x1bde04::
-	text "Perfect! Here's"
-	line "your #MON."
+	text "Echo, cuidalo"
+	line "bien."
 	prompt
 
 UnknownText_0x1bde1f::
-	text "<PLAYER> got back"
+	text "<PLAYER> recuperó"
 	line "@"
 	text_from_ram wStringBuffer1
 	text "."
 	prompt
 
 UnknownText_0x1bde32::
-	text "Huh? Back already?"
-	line "Your @"
+	text "¿Tan pronto?"
+	line "Tu @"
 	text_from_ram wStringBuffer1
 	text_start
-	para "needs a little"
-	line "more time with us."
+	para "no a crecido en"
+	line "lo más mínimo."
 
-	para "If you want your"
-	line "#MON back, it"
-	cont "will cost ¥100."
+	para "Pero si aun así"
+	line "lo quieres de"
+	cont "vuelta será ¥100."
 	done
 
 UnknownText_0x1bdea2::
-	text "You have no room"
-	line "for it."
+	text "No lo puedo"
+	line "enviar al PC."
 	prompt
 
 UnknownText_0x1bdebc::
-	text "You don't have"
-	line "enough money."
+	text "Debes pagar la"
+	line "tarifa."
 	prompt
 
 UnknownText_0x1bded9::
-	text "Oh, fine then."
+	text "Oh, bien."
 	prompt
 
 UnknownText_0x1bdee9::
-	text "Come again."
+	text "Vuelve pronto."
 	done
 
 UnknownText_0x1bdef6::
-	text "Not yet…"
+	text "Aun no…"
 	done
 
 UnknownText_0x1bdf00::
-	text "Ah, it's you!"
+	text "Tus #MON se"
+	line "llevan más que"
+	cont "bien."
 
-	para "We were raising"
-	line "your #MON, and"
+	para "Un huevo apareció"
+	line "junto a ellos,"
 
-	para "my goodness, were"
-	line "we surprised!"
-
-	para "Your #MON had"
-	line "an EGG!"
-
-	para "We don't know how"
-	line "it got there, but"
-
-	para "your #MON had"
-	line "it. You want it?"
+	para "¿Prometes cuidar"
+	line "del huevo?"
 	done
 
 UnknownText_0x1bdfa5::
-	text "<PLAYER> received"
-	line "the EGG!"
+	text "<PLAYER> recibió"
+	line "un Huevo!"
 	done
 
 UnknownText_0x1bdfba::
-	text "Take good care of"
-	line "it."
+	text "Cuida bien de"
+	line "él."
 	done
 
 UnknownText_0x1bdfd1::
-	text "Well then, I'll"
-	line "keep it. Thanks!"
+	text "Entonces será"
+	line "parte de la"
+	cont "guardería."
 	done
 
 UnknownText_0x1bdff2::
-	text "You have no room"
-	line "in your party."
-	cont "Come back later."
+	text "Los Huevos"
+	line "cuentan como"
+	cont "#MON,"
+	
+	para "Tendrás que"
+	line "volver cuando"
+	cont "hagas espacio."
 	done
 
 UnknownText_0x1be024::

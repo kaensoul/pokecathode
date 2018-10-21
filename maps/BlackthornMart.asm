@@ -21,30 +21,35 @@ BlackthornMartBlackBeltScript:
 	jumptextfaceplayer BlackthornMartBlackBeltText
 
 BlackthornMartCooltrainerMText:
-	text "I need Burn and"
-	line "Ice heal for the"
-	cont "GYM."
+	text "Diablos, necesito"
+	line "Antiguemar y Anti-"
+	cont "congelar,"
 
-	para "They should sell"
-	line "Full Heal but i"
-	cont "guess companies"
+	para "Como es una ciudad"
+	line "donde no muchos"
+	cont "vienen, las"
+	cont "grandes compañías"
 
-	para "don't care about"
-	line "our city."
+	para "Ni se molestan en"
+	line "vender buenos"
+	cont "productos como"
+	
+	para "Cura Total o"
+	line "Restaudar Todo."
 	done
 
 BlackthornMartBlackBeltText:
-	text "Smog City is the"
-	line "best place to buy"
-	cont "stuff but the air"
+	text "Smog City es el"
+	line "mejor lugar para"
+	cont "comprar cosas,"
 
-	para "smell like a"
-	line "Koffing and the"
-	cont "people act like a"
+	para "pero apesta a"
+	line "Koffing y la gente"
+	cont "actua como un"
+	cont "grupo de Wiindigoo"
 	
-	para "bunch of Wiindigoo"
-	line "so i try to stay"
-	cont "away from there."
+	para "Mejor ni pensar"
+	cont "en ir."
 	done
 
 BlackthornMart_MapEvents:

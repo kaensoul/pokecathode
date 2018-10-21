@@ -64,119 +64,121 @@ FireScript:
 	
 
 Neighbor:
-    text "It was Jim again,"
-	line "kids nowdays think"
-	cont "they can do"
-	
-	para "whatever they"
-	line "want."
+    text "Ese Jim siempre"
+	line "haciendo tonterías"
+	cont "y arruinando mis"
+	cont "cosas."
 	done
 
 Innwoman:
-    text "You come alone,"
-	line "kid?"
+    text "¿Viniste solo"
+	line "niño?"
 	
-	para "Is fine, all kids"
-	line "need to grouw up,"
-	cont "10yo can't stay"
+	para "Todos debemos"
+	line "crecer algún día,"
 	
-	para "inside home and"
-	line "do nothing the"
-	cont "whole day."
+	para "a los 10 mis"
+	line "hijos dejaron"
+	cont "casa para ganarse"
+	cont "la vida."
 	done	
 	
 Innkitch:
-    text "I dont like my"
-    line "job, but i sucks"
+    text "Odio trabajar en"
+    line "esta posada."
 
-	para "at #MON battles"
-	line "so i dont have a"
-	cont "choice."
+	para "Pero como apesto"
+	line "en las batallas"
+	cont "#MON,"
+	
+	para "no tengo opción."
 	done
 
 Guy:
-    text "I got all that"
-	line "stuff from the"
+    text "La profesora me"
+	line "dió un #MON"
+	cont "y un montón de"
+	cont "cosas geniales,"
 	
-	para "Lab next door, a"
-	line "#DEX, #GEAR"
-	cont "and a #MON"
+	para "pero…"
 	
-	para "but i dont know"
-	line "what to do…"
+	para "No creo ser"
+	line "capaz de luchar."
 	
-    para "Battles aren't"
-	line "easy and i dont"
-	cont "have much money,"
+    para "Tengo miedo de"
+	line "perder."
 	
-	para "if i lose, i lose"
-	line "money and my new"
-	cont "#MON would"
+	para "No quiero perder"
+	line "dinero o que mi"
+	cont "compañero me"
+	cont "odie…"
 	
-	para "hate me…"
-	line "I would go back"
-	cont "home, but my"
+	para "Volvería a casa,"
+	line "pero mi papá se"
+	cont "pondría triste…"
 	
-	para "dad would be so"
-	line "sad and i don't"
-	cont "want to disappoint"
+	para "No quiero decep-"
+	line "cionarlo."
 	
-	para "him again…"
-	line "Why life can't"
-	cont "be a game?"
+	para "Me gustaría que"
+	line "la vida fuera"
+	cont "un videojuego…"
 	done
 
 Bugger:
-    text "Dude, Jim the"
-	line "dude than live"
+    text "Viejo, ese Jim,"
+	line "viejo, tomó"
+	cont "control del GYM,"
 	
-	para "next door was"
-	line "trying to open"
+	para "¡Viejo!"
 	
-	para "his own GYM, but"
-	line "he is so bad than"
+	para "Pero viejo, la"
+	line "Liga #MON no"
+	cont "se interesa en"
+	cont "él, viejo."
 	
-	para "the #MON"
-	line "league told him"
-	
-	para "to fuck off!!"
-	line "duuuude."
+	para "No pierdas"
+	line "tiempo con él,"
+	cont "viejo."
 	done
 
 RadioText:
-	text "Something is write"
-    line "here, for some"
-	cont "reason."
+	text "Alguien escribió"
+    line "su nombre con"
+	cont "marcadoe rojo."
 	
-	para "Jim was here!"
+	para "¡JIM!"
 	done
 
 SinkText:
-	text "Man, i have seen"
-	line "Trubbish more"
-	cont "clean than this."
+	text "Eh visto Trubbish"
+	line "más limpios que"
+	cont "esto."
 	done
 
 FridgeText:
-	text "Let's see what's"
-	line "in the fridge…"
+	text "Veamos que hay"
+	line "para comer…"
 
-	para "There is a Biscby"
-	line "coming out of that"
-	cont "apple!"
+	para "¡Un Biscby se me"
+	line "adelantó!"
+	
+    para "!Está dentro de"
+	line "manzana!"
 	done
 
 TVText:
-	text "Is that movie"
-	line "about ancient"
-    cont "#MON that was"
+	text "Es esa película"
+	line "acerca de #-"
+    cont "MON antiguos que"
 	
-	para "popular last year."
+	para "fue popular hace"
+	line "un año."
 	done
 
 FireText:
-    text "There is oil"
-    line "everywhere."
+    text "Aceite por"
+    line "todos lados."
 	done
 	
 PlayersHouse1F_MapEvents:

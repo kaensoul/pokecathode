@@ -48,13 +48,13 @@ HandleFrenchGermanMail: ; 1df1e6
 	ld a, [hl]
 	cp $dc ; 's in french/german font
 	jr nz, .check_intermediate_chars
-	ld a, "'s"
+	ld a, "s"
 	jr .replace
 
 .check_intermediate_chars
-	sub "'s"
+	sub "s"
 	jr c, .dont_replace
-	cp "'v" - "'s" + 1
+	cp "v" - "s" + 1
 	jr nc, .dont_replace
 	add $cd
 
@@ -78,7 +78,7 @@ DeutenEnglischenPost: ; 1df203
 	ld l, e
 .loop
 	ld a, [hl]
-	cp "'s"
+	cp "s"
 	jr nz, .check_intermediate_chars
 	ld a, $dc
 	jr .replace
@@ -86,9 +86,9 @@ DeutenEnglischenPost: ; 1df203
 .check_intermediate_chars
 	sub $cd
 	jr c, .dont_replace
-	cp "'v" - "'s" + 1
+	cp "v" - "s" + 1
 	jr nc, .dont_replace
-	add "'s"
+	add "s"
 
 .replace
 	ld [hl], a

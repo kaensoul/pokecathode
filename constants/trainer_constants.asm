@@ -109,7 +109,8 @@ KRIS EQU __enum__
 
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
-	const MIKEY
+	const ROD
+	const JIML
 	const ALBERT
 	const GORDON
 	const SAMUEL
@@ -150,8 +151,6 @@ KRIS EQU __enum__
 	const CHAD5
 
 	trainerclass BIRD_KEEPER ; 18
-	const ROD
-	const ABE
 	const BRYAN
 	const THEO
 	const TOBY
@@ -458,6 +457,7 @@ KRIS EQU __enum__
 
 	trainerclass GUITARIST ; 2b
 	const CLYDE
+	const ABE
 	const VINCENT
 
 	trainerclass HIKER ; 2c

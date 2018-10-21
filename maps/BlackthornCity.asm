@@ -59,144 +59,136 @@ BlackthornCityMartSign:
 	jumpstd martsign
 
 Text_ClairIsOut:
-	text "Dude thanks to"
-	line "god i don't have"
-    cont "to go to Salty"
+	text "Nunca volveré a"
+	line "esa horrible"
+    cont "montaña."
 	
-	para "eyes again in my"
-	line "life, i did see "
-	cont "some stuff behind"
-
-	para "rocks but thats "
-	line "not enough to make"
-    cont "me want to go"
-	cont "back there."
+	para "Sin importar la"
+	line "cantidad de teso-"
+	cont "ros que se pueden"
+	cont "encontrar ahí."
 	done
 
 Text_ClairIsIn:
-	text "I'm watching the"
-	line "GYM Leader fight,"
-	cont "he is impressive."
+	text "Veo al Líder del"
+	line "GYM luchar, es"
+	cont "increíble."
 
-	para "I didn't knew"
-	line "someone drunk "
-	cont "could fight like"
-	cont "that."
+	para "¿Como alguien"
+	line "borracho lucha"
+	cont "tan bien?"
 
-	para "Some time ago a"
-	line "girl with Delibird"
-	cont "clothes and a blue"
+	para "Antes vino una"
+	line "chica con ropas"
+	cont "que parecían de"
+	cont "Delibird y un"
 	
-	para "haired kid defea-"
-	line "ted him in awesome"
-	cont "battles."
+	para "chico con cabello"
+	line "azul. Ellos son"
+	cont "de los pocos que"
+	
+	para "han derrotado a"
+	line "Francis."
 	done
 
 BlackthornGrampsRefusesEntryText:
-	text "The water here is"
-	line "hot, people and"
-	cont "Thermaque use it"
+	text "El agua aquí es"
+	line "caliente, la"
+	cont "gente y Thermaques"
 
-	para "to relax a bit."
+	para "vienen a relajarse"
+	line "con frecuencía."
 	done
 
 BlackthornGrampsGrantsEntryText:
-	text "Do you know about"
-	line "the four cardinal"
-	cont "beast?"
+	text "Las 4 bestias"
+	line "cardinales son"
+	cont "un misterio."
 
-	para "They come to Kita"
-	line "around 20 years"
-	cont "ago, people had"
+	para "Hace unos 20 años"
+	line "vinieron a Kita,"
+	cont "y hace 2 años"
 	
-	para "to make shrines"
-	line "to keep them calm"
-	cont "until a the day a"
+	para "el ave carmesí"
+	line "del sur destruyó"
+	cont "Hail City."
 	
-	para "trainer catch"
-	line "them."
+	para "La gente intanta"
+	line "mantenerlas"
+	cont "vigilaras en"
+	cont "santuarios."
 	
-	para "They are dangerous"
-	line "no long ago the"
-	cont "Crimson Bird of"
-	cont "the south,"
-	
-	para "destroyed a city"
-	line "not so far from"
-	cont "here."
+	para "Pero creo que"
+	line "ellas son las que"
+	cont "nos vigilan."
 	done
 
 BlackBeltText_WeirdRadio:
-	text "I come here"
-	line "because i was told"
-	cont "a really rare and"
+	text "Vine buscando un"
+	line "#MON raro que"
+	cont "vive en Salty Eyes"
 	
-	para "strong #MON"
-	line "than look like a"
-	cont "chicken live in"
+	para "pero tras estar"
+	line "día y noche allá,"
+	cont "no lo pude ver."
 	
-	para "Salty Eyes, but"
-	line "i spend the whole"
-	cont "day and night"
-	cont "there and nothing."
+	para "Tal vez deba ir"
+	line "más temprano."
 	
-	para "Maybe i should go"
-	line "early in the"
-	cont "morning."
+	para "Tiene forma de"
+	line "polluelo con cola"
+	cont "escamosa."
 	done
 	
 BlackthornCooltrainerF1Text:
-	text "This place is"
-	line "really high, Ice"
-	cont "#MON can"
-	
-	para "live around here"
-	line "nicely."
+	text "Este es el lugar"
+	line "más alto de la"
+	cont "región."
 	done
 
 BlackthornYoungsterText:
-	text "My sis say than"
-	line "she will catch"
-	cont "a strong #MON"
-	cont "for me!"
+	text "!Mi hermana dijo"
+	line "atraparía unos"
+	cont "#MON raros"
+	cont "para mí!"
 	done
 
 SantosGivesGiftText:
-	text "A Gargolit took"
-	line "my new hat, it"
-	cont "must be hide on a"
-	cont "tree around here."
+	text "Un Gargolit tomó"
+	line "mi gorra y se"
+	cont "escondió sobre"
+	cont "un árbol."
 	done
 
 
 BlackthornCooltrainerF2Text:
-	text "Is hard to get"
-	line "good #BALLs in"
-	cont "Kita, the factory"
+	text "Es difícil encon-"
+	line "trar buenas #-"
+	cont "BALLs en Kita."
 
-	para "in Flower Town"
-	line "would rathen sell"
-	cont "the good ones to"
-	cont "other regions."
+	para "La fabrica de"
+	line "#BALLs en"
+	cont "Flower Town no"
+	
+	para "acostumbra vender"
+	line "a la región."
 	done
 
 BlackthornCitySignText:
 	text "Snowy City"
 
-	para "Stay cool and"
-	line "chill in the"
-	cont "highest place in"
-	cont "Kita."
+	para "Mantente en calor"
+	line "con la gente."
 	done
 
 BlackthornGymSignText:
 	text "Snowy City"
 	line "#MON GYM"
-	cont "Leader: Francis"
+	cont "Líder: Francis"
 
-	para "Always ready for"
-	line "a good fight and"
-	cont "a good drink!"
+	para "¡Siempre listo"
+	line "para combatir"
+	cont "y beber!"
 	done
 
 BlackthornCity_MapEvents:

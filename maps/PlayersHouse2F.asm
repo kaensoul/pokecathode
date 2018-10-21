@@ -85,85 +85,94 @@ PlayerHousePosterPikachuSign:
     closetext
     end
 	
+PlayerHouse2FGirl1Text:
+    jumptextfaceplayer PH2Girll
+
+PlayerHouse2FGirl1smallText:
+    jumptextfaceplayer PH2Girllsmall	
+	
+PlayerHouse2FKidText:
+    jumptextfaceplayer PH2Kid	
+	
 PikachuPoster:
-    text "It look like a"	
-	line "#MON from a far"
-	cont "away country."
+    text "Parece un"	
+	line "#MON de un"
+	cont "país lejano."
 	done
 	
 PlayersRadioText1:
-	text "Dude: Yo! yo!"
-	line "YO! YO!"
-	cont "Garl: Man..."
+	text "Tío: ¡HEY HEY"
+	line "HE HEY!"
+	cont "Tía: Hombre..."
 	done
 
 PlayersRadioText2:
-	text "if you dont know"
+	text "No sabes cantar,"
 	done
 
 PlayersRadioText3:
-	text "how to rap,"
-	line "just say it."
+	text "deja de hacer"
+	line "el bobo."
 	done
 
 PlayersRadioText4:
-	text "YO!"
-	line "YO! YO YO YO!"
+	text "Tío: ¡HEY HEY"
+	line "HE HEY!"
 	done
 	
-PlayerHouse2FGirl1Text:
-    jumptextfaceplayer PH2Girll
-    end	
 	
 PH2Girll:
-    text "So you have the"	
-    line "new shoes than"
-	cont "let you move fast"
+    text "¿Esos son las"	
+    line "deportivas tan"
+	cont "populares en"
+	cont "Hoenn?"
 	
-	para "when you press B."
-	line "But where is the"
-	cont "B button?"
+	para "Dicen que si"
+	line "pulsas el Botón"
+	cont "B puedes ir a"
+	cont "gran velocidad."
+	
+	para "Pero a de ser"
+	line "incomodo patear"
+	cont "para usarlo."
 	done
-
-PlayerHouse2FGirl1smallText:
-    jumptextfaceplayer PH2Girllsmall
-    end	
 	
 PH2Girllsmall:
-    text "Do you know than"
-    line "#MON attacks"
-	cont "can be divided in"
+    text "En clases aprendí"
+    line "que los ataques"
+	cont "#MON se pueden"
 	
-	para "3 categories?"
-	line "Moves than dont"
-	cont "deal damage," 
+	para "dividir en tres"
+	line "categorías."
 	
-	para "moves than use"
-	line "beams and magic"
+	para "No recuerdo sus"
+	line "nombres, pero"
+	cont "se que hacen."
 	
-	para "and finally the"
-	line "direct attacks,"
+	para "Una para los"
+	line "golpes directos."
 	
-	para "my teacher told"
-	line "me that."
+	para "Otra para los"
+	line "ataques mágicos,"
+	
+	para "y otra para los"
+	line "los movimientos"
+	cont "de soporte."
     done
-	
-PlayerHouse2FKidText:
-    jumptextfaceplayer PH2Kid
-    end	
-	
+		
 PH2Kid:
-   text "I can't believe"
-   line "guys and girls use"
-   cont "the same room."
+   text "No me creo que"
+   line "chicos y chicas"
+   cont "¡usen el mismo"
+   cont "cuarto!"
    
-   para "Thats lewd!"
+   para "¡Que nervios!"
    done
    
 PHPC:
-   text "This thing can't"
-   line "even run mine-"
-   cont "sweeper right."
+   text "Este modelo"
+   line "dejó de ser útil"
+   cont "cuando nací."
    done
 	
 PlayersHouse2F_MapEvents:

@@ -20,63 +20,54 @@ ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
 
 ElmsWifeText:
-	text "Prof. Kapok is"
-	line "really smart, but"
+	text "Prof. Kapok es"
+	line "inteligente,"
+	cont "pero el Profesor"
 
-	para "the Prof. Yggdra-"
-	line "sil is smarter."
+	para "Yggdrasil es más"
+	line "listo."
 
-	para "He can even make"
-	line "#MON!!"
+	para "¡Puede crear"
+	line "#MON!"
 	done
 
 ElmsSonText:
 	text "Prof. Yggdrasil"
-	line "used to work on"
-	cont "Mud Town, but no"
+	line "trabajaba en"
+	cont "Mud Town, pero"
 
-	para "one know where he"
-	line "is now."
+	para "ya nadie sabe"
+	line "que es de él."
 	done
 
 ElmsHousePCText:
 	text "Kita's Region News"
-	line "January 13, 2018."
+	line "Junio 13, 2018."
 
-	para "The rare #MON"
-	line "used in that"
-	cont "famous movie last"
+	para "Aquel extraño"
+	line "#MON que"
+	cont "apareció en aque-"
+	cont "lla película,"
 
-	para "year was real"
-	line "after all!"
+	para "¡Es real!"
 
-	para "But not everything"
-	line "is happy news,"
+	para "Pero no todas son"
+	line "buenas noticias."
 
-	para "Prof.Yggdrasil"
-	line "Montrake's creator"
+	para "Prof.Yggdrasil,"
+	line "creador de"
+	cont "Montrake"
 
-	para "experimented on"
-	line "#MON and"
+	para "fue acusado por"
+	line "experimentación"
+	cont "en #MON vivos."
 
-	para "not only his own,"
-	line "two accusations"
+	para "Y no solamente"
+	line "los suyos."
 	
-    para "than can end with"
-	line "Yggdrasil's career"
-	
-	para "The 70 years old"
-	line "man have too much"
-	cont "to explain."
-	
-	para "Oh, this new look"
-	line "better."
-	
-	para "Gulpin's poison"
-	line "can be used to"
-	
-	para "cure cancer, read"
-	line "more on page 84!"
+    para "¿Qué dirá"
+	line "Yggdrasil al"
+	cont "respecto?"
 	done
 
 ElmsHouse_MapEvents:

@@ -27,15 +27,14 @@ BlackthornDragonSpeechHouseMagazineBookshelf:
 	jumpstd magazinebookshelf
 
 BlackthornDragonSpeechHouseGrannyText:
-	text "Did you know than"
-	line "the water over"
-	cont "Thermadril's head"
-
-	para "is mostly liqueur?"
+	text "¿Sabias que sobre"
+	line "la cabeza de"
+	cont "Thermadril se"
+	cont "genera licor?"
 	done
 
 BlackthornDragonSpeechHouseDratiniText:
-	text "The!"
+	text "¡The!"
 	done
 
 BlackthornDragonSpeechHouse_MapEvents:

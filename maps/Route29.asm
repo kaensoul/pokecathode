@@ -47,113 +47,94 @@ Route29Potion:
 	itemball TM_RAGE
 
 Jaklopetext:
-    text "I want to catch a"
-	line "Jaklope for my"
-	cont "daughter and a"
+    text "Quiero atrapar"
+	line "un Jaklope para"
+	cont "mi hija y un Bask"
+	cont "para mi hijo,"
 	
-	para "Bask for my son"
-	line "but Jaklope only"
-	cont "appear during the"
+	para "pero uno sale de"
+	line "noche y el otro"
+	cont "por la mañana."
 	
-	para "morning and Bask"
-	line "at night, so i"
-	cont "will be here the"
-	
-	para "whole day…"
+	para "Será un largo"
+	line "día…"
 	done
 	
 	
 Route29YoungsterText:
-	text "I try to evade"
-	line "tall grass, but"
-	cont "sometimes there"
+	text "Trato de evitar"
+	line "la hierba alta,"
+	
+	para "pero aveces no"
+    line "hay otra opción,"
+	
+	para "Un hombre debe"
+	line "saber enfrentar"
+	cont "sus miedos."
 
-	para "is no other way,"
-	line "sometimes a man"
-	cont "must fight fear"
-
-	para "itself to live,"
-	line "but thanks to"
-	cont "god im a kid."
+	para "Gracias a dios"
+	line "soy solo un"
+	cont "niño."
 	done
 
 Route29TeacherText:
-	text "You should visit"
-	line "the #MON"
-	cont "fan club, you"
+	text "Deberías visitar"
+	line "el #MON"
+	cont "fan club,"
 
-	para "never know what"
-	line "kind of weird"
-	cont "stuff the nerds"
-
-	para "there can teach"
-	line "you."
+	para "esos nerds"
+	line "siempre tienen"
+	cont "cosas de interes"
+	cont "para decir."
 	done
 
 Route29FisherText:
-	text "There is so much"
-	line "weird stuff going"
-    cont "on lately."
+	text "Muchas cosas"
+	line "locas pasan"
+    cont "últimamente."
 	
-	para "Movie mons than"
-	line "become real, a"
-	cont "bird than destroy"
+	para "Un monstruo de"
+	line "película es real,"
 	
-	para "cities for fun, a"
-	line "cave appearing"
-	cont "for no reason,"
+	para "un ave destruyó"
+	line "una ciudad entera,"
 	
-	para "margarine than i"
-	line "can't believe it's"
-	cont "not butter."
+	para "una cueva que sale"
+	line "de la nada."
 	
-	para "Better just ignore"
-	line "everything and"
-	cont "fish all day."
+	para "Mejor ignorar"
+	line "todo y pescar"
+	cont "todo el día."
 	done
 
 LeavingText:
-    text "Is kind of fun,"
-	line "ya know, the GYM"
-	cont "leader leave and"
+    text "Pebble esta"
+	line "llena de vida"
+	cont "gracias al labo-"
+	cont "torio."
 	
-	para "then Pebble Town"
-	line "become popular."
-	
-	para "Not than Emma was"
-	line "bad, but now Ann"
-	cont "give free shit"
-	
-	para "to everyone who"
-	line "come here, before"
-	cont "no one knew we"
-	
-	para "had a lab. And if"
-    line "you ask me Ann is"
-    cont "cuter than Emma,"	
-	
-	para "i really love cute"
-	line "milfs."
+	para "Aunque la gente"
+	line "solo viene una"
+	cont "vez y no vuelve"
+	cont "jamás."
 	done
 
 Lasttext:
-    text "I love my Chillma,"
-	line "it's so cute."
+    text "Amo a mi Chillma,"
+	line "¡Es muy lindo!"
 	
-	para "I would hug it the"
-	line "whole day, may i"
-	cont "should go to Orre"
-	
-	para "and marry him!"
+	para "Me gustaría ir a"
+	line "Orre para casarme"
+	cont "con él."
 	done
 
 
 Route29Sign2Text:
 	text "Route 1"
-    line "Just your old"
-	cont "mountine smell."
+    line "Con ese aroma"
+	cont "a montaña."
 	
-	para "W:Grass Town"
+	para "O:Grass Town"
 	line "E:Pebble Town"
 	done
 
@@ -170,9 +151,9 @@ Route29_MapEvents:
 	db 8 ; object events
 	object_event 20, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	object_event 43,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29YoungsterScript, -1
-	object_event  5,  6, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29TeacherScript, -1
+	object_event  9,  6, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29TeacherScript, -1
 	object_event 26,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29FruitTree, -1
 	object_event 33,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29FisherScript, -1
 	object_event 54, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29CooltrainerMScript, -1
-	object_event 48,  9, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, -1
+	object_event 47, 13, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, -1
 	object_event 49,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION

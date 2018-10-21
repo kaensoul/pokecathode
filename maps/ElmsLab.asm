@@ -568,644 +568,645 @@ RivalLeaveLab:
     step_end	
 
 ElmText_Intro:
-	text "Kapok: You come"
+	text "Kapok: ¡Viniste,"
 	line "<PLAY_G>!"
 
-	para "I know it was a"
-	line "long travel but"
+	para "Se que fue un"
+	line "largo viaje pero"
+	cont "no te decepciona-"
+	cont "das."
 
-	para "you wont be disa-"
-	line "pointed."
+	para "Nos encanta que"
+	line "tantos entrenado-"
+	cont "res empiecen su"
+	cont "viaje con nosotros"
 
-	para "We love to see new"
-	line "trainers start"
-	cont "they travel with"
+	para "y por ello siempre"
+	line "estamos preparados"
+	cont "con todo lo nece-"
+	cont "sario."
 
-	para "us, so we prepared"
-	line "everything you"
-	cont "need."
-
-	para "This #DEX will"
-    line "turn on as soon as"
-	cont "you get a #MON."
+	para "Esta #DEX va"
+    line "a encender apenas"
+	cont "consigas un #-"
+	cont "MON."
 	
-	para "The #GEAR is"
-	line "ready to work, you"
-	cont "only need to set"
-
-	para "the day of the"
-	line "week."
+	para "Y este #GEAR"
+	line "esta casi listo,"
+	cont "solo hace falta"
+	cont "que pongas el día"
+    cont "de la semana."
 	
-	para "And finally, some"
-	line "#BALLS and"
-	cont "POTIONS."
+	para "Finalmente unas"
+	line "#BALLS y"
+	cont "Pociones."
 	
-	para "Now go the table,"
-	line "i want to show you"
-	cont "our rare #MON."
-	done
-
-ElmText_ChooseAPokemon:
-	text "Now than that is"
-	line "done, choose your"
-
-	para "partner, take a"
-	line "#MON from"
-
-	para "the table and"
-	line "start your travel."
-	done
-
-ElmText_LetYourMonBattleIt:
-	text "Only take one,"
-	line "if you want ano-"
-	cont "ther, catch it!"
+	para "Ahora ve a la mesa"
+	line "para que escojas"
+	cont "tu compañero."
 	done
 
 LabWhereGoingText:
-	text "Kapok: Where you"
-	line "go?"
+	text "Kapok: ¿A donde"
+	line "vas?"
 	done
 
 TakeCyndaquilText:
 	text "Kapok: Crimske"
-	line "is a cool #MON,"
-	cont "it start weak,"
+	line "es un #MON"
+	cont "muy genial,"
 	
-	para "but with enough"
-	line "training, nothing"
-	cont "is impossible!"
+	para "¡comienza débil"
+	line "pero si te esfuer-"
+	cont "zas, nada es impo-"
+	cont "sible!"
 	
-	para "It got a dragon's"
-	line "spirit."
+	para "Tiene el espíritu"
+	line "de un dragón."
 	done
 
 TakeTotodileText:
 	text "Kapok: Chillma"
-	line "is a cute #MON,"
-	cont "it look easy to"
+	line "es un #MON"
+	cont "muy tierno,"
 	
-	para "train, but a"
-	line "bad trainer will"
-	cont "have issues."
+	para "al principio será"
+	line "fácil, pero si lo"
+	cont "descuidas tendrás"
+	cont "serios problemas."
 	
-	para "It got arms"
-	line "stronger than an"
+	para "Tiene brazos tan"
+	line "fuertes como un"
 	cont "Iceberg."
 	done
 
 TakeChikoritaText:
 	text "Kapok: Ceramelops"
-	line "is a friendly"
-	cont "#MON, it will"
+	line "es un #MON"
+	cont "muy amistoso,"
 	
-	para "never disappoint"
-	line "you in battle with"
-	cont "scales harder than"
+	para "nunca te va a"
+	line "decepcionar en"
+	cont "batalla con unas"
+	cont "escamas más duras"
 	
-	para "an armor and horns"
-	line "stronger than a"
-	cont "sword."
+	para "que una armadura"
+	line "y cuernos más"
+	cont "fuertes que una"
+	cont "espada."
 	done
 
 DidntChooseStarterText:
-	text "Kapok: Is not"
-	line "your style?"
+	text "Kapok: ¿No es tu"
+	line "estilo?"
 	done
 
 ChoseStarterText:
-	text "Kapok: That"
-	line "#MON look"
-	cont "very happy!"
+	text "Kapok: Ese"
+	line "#MON se ve"
+	cont "muy feliz!"
 	done
 
 ReceivedStarterText:
-	text "<PLAYER> received"
+	text "¡<PLAYER> recibió"
 	line "@"
 	text_from_ram wStringBuffer3
 	text "!"
 	done
 
 ElmDirectionsText1:
-	text "Kapok: That's"
-	line "everything i can"
-	cont "do for you."
+	text "Kapok: Eso es"
+	line "todo lo que puedo"
+	cont "hacer por tí."
 
-	para "You should go"
-	line "and explore the"
+	para "Deberías explorar"
+	line "la región, esta"
+	cont "llena de miste-"
+	cont "rios sin resolver"
 
-	para "region, you and"
-	line "your partner will"
+	para "y la Liga #MON"
+	line "es un reto que"
+	cont "todo entrenador"
+	cont "debería intentar."
 
-	para "have many adventu-"
-	line "res, be carefull"
-	cont "and try your best."
+	para "¡Da lo mejor de"
+	line "tí!"
 
-	para "Oh, you can have"
-	line "my phone number,"
-
-	para "if you need some-"
-	line "one to chat with."
+	para "Oh, ten mi número"
+	line "para que hablemos"
+	cont "luego."
 	done
 
 ElmDirectionsText2:
-	text "I think a girl"
-	line "is watching you"
-	cont "right now, she"
+	text "Parece que una"
+	line "chica te tiene"
+	cont "los ojos encima,"
 
-	para "is also a new"
-	line "trainer, so be"
-	cont "ready to battle!"
+	para "es una entrenado-"
+	line "ra, ¡prepárate"
+	cont "para luchar!"
 	done
 
 ElmDirectionsText3:
-	text "<PLAY_G>, Good"
-	line "Luck!"
+	text "¡<PLAY_G>, buena"
+	line "suerte!"
 	done
 
 GotElmsNumberText:
-	text "<PLAYER> got Kapok's"
-	line "phone number."
+	text "<PLAYER> registró"
+	line "a Kapok."
 	done
 
 ElmDescribesMrPokemonText:
-	text "Kapok: This is a"
-	line "good job, but i"
-	cont "would like to"
+	text "Kapok: Me gusta"
+	line "trabajar aquí,"
+	cont "pero anhelo viajar"
+	cont "por el mundo otra"
+	cont "vez."
 
-	para "travel the world"
-	line "again, i wonder"
-	
-	para "what is Fred doing"
-	line "right now…"
+	para "Me pregunto que"
+	line "estará haciendo"
+	cont "Fred ahora…"
 	done
 
 ElmPokeBallText:
-	text "It look a bit"
-	line "sad…"
+	text "Se ve triste…"
 	done
 
 ElmsLabHealingMachineText1:
-	text "I wonder what this"
-	line "does?"
+	text "¿Qué hará?"
 	done
 
 ElmsLabHealingMachineText2:
-	text "Use the healing"
-	line "machine?"
+	text "¿Debería curar a"
+	line "mis amigos?"
 	done
 
 ElmsLabWindowText1:
-	text "The window's open."
-
-	para "A pleasant breeze"
-	line "is blowing in."
+	text "Se ven huevos"
+	line "#MON del otro"
+	cont "lado."
 	done
 
 ElmsLabWindowText2:
-	text "I can see many"
-	line "#MON eggs!"
+	text "Se ven huevos"
+	line "#MON del otro"
+	cont "lado."
 	done
 
 ElmsLabTravelTip1Text:
-	text "A blue horse"
-	line "#MON, called"
-	cont "Cathode…"
+	text "Un dibujo antiguo"
+	line "de un #MON"
+	cont "llamado Cathode…"
 
-	para "What does it say"
-	line "about it?"
-
-	para "Travel at high"
-	line "speed around the"
-	cont "world."
+	para "Viaja a gran velo-"
+	line "cidad a través"
+	cont "del hemisferio"
+	cont "sur."
 	
-	para "Legends say than"
-	line "the south magnetic"
-	cont "pole use the"
+	para "Genera energía con"
+	line "la cúal carga el"
+	cont "polo sur magnéti-"
+	cont "co."
 	
-	para "energy Cathode"
-	line "generate while"
-	cont "running…"
-	
-	para "South? then it may"
-	line "appear here."
+	para "Me gustaría verlo"
+	line "algún día."
 	done
 
 ElmsLabTravelTip2Text:
-	text "A red horse"
-	line "#MON, called"
-	cont "Anode…"
+	text "Un dibujo antiguo"
+	line "de un #MON"
+	cont "llamado Anode…"
 
-	para "What does it say"
-	line "about it?"
-
-	para "Travel at high"
-	line "speed around the"
-	cont "world."
+	para "Viaja a gran velo-"
+	line "cidad a través"
+	cont "del hemisferio"
+	cont "norte."
 	
-	para "Legends say than"
-	line "the north magnetic"
-	cont "pole use the"
+	para "Genera energía con"
+	line "la cúal carga el"
+	cont "polo norte" 
+	cont "magnético."
 	
-	para "energy Anode "
-	line "generate while "
-	cont "running…"
-	
-	para "North? thats too"
-	line "far from here."
+	para "¿Será real?"
 	done
 
 ElmsLabTravelTip3Text:
-	text "Is about #MON"
-	line "preservation,"
-	cont "what does it say?"
+	text "Un libro acerca"
+	line "de la preserva-"
+	cont "ción #MON,"
+	cont "escrito por Ann"
+	cont "Kapok."
 
-	para "Even when is"
-	line "possible to bring"
-	cont "old #MON back"
+	para "Aun cuando es"
+	line "posible traer"
+	cont "#MON extintos a"
+	cont "la vida con"
 
-	para "to life with our"
-	line "technology, pre-"
-	cont "servation is very"
+	para "nuestra tecnología"
+	line "es muy importante"
+	cont "preservar la vida"
+	cont "#MON."
 	
-	para "important, when we"
-	line "try to recreate a"
-	cont "#MON with a"
+	para "Al recrear un"
+	line "#MON a partir"
+	cont "de un fósil, no"
+	cont "revivimos mágica-"
+	cont "mente a nadie,"
 	
-	para "fossil we don't"
-	line "resurrect someone"
-	cont "we just make a"
+	para "Sino que nosotros"
+	line "simplemente hace-"
+	cont "mos un bebé sin"
+	cont "una madre."
 	
-	para "baby without a"
-	line "mother."
+	para "Además se a descu-"
+	line "bierto que ni"
+	cont "siquiera se ven"
+	cont "como deberían."
 	
-	para "But not just that,"
-	line "fossil #MON"
-	cont "don't even look"
-	
-	para "like they did,"
-	line "Tyramtrum used to"
-    cont "be covered with"
+	para "Tyramtrum debería"
+	line "estar cubierto"
+    cont "por plumas y por"
+	cont "otro lado tenemos"
 
-    para "feathers and Aero-"
-    line "dactyl need a"
-	cont "megastone to look"
+    para "a Aerodactyl quien"
+    line "podemos ver con"
+	cont "su forma real con"
+	cont "la ayuda de las"
+	cont "megapiedras."
 	
-	para "like a real Aero-"
-	line "dactyl. If we let"
-	cont "our #MON"
+	para "…"
 	
-	para "die, then we will"
-	line "lose them forever." 
+	para "No creo poder en-"
+	line "tender el resto,"
+  
+	para "muchas palabras"
+	line "raras como esta"
+	cont "fundación Aeter"
+	cont "o como se diga."
 	done
 	
 
 ElmsLabTravelTip4Text:
-	text "A folder with many"
-	line "photographs, oh"
-	cont "and i can read"
+	text "Unas cuantas"
+	line "fotos, esta tiene"
+	cont "personas etique-"
+	cont "tadas."
 
-	para "peoples names on"
-	line "this one."
+	para "Fue tomada el 4"
+	line "de Octubre de"
+	cont "2004."
 
-	para "October 4, 2004"
-	line "Ann Kapok got her"
-	cont "University Degree."
+	para "Ann Kapok sostiene"
+	line "un diploma univer-"
+	cont "sitario."
 
-	para "With her is a"
-	line "young man with an"
-	cont "Air Force uniform"
+	para "La acompaña un"
+	line "joven adulto con"
+	cont "un uniforme de la"
+	cont "fuerza aérea lla-"
+	cont "mado Fred."
 	
-	para "named Fred."
-	line "An old man called"
-	cont "Mark Kapok and"
+	para "Un anciano llamado"
+	line "Mark Kapok esta"
+	cont "del otro lado,"
 	
-	para "Ann's teacher…"
-	line "Prof. Yggdrasil."
+	para "y en frente un"
+	line "profesor de la"
+	cont "universidad…"
+	
+	para "Profesor de"
+    line "biología #MON,"
+	cont "Prof. Yggdrasil."
 	done
 
 ElmsLabTrashcanText:
-	text "It look like prof."
-	line "really like to"
-	cont "eat sweets."
+	text "A la profesora le"
+	line "gustán MUCHO los"
+	cont "dulces."
 	done
 
 ElmsLabPCText:
-	text "Is about #MON"
-	line "preservation."
+	text "Sobre la preser-"
+	line "vación #MON."
 
-	para "By giving rare"
-	line "#MON to good "
-	cont "people we can "
+	para "Al dar #MON"
+	line "raros a gente"
+	cont "buena aumentamos"
 	
-	para "increase their"
-	line "pobulation without"
-	cont "the need to"
-	
-	para "disturb other's"
-	line "habitat."
+	para "la población de"
+	line "estos #MON"
+	cont "sin perturbar el"
+	cont "habitat de otros."
 	done
 	
 Dayofweek:
-    text "Now set the day"
-    line "of the week"
+    text "Escoge el día"
+    line "de la semana:"
     done	
 	
 NewBarkTownRivalText_Seen:
-	text "Hey!!"
+	text "¡¡OYE!!"
 
-	para "You look like"
-	line "someone with no"
-	cont "idea of whats"
+	para "Tienes pinta de"
+	line "no tener la mas"
+	cont "mínima idea de lo"
+    cont "que sucede aquí,"
+	
+	para "pues dejame mos-"
+	line "trarte como una"
+	cont "batalla #MON"
+	cont "se lleva a cabo."
 
-	para "going on, so let"
-	line "me show you how"
-	cont "to battle, i dont"
+	para "Tienes suerte de"
+	line "que no cargo mi"
+	cont "#MON mas podero-"
+	cont "so conmigo,"
 
-	para "have my strong"
-	line "#MON with"
-	cont "me for now so a"
+	para "¡tal vez un bueno"
+	line "para nada tenga "
+	cont "oportunidad!"
 
-	para "good for nothing"
-	line "like you may have"
-	cont "a chance!"
-
-	para "My name?"
-	line "is …"
+	para "¿Mi nombre?"
+	line "es …"
 	done
 
 SilverNewBarkTownWinText:
-	text "I cant believe"
-	line "i lose against"
-	cont "a baby face."
+	text "¿Como perdí contra"
+	line "un cara de bebé?"
 	done
 
 NewBarkTownRivalText_YouLost:
-    text "This can't be…"
+    text "Imposible…"
 
-	para "I need to be"
-    line "strong, i can't"
-	cont "lose more time."
+	para "Tengo que mejorar"
+    line "y dejar de perder"
+	cont "tiempo, tienes"
+	cont "suerte que no use"
+	cont "objetos."
 	
-	para "You are lucky"
-	line "that metal face"
-	cont "took my partner."
+	para "Me largo, tengo"
+	line "que romper una"
+	cont "lata-humana."
+	
+	para "Nos volveremos"
+	cont "a ver."
 	done		
 
 SilverNewBarkTownLossText:
-	text "I know you are"
-	line "new, but i feel"
-	cont "bad for your"
-	
-	para "#MON."
+	text "Wow, se que eres"
+	line "nuevo, pero me"
+	cont "siento mal por"
+	cont "tú #MON."
 	done
 
 NewBarkTownRivalText_YouWon:
-	text "Some easy EXP for"
-	line "my new partner,"
-	cont "now that metal"
-
-	para "face will have no"
-	line "chance."
-	
-	para "See ya baby face."
+	text "EXP fácil, mi"
+	line "nuevo compañero"
+	cont "podrá vencer a"
+	cont "ese cara de"
+	cont "hojalata."
 	done
 
 ReceiveDEXandGear:
-    text "<PLAYER> got a"
-	line "#DEX and"
-	cont "#GEAR."
+    text "<PLAYER> consiguió"
+	line "un #DEX y"
+	cont "un #GEAR."
 	done
 	
 Book1text:
-	text "A big collection"
-	line "of books about"
-	cont "#MON distri-"
+	text "Una gran colección"
+	line "sobre la distribu-"
+	cont "ción y biología"
 	
-	para "bution and biology"
-	line "they all have"
-	cont "the same author"
-	
-	para "Prof. Cedric"
-    line "Juniper."	
+	para "#MON escritos"
+	line "por Cedric Juniper."
 	done
 	
 Book2text:
-    text "A big collection"
-	line "of books about"
-	cont "#MON habitats,"
+    text "Una gran colección"
+	line "sobre los habitats"
+	cont "#MON, escrito"
 	
-	para "they all have"
-	line "the same author"
-	cont "Prof. Birch."
+	para "por el Profesor"
+	line "Birch."
     done
 
 Book3text:
-    text "July 2, 1913"
-    line "A new fossil was"
-    cont "discovered, the"
+    text "Un libro escrito"
+	line "por Mark Kapok."
+	
+    para "El 2 de julio de"
+    line "1913 mi padre"
+	cont "descubrió el"
+	cont "fósil de un raro"
+	cont "#MON."
 
-    para "#MON was called"
-    line "a weird Bastiodon"
-    cont "sub-species at"
+    para "A primeras fue"
+    line "considerado como" 
+	cont "una sub-especie"
+	
+	para "de Bastiodon pero"
+    line "con la nueva"
+	cont "tecnología de"
 
-    para "first, but this"
-	line "was because small"
-	cont "amount of bones"
+    para "restauración de"
+	line "fósiles pude"
+	cont "finalmente probar"
 	
-	para "people could find."
-	line "Many years later"
-	cont "was decided to"
+	para "que los hallazgos"
+	line "de mi padre eran"
+	cont "de una única es-"
+	cont "pecie de #MON"
 	
-	para "use the new resto-"
-	line "ration technology"
-	cont "on one of the"
+	para "que habitó Kita"
+	line "en la antigüedad,"
+	cont "llamé a este"
+	cont "#MON Ceraroks."
 	
-	para "few fossils. The"
-	line "new #MON was"
-	cont "called Ceraroks"
+	para "Mi hija Ann a"
+	line "estado a cargo de"
+	cont "cuidar ya gene-"
+	cont "raciones de estos"
+	cont "#MON y"
 	
-	para "and we tried to"
-	line "breed it with"
-	cont "Ditto to make"
+	para "descubrió algo"
+	line "muy interesante."
+	cont "Los Ceraroks die-"
+	cont "ron a luz a una"
 	
-	para "more, this worked"
-	line "for some time but"
-	cont "Ceraroks got a"
+	para "especie, "
+	line "Ceramelops." 
 	
-	para "natural evolution"
-	line "to adapt to"
-	cont "the modern world."
+	para "Parece ser"
+	line "más apto para la"
+	cont "vida moderna."
 	
-	para "We call the"
-	line "modern species"
-	cont "Ceramelops."
+	para "Estoy muy seguro"
+	line "que Ceramelops"
+	cont "seguirá sorpren-"
+	cont "diéndonos."
 	done
 	
 Book4text:
-    text "June 21, 2011"
-    line "A 10yo kid found"
-    cont "the legendary"
+    text "21 de Junio del"
+    line "2011, un entrena-"
+    cont "dor de 10 años de"
+	cont "edad atrapó"
 
-    para "#MON Zhulong,"
-    line "but after he left"
-    cont "it on the "
+    para "a Zhulong, un"
+    line "#MON que se"
+    cont "creía legendario,"
 	
-	para "Day-care somewhere"
-	line "on route 34, an "
-	cont "egg come out."
+	para "pero despúes de"
+	line "dejarlo en la"
+	cont "guardería en" 
 	
-	para "The baby was named"
-	line "Cimske, and it was"
-	cont "discovered than"
+	para "ruta 34 se encon-"
+	line "tró un huevo."
 	
-	para "Zhulong wasnt a"
-	line "legendary #MON"
-	cont "just a rare one."
+	para "Llamó al bebé"
+	line "Cimske y se hizo"
+	cont "muy popular en"
+	cont "Kita."
 	done
 	
 Book5text:
-    text "May 11, 1997"
-    line "Our technology is"
-    cont "supposed to help"
+    text "El 11 de Mayo 11"
+    line "se 1997 se "
+    cont "descubrió que"
  
-    para "people and #MON"
-    line "but this isnt"
-	cont "always true."
+    para "Chillma ya no"
+    line "nacía con el tipo"
+	cont "Hielo, se cree que"
 	
-	para "Chillma's popula-"
-	line "tion is in danger"
-	cont "because some"
+	para "es debido al"
+	line "cambio climático"
+	cont "que hace más"
 	
-	para "industries"
-	line "destroyed their"
-	cont "habitat."
+	para "complicada la vida" 
+	line "de los tipo"
+	cont "Hielo jovenes."
 	
-	para "But at the same"
-	line "time some Chillma"
-    cont "without the Ice"
+	para "El Prof. Samson"
+	line "Oak da sus acerta-"
+	cont "dos comentarios:"
+	
+	para "Chillma cambia y"
+	line "adapta como un"
+    cont "¡CASTFORM! para"
 
-    para "Typing have been"
-    line "discovered, the"
-    cont "Prof. Samson Oak"
-
-    para "expert on regional"
-    line "variants say:"
-	cont "Chillma's form"
-
-    para "change like a"
-    line "CASTFORM!! to"
-    cont "live on new areas"
-
-    para "and fight like a"
-    line "MACHAMP!!"	
+    para "vivir en nuevas"
+    line "áreas y tener la"
+    cont "fuerza de un"
+	cont "¡MACHAMP!"
 	done
 	
 Book6text:
-    text "Nothing good, just"
-	line "some weird books"
-	cont "about #MON"
-	
-	para "discoverd on the"
-	line "country."
+    text "Nada interesante,"
+	line "solo habla de"
+	cont "#MON únicos del"
+	cont "país."
 	done
 	
 Book7text:
-    text "The four cardinal"
-	line "beast, this book"
-	cont "say they come"
+    text "Dice algo acerca"
+	line "de las cuatro"
+	cont "bestias cardinales"
 	
-	para "from a far "
-	line "country in the"
-	cont "east, now they "
-	
-	para "live on 4 diffe-"
-	line "rent shrines here"
-	cont "in Kita."
+	para "provienen de un"
+	line "país lejano y"
+	cont "se desconoce que"
+	cont "las trae a Kita."
 	done
 	
 Book8text:
-    text "A book write by"
-	line "Prof. Yggdrasil."
+    text "Un libro acerca de"
+	line "#MON creados"
+	cont "por humanos."
 	
-	para "Artificial #MON"
-	line "was Porygon a "
-	cont "good idea?"
+	para "Fue escrito por el"
+	line "Prof. Yggdrasil."
 	done
 	
 Secretext:
-    text "We act like the"
-	line "#MON Center"
-	cont "here, but you"
+    text "¿Necesitas ayuda?"
 	
-	para "must use the"
-	line "machine yourself."
+	para "Somos como el"
+	line "centro #MON o"
+	cont "algo así."
+	
+	para "¿Curar a tus #-"
+	line "MON?"
+	cont "Hazlo tu mismo."
 	done
 	
 Nerdtext:
-    text "We have prepared"
-    line "#MON for"
-    cont "20 people today."	
+    text "Entregamos #MON"
+    line "a 30 personas"
+    cont "cada día."	
 	done
 	
 PC2text:
-    text "Prof. Kapok with"
-	line "a blonde girl"
-	cont "next to the GYM"
+    text "Prof. Kapok y una"
+	line "chica rubia, están"
+	cont "junto al Gimnasio"
+	cont "en esta foro."
 	
-	para "must be the old"
-	line "GYM leader."
+	para "Debe ser la"
+	line "antigua lider."
 	done
 
 PC3text:
-    text "Is off."
+    text "Apagado."
 
-    para "A cup with a"
-    line "bird theme is"
-    cont "next to the PC."	
+    para "Una taza con"
+    line "varias fotografías"
+    cont "de #MON pájaro."	
 	done
 	
 Nerd2text:
-    text "Here we study"
-	line "#MON preserva-"
-	cont "tion."
+    text "Nosotros estudia-"
+	line "mos preservación"
+	cont "#MON, y claro,"
 	
-	para "Our country have"
-	line "many unique"
-	cont "species than"
-    
-    para "can't live in"
-    line "other places."	
+	para "nos dedicamos a"
+	line "más que solamente"
+	cont "estudiar."
 	done
 
 PC4text:
-    text "An ancient #-"
-    line "MON with spikes"
-    cont "and plates."
+    text "La foto de un"
+    line "#MON antiguo."
 
-    para "No wait, i think"
-    line "they are leafs."
+    para "Tiene púas en la"
+    line "cola."
+	cont "¿O será en su"
+	cont "cabeza?"
     done
 
 PC5text:
-    text "An ancient #-"
-    line "MON with a big"
-    cont "armor and strong"
+    text "La foto de un"
+    line "#MON antiguo."
 
-	para "tail than can"
-	line "carry rocks."
+	para "Con su cola puede"
+	line "cargar rocas."
 	done
 	
 PC6text:
-    text "An ancient #-"
-    line "MON with wings, it"
-    cont "got a long face."
+    text "La foto de un"
+    line "#MON antiguo."
+	
+	para "Tiene alas y una"
+	line "larga cara."
 	done
 	
 PC7text:
-    text "An ancient #-"
-    line "MON with big fangs"
-    cont "and fluffy hair."
+    text "La foto de un"
+    line "#MON antiguo."
+	
+	para "Tiene grandes"
+    line "colmillos."
     done	
 	
 ElmsLab_MapEvents:

@@ -26,12 +26,12 @@ TreeMonMaps: ; b825e
 	treemon_map ROUTE_45,                  TREEMON_SET_LAKE
 	treemon_map ROUTE_46,                  TREEMON_SET_CANYON
 	treemon_map NEW_BARK_TOWN,             TREEMON_SET_CITY
-	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_CITY
+	treemon_map CHERRYGROVE_CITY,          TREEMON_SET_TOWN
 	treemon_map VIOLET_CITY,               TREEMON_SET_CITY
-	treemon_map AZALEA_TOWN,               TREEMON_SET_TOWN
+	treemon_map AZALEA_TOWN,               TREEMON_SET_CITY
 	treemon_map CIANWOOD_CITY,             TREEMON_SET_CITY
 	treemon_map GOLDENROD_CITY,            TREEMON_SET_CITY
-	treemon_map OLIVINE_CITY,              TREEMON_SET_CITY
+	treemon_map OLIVINE_CITY,              TREEMON_SET_TOWN
 	treemon_map ECRUTEAK_CITY,             TREEMON_SET_CITY
 	treemon_map MAHOGANY_TOWN,             TREEMON_SET_CITY
 	treemon_map LAKE_OF_RAGE,              TREEMON_SET_LAKE

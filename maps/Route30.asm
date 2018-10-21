@@ -187,93 +187,88 @@ Route30HiddenPotion:
 	hiddenitem POTION, EVENT_ROUTE_30_HIDDEN_POTION
 
 YoungsterJoey1SeenText:
-	text "This is the top"
-	line "percentage of"
-	cont "Trismunk, you may"
-
-	para "not like it, but"
-	line "this what top"
-	
-	para "percentage looks"
-	line "like."
+	text "¿Cress poder"
+	line "contra el mayor"
+	cont "porcentaje de"
+	cont "Trismunk?"
 	done
 
 YoungsterJoey1BeatenText:
-	text "I may need more"
+	text "Necesitaré mas"
 	line "Trismunk."
 	done
 
 YoungsterJoey1AfterText:
-	text "Trismunk is a"
-	line "cool #MON,"
-	cont "they move fast in"
+	text "Trismunk es muy"
+	line "genial, ellos"
+	cont "corren muy rápido"
 
-	para "the grass and run"
-	line "when people is"
-	cont "near. But if you"
+	para "cuando alguien se"
+	line "acerca haciendo"
+	cont "imposibles de"
+	cont "agarrar."
 
-	para "could hit trees"
-	line "a bunch of them"
-	cont "would fall out!"
+	para "Tendrías que"
+	line "golpear un árbol"
+	cont "para alcanzar"
+	cont "alguno."
 	done
 
 Route30YoungsterText_DirectionsToMrPokemonsHouse:
-	text "Im training to"
-	line "be able to cross"
-	cont "the mountine, is"
+	text "Me entreno para"
+	line "cruzar la monta-"
+	cont "ña, es un camino"
+	cont "difícil, pero"
 	
-	para "a really long"
-	line "travel."
+	para "esta lleno de"
+	line "tesoros."
 	done
 
 Route30CooltrainerFText:
-	text "I was a trainer"
-	line "but a weird thing,"
-	cont "like a metal-man"
+	text "Era una entrena-"
+	line "dora pero mi"
+	cont "compañero fue"
 
-	para "defeated me in"
-	line "battle using weird"
-	cont "#MON."
+	para "robado por un tipo"
+	line "que no parecía"
+	cont "humano con un"
 	
-	para "Then it stole all"
-	line "my #MON, and"
-	cont "i don't know what"
+	para "#MON muy"
+	line "extraño."
 	
-	para "to do anymore…"
+	para "No se que hacer…"
 	done
 
 Route30SignText:
 	text "Route 2"
-	line "Salty Eyes outside"
-	cont "area."
+	line "Monte Salty Eyes"
+	cont "Área externa."
 
 	para "N:Pebble Town"
 	line "S:Snowy City"
 	done
 	
 MrPokemonsHouseSignText:
-	text "The old route"
-	line "was destroyed, the"
-	cont "cave is the only"
+	text "Un derrumbe en"
+	line "la montaña destru-"
+	cont "yó el camino"
+	cont "principal."
 	
-	para "way to Snowy City."
-	
-	para "WARNING:"
-	line "Extreme cold in"
-	cont "some areas."
+	para "PELIGRO:"
+	line "Más adelante hay"
+	cont "frío extremo."
 	done
 
 
 YoungsterJoeyText_GiveHPUpAfterBattle:
-	text "So you are the one"
-	line "who is beyond the"
-	cont "Trismunk power."
+	text "Pudiste superar"
+	line "al Trismunk más"
+	cont "fuerte."
 
-	para "I don't know if"
-	line "you need this, but"
-	cont "i need to show my"
-
-	para "respect somehow."
+	para "Tal vez ya no te"
+	line "sirva pero quiero"
+	cont "mostrar lo mucho"
+    cont "que te respeto."
 	done
 
 Route30_MapEvents:
