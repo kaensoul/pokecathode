@@ -88,6 +88,9 @@ ReadTrainerPartyPieces:
 	ld l, e
 
 call GetNextTrainerDataByte
+    ld a, [wBadges]
+	cp 0
+	jr z, .not_variable ;it skip variable because the trainers bug if you dont carry badges, also, this only allow trainer_type_normal
     ld a, [wOtherTrainerType]
 
 ; variable?
@@ -98,7 +101,7 @@ call GetNextTrainerDataByte
     ld hl, wBadges
     ld b, 2
     call CountSetBits
-    pop hl
+	pop hl
     ; skip that many $fe delimiters
 .outerloop
     ld a, c
@@ -115,7 +118,7 @@ call GetNextTrainerDataByte
     call GetNextTrainerDataByte
     ld [wOtherTrainerType], a
 .not_variable
-
+    
 .loop
 ; level
     call GetNextTrainerDataByte
