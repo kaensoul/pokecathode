@@ -14,7 +14,7 @@ SlowpokeWellB2FGymGuyScript:
 	iftrue .GotKingsRock
 	writetext SlowpokeWellB2FGymGuyText
 	buttonsound
-	verbosegiveitem KINGS_ROCK
+	verbosegiveitem SUN_STONE
 	iffalse .NoRoom
 	setevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
 .NoRoom:
@@ -28,47 +28,44 @@ SlowpokeWellB2FGymGuyScript:
 	end
 
 SlowpokeWellB2FTMRainDance:
-	itemball TM_RAIN_DANCE
+	itemball LOVE_BALL
 
 SlowpokeWellB2FGymGuyText:
-	text "I'm waiting to see"
-	line "SLOWPOKE's moment"
-	cont "of evolution."
+	text "Pensaba buscar"
+	line "piedras raras en"
+	cont "la mina, pero unos"
+    cont "tipos extraños ya"
+	cont "recolectaron todo."
+	
+	para "Aunque encontré"
+	line "unas cuantas"
+	cont "Piedras Solares."
 
-	para "Through observa-"
-	line "tion, I made a new"
-	cont "discovery."
-
-	para "A SLOWPOKE with a"
-	line "KING'S ROCK often"
-
-	para "gets bitten by a"
-	line "SHELLDER."
-
-	para "Here, I'll share a"
-	line "KING'S ROCK with"
-	cont "you."
+	para "Mi Kibaion ya"
+	line "evoluciono, puedes"
+	cont "tener la otra."
 	done
 
 SlowpokeWellB2FGymGuyText_GotKingsRock:
-	text "I'm going to be"
-	line "like SLOWPOKE."
-
-	para "I'll wait patient-"
-	line "ly, so I can see"
-	cont "one evolve."
+	text "Al principio creía"
+	line "que esos tipos de"
+	cont "abajo usaban arma-"
+	cont "duras, pero tal"
+	cont "vez no sean real-"
+	cont "mente humanos."
 	done
 
 SlowpokeWellB2F_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
-	warp_event  9, 11, SLOWPOKE_WELL_B1F, 2
+	db 2 ; warp events
+	warp_event  3, 15, SLOWPOKE_WELL_B1F, 2
+	warp_event 13,  7, UNION_CAVE_1F, 4
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  5,  4, SPRITE_GYM_GUY, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, SlowpokeWellB2FGymGuyScript, -1
-	object_event 15,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SlowpokeWellB2FTMRainDance, EVENT_SLOWPOKE_WELL_B2F_TM_RAIN_DANCE
+	object_event 15, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, SlowpokeWellB2FGymGuyScript, -1
+	object_event  9,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SlowpokeWellB2FTMRainDance, EVENT_SLOWPOKE_WELL_B2F_TM_RAIN_DANCE

@@ -1,6 +1,6 @@
 	db PIDGEY ; 016
 
-	db  70,  105,  55,  98,  90,  67
+	db  70,  99,  55,  101,  90,  67
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, FLYING ; type

@@ -139,15 +139,12 @@ AddOutdoorSprites: ; 141ee
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld c, MAX_OUTDOOR_SPRITES
 .loop
-	push bc
 	ld a, [hli]
+	and a
+	ret z
 	call AddSpriteGFX
-	pop bc
-	dec c
-	jr nz, .loop
-	ret
+	jr .loop
 ; 14209
 
 
@@ -329,7 +326,6 @@ _GetSpritePalette:: ; 142c4
 
 LoadAndSortSprites: ; 142db
 	call LoadSpriteGFX
-	call SortUsedSprites
 	call ArrangeUsedSprites
 	ret
 ; 142e5
@@ -376,9 +372,6 @@ AddSpriteGFX: ; 142e5
 
 
 LoadSpriteGFX: ; 14306
-; Bug: b is not preserved, so it's useless as a next count.
-; Uncomment the lines below to fix.
-
 	ld hl, wUsedSprites
 	ld b, SPRITE_GFX_LIST_CAPACITY
 .loop
@@ -396,83 +389,12 @@ LoadSpriteGFX: ; 14306
 	ret
 
 .LoadSprite:
-	; push bc
+	push bc
 	call GetSprite
-	; pop bc
+	pop bc
 	ld a, l
 	ret
 ; 1431e
-
-
-SortUsedSprites: ; 1431e
-; Bubble-sort sprites by type.
-
-; Run backwards through wUsedSprites to find the last one.
-
-	ld c, SPRITE_GFX_LIST_CAPACITY
-	ld de, wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2
-.FindLastSprite:
-	ld a, [de]
-	and a
-	jr nz, .FoundLastSprite
-	dec de
-	dec de
-	dec c
-	jr nz, .FindLastSprite
-.FoundLastSprite:
-	dec c
-	jr z, .quit
-
-; If the length of the current sprite is
-; higher than a later one, swap them.
-
-	inc de
-	ld hl, wUsedSprites + 1
-
-.CheckSprite:
-	push bc
-	push de
-	push hl
-
-.CheckFollowing:
-	ld a, [de]
-	cp [hl]
-	jr nc, .loop
-
-; Swap the two sprites.
-
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	dec de
-	dec hl
-	ld a, [de]
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	inc de
-	inc hl
-
-; Keep doing this until everything's in order.
-
-.loop
-	dec de
-	dec de
-	dec c
-	jr nz, .CheckFollowing
-
-	pop hl
-	inc hl
-	inc hl
-	pop de
-	pop bc
-	dec c
-	jr nz, .CheckSprite
-
-.quit
-	ret
 ; 14355
 
 

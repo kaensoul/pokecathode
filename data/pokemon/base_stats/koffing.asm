@@ -1,11 +1,11 @@
 	db KOFFING ; 109
 
-	db  40,  65,  95,  35,  60,  45
+	db  80,  135,  75,  101,  65,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db POISON, POISON ; type
-	db 190 ; catch rate
-	db 114 ; base exp
+	db ELECTRIC, DRAGON ; type
+	db 10 ; catch rate
+	db 244 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -13,9 +13,9 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/koffing/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	db GROWTH_SLOW ; growth rate
+	dn EGG_DRAGON, EGG_MONSTER ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm CONVERSION, HEADBUTT, CURSE, MEGA_PUNCH, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, HIDDEN_POWER, VICEGRIP, HYPER_BEAM, PROTECT, FRUSTRATION, IRON_TAIL, SACRED_FIRE, THUNDER, EARTHQUAKE, RETURN, DIG, SWAGGER, SLEEP_TALK, FIRE_BLAST, THUNDERPUNCH, THUNDERBOLT, REST, ATTRACT, THIEF, FIRE_PUNCH, SCREECH, FLAMETHROWER, CUT, STRENGTH, FLASH
 	; end

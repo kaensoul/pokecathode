@@ -13,69 +13,6 @@ VioletPokecenter1F_MapScripts:
 VioletPokecenterNurse:
 	jumpstd pokecenternurse
 
-VioletPokecenter1F_ElmsAideScript:
-	faceplayer
-	opentext
-	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
-	iftrue .SecondTimeAsking
-	writetext UnknownText_0x69555
-.AskTakeEgg:
-	yesorno
-	iffalse .RefusedEgg
-	checkcode VAR_PARTYCOUNT
-	ifequal PARTY_LENGTH, .PartyFull
-	giveegg TOGEPI, 5
-	stringtotext .eggname, MEM_BUFFER_1
-	scall .AideGivesEgg
-	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	clearevent EVENT_ELMS_AIDE_IN_LAB
-	clearevent EVENT_TOGEPI_HATCHED
-	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
-	writetext UnknownText_0x695c5
-	waitbutton
-	closetext
-	checkcode VAR_FACING
-	ifequal UP, .AideWalksAroundPlayer
-	turnobject PLAYER, DOWN
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideWalksStraightOutOfPokecenter
-	playsound SFX_EXIT_BUILDING
-	disappear VIOLETPOKECENTER1F_SCIENTIST
-	waitsfx
-	end
-
-.AideWalksAroundPlayer:
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideWalksLeftToExitPokecenter
-	turnobject PLAYER, DOWN
-	applymovement VIOLETPOKECENTER1F_SCIENTIST, MovementData_AideFinishesLeavingPokecenter
-	playsound SFX_EXIT_BUILDING
-	disappear VIOLETPOKECENTER1F_SCIENTIST
-	waitsfx
-	end
-
-.eggname
-	db "EGG@"
-
-.AideGivesEgg:
-	jumpstd receivetogepiegg
-	end
-
-.PartyFull:
-	writetext UnknownText_0x69693
-	waitbutton
-	closetext
-	end
-
-.RefusedEgg:
-	writetext UnknownText_0x696f2
-	waitbutton
-	closetext
-	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
-	end
-
-.SecondTimeAsking:
-	writetext UnknownText_0x69712
-	jump .AskTakeEgg
-
 VioletPokecenter1FGameboyKidScript:
 	jumptextfaceplayer VioletPokecenter1FGameboyKidText
 
@@ -85,132 +22,45 @@ VioletPokecenter1FGentlemanScript:
 VioletPokecenter1FYoungsterScript:
 	jumptextfaceplayer VioletPokecenter1FYoungsterText
 
-MovementData_AideWalksStraightOutOfPokecenter:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-MovementData_AideWalksLeftToExitPokecenter:
-	step LEFT
-	step DOWN
-	step_end
-
-MovementData_AideFinishesLeavingPokecenter:
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-UnknownText_0x69555:
-	text "<PLAY_G>, long"
-	line "time, no see."
-
-	para "PROF.ELM asked me"
-	line "to find you."
-
-	para "He has another"
-	line "favor to ask."
-
-	para "Would you take the"
-	line "#MON EGG?"
-	done
-
-UnknownText_0x695c5:
-	text "We discovered that"
-	line "a #MON will not"
-
-	para "hatch until it"
-	line "grows in the EGG."
-
-	para "It also has to be"
-	line "with other active"
-	cont "#MON to hatch."
-
-	para "<PLAY_G>, you're"
-	line "the only person"
-	cont "we can rely on."
-
-	para "Please call PROF."
-	line "ELM when that EGG"
-	cont "hatches!"
-	done
-
-UnknownText_0x69693:
-	text "Oh, no. You can't"
-	line "carry any more"
-	cont "#MON with you."
-
-	para "I'll wait here"
-	line "while you make"
-	cont "room for the EGG."
-	done
-
-UnknownText_0x696f2:
-	text "B-but… PROF.ELM"
-	line "asked for you…"
-	done
-
-UnknownText_0x69712:
-	text "<PLAY_G>, will you"
-	line "take the EGG?"
-	done
-
-UnknownText_0x6972d:
-	text "I've been thinking"
-	line "it'd be great to"
-
-	para "be able to link up"
-	line "and battle with my"
-
-	para "friends who live"
-	line "far away."
-	done
-
-UnknownText_0x69791:
-	text "I just battled a"
-	line "friend in CIANWOOD"
-	cont "over a link."
-
-	para "If you connect a"
-	line "MOBILE ADAPTER,"
-
-	para "you can link with"
-	line "a friend far away."
-	done
-
 VioletPokecenter1FGameboyKidText:
-	text "A guy named BILL"
-	line "made the #MON"
-	cont "PC storage system."
+	text "Nate es mi hermano"
+	line "mayor, no hablamos"
+	cont "mucho pero siempre"
+	cont "me defiende."
+	
+	para "Una vez derrotó a"
+	line "5 matones a la vez"
+	cont "usando nada mas"
+	cont "que sus manos."
 	done
 
 VioletPokecenter1FGentlemanText:
-	text "It was around"
-	line "three years ago."
+	text "El papá de Nate"
+	line "era un polícia de"
+	cont "transito hasta un"
+	cont "par de años atrás."
 
-	para "TEAM ROCKET was up"
-	line "to no good with"
-	cont "#MON."
+	para "Usaba a Yeagle"
+	line "para alertar a los"
+	cont "automóviles."
 
-	para "But justice pre-"
-	line "vailed--a young"
-	cont "kid broke 'em up."
+	para "Pero no se usan"
+	line "muchos vehiculos"
+	cont "en Kita por lo que"
+	cont "ahora pasa más"
+	cont "tiempo resolviendo"
+	cont "misterios."
 	done
 
 VioletPokecenter1FYoungsterText:
-	text "#MON are smart."
-	line "They won't obey a"
+	text "Trato de visitar a"
+	line "mi difunta abuela"
+	cont "todos los días."
 
-	para "trainer they don't"
-	line "respect."
-
-	para "Without the right"
-	line "GYM BADGES, they"
-
-	para "will just do as"
-	line "they please."
+	para "Los Shamlur van a"
+	line "las tumbas descui-"
+	cont "dadas y roban los"
+	cont "huesos."
 	done
 
 VioletPokecenter1F_MapEvents:
@@ -225,9 +75,9 @@ VioletPokecenter1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 5 ; object events
+	db 4 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletPokecenterNurse, -1
 	object_event  7,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGameboyKidScript, -1
-	object_event  1,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGentlemanScript, -1
-	object_event  8,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FYoungsterScript, -1
-	object_event  4,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	object_event  1,  4, SPRITE_MOM, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FGentlemanScript, -1
+	object_event  8,  1, SPRITE_BILL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletPokecenter1FYoungsterScript, -1
+	

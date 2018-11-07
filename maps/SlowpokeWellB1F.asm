@@ -1,21 +1,33 @@
 	const_def 2 ; object constants
+	const SLOWPOKEWELLB1F_ROCK1
+	const SLOWPOKEWELLB1F_ROCK2
 	const SLOWPOKEWELLB1F_ROCKET1
 	const SLOWPOKEWELLB1F_ROCKET2
 	const SLOWPOKEWELLB1F_ROCKET3
 	const SLOWPOKEWELLB1F_ROCKET_GIRL
-	const SLOWPOKEWELLB1F_SLOWPOKE1
-	const SLOWPOKEWELLB1F_SLOWPOKE2
 	const SLOWPOKEWELLB1F_KURT
-	const SLOWPOKEWELLB1F_BOULDER
 	const SLOWPOKEWELLB1F_POKE_BALL
+	const SLOWPOKEWELLB1F_CHARMANDER
 
 SlowpokeWellB1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-
+	
 SlowpokeWellB1FKurtScript:
-	jumptextfaceplayer SlowpokeWellB1FKurtText
+	opentext
+	faceplayer
+	checkitem MYSTERY_EGG
+	iftrue .AlreadygotWingFossil
+	writetext cybergruntseverywhere
+	verbosegiveitem MYSTERY_EGG
+	closetext
+	end
+	
+.AlreadygotWingFossil:
+    writetext fossiltext
+    closetext
+    end	
 
 TrainerGruntM29:
 	trainer GRUNTM, GRUNTM_29, EVENT_BEAT_ROCKET_GRUNTM_29, GruntM29SeenText, GruntM29BeatenText, 0, .Script
@@ -29,7 +41,7 @@ TrainerGruntM29:
 	end
 
 TrainerGruntM1:
-	trainer GRUNTM, GRUNTM_1, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
+	trainer EXECUTIVEM, GRUNTM_1, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
 
 .Script:
 	opentext
@@ -42,33 +54,9 @@ TrainerGruntM1:
 	disappear SLOWPOKEWELLB1F_ROCKET2
 	disappear SLOWPOKEWELLB1F_ROCKET3
 	disappear SLOWPOKEWELLB1F_ROCKET_GIRL
+	setevent EVENT_CLEARED_SLOWPOKE_WELL
 	pause 15
 	special FadeInQuickly
-	disappear SLOWPOKEWELLB1F_KURT
-	moveobject SLOWPOKEWELLB1F_KURT, 11, 6
-	appear SLOWPOKEWELLB1F_KURT
-	applymovement SLOWPOKEWELLB1F_KURT, KurtSlowpokeWellVictoryMovementData
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext KurtLeaveSlowpokeWellText
-	waitbutton
-	closetext
-	setevent EVENT_CLEARED_SLOWPOKE_WELL
-	variablesprite SPRITE_AZALEA_ROCKET, SPRITE_SILVER
-	setmapscene AZALEA_TOWN, SCENE_AZALEATOWN_RIVAL_BATTLE
-	clearevent EVENT_ILEX_FOREST_APPRENTICE
-	clearevent EVENT_ILEX_FOREST_FARFETCHD
-	setevent EVENT_CHARCOAL_KILN_FARFETCH_D
-	setevent EVENT_CHARCOAL_KILN_APPRENTICE
-	setevent EVENT_SLOWPOKE_WELL_SLOWPOKES
-	setevent EVENT_SLOWPOKE_WELL_KURT
-	clearevent EVENT_AZALEA_TOWN_SLOWPOKES
-	clearevent EVENT_KURTS_HOUSE_SLOWPOKE
-	clearevent EVENT_KURTS_HOUSE_KURT_1
-	special FadeOutPalettes
-	special HealParty
-	pause 15
-	warp KURTS_HOUSE, 3, 3
 	end
 
 TrainerGruntM2:
@@ -83,7 +71,7 @@ TrainerGruntM2:
 	end
 
 TrainerGruntF1:
-	trainer GRUNTF, GRUNTF_1, EVENT_BEAT_ROCKET_GRUNTF_1, GruntF1SeenText, GruntF1BeatenText, 0, .Script
+	trainer GRUNTM, GRUNTF_1, EVENT_BEAT_ROCKET_GRUNTF_1, GruntF1SeenText, GruntF1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -93,251 +81,319 @@ TrainerGruntF1:
 	closetext
 	end
 
-SlowpokeWellB1FSlowpokeWithMailScript:
-	faceplayer
-	opentext
-	cry SLOWPOKE
-	writetext SlowpokeWellB1FSlowpokeWithMailText
-	yesorno
-	iftrue .ReadMail
+WildCrimske:
+    opentext
+	writetext CrimskeAttackyou
+	pause 15
+	cry CHARMANDER
 	closetext
-	end
-
-.ReadMail:
-	writetext SlowpokeWellB1FSlowpokeMailText
-	waitbutton
-	closetext
-	end
-
-SlowpokeWellB1FTaillessSlowpokeScript:
-	faceplayer
-	opentext
-	writetext SlowpokeWellB1FTaillessSlowpokeText
-	cry SLOWPOKE
-	waitbutton
-	closetext
-	end
-
-SlowpokeWellB1FBoulder:
-	jumpstd strengthboulder
-
+	loadwildmon CHARMANDER, 5
+	startbattle
+	disappear SLOWPOKEWELLB1F_CHARMANDER
+	reloadmapafterbattle
+	end	
+	
 SlowpokeWellB1FSuperPotion:
-	itemball SUPER_POTION
+	itemball MOON_STONE
 
-KurtSlowpokeWellVictoryMovementData:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step UP
-	step_sleep 8
-	step_sleep 8
-	step_sleep 8
-	step LEFT
-	step UP
-	step UP
-	step_sleep 8
-	step_sleep 8
-	step_sleep 8
-	turn_head LEFT
-	step_end
+Carro1:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro1yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 4, 31
+	end
 
-SlowpokeWellB1FKurtText:
-	text "KURT: Hey there,"
-	line "<PLAYER>!"
+.carro1yes:
+    closetext
+	end	
 
-	para "The guard up top"
-	line "took off when I"
-	cont "shouted at him."
+Carro2:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro2yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 4, 23 
+	end
 
-	para "But then I took a"
-	line "tumble down the"
-	cont "WELL."
+.carro2yes:
+    closetext
+	end	
+	
+Carro3:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro3yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 4, 31 
+	end
 
-	para "I slammed down"
-	line "hard on my back,"
-	cont "so I can't move."
+.carro3yes:
+    closetext
+	end	
+	
+Carro4:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro4yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 5, 20 
+	end
 
-	para "Rats! If I were"
-	line "fit, my #MON"
+.carro4yes:
+    closetext
+	end	
 
-	para "would've punished"
-	line "them…"
+Carro5:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro5yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 23, 21 
+	end
 
-	para "Ah, it can't be"
-	line "helped."
+.carro5yes:
+    closetext
+    
+	end		
 
-	para "<PLAYER>, show them"
-	line "how gutsy you are"
-	cont "in my place!"
+Carro6:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro6yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 15, 21
+	end
+
+.carro6yes:
+    closetext
+	end	
+
+Carro7:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro7yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 17, 6
+	end
+
+.carro7yes:
+    closetext
+	end		
+
+Carro8:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro8yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 16, 15 
+	end
+
+.carro8yes:
+    closetext
+	end	
+	
+Carro9:
+    opentext
+	writetext Carro1header
+    yesorno
+	iffalse .carro9yes
+	closetext
+	warp SLOWPOKE_WELL_B1F, 16, 15 
+	end
+
+.carro9yes:
+    closetext
+	end		
+	
+CrimskeAttackyou:
+    text "¡CRIIIIMS!"	
 	done
+	
+cybergruntseverywhere:
+    text "Soy Arquelogo de"
+	line "una región muy"
+	cont "cercana."
+	
+	para "Vine buscando"
+	line "fósiles de un"
+	cont "#MON alado,"
+	
+	para "y parece ser que"
+	line "no soy el único."
+	
+	para "Esos extraños"
+	line "sujetos no hacen"
+	cont "mas que destruir"
+	cont "el lugar."
+	
+	para "Tu pareces un"
+	line "buen tipo, te"
+	cont "voy a dar algo"
+	cont "bien chulo."
+	
+	para "Es un parte del"
+	line "fósil que estoy"
+	cont "extrayendo."
+    done
 
-KurtLeaveSlowpokeWellText:
-	text "KURT: Way to go,"
-	line "<PLAYER>!"
+fossiltext:
+    text "¿Aun tienes el"
+    line "fósil?"
 
-	para "TEAM ROCKET has"
-	line "taken off."
-
-	para "My back's better"
-	line "too. Let's get out"
-	cont "of here."
+    para "No lo pierdas,"
+    line "con la tecnología"
+    cont "actual, con esa"
+    cont "pieza puedes"
+	cont "clonar millones"
+	cont "de #MON."
+	done
+	
+Carro1header:
+    text "¿Debería subir?"
 	done
 
 GruntM29SeenText:
-	text "Darn! I was stand-"
-	line "ing guard up top"
-
-	para "when some old coot"
-	line "yelled at me."
-
-	para "He startled me so"
-	line "much that I fell"
-	cont "down here."
-
-	para "I think I'll vent"
-	line "my anger by taking"
-	cont "it out on you!"
+	text "ACTIVANDO MODELO"
+	line "000 SLASH"
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NOT"
-	line "my day!"
+	text "ALERTANDO A"
+	line "SEÑOR ADAM"
 	done
 
 GruntM29AfterBattleText:
-	text "Sure, we've been"
-	line "hacking the tails"
-
-	para "off SLOWPOKE and"
-	line "selling them."
-
-	para "Everything we do"
-	line "is for profit."
-
-	para "That's right!"
-	line "We're TEAM ROCKET,"
-
-	para "and we'll do any-"
-	line "thing for money!"
+	text "…"
 	done
 
 GruntM1SeenText:
-	text "What do you want?"
+	text "¿Huh?"
 
-	para "If you interrupt"
-	line "our work, don't"
-	cont "expect any mercy!"
+	para "Si llegaste hasta"
+	line "aquí significa"
+	cont "que rompiste mis"
+	cont "juguetes."
+	
+	para "Supongo que ahora"
+	line "me toca romperte."
+	
+	para "Ya conseguí lo"
+	line "que buscaba, el"
+	cont "modelo 007 SPIRIT"
+	cont "no solo me ayudó"
+	cont "a encontrar un"
+	cont "fósil raro sino"
+	cont "que lo revitalizo"
+	cont "a niveles nunca"
+	cont "antes vistos."
+	
+	para "Es como si nunca"
+	line "hubiera muerto."
+	
+	para "Tienes suerte que"
+	line "mi jefe lo necesi-"
+	cont "ta en perfecto"
+	cont "estado o lo usaría"
+	cont "ahora."
+	
+	para "Pero con el modelo"
+	line "007 SPIRIT en mi"
+	cont "poder, ningún"
+	cont "#MON me podrá"
+    cont "vencer."
+
+    para "¡Preparate para"
+    line "enfrentar un poder"
+    cont "futurista en manos"
+    cont "del Team Cyber!"	
 	done
 
 GruntM1BeatenText:
-	text "You did OK today,"
-	line "but wait till next"
-	cont "time!"
+	text "009 se esta"
+	line "descontrolando."
+	
+	para "Nuestro combate"
+	line "seguirá otro día."
 	done
 
+
 TrainerGruntM1WhenTalkText:
-	text "Yeah, TEAM ROCKET"
-	line "was broken up"
-	cont "three years ago."
-
-	para "But we continued"
-	line "our activities"
-	cont "underground."
-
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	text "No sabia que aun"
+	line "existían entrena-"
+	cont "dores capaces de"
+	cont "sacar todo el"
+    cont "potencial de sus"
+	cont "#MON."
+	
+	para "Me recuerdas a"
+	line "Gunther."
+	
+	para "Nos vemos."
 	done
 
 GruntM2SeenText:
-	text "Quit taking SLOW-"
-	line "POKETAILS?"
-
-	para "If we obeyed you,"
-	line "TEAM ROCKET's rep"
-	cont "would be ruined!"
+	text "INICIANDO MODO"
+	line "DE COMBATE"
 	done
 
 GruntM2BeatenText:
-	text "Just…"
-	line "Too strong…"
+	text "BATERÍA"
+	line "BAJA…"
 	done
 
 GruntM2AfterBattleText:
-	text "We need the money,"
-	line "but selling SLOW-"
-	cont "POKETAILS?"
-
-	para "It's tough being a"
-	line "ROCKET GRUNT!"
+	text "…"
 	done
 
 GruntF1SeenText:
-	text "Stop taking TAILS?"
-
-	para "Yeah, just try to"
-	line "defeat all of us!"
+    text "ELIMINAR INTRUSO"
 	done
-
+	
 GruntF1BeatenText:
-	text "You rotten brat!"
-	done
-
+    text "DAÑO MASIVO"
+    done
+	
 GruntF1AfterBattleText:
-	text "SLOWPOKETAILS"
-	line "grow back fast!"
-
-	para "What's wrong with"
-	line "selling them?"
+    text "…"
 	done
-
-SlowpokeWellB1FSlowpokeWithMailText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
-
-	para "Huh? It has MAIL."
-	line "Read it?"
-	done
-
-SlowpokeWellB1FSlowpokeMailText:
-	text "<PLAYER> read the"
-	line "MAIL."
-
-	para "Be good and look"
-	line "after the house"
-
-	para "with Grandpa and"
-	line "SLOWPOKE."
-
-	para "Love, Dad"
-	done
-
-SlowpokeWellB1FTaillessSlowpokeText:
-	text "A SLOWPOKE with"
-	line "its TAIL cut off…"
-	done
-
+	
+	
 SlowpokeWellB1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 17, 15, AZALEA_TOWN, 6
-	warp_event  7, 11, SLOWPOKE_WELL_B2F, 1
+	warp_event  3, 35, ROUTE_32, 2
+	warp_event 29, 13, SLOWPOKE_WELL_B2F, 1
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 9 ; bg events
+	bg_event 27, 30, BGEVENT_READ, Carro1
+	bg_event  4, 30, BGEVENT_READ, Carro2
+	bg_event  4, 24, BGEVENT_READ, Carro3
+	bg_event 15, 20, BGEVENT_READ, Carro4
+	bg_event  6, 20, BGEVENT_READ, Carro5
+	bg_event 23, 20, BGEVENT_READ, Carro6
+	bg_event 16, 14, BGEVENT_READ, Carro7
+	bg_event 16,  6, BGEVENT_READ, Carro8
+	bg_event 21, 14, BGEVENT_READ, Carro9
 
-	db 11 ; object events
-	object_event 15, 31, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveVioletEntranceRock, -1
-    object_event 21, 27, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveVioletEntranceRock, -1
-    object_event 15,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerGruntM29, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  5,  2, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerGruntM1, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  5,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGruntM2, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event 10,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGruntF1, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  7,  4, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSlowpokeWithMailScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
-	object_event  6,  2, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FTaillessSlowpokeScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
-	object_event 16, 14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FKurtScript, EVENT_SLOWPOKE_WELL_KURT
-	object_event  3,  2, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FBoulder, -1
-	object_event 10,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SlowpokeWellB1FSuperPotion, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
+	db 9 ; object events
+	object_event 10,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveVioletEntranceRock, -1
+    object_event  8,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveVioletEntranceRock, -1
+    object_event 11, 26, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGruntM29, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event 30,  4, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGruntM1, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event  4, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerGruntM2, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event 16, 17, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerGruntF1, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event 20,  3, SPRITE_BILL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FKurtScript, -1
+	object_event 27, 27, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SlowpokeWellB1FSuperPotion, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
+    object_event 33, 10, SPRITE_CHARMANDER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WildCrimske, -1

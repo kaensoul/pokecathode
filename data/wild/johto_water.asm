@@ -190,9 +190,9 @@ JohtoWaterWildMons: ; 0x2b11d
 
 	map_id VIOLET_CITY
 	db 2 percent ; encounter rate
-	db 20, POLIWAG
-	db 15, POLIWAG
-	db 20, POLIWHIRL
+	db 25, MUK
+	db 20, MUK
+	db 20, TANGELA
 
 	map_id CIANWOOD_CITY
 	db 6 percent ; encounter rate

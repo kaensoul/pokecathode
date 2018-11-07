@@ -15,7 +15,7 @@ OlivineCafeStrengthSailorScript:
 	iftrue .GotStrength
 	writetext OlivineCafeStrengthSailorText
 	buttonsound
-	verbosegiveitem HM_STRENGTH
+	verbosegiveitem TM_SWEET_SCENT
 	setevent EVENT_GOT_HM04_STRENGTH
 .GotStrength:
 	writetext OlivineCafeStrengthSailorText_GotStrength
@@ -30,64 +30,60 @@ OlivineCafeSailorScript:
 	jumptextfaceplayer OlivineCafeSailorText
 
 OlivineCafeStrengthSailorText:
-	text "Hah! Your #MON"
-	line "sure look like"
-	cont "lightweights!"
+	text "La comida de este"
+	line "lugar huele deli-"
+	cont "ciosa."
 
-	para "They don't have"
-	line "the power to move"
-	cont "boulders aside."
+	para "Los buenos olores"
+	line "atraen gente y"
+	cont "#MON ya sea"
+	cont "para comer o para"
+	cont "abrir corazones."
 
-	para "Here, use this"
-	line "and teach them"
-	cont "STRENGTH!"
+	para "Si usas esto"
+	line "muchos #MON"
+	cont "van a ir por ti."
 	done
 
 OlivineCafeStrengthSailorText_GotStrength:
-	text "On the sea, the"
-	line "only thing you can"
-
-	para "count on is your"
-	line "own good self!"
-
-	para "I'm so proud of my"
-	line "buff bod!"
+	text "Dicen que la miel"
+	line "de Combee es uno"
+	cont "de los mejores"
+	cont "olores del mundo"
+	cont "#MON."
+	
+	para "¿Será cierto?"
 	done
 
 OlivineCafeFishingGuruText:
-	text "OLIVINE CAFE's"
-	line "menu is chock full"
-
-	para "of hearty fare for"
-	line "beefy SAILORS!"
+	text "¿Quieres comer"
+	line "algo?"
 	done
 
 OlivineCafeSailorText:
-	text "Whenever I roll"
-	line "into this town, I"
+	text "Conozco a Pluto"
+	line "desde hace muchos"
+	cont "años."
 
-	para "always visit the"
-	line "OLIVINE CAFE."
-
-	para "Everything on the"
-	line "menu makes me feel"
-
-	para "stronger. I can't"
-	line "stop eating!"
+	para "Llegó la mañana"
+	line "siguiente a la"
+	cont "caida del meteoro"
+    cont "actuando como si"
+	cont "nada."
 	done
 
 OlivineCafe_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, OLIVINE_CITY, 7
-	warp_event  3,  7, OLIVINE_CITY, 7
+	warp_event  2,  7, OLIVINE_CITY, 6
+	warp_event  3,  7, OLIVINE_CITY, 6
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  4,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
-	object_event  7,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
-	object_event  6,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1
+	object_event  4,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
+	object_event  7,  3, SPRITE_DAISY, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
+	object_event  6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1

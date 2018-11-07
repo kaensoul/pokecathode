@@ -20,29 +20,31 @@ OlivinePunishmentSpeechHouseBookshelf1:
 	jumpstd magazinebookshelf
 
 OlivinePunishmentSpeechHouseDadText:
-	text "Along the way to"
-	line "CIANWOOD, there"
+	text "Hace unos años"
+	line "el Profesor"
+	cont "Yggdrasil vino a"
+	cont "entrevistar a"
+	cont "Pluto."
 
-	para "are four deserted"
-	line "islands."
-
-	para "Bad kids are taken"
-	line "to the islands as"
-	cont "punishment!"
+	para "Parece que además"
+	line "se llevó una"
+	cont "muestra de sangre."
 	done
 
 OlivinePunishmentSpeechHouseDaughterText:
-	text "Whenever I get in"
-	line "trouble, Daddy"
-	cont "always scares me."
+	text "¿Alguna vez has"
+	line "visto una lluvia"
+	cont "de meteoritos?"
+	
+	para "¡Son hermosas!"
 	done
 
 OlivinePunishmentSpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, OLIVINE_CITY, 5
-	warp_event  3,  7, OLIVINE_CITY, 5
+	warp_event  2,  7, OLIVINE_CITY, 4
+	warp_event  3,  7, OLIVINE_CITY, 4
 
 	db 0 ; coord events
 

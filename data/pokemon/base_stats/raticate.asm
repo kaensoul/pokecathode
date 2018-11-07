@@ -5,7 +5,7 @@
 
 	db POISON, FAIRY ; type
 	db 200 ; catch rate
-	db 55 ; base exp
+	db 65 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

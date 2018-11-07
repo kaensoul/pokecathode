@@ -83,11 +83,11 @@ MonMenuIcons: ; 8eac4
 	db ICON_SBUSHO      ; SLOWBRO
 	db ICON_BUMERALD    ; MAGNEMITE
 	db ICON_ANKYLONITE  ; MAGNETON
-	db ICON_BIRD        ; FARFETCH_D
-	db ICON_BIRD        ; DODUO
-	db ICON_BIRD        ; DODRIO
-	db ICON_LAPRAS      ; SEEL
-	db ICON_LAPRAS      ; DEWGONG
+	db ICON_BASK        ; FARFETCH_D
+	db ICON_BASK        ; DODUO
+	db ICON_BASK        ; DODRIO
+	db ICON_BASK      ; SEEL
+	db ICON_BASK      ; DEWGONG
 	db ICON_BLOB        ; GRIMER
 	db ICON_BLOB        ; MUK
 	db ICON_SHELL       ; SHELLDER

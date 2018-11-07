@@ -244,7 +244,7 @@ BattleText_0x80a4f: ; 0x80a4f
 BattleText_MonFainted: ; 0x80a75
 	text_from_ram wBattleMonNick
 	text_start
-	line "!Se debilitó!"
+	line "¡Se debilitó!"
 	prompt
 ; 0x80a83
 

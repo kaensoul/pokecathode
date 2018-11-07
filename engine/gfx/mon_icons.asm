@@ -1,7 +1,7 @@
 LoadOverworldMonIcon: ; 8e82b
 	ld a, e
-	push af
 	call ReadMonMenuIcon
+	ld [wCurIcon], a
 	ld l, a
 	ld h, 0
 	add hl, hl
@@ -10,7 +10,6 @@ LoadOverworldMonIcon: ; 8e82b
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	pop af
 	call GetIconBank
 	ret
 ; 8e83f
@@ -355,8 +354,9 @@ endr
 	ret
 	
 GetIconBank:
+    ld a, [wCurIcon]
+	cp TAUROS
 	lb bc, BANK("Mon Icons 1"), 8
-	cp SUDOWOODO ; lowest species in "Mon Icons 2"
 	ret c
 	ld b, BANK("Mon Icons 2")
 	ret

@@ -11,12 +11,19 @@ GoodRodGuru:
 	opentext
 	checkevent EVENT_GOT_GOOD_ROD
 	iftrue .AlreadyGotItem
+	checkitem OLD_ROD
+	iffalse .SinCumplirQuest
 	writetext OfferGoodRodText
 	yesorno
 	iffalse .DontWantIt
 	writetext GiveGoodRodText
 	buttonsound
-	verbosegiveitem GOOD_ROD
+	checkcode VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoomOcto
+	writetext ReciOcto
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke NIDOKING, 10
 	writetext GaveGoodRodText
 	waitbutton
 	closetext
@@ -35,57 +42,87 @@ GoodRodGuru:
 	closetext
 	end
 
-GoodRodHouseBookshelf:
-; unused
-	jumpstd picturebookshelf
+.SinCumplirQuest:
+    writetext Veporoldrod
+	waitbutton
+	closetext
+	end
 
+.NoRoomOcto:
+    writetext Sinlugar
+	waitbutton
+   	closetext
+	end
+	
+Veporoldrod:
+    text "¿Un entrenador"
+	line "sin una caña de"
+	cont "pescar?"
+	
+	para "¿Que sigue?,"
+	line "¿un Octovase sin"
+	cont "su vasija?"
+	done 
+
+ReciOcto:
+    text "¡Recibiste un"
+    line "Octovase!"
+    done	
+	
+Sinlugar:
+    text "Oh, pero no"
+    line "puedes cargar"
+    cont "mas #MON,"
+
+    para "vuelve cuando"
+    line "tengas espacio."	
+	done
+	
 OfferGoodRodText:
-	text "OLIVINE is on the"
-	line "sea!"
+	text "Veo que eres"
+	line "amigo del maestro"
+	cont "de pesca."
 
-	para "And if it's on the"
-	line "sea, there are"
-	cont "bound to be fish!"
-
-	para "I've fished here"
-	line "for 30 years."
-
-	para "Would you like to"
-	line "face the sea and"
-	cont "fish?"
+	para "En esta zona no"
+	line "puedes pescar,"
+	cont "pero no dejes que"
+    cont "eso te desanime."
+	
+	para "Si quieres te"
+	line "puedo dar un"
+	cont "#MON del"
+	cont "mar para que veas"
+	cont "lo que puedes"
+	cont "conseguir."
 	done
 
 GiveGoodRodText:
-	text "Ah, hahah!"
-	line "We have ourselves"
-	cont "a new angler!"
+	text "Ok, cuidalo bien."
 	done
 
 GaveGoodRodText:
-	text "Fish aren't found"
-	line "in the sea alone."
-
-	para "They go wherever"
-	line "there is water."
+	text "Octovase es un"
+	line "#MON muy"
+	cont "resistente."
 	done
 
 DontWantGoodRodText:
-	text "Whaaat? You don't"
-	line "like to fish!?"
-	cont "Incomprehensible!"
+	text "Bien, pescar tus"
+	line "propios #MON"
+	cont "es mas divertido."
 	done
 
 HaveGoodRodText:
-	text "How are things?"
-	line "Land the big one?"
+	text "¿Como va la"
+	line "pesca?"
 	done
 
 OlivineGoodRodHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, OLIVINE_CITY, 6
-	warp_event  3,  7, OLIVINE_CITY, 6
+	warp_event  2,  7, OLIVINE_CITY, 5
+	warp_event  3,  7, OLIVINE_CITY, 5
 
 	db 0 ; coord events
 

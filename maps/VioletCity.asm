@@ -25,13 +25,39 @@ VioletCityLassScript:
 	jumptextfaceplayer VioletCityLassText
 
 VioletCitySuperNerdScript:
-	jumptextfaceplayer VioletCitySuperNerdText
+    faceplayer
+	opentext
+	checkitem SACRED_ASH
+	iftrue .gotsacredashtext
+	writetext VioletCitySuperNerdText
+	waitbutton
+	closetext
+	end
+	
+.gotsacredashtext
+    writetext VioletCitySuperNerdText2
+    waitbutton
+	closetext
+	end		
 
 VioletCityGrampsScript:
 	jumptextfaceplayer VioletCityGrampsText
 
 VioletCityYoungsterScript:
-	jumptextfaceplayer VioletCityYoungsterText
+    faceplayer
+	opentext
+	checkflag ENGINE_ZEPHYRBADGE
+	iftrue .gotvigilantebadge
+	writetext VioletCityYoungsterText
+	waitbutton
+	closetext
+	end
+	
+.gotvigilantebadge
+    writetext VioletCityYoungsterText2
+    waitbutton
+	closetext
+	end	
 
 VioletCitySign:
 	jumptext VioletCitySignText
@@ -100,6 +126,26 @@ VioletCitySuperNerdText:
 	line "normal que no"
 	cont "tengan sentido."
 	done
+	
+VioletCitySuperNerdText2:	
+    text "¿Ese montón de"
+	line "mugre era el te-"
+	cont "soro?"
+	
+	para "Ya veo porque lo"
+	line "abandono sin más."
+	
+	para "Como viene de tan"
+	line "lejor pensé que"
+	cont "tendría cosas más"
+	cont "geniales, pero"
+	cont "almenos sus"
+	
+	para "#MON eran"
+	line "geniales, debiste"
+	cont "ver ese cocodrilo"
+	cont "azul."
+	done
 
 VioletCityGrampsText:
 	text "Antes se podía"
@@ -131,6 +177,17 @@ VioletCityYoungsterText:
 	cont "para trabajar"
 	cont "aquí."
 	done
+	
+VioletCityYoungsterText2:
+    text "No puedo creer"
+	line "que derrotaras a"
+	cont "Nate."
+	
+	para "Debería ir al"
+	line "GYM a trabajar o"
+	cont "se van a enojar"
+	cont "conmigo."
+	done 
 
 VioletCitySignText:
 	text "Entrada al"
@@ -157,7 +214,7 @@ SproutTowerSignText:
 VioletCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 8 ; warp events
+	db 10 ; warp events
 	warp_event 17, 19, VIOLET_MART, 2
 	warp_event  4, 13, VIOLET_GYM, 1
 	warp_event 21,  9, EARLS_POKEMON_ACADEMY, 1
@@ -166,6 +223,8 @@ VioletCity_MapEvents:
 	warp_event 11, 13, VIOLET_KYLES_HOUSE, 1
 	warp_event 21, 26, ROUTE_31_VIOLET_GATE, 1
 	warp_event 21, 27, ROUTE_31_VIOLET_GATE, 2
+	warp_event  6,  2, ILEX_FOREST_AZALEA_GATE, 3
+	warp_event  6,  3, ILEX_FOREST_AZALEA_GATE, 4
 
 	db 0 ; coord events
 
@@ -180,7 +239,7 @@ VioletCity_MapEvents:
 	db 8 ; object events
 	object_event 24,  9, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL
 	object_event 18, 24, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityLassScript, -1
-	object_event 10, 23, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCitySuperNerdScript, -1
+	object_event 10, 23, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCitySuperNerdScript, -1
 	object_event  9,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityGrampsScript, -1
 	object_event  6, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityYoungsterScript, -1
 	object_event  5, 22, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFruitTree, -1

@@ -12,24 +12,342 @@ SECTION "Enemy Trainer Parties 1", ROMX
 
 FalknerGroup:
 	; FALKNER (1)
-	db "FALKNER@", TRAINERTYPE_VARIABLE
+	db "NATE@", TRAINERTYPE_VARIABLE
 	
 	;0
-    db  1
+    db  0
 	
-	db 14, WEEDLE,     HEADBUTT, BUBBLE, HIDDEN_POWER, LICK
-	db 15, KINGLER,    POUND, HIDDEN_POWER, BONE_CLUB, LICK
-	db 16, MEOWTH,     QUICK_ATTACK, GUST, HIDDEN_POWER, PURSUIT
-	db $ff ; end
+	db 14, WEEDLE
+	db 15, KINGLER
+	db 16, MEOWTH
+	db $fe
+	
+	;1
+	db  1
+	
+	db 19, LAPRAS,     DOUBLESLAP, HIDDEN_POWER, LEECH_SEED, CHARM 
+	db 19, WEEDLE,     HEADBUTT, BUBBLE, HIDDEN_POWER, LICK
+	db 19, KINGLER,    POUND, HIDDEN_POWER, BONE_CLUB, LICK
+	db 23, MEOWTH,     QUICK_ATTACK, GUST, HIDDEN_POWER, PURSUIT
+	db $fe
+	
+	;2
+	db  1
+	
+	db 24, LAPRAS,     DOUBLESLAP, HIDDEN_POWER, LEECH_SEED, CHARM 
+	db 24, WEEDLE,     HEADBUTT, BUBBLEBEAM, HIDDEN_POWER, BITE
+	db 24, KINGLER,    DOUBLESLAP, HIDDEN_POWER, BONE_CLUB, LICK
+	db 29, MEOWTH,     CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, PURSUIT
+	db $fe
+	
+	;3
+	db  1
+	
+	db 27, LAPRAS,     DOUBLESLAP, HIDDEN_POWER, LEECH_SEED, CHARM 
+	db 27, KAKUNA,     HEADBUTT, BUBBLEBEAM, HIDDEN_POWER, BITE
+	db 27, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 32, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;4
+	db  1
+	
+	db 31, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 31, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 31, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 34, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;5
+	db  1
+	
+	db 32, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 32, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 32, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 36, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;6
+	db  1
+	
+	db 34, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 34, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 34, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 39, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;7
+	db  1
+	
+	db 39, NIDOQUEEN,  TAKE_DOWN, RAGE, CHARM, HIDDEN_POWER
+	db 39, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 39, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 39, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 44, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;8
+	db  1
+	
+	db 44, NIDOQUEEN,  TAKE_DOWN, RAGE, CHARM, HIDDEN_POWER
+	db 44, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 44, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 44, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 50, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;9
+	db  1
+	
+	db 49, NIDOQUEEN,  TAKE_DOWN, RAGE, CHARM, HIDDEN_POWER
+	db 49, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 49, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 49, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 55, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;10
+	db  1
+	
+	db 53, NIDOQUEEN,  TAKE_DOWN, RAGE, CHARM, HIDDEN_POWER
+	db 53, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 53, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 53, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 60, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;11
+	db  1
+	
+	db 58, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 58, NIDOQUEEN,  TAKE_DOWN, RAGE, CHARM, HIDDEN_POWER
+	db 58, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 58, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, BITE
+	db 58, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONE_RUSH, SHADOW_BALL
+	db 65, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, TRI_ATTACK
+	db $fe
+	
+	;12
+	db  1
+	
+	db 63, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 63, NIDOQUEEN,  TAKE_DOWN, RAGE, MEGAHORN, HIDDEN_POWER
+	db 63, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 63, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, CRUNCH
+	db 63, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONEMERANG, SHADOW_BALL
+	db 70, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, AEROBLAST
+	db $fe
+	
+	;13
+	db  1
+	
+	db 65, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 65, NIDOQUEEN,  TAKE_DOWN, RAGE, MEGAHORN, HIDDEN_POWER
+	db 65, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 65, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, CRUNCH
+	db 65, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONEMERANG, SHADOW_BALL
+	db 74, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, AEROBLAST
+	db $fe
+	
+	;14
+	db  1
+	
+	db 74, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 74, NIDOQUEEN,  TAKE_DOWN, RAGE, MEGAHORN, HIDDEN_POWER
+	db 74, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 74, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, CRUNCH
+	db 74, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONEMERANG, SHADOW_BALL
+	db 80, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, AEROBLAST
+	db $fe
+	
+	;15
+	db  1
+	
+	db 80, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 80, NIDOQUEEN,  TAKE_DOWN, RAGE, MEGAHORN, HIDDEN_POWER
+	db 80, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 80, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, CRUNCH
+	db 80, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONEMERANG, SHADOW_BALL
+	db 90, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, AEROBLAST
+	db $fe
+	
+	;16
+	db  1
+	
+	db 100, NIDORAN_F,  SPIKES, CRUNCH, HIDDEN_POWER, HYPER_BEAM
+	db 100, NIDOQUEEN,  TAKE_DOWN, RAGE, MEGAHORN, HIDDEN_POWER
+	db 100, DITTO,      HEADBUTT, CHARM, LEECH_SEED, GIGA_DRAIN 
+	db 100, KAKUNA,     HEADBUTT, SURF, HIDDEN_POWER, CRUNCH
+	db 100, VOLTORB,    HEADBUTT, HIDDEN_POWER, BONEMERANG, SHADOW_BALL
+	db 100, PERSIAN,    CONFUSE_RAY, SONICBOOM, HIDDEN_POWER, AEROBLAST
+	db $ff
+	
+	
 
 
 WhitneyGroup:
 	; WHITNEY (1)
-	db "WHITNEY@", TRAINERTYPE_MOVES
-	db 18, CLEFAIRY,   DOUBLESLAP, MIMIC, ENCORE, METRONOME
-	db 20, MILTANK,    ROLLOUT, ATTRACT, STOMP, MILK_DRINK
-	db $ff ; end
-
+	db "PLUTO@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 14, TENTACOOL
+	db 14, SEAKING
+	db 16, MAGIKARP
+	db $fe
+	
+	;1
+	db 1
+	
+	db 19, TENTACOOL, CONFUSION, DOUBLESLAP, DRAGONBREATH, NO_MOVE
+	db 19, SEAKING,   CONFUSION, THUNDERSHOCK, CONFUSE_RAY, NO_MOVE
+	db 23, MAGIKARP,  CONFUSION, TELEPORT, BEAT_UP, NO_MOVE
+	db $fe
+	
+	;2
+	db 1
+	
+	db 24, TENTACOOL, CONFUSION, DOUBLESLAP, DRAGONBREATH, NO_MOVE
+	db 24, SEAKING,   CONFUSION, THUNDERSHOCK, CONFUSE_RAY, NO_MOVE
+	db 29, GYARADOS,  PSYBEAM, TELEPORT, BEAT_UP, NO_MOVE
+	db $fe
+	
+	;3
+	db 1
+	
+	db 27, HAUNTER,   CURSE, PSYBEAM, BITE, NO_MOVE 
+	db 27, TENTACOOL, PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 27, STARYU,    PSYBEAM, THUNDERSHOCK, CONFUSE_RAY, AMNESIA
+	db 32, GYARADOS,  PSYBEAM, TELEPORT, BEAT_UP, FUTURE_SIGHT
+	db $fe
+	
+	;4
+	db 1
+	
+	db 31, GENGAR,    CURSE, PSYBEAM, BITE, NO_MOVE 
+	db 31, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 31, STARYU,    PSYCHIC_M, THUNDERSHOCK, CONFUSE_RAY, AMNESIA
+	db 34, GYARADOS,  PSYCHIC_M, TELEPORT, BEAT_UP, FUTURE_SIGHT
+	db $fe
+	
+	;5
+	db 1
+	
+	db 32, GENGAR,    CURSE, PSYBEAM, BITE, NO_MOVE 
+	db 32, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 32, STARYU,    PSYCHIC_M, THUNDERSHOCK, CONFUSE_RAY, AMNESIA
+	db 36, GYARADOS,  PSYCHIC_M, TELEPORT, BEAT_UP, FUTURE_SIGHT
+	db $fe
+	
+	;6
+	db 1
+	
+	db 34, GENGAR,    CURSE, SUBMISSION, BITE, NO_MOVE 
+	db 34, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 34, STARYU,    PSYCHIC_M, THUNDERSHOCK, CONFUSE_RAY, AMNESIA
+	db 39, GYARADOS,  PSYCHIC_M, TELEPORT, BEAT_UP, FUTURE_SIGHT
+	db $fe
+	
+	;7
+	db 1
+	
+	db 39, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 39, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 39, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 44, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;8
+	db 1
+	
+	db 44, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 44, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 44, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 50, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;9
+	db 1
+	
+	db 49, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 49, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 49, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 55, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;10
+	db 1
+	
+	db 53, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 53, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 53, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 60, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;11
+	db 1
+	
+	db 58, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 58, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 58, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 65, GYARADOS,  PSYCHIC_M, TELEPORT, SKULL_BASH, FUTURE_SIGHT
+	db $fe
+	
+	;12
+	db 1
+	
+	db 63, PRIMEAPE,  PSYCHIC, LEECH_SEED, GIGA_DRAIN, TOXIC
+	db 63, ZAPDOS,    SUBMISSION, MEGA_PUNCH, NO_MOVE, NO_MOVE
+	db 63, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 63, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 63, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 70, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;13
+	db 1
+	
+	db 65, PRIMEAPE,  PSYCHIC, LEECH_SEED, GIGA_DRAIN, TOXIC
+	db 65, ZAPDOS,    SUBMISSION, MEGA_PUNCH, NO_MOVE, NO_MOVE
+	db 65, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 65, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 65, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 74, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;14
+	db 1
+	
+	db 74, PRIMEAPE,  PSYCHIC, LEECH_SEED, GIGA_DRAIN, TOXIC
+	db 74, ZAPDOS,    SUBMISSION, MEGA_PUNCH, NO_MOVE, NO_MOVE
+	db 74, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 74, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 74, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 80, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+    ;15
+	db 1
+	
+	db 80, PRIMEAPE,  PSYCHIC, LEECH_SEED, GIGA_DRAIN, TOXIC
+	db 80, ZAPDOS,    SUBMISSION, MEGA_PUNCH, NO_MOVE, NO_MOVE
+	db 80, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 80, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 80, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 90, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $fe
+	
+	;16
+	db 1
+	
+	db 100, PRIMEAPE,  PSYCHIC, LEECH_SEED, GIGA_DRAIN, TOXIC
+	db 100, ZAPDOS,    SUBMISSION, MEGA_PUNCH, NO_MOVE, NO_MOVE
+	db 100, GENGAR,    CURSE, SUBMISSION, SHADOW_BALL, NO_MOVE 
+	db 100, TENTACRUEL,PSYCHIC_M, DRAGONBREATH, NO_MOVE, NO_MOVE
+	db 100, STARYU,    PSYCHIC_M, THUNDERBOLT, CONFUSE_RAY, AMNESIA
+	db 100, GYARADOS,  PSYCHIC_M, TELEPORT, CRUNCH, FUTURE_SIGHT
+	db $ff
 
 BugsyGroup:
 	; BUGSY (1)
@@ -78,14 +396,14 @@ ChuckGroup:
 
 ClairGroup:
 	; CLAIR (1)
-	db "Francis@", TRAINERTYPE_VARIABLE
+	db "FRANCIS@", TRAINERTYPE_VARIABLE
 	
 	;0
-	db 1
+	db 0
 	
-	db 14, PIDGEOTTO, MUD_SLAP, EMBER, NO_MOVE, NO_MOVE
-	db 14, WEEZING, KARATE_CHOP, EMBER, LICK, TAIL_WHIP
-	db 16, STARMIE, FIRE_PUNCH, POWDER_SNOW, WATER_GUN, NO_MOVE
+	db 14, PIDGEOTTO
+	db 14, WEEZING
+	db 16, STARMIE
 	db $fe
 	
 	;1
@@ -266,7 +584,6 @@ Rival1Group:
 	
 	db 0
 	
-	
 	db  5, BULBASAUR
 	db $ff; end
 
@@ -275,7 +592,6 @@ Rival1Group:
 	
 	db 0
 	
-	
 	db  5, CHARMANDER
 	db $ff ; end
 
@@ -283,8 +599,7 @@ Rival1Group:
 	db "?@", TRAINERTYPE_VARIABLE
 	
 	db 0
-	
-	
+
 	db  5, SQUIRTLE
 	db $ff ; end
 
@@ -726,18 +1041,129 @@ YoungsterGroup:
 	
 	db  9, LAPRAS
 	db 12, NIDORINA
+	db $fe
 	
-	db $ff ; end
+	;1
+	db  0
+	
+	db 12, LAPRAS
+	db 14, NIDORINA
+	db $fe
+	
+	;2
+	db  0
+	
+	db 19, LAPRAS
+	db 20, NIDORINA
+	db $fe
+	
+	;3
+	db  0
+	
+	db 24, LAPRAS
+	db 25, NIDORINA
+	db $fe
+	
+	;4
+	db  0
+	
+	db 27, DITTO
+	db 28, NIDOQUEEN
+	db $fe
+	
+	;5
+	db  0
+	
+	db 30, DITTO
+	db 31, NIDOQUEEN
+	db $fe
+	
+	;6
+	db  0
+	
+	db 32, DITTO
+	db 33, NIDOQUEEN
+	db $fe
+	
+	;7
+	db  0
+	
+	db 37, DITTO
+	db 38, NIDOQUEEN
+	db $fe
+	
+	;8
+	db  0
+	
+	db 42, DITTO
+	db 43, NIDOQUEEN
+	db $fe
+	
+	;9
+	db  0
+	
+	db 47, DITTO
+	db 48, NIDOQUEEN
+	db $fe
+	
+	;10
+	db  0
+	
+	db 51, DITTO
+	db 52, NIDOQUEEN
+	db $fe
+	
+	;11
+	db  0
+	
+	db 56, DITTO
+	db 57, NIDOQUEEN
+	db $fe
+	
+	;12
+	db  0
+	
+	db 61, DITTO
+	db 62, NIDOQUEEN
+	db $fe
+	
+	;13
+	db  0
+	
+	db 63, DITTO
+	db 64, NIDOQUEEN
+	db $fe
+	
+	;14
+	db  0
+	
+	db 72, DITTO
+	db 73, NIDOQUEEN
+	db $fe
+	
+	;15
+	db  0
+	
+	db 78, DITTO
+	db 79, NIDOQUEEN
+	db $fe
+	
+	;16
+	db  0
+	
+	db 84, DITTO
+	db 87, NIDOQUEEN
+	db $ff
 	
 	; YOUNGSTER (2)
 	db "JIM@", TRAINERTYPE_VARIABLE
 	
 	;0
-	db 3
+	db 0
 	
-	db  4, BULBASAUR, NO_ITEM, TACKLE, GROWL, NO_MOVE, NO_MOVE
-	db  5, CHARMANDER, NO_ITEM, CONSTRICT, TAIL_WHIP, NO_MOVE, NO_MOVE
-	db  6, SQUIRTLE, BERRY, POUND, GROWL, NO_MOVE, NO_MOVE
+	db  4, BULBASAUR
+	db  5, CHARMANDER
+	db  6, SQUIRTLE
 	db $fe
 	
 	;1
@@ -869,16 +1295,225 @@ YoungsterGroup:
 	db $ff
 
 	; YOUNGSTER (3)
-	db "ALBERT@", TRAINERTYPE_NORMAL
-	db  6, RATTATA
-	db  8, ZUBAT
-	db $ff ; end
+	db "ALBERT@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, POLIWRATH
+	db  8, TENTACOOL
+	db $fe
+	
+	;1
+	db 0
+	
+	db 13, POLIWRATH
+	db 13, TENTACOOL
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, POLIWRATH
+	db 20, TENTACOOL
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, POLIWRATH
+	db 24, TENTACOOL
+	db $fe
+	
+	;5
+	db 0
+	
+	db 29, ABRA
+	db 29, TENTACRUEL
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, ABRA
+	db 32, TENTACRUEL
+	db $fe
+	
+	;7
+	db 0
+	
+	db 35, ABRA
+	db 35, TENTACRUEL
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, ABRA
+	db 42, TENTACRUEL
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, ABRA
+	db 47, TENTACRUEL
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, ABRA
+	db 51, TENTACRUEL
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, ABRA
+	db 55, TENTACRUEL
+	db $fe
+	
+	;12
+	db 0
+	
+	db 59, ABRA
+	db 59, TENTACRUEL
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, ABRA
+	db 63, TENTACRUEL
+	db $fe
 
+	;14
+	db 0
+	
+	db 68, ABRA
+	db 68, TENTACRUEL
+	db $fe
+	
+	;15
+	db 0
+	
+	db 76, ABRA
+	db 76, TENTACRUEL
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, ABRA
+	db 80, TENTACRUEL
+	db $ff
+	
 	; YOUNGSTER (4)
-	db "GORDON@", TRAINERTYPE_NORMAL
-	db 10, WOOPER
-	db $ff ; end
+	db "GORDON@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, PINSIR
+	db $fe
+	
+	;1
+	db 0
+	
+	db 17, PINSIR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 22, PINSIR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, TAUROS
+	db $fe
+	
+	;4
+	db 0
+	
+	db 30, TAUROS
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, TAUROS
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, TAUROS
+	db $fe
 
+	;7
+	db 0
+	
+	db 38, TAUROS
+	db $fe
+	
+	;8
+	db 0
+	
+	db 43, TAUROS
+	db $fe
+	
+	;9
+	db 0
+	
+	db 48, TAUROS
+	db $fe
+	
+	;10
+	db 0
+	
+	db 52, TAUROS
+	db $fe
+	
+	;11
+	db 0
+	
+	db 57, TAUROS
+	db $fe
+	
+	;12
+	db 0
+	
+	db 62, TAUROS
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, TAUROS
+	db $fe
+	
+	;14
+	db 0
+	
+	db 73, TAUROS
+	db $fe
+	
+	;15
+	db 0
+	
+	db 79, TAUROS
+	db $fe
+	
+	;16
+	db 0
+	
+	db 95, TAUROS
+	db $ff
+	
 	; YOUNGSTER (5)
 	db "SAMUEL@", TRAINERTYPE_NORMAL
 	db  7, RATTATA
@@ -1814,11 +2449,143 @@ BirdKeeperGroup:
 	db $ff ; end
 
 	; BIRD_KEEPER (13)
-	db "PETER@", TRAINERTYPE_NORMAL
-	db  6, PIDGEY
-	db  6, PIDGEY
-	db  8, SPEAROW
-	db $ff ; end
+	db "PETER@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, EEVEE
+	db 10, ODDISH
+	db 10, VILEPLUME
+	db $fe
+	
+	;1
+	db 0
+	
+	db 14, EEVEE
+	db 16, ODDISH
+	db 16, VILEPLUME
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, EEVEE
+	db 21, ODDISH
+	db 21, VILEPLUME
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, EEVEE
+	db 25, ODDISH
+	db 25, VILEPLUME
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, EEVEE
+	db 29, ODDISH
+	db 29, VILEPLUME
+	db $fe
+	
+	;5
+	db 0
+	
+	db 29, VAPOREON
+	db 30, GLOOM
+	db 30, PARAS
+	db $fe
+	
+	;6
+	db 0
+	
+	db 31, VAPOREON
+	db 32, GLOOM
+	db 32, PARAS
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, VAPOREON
+	db 37, GLOOM
+	db 37, PARAS
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, VAPOREON
+	db 43, GLOOM
+	db 43, PARAS
+	db $fe
+	
+	;9
+	db 0
+	
+	db 45, VAPOREON
+	db 46, GLOOM
+	db 46, PARAS
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, VAPOREON
+	db 51, GLOOM
+	db 51, PARAS
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, VAPOREON
+	db 56, GLOOM
+	db 56, PARAS
+	db $fe
+	
+	;12
+	db 0
+	
+	db 60, VAPOREON
+	db 61, GLOOM
+	db 61, PARAS
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, VAPOREON
+	db 64, GLOOM
+	db 64, PARAS
+	db $fe
+	
+	;14
+	db 0
+	
+	db 71, VAPOREON
+	db 72, GLOOM
+	db 72, PARAS
+	db $fe
+	
+	;15
+	db 0
+	
+	db 76, VAPOREON
+	db 77, GLOOM
+	db 77, PARAS
+	db $fe
+	
+	;16
+	db 0
+	
+	db 90, VAPOREON
+	db 93, GLOOM
+	db 93, PARAS
+	db $ff
 
 	; BIRD_KEEPER (14)
 	db "JOSE@", TRAINERTYPE_NORMAL
@@ -2722,8 +3489,120 @@ CooltrainerFGroup:
 	
 	db  8, CLEFABLE
 	db  8, STARMIE
-	db $fe ; end
+	db $fe
+	
+	;1
+	db 0
+	
+	db 11, CLEFABLE
+	db 11, STARMIE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 18, CLEFABLE
+	db 18, STARMIE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 23, CLEFABLE
+	db 23, STARMIE
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, CLEFABLE
+	db 27, STARMIE
+	db $fe
+	
+	;5
+	db 0
+	
+	db 28, CLEFABLE
+	db 28, STARMIE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 30, VULPIX
+	db 30, MR__MIME
+	db $fe
+	
+	;7
+	db 0
+	
+	db 34, VULPIX
+	db 34, MR__MIME
+	db $fe
+	
+	;8
+	db 0
+	
+	db 39, VULPIX
+	db 39, MR__MIME
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, VULPIX
+	db 44, MR__MIME
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, VULPIX
+	db 49, MR__MIME
+	db $fe
+	
+	;11
+	db 0
+	
+	db 53, VULPIX
+	db 53, MR__MIME
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, VULPIX
+	db 57, MR__MIME
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, VULPIX
+	db 62, MR__MIME
+	db $fe
+	
+	;14
+	db 0
+	
+	db 65, VULPIX
+	db 65, MR__MIME
+	db $fe
 
+	;15
+	db 0
+	
+	db 73, VULPIX
+	db 73, MR__MIME
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, VULPIX
+	db 80, MR__MIME
+	db $ff
+	
 	; COOLTRAINERF (4)
 	db "LOLA@", TRAINERTYPE_VARIABLE
 	
@@ -3703,17 +4582,215 @@ PokemaniacGroup:
 
 
 GruntMGroup:
-	; GRUNTM (1)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 14, KOFFING
-	db $ff ; end
+    ; GRUNTF (1)
+	db "002TRAINER@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, MEGANIUM
+	db $fe
+	
+	;1
+	db 0
+	
+	db 17, MEGANIUM
+	db $fe
+	
+	;2
+	db 0
+	
+	db 22, MEGANIUM
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, MEGANIUM
+	db $fe
+	
+	;4
+	db 0
+	
+	db 30, MEGANIUM
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, MEGANIUM
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, MEGANIUM
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, MEGANIUM
+	db $fe
+	
+	;8
+	db 0
+	
+	db 43, MEGANIUM
+	db $fe
+	
+	;9
+	db 0
+	
+	db 48, MEGANIUM
+	db $fe
+	
+	;10
+	db 0
+	
+	db 52, MEGANIUM
+	db $fe
+	
+	;11
+	db 0
+	
+	db 57, MEGANIUM
+	db $fe
+	
+	;12
+	db 0
+	
+	db 62, MEGANIUM
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, MEGANIUM
+	db $fe
+	
+	;14
+	db 0
+	
+	db 73, MEGANIUM
+	db $fe
+	
+	;15
+	db 0
+	
+	db 79, MEGANIUM
+	db $fe
+	
+	;16
+	db 0
+	
+	db 95, MEGANIUM
+	db $ff
 
 	; GRUNTM (2)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  7, RATTATA
-	db  9, ZUBAT
-	db  9, ZUBAT
-	db $ff ; end
+	db "002TRAINER@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, MEGANIUM
+	db $fe
+	
+	;1
+	db 0
+	
+	db 17, MEGANIUM
+	db $fe
+	
+	;2
+	db 0
+	
+	db 22, MEGANIUM
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, MEGANIUM
+	db $fe
+	
+	;4
+	db 0
+	
+	db 30, MEGANIUM
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, MEGANIUM
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, MEGANIUM
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, MEGANIUM
+	db $fe
+	
+	;8
+	db 0
+	
+	db 43, MEGANIUM
+	db $fe
+	
+	;9
+	db 0
+	
+	db 48, MEGANIUM
+	db $fe
+	
+	;10
+	db 0
+	
+	db 52, MEGANIUM
+	db $fe
+	
+	;11
+	db 0
+	
+	db 57, MEGANIUM
+	db $fe
+	
+	;12
+	db 0
+	
+	db 62, MEGANIUM
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, MEGANIUM
+	db $fe
+	
+	;14
+	db 0
+	
+	db 73, MEGANIUM
+	db $fe
+	
+	;15
+	db 0
+	
+	db 79, MEGANIUM
+	db $fe
+	
+	;16
+	db 0
+	
+	db 95, MEGANIUM
+	db $ff
 
 	; GRUNTM (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
@@ -3876,10 +4953,110 @@ GruntMGroup:
 	db $ff ; end
 
 	; GRUNTM (29)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  9, RATTATA
-	db  9, RATTATA
-	db $ff ; end
+	db "002TRAINER@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, MEGANIUM
+	db $fe
+	
+	;1
+	db 0
+	
+	db 17, MEGANIUM
+	db $fe
+	
+	;2
+	db 0
+	
+	db 22, MEGANIUM
+	db $fe
+	
+	;3
+	db 0
+	
+	db 26, MEGANIUM
+	db $fe
+	
+	;4
+	db 0
+	
+	db 30, MEGANIUM
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, MEGANIUM
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, MEGANIUM
+	db $fe
+	
+	;7
+	db 0
+	
+	db 38, MEGANIUM
+	db $fe
+	
+	;8
+	db 0
+	
+	db 43, MEGANIUM
+	db $fe
+	
+	;9
+	db 0
+	
+	db 48, MEGANIUM
+	db $fe
+	
+	;10
+	db 0
+	
+	db 52, MEGANIUM
+	db $fe
+	
+	;11
+	db 0
+	
+	db 57, MEGANIUM
+	db $fe
+	
+	;12
+	db 0
+	
+	db 62, MEGANIUM
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, MEGANIUM
+	db $fe
+	
+	;14
+	db 0
+	
+	db 73, MEGANIUM
+	db $fe
+	
+	;15
+	db 0
+	
+	db 79, MEGANIUM
+	db $fe
+	
+	;16
+	db 0
+	
+	db 95, MEGANIUM
+	db $ff
+	
 
 	; GRUNTM (30)
 	db "GRUNT@", TRAINERTYPE_NORMAL
@@ -3918,11 +5095,127 @@ GentlemanGroup:
 	db $ff ; end
 
 	; GENTLEMAN (5)
-	db "ALFRED@", TRAINERTYPE_NORMAL
-	db 20, NOCTOWL
-	db $ff ; end
+	db "ALFRED@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, MANKEY
+	db 10, HAUNTER
+	db $fe
+	
+	;1
+	db 0
+	
+	db 14, MANKEY
+	db 15, HAUNTER
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, MANKEY
+	db 20, HAUNTER
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, MANKEY
+	db 25, HAUNTER
+	db $fe
 
+	;4
+	db 0
+	
+	db 27, PRIMEAPE
+	db 28, GENGAR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 29, PRIMEAPE
+	db 30, GENGAR
+	db $fe
+	
+	;6
+	db 0
+	
+	db 31, PRIMEAPE
+	db 32, GENGAR
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, PRIMEAPE
+	db 37, GENGAR
+	db $fe
+	
+	;8
+	db 0
+	
+	db 40, PRIMEAPE
+	db 41, GENGAR
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, PRIMEAPE
+	db 46, GENGAR
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, PRIMEAPE
+	db 50, GENGAR
+	db $fe
+	
+	;11
+	db 0
+	
+	db 54, PRIMEAPE
+	db 55, GENGAR
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, PRIMEAPE
+	db 58, GENGAR
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, PRIMEAPE
+	db 63, GENGAR
+	db $fe
 
+	;14
+	db 0
+	
+	db 70, PRIMEAPE
+	db 71, GENGAR
+	db $fe
+	
+	;15
+	db 0
+	
+	db 76, PRIMEAPE
+	db 77, GENGAR
+	db $fe
+	
+	;16
+	db 0
+	
+	db 82, PRIMEAPE
+	db 83, GENGAR
+	db $ff
+	
 SkierGroup:
 	; SKIER (1)
 	db "ROXANNE@", TRAINERTYPE_NORMAL
@@ -4963,25 +6256,374 @@ BugCatcherGroup:
 	db $ff ; end
 
 	; BUG_CATCHER (19)
-	db "WAYNE@", TRAINERTYPE_NORMAL
-	db  8, LEDYBA
-	db 10, PARAS
-	db $ff ; end
+	db "WAYNE@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, METAPOD
+	db 10, KADABRA
+	db $fe
+	
+	;1
+	db 0
+	
+	db 14, METAPOD
+	db 14, KADABRA
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, METAPOD
+	db 20, KADABRA
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, METAPOD
+	db 25, KADABRA
+	db $fe
 
+	;4
+	db 0
+	
+	db 29, METAPOD
+	db 29, ALAKAZAM
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, BUTTERFREE
+	db 31, ALAKAZAM
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, BUTTERFREE
+	db 32, ALAKAZAM
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, BUTTERFREE
+	db 36, ALAKAZAM
+	db $fe
 
+	;8
+	db 0
+	
+	db 40, BUTTERFREE
+	db 40, ALAKAZAM
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, BUTTERFREE
+	db 46, ALAKAZAM
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, BUTTERFREE
+	db 50, ALAKAZAM
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, BUTTERFREE
+	db 56, ALAKAZAM
+	db $fe
+	
+	;12
+	db 0
+	
+	db 60, BUTTERFREE
+	db 60, ALAKAZAM
+	db $fe
+	
+	;13
+	db 0
+	
+	db 64, BUTTERFREE
+	db 64, ALAKAZAM
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, BUTTERFREE
+	db 70, ALAKAZAM
+	db $fe
+	
+	;15
+	db 0
+	
+	db 77, BUTTERFREE
+	db 77, ALAKAZAM
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, BUTTERFREE
+	db 85, ALAKAZAM
+	db $ff
+	
 FisherGroup:
 	; FISHER (1)
-	db "JUSTIN@", TRAINERTYPE_NORMAL
-	db  5, MAGIKARP
-	db  5, MAGIKARP
-	db 15, MAGIKARP
-	db  5, MAGIKARP
-	db $ff ; end
+	db "JUSTIN@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  7, NIDORAN_M
+	db  7, NIDOKING
+	db $fe
+	
+	;1
+	db 0
+	
+	db  11, NIDORAN_M
+	db  11, NIDOKING
+	db $fe
+	
+	;2
+	db 0
+	
+	db  18, NIDORAN_M
+	db  18, NIDOKING
+	db $fe
+	
+	;3
+	db 0
+	
+	db 23, NIDORAN_M
+	db 23, NIDOKING
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, NIDORINO
+	db 27, CLEFAIRY
+	db $fe
 
+	;5
+	db 0
+	
+	db 28, NIDORINO
+	db 28, CLEFAIRY
+	db $fe
+	
+	;6
+	db 0
+	
+	db 30, NIDORINO
+	db 30, CLEFAIRY
+	db $fe
+	
+	;7
+	db 0
+	
+	db 34, NIDORINO
+	db 34, CLEFAIRY
+	db $fe
+	
+	;8
+	db 0
+	
+	db 39, NIDORINO
+	db 39, CLEFAIRY
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, NIDORINO
+	db 44, CLEFAIRY
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, NIDORINO
+	db 49, CLEFAIRY
+	db $fe
+	
+	;11
+	db 0
+	
+	db 53, NIDORINO
+	db 53, CLEFAIRY
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, NIDORINO
+	db 57, CLEFAIRY
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, NIDORINO
+	db 62, CLEFAIRY
+	db $fe
+
+    ;14
+    db 0
+	
+	db 65, NIDORINO
+	db 65, CLEFAIRY
+	db $fe
+	
+	;15
+	db 0
+	
+	db 73, NIDORINO
+	db 73, CLEFAIRY
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, NIDORINO
+	db 80, CLEFAIRY
+	db $ff
+	
 	; FISHER (2)
-	db "RALPH@", TRAINERTYPE_NORMAL
-	db 10, GOLDEEN
-	db $ff ; end
+	db "RALPH@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 9, ONIX
+	db 9, EXEGGUTOR
+	db $fe
+    
+	;1
+	db 0
+	
+	db 12, ONIX
+	db 12, EXEGGUTOR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, ONIX
+	db 19, EXEGGUTOR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, ONIX
+	db 24, EXEGGUTOR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, ONIX
+	db 28, EXEGGUTOR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DROWZEE
+	db 30, CUBONE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, DROWZEE
+	db 32, CUBONE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, DROWZEE
+	db 36, CUBONE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DROWZEE
+	db 41, CUBONE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, DROWZEE
+	db 46, CUBONE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, DROWZEE
+	db 50, CUBONE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, DROWZEE
+	db 55, CUBONE
+	db $fe
+
+    ;12
+	db 0
+	
+	db 60, DROWZEE
+	db 60, CUBONE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, DROWZEE
+	db 63, CUBONE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, DROWZEE
+	db 70, CUBONE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, DROWZEE
+	db 75, CUBONE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, DROWZEE
+	db 85, CUBONE
+	db $ff
+
+
+
 
 	; FISHER (3)
 	db "ARNOLD@", TRAINERTYPE_NORMAL
@@ -4996,10 +6638,126 @@ FisherGroup:
 	db $ff ; end
 
 	; FISHER (5)
-	db "HENRY@", TRAINERTYPE_NORMAL
-	db  8, POLIWAG
-	db  8, POLIWAG
-	db $ff ; end
+	db "HENRY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  8, MUK
+	db  8, SCYTHER
+	db $fe
+	
+	;1
+	db 0
+	
+	db 12, MUK
+	db 12, SCYTHER
+	db $fe
+	
+	;2
+	db 0
+	
+	db 18, MUK
+	db 18, SCYTHER
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, MUK
+	db 24, SCYTHER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, SHELLDER
+	db 29, JYNX
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, MUK
+	db 30, SCYTHER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, MUK
+	db 32, SCYTHER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, MUK
+	db 36, SCYTHER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, MUK
+	db 41, SCYTHER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, MUK
+	db 46, SCYTHER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, MUK
+	db 50, SCYTHER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, MUK
+	db 55, SCYTHER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 60, MUK
+	db 60, SCYTHER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, MUK
+	db 63, SCYTHER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, MUK
+	db 70, SCYTHER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 76, MUK
+	db 76, SCYTHER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 88, MUK
+	db 88, SCYTHER
+	db $ff
 
 	; FISHER (6)
 	db "MARVIN@", TRAINERTYPE_NORMAL
@@ -5070,15 +6828,248 @@ FisherGroup:
 	db $ff ; end
 
 	; FISHER (16)
-	db "RALPH@", TRAINERTYPE_NORMAL
-	db 17, GOLDEEN
-	db $ff ; end
+	db "RALPH@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 9, ONIX
+	db 9, EXEGGUTOR
+	db $fe
+    
+	;1
+	db 0
+	
+	db 12, ONIX
+	db 12, EXEGGUTOR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, ONIX
+	db 19, EXEGGUTOR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, ONIX
+	db 24, EXEGGUTOR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, ONIX
+	db 28, EXEGGUTOR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DROWZEE
+	db 30, CUBONE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, DROWZEE
+	db 32, CUBONE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, DROWZEE
+	db 36, CUBONE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DROWZEE
+	db 41, CUBONE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, DROWZEE
+	db 46, CUBONE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, DROWZEE
+	db 50, CUBONE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, DROWZEE
+	db 55, CUBONE
+	db $fe
+
+    ;12
+	db 0
+	
+	db 60, DROWZEE
+	db 60, CUBONE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, DROWZEE
+	db 63, CUBONE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, DROWZEE
+	db 70, CUBONE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, DROWZEE
+	db 75, CUBONE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, DROWZEE
+	db 85, CUBONE
+	db $ff
 
 	; FISHER (17)
-	db "RALPH@", TRAINERTYPE_NORMAL
-	db 17, QWILFISH
-	db 19, GOLDEEN
-	db $ff ; end
+	db "RALPH@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 9, ONIX
+	db 9, EXEGGUTOR
+	db $fe
+    
+	;1
+	db 0
+	
+	db 12, ONIX
+	db 12, EXEGGUTOR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, ONIX
+	db 19, EXEGGUTOR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, ONIX
+	db 24, EXEGGUTOR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, ONIX
+	db 28, EXEGGUTOR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DROWZEE
+	db 30, CUBONE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, DROWZEE
+	db 32, CUBONE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, DROWZEE
+	db 36, CUBONE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DROWZEE
+	db 41, CUBONE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, DROWZEE
+	db 46, CUBONE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, DROWZEE
+	db 50, CUBONE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, DROWZEE
+	db 55, CUBONE
+	db $fe
+
+    ;12
+	db 0
+	
+	db 60, DROWZEE
+	db 60, CUBONE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, DROWZEE
+	db 63, CUBONE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, DROWZEE
+	db 70, CUBONE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, DROWZEE
+	db 75, CUBONE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, DROWZEE
+	db 85, CUBONE
+	db $ff
 
 	; FISHER (18)
 	db "TULLY@", TRAINERTYPE_NORMAL
@@ -5114,16 +7105,248 @@ FisherGroup:
 	db $ff ; end
 
 	; FISHER (23)
-	db "RALPH@", TRAINERTYPE_NORMAL
-	db 30, QWILFISH
-	db 32, GOLDEEN
-	db $ff ; end
+	db "RALPH@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 9, ONIX
+	db 9, EXEGGUTOR
+	db $fe
+    
+	;1
+	db 0
+	
+	db 12, ONIX
+	db 12, EXEGGUTOR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, ONIX
+	db 19, EXEGGUTOR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, ONIX
+	db 24, EXEGGUTOR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, ONIX
+	db 28, EXEGGUTOR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DROWZEE
+	db 30, CUBONE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, DROWZEE
+	db 32, CUBONE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, DROWZEE
+	db 36, CUBONE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DROWZEE
+	db 41, CUBONE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, DROWZEE
+	db 46, CUBONE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, DROWZEE
+	db 50, CUBONE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, DROWZEE
+	db 55, CUBONE
+	db $fe
+
+    ;12
+	db 0
+	
+	db 60, DROWZEE
+	db 60, CUBONE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, DROWZEE
+	db 63, CUBONE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, DROWZEE
+	db 70, CUBONE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, DROWZEE
+	db 75, CUBONE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, DROWZEE
+	db 85, CUBONE
+	db $ff
 
 	; FISHER (24)
-	db "RALPH@", TRAINERTYPE_MOVES
-	db 35, QWILFISH,   TOXIC, MINIMIZE, SURF, PIN_MISSILE
-	db 39, SEAKING,    ENDURE, FLAIL, FURY_ATTACK, WATERFALL
-	db $ff ; end
+	db "RALPH@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 9, ONIX
+	db 9, EXEGGUTOR
+	db $fe
+    
+	;1
+	db 0
+	
+	db 12, ONIX
+	db 12, EXEGGUTOR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 19, ONIX
+	db 19, EXEGGUTOR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, ONIX
+	db 24, EXEGGUTOR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 28, ONIX
+	db 28, EXEGGUTOR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 30, DROWZEE
+	db 30, CUBONE
+	db $fe
+	
+	;6
+	db 0
+	
+	db 32, DROWZEE
+	db 32, CUBONE
+	db $fe
+	
+	;7
+	db 0
+	
+	db 36, DROWZEE
+	db 36, CUBONE
+	db $fe
+	
+	;8
+	db 0
+	
+	db 41, DROWZEE
+	db 41, CUBONE
+	db $fe
+	
+	;9
+	db 0
+	
+	db 46, DROWZEE
+	db 46, CUBONE
+	db $fe
+	
+	;10
+	db 0
+	
+	db 50, DROWZEE
+	db 50, CUBONE
+	db $fe
+	
+	;11
+	db 0
+	
+	db 55, DROWZEE
+	db 55, CUBONE
+	db $fe
+
+    ;12
+	db 0
+	
+	db 60, DROWZEE
+	db 60, CUBONE
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, DROWZEE
+	db 63, CUBONE
+	db $fe
+	
+	;14
+	db 0
+	
+	db 70, DROWZEE
+	db 70, CUBONE
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, DROWZEE
+	db 75, CUBONE
+	db $fe
+	
+	;16
+	db 0
+	
+	db 85, DROWZEE
+	db 85, CUBONE
+	db $ff
 
 	; FISHER (25)
 	db "TULLY@", TRAINERTYPE_MOVES
@@ -5493,11 +7716,110 @@ SailorGroup:
 	db $ff ; end
 
 	; SAILOR (2)
-	db "HUEY@", TRAINERTYPE_NORMAL
-	db 18, POLIWAG
-	db 18, POLIWHIRL
-	db $ff ; end
+	db "HUEY@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 10, SEAKING
+    db $fe
+	
+	;1
+	db 0
+	
+	db 17, SEAKING
+    db $fe
+	
+	;2
+	db 0
+	
+	db 22, STARYU
+    db $fe
+	
+	;3
+	db 0
+	
+	db 26, STARYU
+    db $fe
+	
+	;4
+	db 0
+	
+	db 30, STARYU
+    db $fe
+	
+	;5
+	db 0
+	
+	db 31, STARYU
+    db $fe
+	
+	;6
+	db 0
+	
+	db 33, STARYU
+    db $fe
+	
+	;7
+	db 0
+	
+	db 38, STARYU
+    db $fe
+	
+	;8
+	db 0
+	
+	db 43, STARYU
+    db $fe
+	
+	;9
+	db 0
+	
+	db 48, STARYU
+    db $fe
+	
+	;10
+	db 0
+	
+	db 52, STARYU
+    db $fe
+	
+	;11
+	db 0
+	
+	db 57, STARYU
+    db $fe
+	
+	;12
+	db 0
+	
+	db 62, STARYU
+    db $fe
+	
+	;13
+	db 0
+	
+	db 64, STARYU
+    db $fe
+	
+	;14
+	db 0
+	
+	db 73, STARYU
+    db $fe
+	
+	;15
+	db 0
+	
+	db 79, STARYU
+    db $fe
 
+	;16
+	db 0
+	
+	db 85, STARYU
+    db $ff
+	
 	; SAILOR (3)
 	db "TERRELL@", TRAINERTYPE_NORMAL
 	db 20, POLIWHIRL
@@ -5729,9 +8051,152 @@ GuitaristGroup:
 	db  9, KABUTOPS
 	db 10, NIDORINA
 	db 11, WEEDLE
+	db $fe
 	
-	db $ff ; end
+	;1
+	db 0
+	
+	db 11, SANDSLASH
+	db 11, KABUTOPS
+	db 13, NIDORINA
+	db 14, WEEDLE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 18, SANDSLASH
+	db 19, KABUTOPS
+	db 20, NIDORINA
+	db 20, WEEDLE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 24, SANDSLASH
+	db 24, AERODACTYL
+	db 25, NIDORINA
+	db 25, WEEDLE
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, SANDSLASH
+	db 27, AERODACTYL
+	db 28, NIDORINA
+	db 29, KAKUNA
+	db $fe
 
+	;5
+	db 0
+	
+	db 28, SANDSLASH
+	db 28, AERODACTYL
+	db 29, NIDORINA
+	db 30, KAKUNA
+	db $fe
+	
+	;6
+	db 0
+	
+	db 30, NIDORAN_F
+	db 30, SNORLAX
+	db 31, NIDOQUEEN
+	db 32, KAKUNA
+	db $fe
+	
+	;7
+	db 0
+	
+	db 34, NIDORAN_F
+	db 34, SNORLAX
+	db 35, NIDOQUEEN
+	db 36, KAKUNA
+	db $fe
+	
+	;8
+	db 0
+	
+	db 39, NIDORAN_F
+	db 39, SNORLAX
+	db 40, NIDOQUEEN
+	db 41, KAKUNA
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, NIDORAN_F
+	db 44, SNORLAX
+	db 45, NIDOQUEEN
+	db 46, KAKUNA
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, NIDORAN_F
+	db 49, SNORLAX
+	db 50, NIDOQUEEN
+	db 51, KAKUNA
+	db $fe
+	
+	;11
+	db 0
+	
+	db 53, NIDORAN_F
+	db 53, SNORLAX
+	db 54, NIDOQUEEN
+	db 55, KAKUNA
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, NIDORAN_F
+	db 57, SNORLAX
+	db 58, NIDOQUEEN
+	db 59, KAKUNA
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, NIDORAN_F
+	db 62, SNORLAX
+	db 63, NIDOQUEEN
+	db 64, KAKUNA
+	db $fe
+	
+	;14
+	db 0
+	
+	db 65, NIDORAN_F
+	db 65, SNORLAX
+	db 66, NIDOQUEEN
+	db 67, KAKUNA
+	db $fe
+	
+	;15
+	db 0
+	
+	db 75, NIDORAN_F
+	db 75, SNORLAX
+	db 76, NIDOQUEEN
+	db 79, KAKUNA
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, NIDORAN_F
+	db 80, SNORLAX
+	db 84, NIDOQUEEN
+	db 86, KAKUNA
+	db $ff
+	
 	; GUITARIST (2)
 	db "VINCENT@", TRAINERTYPE_NORMAL
 	db 27, MAGNEMITE
@@ -6913,6 +9378,128 @@ BlackbeltGroup:
 
 
 ExecutiveMGroup:
+    ; GRUNTM (1)
+	db "ADAM@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 16, MEGANIUM
+	db 20, FERALIGATR
+	db $fe
+	
+	;1
+	db 0
+	
+	db 23, MEGANIUM
+	db 25, FERALIGATR
+	db $fe
+	
+	;2
+	db 0
+	
+	db 29, MEGANIUM
+	db 32, FERALIGATR
+	db $fe
+	
+	;3
+	db 0
+	
+	db 32, MEGANIUM
+	db 35, FERALIGATR
+	db $fe
+	
+	;4
+	db 0
+	
+	db 34, MEGANIUM
+	db 37, FERALIGATR
+	db $fe
+	
+	;5
+	db 0
+	
+	db 36, MEGANIUM
+	db 40, FERALIGATR
+	db $fe
+	
+	;6
+	db 0
+	
+	db 39, MEGANIUM
+	db 42, FERALIGATR
+	db $fe
+	
+	;7
+	db 0
+	
+	db 44, MEGANIUM
+	db 47, FERALIGATR
+	db $fe
+	
+	;8
+	db 0
+	
+	db 50, MEGANIUM
+	db 52, FERALIGATR
+	db $fe
+	
+	;9
+	db 0
+	
+	db 55, MEGANIUM
+	db 58, FERALIGATR
+	db $fe
+	
+	;10
+	db 0
+	
+	db 60, MEGANIUM
+	db 63, FERALIGATR
+	db $fe
+	
+	;11
+	db 0
+	
+	db 65, MEGANIUM
+	db 68, FERALIGATR
+	db $fe
+	
+	;12
+	db 0
+	
+	db 70, MEGANIUM
+	db 73, FERALIGATR
+	db $fe
+	
+	;13
+	db 0
+	
+	db 74, MEGANIUM
+	db 77, FERALIGATR
+	db $fe
+	
+	;14
+	db 0
+	
+	db 80, MEGANIUM
+	db 82, FERALIGATR
+	db $fe
+	
+	;15
+	db 0
+	
+	db 90, MEGANIUM
+	db 93, FERALIGATR
+	db $fe
+	
+	;16
+	db 0
+	
+	db 100, MEGANIUM
+	db 100, FERALIGATR
+	db $ff
+	
 	; EXECUTIVEM (1)
 	db "EXECUTIVE@", TRAINERTYPE_MOVES
 	db 33, HOUNDOUR,   EMBER, ROAR, BITE, FAINT_ATTACK
@@ -7018,9 +9605,128 @@ PsychicGroup:
 
 PicnickerGroup:
 	; PICNICKER (1)
-	db "LIZ@", TRAINERTYPE_NORMAL
-	db  9, NIDORAN_F
-	db $ff ; end
+	db "LIZ@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, TANGELA
+	db  9, GEODUDE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, TANGELA
+	db 15, GEODUDE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, TANGELA
+	db 20, GEODUDE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, KANGASKHAN
+	db 25, GRAVELER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, KANGASKHAN
+	db 29, GRAVELER
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, KANGASKHAN
+	db 31, GRAVELER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, KANGASKHAN
+	db 33, GRAVELER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 37, KANGASKHAN
+	db 37, GRAVELER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, KANGASKHAN
+	db 42, GRAVELER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, KANGASKHAN
+	db 47, GRAVELER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, KANGASKHAN
+	db 51, GRAVELER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, KANGASKHAN
+	db 56, GRAVELER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 61, KANGASKHAN
+	db 61, GRAVELER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, KANGASKHAN
+	db 63, GRAVELER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 72, KANGASKHAN
+	db 72, GRAVELER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 78, KANGASKHAN
+	db 78, GRAVELER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, KANGASKHAN
+	db 92, GRAVELER
+	db $ff
+	
+	
 
 	; PICNICKER (2)
 	db "GINA@", TRAINERTYPE_NORMAL
@@ -7074,17 +9780,248 @@ PicnickerGroup:
 	db $ff ; end
 
 	; PICNICKER (11)
-	db "LIZ@", TRAINERTYPE_NORMAL
-	db 15, WEEPINBELL
-	db 15, NIDORINA
-	db $ff ; end
+	db "LIZ@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, TANGELA
+	db  9, GEODUDE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, TANGELA
+	db 15, GEODUDE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, TANGELA
+	db 20, GEODUDE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, KANGASKHAN
+	db 25, GRAVELER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, KANGASKHAN
+	db 29, GRAVELER
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, KANGASKHAN
+	db 31, GRAVELER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, KANGASKHAN
+	db 33, GRAVELER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 37, KANGASKHAN
+	db 37, GRAVELER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, KANGASKHAN
+	db 42, GRAVELER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, KANGASKHAN
+	db 47, GRAVELER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, KANGASKHAN
+	db 51, GRAVELER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, KANGASKHAN
+	db 56, GRAVELER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 61, KANGASKHAN
+	db 61, GRAVELER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, KANGASKHAN
+	db 63, GRAVELER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 72, KANGASKHAN
+	db 72, GRAVELER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 78, KANGASKHAN
+	db 78, GRAVELER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, KANGASKHAN
+	db 92, GRAVELER
+	db $ff
 
 	; PICNICKER (12)
-	db "LIZ@", TRAINERTYPE_NORMAL
-	db 19, WEEPINBELL
-	db 19, NIDORINO
-	db 21, NIDOQUEEN
-	db $ff ; end
+	db "LIZ@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, TANGELA
+	db  9, GEODUDE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, TANGELA
+	db 15, GEODUDE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, TANGELA
+	db 20, GEODUDE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, KANGASKHAN
+	db 25, GRAVELER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, KANGASKHAN
+	db 29, GRAVELER
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, KANGASKHAN
+	db 31, GRAVELER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, KANGASKHAN
+	db 33, GRAVELER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 37, KANGASKHAN
+	db 37, GRAVELER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, KANGASKHAN
+	db 42, GRAVELER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, KANGASKHAN
+	db 47, GRAVELER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, KANGASKHAN
+	db 51, GRAVELER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, KANGASKHAN
+	db 56, GRAVELER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 61, KANGASKHAN
+	db 61, GRAVELER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, KANGASKHAN
+	db 63, GRAVELER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 72, KANGASKHAN
+	db 72, GRAVELER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 78, KANGASKHAN
+	db 78, GRAVELER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, KANGASKHAN
+	db 92, GRAVELER
+	db $ff
 
 	; PICNICKER (13)
 	db "HEIDI@", TRAINERTYPE_NORMAL
@@ -7139,18 +10076,248 @@ PicnickerGroup:
 	db $ff ; end
 
 	; PICNICKER (22)
-	db "LIZ@", TRAINERTYPE_NORMAL
-	db 24, WEEPINBELL
-	db 26, NIDORINO
-	db 26, NIDOQUEEN
-	db $ff ; end
+	db "LIZ@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, TANGELA
+	db  9, GEODUDE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, TANGELA
+	db 15, GEODUDE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, TANGELA
+	db 20, GEODUDE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, KANGASKHAN
+	db 25, GRAVELER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, KANGASKHAN
+	db 29, GRAVELER
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, KANGASKHAN
+	db 31, GRAVELER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, KANGASKHAN
+	db 33, GRAVELER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 37, KANGASKHAN
+	db 37, GRAVELER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, KANGASKHAN
+	db 42, GRAVELER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, KANGASKHAN
+	db 47, GRAVELER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, KANGASKHAN
+	db 51, GRAVELER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, KANGASKHAN
+	db 56, GRAVELER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 61, KANGASKHAN
+	db 61, GRAVELER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, KANGASKHAN
+	db 63, GRAVELER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 72, KANGASKHAN
+	db 72, GRAVELER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 78, KANGASKHAN
+	db 78, GRAVELER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, KANGASKHAN
+	db 92, GRAVELER
+	db $ff
 
 	; PICNICKER (23)
-	db "LIZ@", TRAINERTYPE_MOVES
-	db 30, WEEPINBELL, SLEEP_POWDER, POISONPOWDER, STUN_SPORE, SLUDGE_BOMB
-	db 32, NIDOKING,   EARTHQUAKE, DOUBLE_KICK, POISON_STING, IRON_TAIL
-	db 32, NIDOQUEEN,  EARTHQUAKE, DOUBLE_KICK, TAIL_WHIP, BODY_SLAM
-	db $ff ; end
+	db "LIZ@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db  9, TANGELA
+	db  9, GEODUDE
+	db $fe
+	
+	;1
+	db 0
+	
+	db 15, TANGELA
+	db 15, GEODUDE
+	db $fe
+	
+	;2
+	db 0
+	
+	db 20, TANGELA
+	db 20, GEODUDE
+	db $fe
+	
+	;3
+	db 0
+	
+	db 25, KANGASKHAN
+	db 25, GRAVELER
+	db $fe
+	
+	;4
+	db 0
+	
+	db 29, KANGASKHAN
+	db 29, GRAVELER
+	db $fe
+	
+	;5
+	db 0
+	
+	db 31, KANGASKHAN
+	db 31, GRAVELER
+	db $fe
+	
+	;6
+	db 0
+	
+	db 33, KANGASKHAN
+	db 33, GRAVELER
+	db $fe
+	
+	;7
+	db 0
+	
+	db 37, KANGASKHAN
+	db 37, GRAVELER
+	db $fe
+	
+	;8
+	db 0
+	
+	db 42, KANGASKHAN
+	db 42, GRAVELER
+	db $fe
+	
+	;9
+	db 0
+	
+	db 47, KANGASKHAN
+	db 47, GRAVELER
+	db $fe
+	
+	;10
+	db 0
+	
+	db 51, KANGASKHAN
+	db 51, GRAVELER
+	db $fe
+	
+	;11
+	db 0
+	
+	db 56, KANGASKHAN
+	db 56, GRAVELER
+	db $fe
+	
+	;12
+	db 0
+	
+	db 61, KANGASKHAN
+	db 61, GRAVELER
+	db $fe
+	
+	;13
+	db 0
+	
+	db 63, KANGASKHAN
+	db 63, GRAVELER
+	db $fe
+	
+	;14
+	db 0
+	
+	db 72, KANGASKHAN
+	db 72, GRAVELER
+	db $fe
+	
+	;15
+	db 0
+	
+	db 78, KANGASKHAN
+	db 78, GRAVELER
+	db $fe
+	
+	;16
+	db 0
+	
+	db 92, KANGASKHAN
+	db 92, GRAVELER
+	db $ff
 
 	; PICNICKER (24)
 	db "GINA@", TRAINERTYPE_NORMAL
@@ -7174,10 +10341,144 @@ PicnickerGroup:
 
 CamperGroup:
 	; CAMPER (1)
-	db "ROLAND@", TRAINERTYPE_NORMAL
-	db  9, NIDORAN_M
-	db $ff ; end
+	db "ROLAND@", TRAINERTYPE_VARIABLE
+	
+	;0
+	db 0
+	
+	db 7, MAROWAK
+	db 7, ELECTRODE
+	db 8, HITMONCHAN
+	db $fe
+	
+	;1
+	db 0
+	
+	db 12, MAROWAK
+	db 12, ELECTRODE
+	db 13, HITMONCHAN
+	db $fe
+	
+	;2
+	db 0
+	
+	db 18, MAROWAK
+	db 18, ELECTRODE
+	db 19, HITMONCHAN
+	db $fe
+	
+	;3
+	db 0
+	
+	db 23, MAROWAK
+	db 23, ELECTRODE
+	db 24, LICKITUNG
+	db $fe
+	
+	;4
+	db 0
+	
+	db 27, HITMONLEE
+	db 27, EXEGGCUTE
+	db 28, LICKITUNG
+	db $fe
+	
+	;5
+	db 0
+	
+	db 29, HITMONLEE
+	db 29, EXEGGCUTE
+	db 30, LICKITUNG
+	db $fe
+	
+	;6
+	db 0
+	
+	db 30, HITMONLEE
+	db 30, EXEGGCUTE
+	db 31, KOFFING
+	db $fe
+	
+	;7
+	db 0
+	
+	db 35, HITMONLEE
+	db 35, EXEGGCUTE
+	db 36, KOFFING
+	db $fe
+	
+	;8
+	db 0
+	
+	db 39, HITMONLEE
+	db 39, EXEGGCUTE
+	db 40, KOFFING
+	db $fe
+	
+	;9
+	db 0
+	
+	db 44, HITMONLEE
+	db 44, EXEGGCUTE
+	db 45, KOFFING
+	db $fe
+	
+	;10
+	db 0
+	
+	db 49, HITMONLEE
+	db 49, EXEGGCUTE
+	db 50, KOFFING
+	db $fe
 
+	;11
+	db 0
+	
+	db 53, HITMONLEE
+	db 53, EXEGGCUTE
+	db 54, KOFFING
+	db $fe
+	
+	;12
+	db 0
+	
+	db 57, HITMONLEE
+	db 57, EXEGGCUTE
+	db 58, KOFFING
+	db $fe
+	
+	;13
+	db 0
+	
+	db 62, HITMONLEE
+	db 62, EXEGGCUTE
+	db 63, KOFFING
+	db $fe
+	
+	;14
+	db 0
+	
+	db 65, HITMONLEE
+	db 65, EXEGGCUTE
+	db 66, KOFFING
+	db $fe
+	
+	;15
+	db 0
+	
+	db 73, HITMONLEE
+	db 73, EXEGGCUTE
+	db 74, KOFFING
+	db $fe
+	
+	;16
+	db 0
+	
+	db 80, HITMONLEE
+	db 80, EXEGGCUTE
+	db 81, KOFFING
+	db $ff
+	
 	; CAMPER (2)
 	db "TODD@", TRAINERTYPE_NORMAL
 	db 14, PSYDUCK
@@ -7727,12 +11028,6 @@ OfficerGroup:
 
 
 GruntFGroup:
-	; GRUNTF (1)
-	db "GRUNT@", TRAINERTYPE_NORMAL
-	db  9, ZUBAT
-	db 11, EKANS
-	db $ff ; end
-
 	; GRUNTF (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 26, ARBOK

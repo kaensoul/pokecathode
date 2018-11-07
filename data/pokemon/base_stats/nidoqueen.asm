@@ -1,6 +1,6 @@
 	db NIDOQUEEN ; 031
 
-	db  80,  100,  80,  106,  70,  80
+	db  70,  100,  70,  106,  70,  70
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FAIRY ; type

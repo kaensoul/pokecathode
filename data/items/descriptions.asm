@@ -284,8 +284,8 @@ BicycleDesc:
 	next "for fast movement.@"
 
 MoonStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 AntidoteDesc:
 	db   "Cures poisoned"
@@ -340,16 +340,16 @@ MaxElixerDesc:
 	next "PP of one #MON.@"
 
 FireStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 ThunderStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 WaterStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 TeruSama2Desc:
 	db   "?@"
@@ -387,16 +387,16 @@ XAccuracyDesc:
 	next "(1 BTL)@"
 
 LeafStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 MetalPowderDesc:
 	db   "Raises DEFENSE of"
 	next "DITTO. (HOLD)@"
 
 NuggetDesc:
-	db   "Made of pure gold."
-	next "Sell high.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 PokeDollDesc:
 	db   "Use to escape from"
@@ -480,8 +480,8 @@ ExpShareDesc:
 	next "Points. (HOLD)@"
 
 OldRodDesc:
-	db   "Use by water to"
-	next "fish for #MON.@"
+	db   "Caña ideal para"
+	next "#MON pequeños.@"
 
 GoodRodDesc:
 	db   "A good ROD for"
@@ -512,20 +512,20 @@ ElixerDesc:
 	next "moves by 10.@"
 
 RedScaleDesc:
-	db   "A scale from the"
-	next "red GYARADOS.@"
+	db   "Un colmillo ya"
+	next "fosilizado.@"
 
 SecretPotionDesc:
-	db   "Fully heals any"
-	next "#MON.@"
+	db   "Tiene forma de"
+	next "hoja.@"
 
 SSTicketDesc:
-	db   "A ticket for the"
-	next "S.S.AQUA.@"
+	db   "Parece una herra-"
+	next "mienta primitiva.@"
 
 MysteryEggDesc:
-	db   "An EGG obtained"
-	next "from MR.#MON.@"
+	db   "Es como una mano"
+	next "con membranas.@"
 
 ClearBellDesc:
 	db   "Makes a gentle"
@@ -595,15 +595,16 @@ TinyMushroomDesc:
 	next "room. Sell low.@"
 
 BigMushroomDesc:
-	db   "A rare mushroom."
-	next "Sell high.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 SilverPowderDesc:
 	db   "Powers up bug-type"
 	next "moves. (HOLD)@"
 
 BluApricornDesc:
-	db   "A blue APRICORN.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 TeruSama6Desc:
 	db   "?@"
@@ -685,8 +686,8 @@ PearlDesc:
 	next "Sell low.@"
 
 BigPearlDesc:
-	db   "A big, beautiful"
-	next "pearl. Sell high.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 EverStoneDesc:
 	db   "Stops evolution."
@@ -764,12 +765,12 @@ LostItemDesc:
 	next "by the COPYCAT.@"
 
 StardustDesc:
-	db   "Pretty, red sand."
-	next "Sell high.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 StarPieceDesc:
-	db   "A hunk of red gem."
-	next "Sell very high.@"
+	db   "Se vende a alto"
+	next "precio@."
 
 BasementKeyDesc:
 	db   "Opens doors.@"
@@ -902,8 +903,8 @@ GorgeousBoxDesc:
 	next "what's inside.@"
 
 SunStoneDesc:
-	db   "Evolves certain"
-	next "kinds of #MON.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 PolkadotBowDesc:
 	db   "Powers up fairy-"
@@ -913,8 +914,8 @@ TeruSama22Desc:
 	db   "?@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+	db   "Hace evolucionar"
+	next "algunos #MON.@"
 
 BerryDesc:
 	db   "A self-restore"

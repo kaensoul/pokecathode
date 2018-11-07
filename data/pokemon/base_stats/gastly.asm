@@ -1,13 +1,13 @@
 	db GASTLY ; 092
 
-	db  30,  35,  30,  80, 100,  35
+	db  60,  75,  50, 115, 120,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, POISON ; type
-	db 190 ; catch rate
-	db 95 ; base exp
+	db 100 ; catch rate
+	db 195 ; base exp
 	db NO_ITEM, NO_ITEM ; items
-	db GENDER_F50 ; gender ratio
+	db GENDER_F100 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
 	db 5 ; unknown 2
@@ -17,5 +17,5 @@
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	; tm/hm learnset
-	tmhm
+	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SWEET_SCENT, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, FRUSTRATION, THUNDER, PSYCHIC_M, SHADOW_BALL, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, RAGE, SHARPEN, LOVELY_KISS, THUNDERBOLT, REST, ATTRACT, THIEF, ICE_BEAM, LOVE_CANNON, FLASH
 	; end

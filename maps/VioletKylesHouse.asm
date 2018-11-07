@@ -19,15 +19,15 @@ Kyle:
 	end
 
 VioletKylesHousePokefanMText:
-	text "A #MON you get"
-	line "in a trade grows"
-	cont "quickly."
+	text "Los Burrowl son"
+	line "buenos para hacer"
+	cont "agujeros en la"
+	cont "tierra."
 
-	para "But if you don't"
-	line "have the right GYM"
-
-	para "BADGE, they may"
-	line "disobey you."
+	para "Los Cabbit suelen"
+	line "ser mejores al"
+	cont "cultivar, pero"
+	cont "comen el doble."
 	done
 
 VioletKylesHouse_MapEvents:

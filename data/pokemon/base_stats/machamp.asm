@@ -6,7 +6,7 @@
 	db GRASS, FIGHTING ; type
 	db 205 ; catch rate
 	db 53 ; base exp
-	db PRZCUREBERRY, MIRACLE_SEED ; items
+	db BLU_APRICORN, MIRACLE_SEED ; items
 	db GENDER_F25 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch

@@ -923,7 +923,7 @@ UnknownText_0x1c564a::
 
 UnknownText_0x1c5660::
 	text_from_ram wMonOrItemNameBuffer
-	text " aprendió"
+	text " sabe"
 	line "@"
 	text_from_ram wStringBuffer2
 	text "!@"

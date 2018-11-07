@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db DRAGON, FIRE ; type
-	db 45 ; catch rate
+	db 95 ; catch rate
 	db 64 ; base exp
 	db NO_ITEM, DRAGON_FANG ; items
 	db GENDER_F50 ; gender ratio

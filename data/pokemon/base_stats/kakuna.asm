@@ -1,6 +1,6 @@
 	db KAKUNA ; 014
 
-    db  94,  100,  84,  87,  69,  74
+    db  94,  100,  74,  57,  69,  74
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, WATER ; type

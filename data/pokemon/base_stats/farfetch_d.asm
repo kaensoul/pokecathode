@@ -1,12 +1,12 @@
 	db FARFETCH_D ; 083
 
-	db  52,  65,  55,  60,  58,  62
+	db  128,  120,  90,  78,  48,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, FLYING ; type
+	db ROCK, FIGHTING ; type
 	db 45 ; catch rate
-	db 94 ; base exp
-	db NO_ITEM, STICK ; items
+	db 194 ; base exp
+	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/farfetch_d/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_FLYING, EGG_GROUND ; egg groups
+	dn EGG_MINERAL, EGG_MONSTER ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm CONVERSION, HEADBUTT, CURSE, MEGA_PUNCH, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, HIDDEN_POWER, VICEGRIP, HYPER_BEAM, PROTECT, FRUSTRATION, IRON_TAIL, EARTHQUAKE, RETURN, DIG, FISSURE, ICE_PUNCH, SWAGGER, SLEEP_TALK, SANDSTORM, SHARPEN, THUNDERPUNCH, REST, ATTRACT, FIRE_PUNCH, FLAMETHROWER, CUT, STRENGTH
 	; end

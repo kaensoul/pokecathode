@@ -85,9 +85,8 @@ ENDM
 	connection north, Route35, ROUTE_35, 5, 0, 10
 	connection south, Route34, ROUTE_34, 5, 0, 10
 
-	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST
-	connection north, Route39, ROUTE_39, 5, 0, 10
-	connection west, Route40, ROUTE_40, 9, 0, 12
+	map_attributes OlivineCity, OLIVINE_CITY, $05, NORTH
+	connection north, Route32, ROUTE_32, 0, 0, 10
 
 	map_attributes EcruteakCity, ECRUTEAK_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route37, ROUTE_37, 5, 0, 10
@@ -102,9 +101,7 @@ ENDM
 	map_attributes LakeOfRage, LAKE_OF_RAGE, $05, SOUTH
 	connection south, Route43, ROUTE_43, 5, 0, 10
 
-	map_attributes BlackthornCity, BLACKTHORN_CITY, $71, SOUTH | WEST
-	connection south, Route45, ROUTE_45, 0, 0, 10
-	connection west, Route44, ROUTE_44, 9, 0, 9
+	map_attributes BlackthornCity, BLACKTHORN_CITY, $71, 0
 
 	map_attributes SilverCaveOutside, SILVER_CAVE_OUTSIDE, $2c, EAST
 	connection east, Route28, ROUTE_28, 9, 0, 9
@@ -132,7 +129,7 @@ ENDM
 
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, 0, 0, 10
-	connection south, Route33, ROUTE_33, 0, 0, 10
+	connection south, OlivineCity, OLIVINE_CITY, 0, 0, 10
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST
 	connection north, Route32, ROUTE_32, 0, 0, 10

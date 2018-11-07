@@ -153,15 +153,15 @@ MartGoldenrod5F: ; 1613b
 
 MartOlivine: ; 16153
 	db 9 ; # items
-	db GREAT_BALL
-	db SUPER_POTION
-	db HYPER_POTION
+	db POKE_BALL
+	db POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
 	db ICE_HEAL
-	db SUPER_REPEL
-	db SURF_MAIL
+	db BURN_HEAL
+	db REPEL
+	db POKE_DOLL
 	db -1 ; end
 ; 1615e
 

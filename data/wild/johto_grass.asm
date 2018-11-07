@@ -464,110 +464,110 @@ JohtoGrassWildMons: ; 0x2a5e9
 	map_id UNION_CAVE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db  4, CLEFABLE
-	db  3, CLEFABLE
 	db  5, CLEFABLE
-	db  3, ZUBAT
+	db  4, CLEFABLE
+	db  6, CLEFABLE
+	db  6, ZUBAT
 	db  4, ZUBAT
-	db  5, ZUBAT
-	db  4, STARMIE
+	db  7, ZUBAT
+	db  8, STARMIE
 	; day
-	db  3, CLEFABLE
-	db  4, CLEFABLE
-	db  3, ZUBAT
-	db  5, ZUBAT
-	db  4, ZUBAT
-	db  4, STARMIE
-	db  5, STARMIE
-	; nite
-	db  4, CLEFABLE
-	db  3, CLEFABLE
+	db  6, CLEFABLE
 	db  5, CLEFABLE
 	db  4, ZUBAT
-	db  3, ZUBAT
-	db  4, HYPNO
-	db  3, HYPNO
+	db  5, ZUBAT
+	db  6, ZUBAT
+	db  6, STARMIE
+	db  7, STARMIE
+	; nite
+	db  6, CLEFABLE
+	db  7, CLEFABLE
+	db  5, CLEFABLE
+	db  5, ZUBAT
+	db  4, ZUBAT
+	db  5, HYPNO
+	db  6, HYPNO
 
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, PIDGEOTTO
+	db 6, PIDGEOTTO
+	db 7, ARBOK
+	db 6, WEEZING
+	db 8, WEEZING
+	db 8, ELECTABUZZ
+	db 8, CHIKORITA
 	; day
-	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, PIDGEOTTO
+	db 6, PIDGEOTTO
+	db 7, ARBOK
+	db 6, ELECTABUZZ
+	db 8, ELECTABUZZ
+	db 8, WEEZING
+	db 8, CHIKORITA
 	; nite
-	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, PIDGEOTTO
+	db 6, ARBOK
+	db 7, ARBOK
+	db 6, WEEZING
+	db 8, WEEZING
+	db 8, ELECTABUZZ
+	db 8, OMASTAR
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 21, ZUBAT
-	db 23, ZUBAT
-	db 19, ZUBAT
-	db 21, SLOWPOKE
-	db 23, GOLBAT
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 9, PIDGEOTTO
+	db 10, PIDGEOTTO
+	db 10, ARBOK
+	db 9, WEEZING
+	db 10, WEEZING
+	db 8, ELECTABUZZ
+	db 8, CHIKORITA
 	; day
-	db 21, ZUBAT
-	db 23, ZUBAT
-	db 19, ZUBAT
-	db 21, SLOWPOKE
-	db 23, GOLBAT
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 10, PIDGEOTTO
+	db 9, PIDGEOTTO
+	db 10, ARBOK
+	db 10, ELECTABUZZ
+	db 9, WEEZING
+	db 10, HITMONCHAN
+	db 10, CHIKORITA
 	; nite
-	db 21, ZUBAT
-	db 23, ZUBAT
-	db 19, ZUBAT
-	db 21, SLOWPOKE
-	db 23, GOLBAT
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 10, PIDGEOTTO
+	db 9, ARBOK
+	db 10, ARBOK
+	db 9, WEEZING
+	db 10, WEEZING
+	db 12, ELECTABUZZ
+	db 8, OMASTAR
 
 	map_id ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, CATERPIE
-	db 5, WEEDLE
-	db 7, METAPOD
-	db 7, KAKUNA
-	db 7, PIDGEY
-	db 6, PARAS
-	db 6, PARAS
+	db 6, RAICHU
+	db 5, MANKEY
+	db 5, PSYDUCK
+	db 6, GROWLITHE
+	db 7, MACHAMP
+	db 6, WEEPINBELL
+	db 6, CATERPIE
 	; day
-	db 5, CATERPIE
-	db 5, WEEDLE
-	db 7, METAPOD
-	db 7, KAKUNA
-	db 7, PIDGEY
-	db 6, PARAS
-	db 6, PARAS
+	db 6, RAICHU
+	db 5, MANKEY
+	db 6, POLIWRATH
+	db 7, MACHAMP
+	db 5, WEEPINBELL
+	db 6, GOLEM
+	db 6, CATERPIE
 	; nite
-	db 5, ODDISH
-	db 5, VENONAT
-	db 7, ODDISH
-	db 7, PSYDUCK
-	db 7, HOOTHOOT
-	db 6, PARAS
-	db 6, PARAS
+	db 5, RAICHU
+	db 6, MANKEY
+	db 6, GROWLITHE
+	db 7, KADABRA
+	db 5, GEODUDE
+	db 6, OMASTAR
+	db 6, CATERPIE
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1261,7 +1261,7 @@ JohtoGrassWildMons: ; 0x2a5e9
 	db 5, CATERPIE
 	db 4, RATICATE
 	db 5, RAICHU
-	db 3, LAPRAS
+	db 8, LAPRAS
 	; nite
 	db 4, BEEDRILL
 	db 4, CATERPIE
@@ -1274,29 +1274,29 @@ JohtoGrassWildMons: ; 0x2a5e9
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 4, EKANS
-	db 5, RATTATA
-	db 7, BELLSPROUT
-	db 6, HOPPIP
-	db 7, PIDGEY
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 4, FEAROW
+	db 5, CATERPIE
+	db 4, PIDGEOTTO
+	db 5, FEAROW
+	db 7, CATERPIE
+	db 4, ODDISH
+	db 7, ODDISH
 	; day
-	db 4, EKANS
-	db 5, RATTATA
-	db 7, BELLSPROUT
-	db 6, HOPPIP
-	db 7, PIDGEY
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 4, FEAROW
+	db 5, CATERPIE
+	db 4, PIDGEOTTO
+	db 5, FEAROW
+	db 7, CATERPIE
+	db 4, ODDISH
+	db 7, ODDISH
 	; nite
-	db 4, WOOPER
-	db 5, RATTATA
-	db 7, BELLSPROUT
-	db 6, ZUBAT
-	db 7, HOOTHOOT
-	db 7, GASTLY
-	db 7, GASTLY
+	db 4, BEEDRILL
+	db 5, CATERPIE
+	db 4, ARBOK
+	db 5, ARBOK
+	db 7, BEEDRILL
+	db 4, VILEPLUME
+	db 7, VILEPLUME
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

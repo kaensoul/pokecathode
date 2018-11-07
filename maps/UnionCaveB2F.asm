@@ -28,7 +28,6 @@ BadTrainer:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke SQUIRTLE, 5
-	setevent EVENT_GOT_EEVEE
 	writetext Postgive
 	waitbutton
 	setflag ENGINE_UNION_CAVE_LAPRAS

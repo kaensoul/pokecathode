@@ -1,6 +1,6 @@
 	db PIKACHU ; 025
 
-	db  105, 135, 115, 92,  20,  20
+	db  90, 125, 85, 102,  20,  20
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, GROUND ; type

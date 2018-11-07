@@ -1,6 +1,6 @@
 	db SANDSHREW ; 027
 
-	db  90,  87,  75,  102,  80,  75
+	db  90,  87,  75,  102,  60,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GROUND ; type

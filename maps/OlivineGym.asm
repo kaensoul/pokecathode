@@ -1,6 +1,8 @@
 	const_def 2 ; object constants
 	const OLIVINEGYM_JASMINE
 	const OLIVINEGYM_GYM_GUY
+	const OLIVINEGYM_ONEGUY
+	const OLIVINEGYM_ANOTHERGUY
 
 OlivineGym_MapScripts:
 	db 0 ; scene scripts
@@ -9,61 +11,42 @@ OlivineGym_MapScripts:
 
 OlivineGymJasmineScript:
 	faceplayer
-	opentext
-	checkevent EVENT_BEAT_JASMINE
+	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
-	writetext Jasmine_SteelTypeIntro
+	opentext
+	writetext WhitneyBeforeText
 	waitbutton
 	closetext
-	winlosstext Jasmine_BetterTrainer, 0
-	loadtrainer JASMINE, JASMINE1
+	winlosstext WhitneyShouldntBeSoSeriousText, 0
+	loadtrainer WHITNEY, WHITNEY1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_JASMINE
 	opentext
-	writetext Text_ReceivedMineralBadge
+	setevent EVENT_BEAT_WHITNEY
+	writetext PlayerReceivedPlainBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_PLAINBADGE
 	checkcode VAR_BADGES
-	scall OlivineGymActivateRockets
-.FightDone:
-	checkevent EVENT_GOT_TM23_IRON_TAIL
-	iftrue .GotIronTail
-	writetext Jasmine_BadgeSpeech
+	writetext Givepsychictm
 	buttonsound
-	verbosegiveitem TM_IRON_TAIL
-	iffalse .NoRoomForIronTail
-	setevent EVENT_GOT_TM23_IRON_TAIL
-	writetext Jasmine_IronTailSpeech
+	verbosegiveitem TM_PSYCHIC_M
+	writetext Explicapsychic
 	waitbutton
 	closetext
 	end
-
-.GotIronTail:
-	writetext Jasmine_GoodLuck
+	
+.FightDone:
+	opentext
+	writetext WhitneyYouMeanieText
 	waitbutton
-.NoRoomForIronTail:
 	closetext
 	end
-
-OlivineGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 OlivineGymGuyScript:
 	faceplayer
-	checkevent EVENT_BEAT_JASMINE
+	checkevent EVENT_BEAT_WHITNEY
 	iftrue .OlivineGymGuyWinScript
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iffalse .OlivineGymGuyPreScript
 	opentext
 	writetext OlivineGymGuyText
 	waitbutton
@@ -77,122 +60,175 @@ OlivineGymGuyScript:
 	closetext
 	end
 
-.OlivineGymGuyPreScript:
+OlivineGymStatue:
+	checkflag ENGINE_PLAINBADGE
+	iftrue .Beaten
+	jumpstd gymstatue1
+.Beaten:
+	trainertotext WHITNEY, WHITNEY1, MEM_BUFFER_1
+	jumpstd gymstatue2
+	
+TrainerGentlemanAlfred:
+	trainer GENTLEMAN, ALFRED, EVENT_BEAT_GENTLEMAN_ALFRED, GentlemanAlfredSeenText, GentlemanAlfredBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
 	opentext
-	writetext OlivineGymGuyPreText
+	writetext GentlemanAlfredAfterBattleText
 	waitbutton
 	closetext
 	end
 
-OlivineGymStatue:
-	checkflag ENGINE_MINERALBADGE
-	iftrue .Beaten
-	jumpstd gymstatue1
-.Beaten:
-	trainertotext JASMINE, JASMINE1, MEM_BUFFER_1
-	jumpstd gymstatue2
+TrainerSailorHuey:
+	trainer SAILOR, HUEY1, EVENT_BEAT_SAILOR_HUEY, SailorHueySeenText, SailorHueyBeatenText, 0, .Script
 
-Jasmine_SteelTypeIntro:
-	text "…Thank you for"
-	line "your help at the"
-	cont "LIGHTHOUSE…"
+.Script:
+	endifjustbattled
+	opentext
+    writetext Afterheybattletext
+	waitbutton
+	closetext
+	end
 
-	para "But this is dif-"
-	line "ferent. Please"
-
-	para "allow me to intro-"
-	line "duce myself."
-
-	para "I am JASMINE, a"
-	line "GYM LEADER. I use"
-	cont "the steel-type."
-
-	para "…Do you know about"
-	line "the steel-type?"
-
-	para "It's a type that"
-	line "was only recently"
-	cont "discovered."
-
-	para "…Um… May I begin?"
+SailorHueySeenText:
+	text "Pluto me rescató"
+	line "de un nauflagio,"
+	
+	para "¡Supo donde"
+	line "fallaría el"
+	cont "barco!"
 	done
 
-Jasmine_BetterTrainer:
-	text "…You are a better"
-	line "trainer than me,"
+SailorHueyBeatenText:
+	text "Nada mal"
+	line "grumete."
+	done
+	
+Afterheybattletext:
+    text "Pluto parece"
+    line "saber todo lo que"
+    cont "va a pasar, pero"
+    cont "el dice que mas"
+    cont "bien lo que podría"
+    cont "pasar."
+    done	
 
-	para "in both skill and"
-	line "kindness."
-
-	para "In accordance with"
-	line "LEAGUE rules, I"
-
-	para "confer upon you"
-	line "this BADGE."
+GentlemanAlfredSeenText:
+	text "El mundo no esta"
+	line "listo para Pluto."
 	done
 
-Text_ReceivedMineralBadge:
-	text "<PLAYER> received"
-	line "MINERALBADGE."
+GentlemanAlfredBeatenText:
+	text "No estaba listo"
+	line "para esto."
 	done
 
-Jasmine_BadgeSpeech:
-	text "MINERALBADGE"
-	line "raises #MON's"
-	cont "DEFENSE."
+GentlemanAlfredAfterBattleText:
+	text "Los estantes no"
+	line "son especiales,"
+	cont "pero algunos"
+	cont "tienen objetos de"
+	cont "otro mundo que"
+	cont "los hace funcionar"
+	cont "de formas que no"
+	cont "podemos explicar."
+	done	
 
-	para "…Um… Please take"
-	line "this too…"
+WhitneyBeforeText:
+    text "Hola <PLAYER>,"
+	line "supongo que vienes"
+	cont "a enfrentar tu"
+	cont "destino."
+	
+	para "Solamente soy un"
+	line "paso mas en tu"
+	cont "camino a ser"
+	cont "campeón."
+	
+	para "Pero no puedo"
+	line "decirte si este"
+	cont "es realmente el"
+	cont "momento en el cual"
+	cont "me derrotas."
+	
+	para "Conozco tu destino"
+	line "pero es mejor que"
+	cont "lo descubras con"
+	cont "el tiempo."
+	
+	para "¡Es hora que"
+	line "pruebes tu destino"
+	cont "contra Pluto!"
+	
+	para "¡Líder de ciudad"
+	line "Meteor Shower y"
+	cont "uno de tus desti-"
+	cont "dos adversarios."
 	done
 
-Text_ReceivedTM09:
-	text "<PLAYER> received"
-	line "TM09."
+WhitneyShouldntBeSoSeriousText:	
+    text "Fue un places"
+	line "ser parte de tu"
+	cont "historia."
+	
+	para "Pero a decir"
+	line "verdad, nada esta"
+	cont "escrito aun."
+	
+	para "Hay miles de"
+	line "caminos que"
+	cont "puedes tomar y"
+	cont "espero que tomes"
+	cont "el mejor."
 	done
-
-Jasmine_IronTailSpeech:
-	text "…You could use"
-	line "that TM to teach"
-	cont "IRON TAIL."
+	
+PlayerReceivedPlainBadgeText:
+    text "¡<PLAYER> recibió"
+	line "la medalla"
+	cont "Andrómeda!"
 	done
-
-Jasmine_GoodLuck:
-	text "Um… I don't know"
-	line "how to say this,"
-	cont "but good luck…"
+	
+Givepsychictm:
+    text "Sin importar el"
+    line "camino que tomes,"
+    cont "espero que esto"
+    cont "te sea útil."	
 	done
-
+	
+Explicapsychic:
+    text "Utilízala para"
+	line "que tus #MON"
+	cont "puedan liberar"
+	cont "todo su poder"
+	cont "mental."
+	done
+	
+WhitneyYouMeanieText:
+    text "Me gusta ver el"
+    line "cielo nocturno y"
+    cont "recordar mi"
+    cont "antiguo hogar."
+    done	
+	
 OlivineGymGuyText:
-	text "JASMINE uses the"
-	line "newly discovered"
-	cont "steel-type."
+	text "¡Futuro campeón!"
+	
+	para "Este lugar es"
+	line "pequeño pero ex-"
+	cont "traño, ya veras."
 
-	para "I don't know very"
-	line "much about it."
+	para "En cuanto a los"
+	line "#MON de tipo"
+	cont "Psíquico lo mejor"
+	cont "es jugar con sus"
+	cont "miedos."
 	done
 
 OlivineGymGuyWinText:
-	text "That was awesome."
-
-	para "The steel-type,"
-	line "huh?"
-
-	para "That was a close"
-	line "encounter of an"
-	cont "unknown kind!"
-	done
-
-OlivineGymGuyPreText:
-	text "JASMINE, the GYM"
-	line "LEADER, is at the"
-	cont "LIGHTHOUSE."
-
-	para "She's been tending"
-	line "to a sick #MON."
-
-	para "A strong trainer"
-	line "has to be compas-"
-	cont "sionate."
+	text "No tengo ni idea"
+	line "de lo que dice"
+	cont "Pluto, pero como"
+	cont "sea, bien hecho."
 	done
 
 OlivineGym_MapEvents:
@@ -208,6 +244,8 @@ OlivineGym_MapEvents:
 	bg_event  3, 13, BGEVENT_READ, OlivineGymStatue
 	bg_event  6, 13, BGEVENT_READ, OlivineGymStatue
 
-	db 2 ; object events
-	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_OLIVINE_GYM_JASMINE
+	db 4 ; object events
+	object_event  5,  1, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuyScript, -1
+    object_event  2,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerSailorHuey, -1
+	object_event  7,  9, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerGentlemanAlfred, -1

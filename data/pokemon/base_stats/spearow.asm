@@ -1,11 +1,11 @@
 	db SPEAROW ; 021
 
-	db  50,  90,  60,  124,  89,  86
+	db  50,  90,  50,  124,  89,  70
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, FAIRY ; type
 	db 155 ; catch rate
-	db 158 ; base exp
+	db 208 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

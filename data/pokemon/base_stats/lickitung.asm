@@ -1,10 +1,10 @@
 	db LICKITUNG ; 108
 
-	db  90,  55,  75,  30,  60,  75
+	db  60,  85,  55,  50,  45,  50
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
-	db 45 ; catch rate
+	db ELECTRIC, DRAGON ; type
+	db 25 ; catch rate
 	db 127 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
@@ -13,9 +13,9 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/lickitung/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_MONSTER ; egg groups
+	db GROWTH_SLOW ; growth rate
+	dn EGG_DRAGON, EGG_MONSTER ; egg groups
 
 	; tm/hm learnset
-	tmhm
+	tmhm CONVERSION, HEADBUTT, CURSE, MEGA_PUNCH, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, HIDDEN_POWER, VICEGRIP, HYPER_BEAM, PROTECT, FRUSTRATION, IRON_TAIL, SACRED_FIRE, THUNDER, EARTHQUAKE, RETURN, DIG, SWAGGER, SLEEP_TALK, FIRE_BLAST, THUNDERPUNCH, THUNDERBOLT, REST, ATTRACT, THIEF, FIRE_PUNCH, SCREECH, FLAMETHROWER, CUT, STRENGTH, FLASH
 	; end

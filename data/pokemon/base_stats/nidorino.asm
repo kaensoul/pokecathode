@@ -1,6 +1,6 @@
 	db NIDORINO ; 033
 
-	db  85,  122,  80,  95,  55,  75
+	db  80,  122,  80,  85,  45,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, STEEL ; type

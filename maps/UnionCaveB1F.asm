@@ -142,16 +142,19 @@ PokemaniacAndrewAfterBattleText:
 	done
 
 PokemaniacCalvinSeenText:
-	text "Oe, batoru?"
+	text "¿Quieres tomar"
+	line "mi tesoro?"
 	done
 
 PokemaniacCalvinBeatenText:
-	text "N-Nani?!"
+	text "¡No puede ser!"
 	done
 
 PokemaniacCalvinAfterBattleText:
-	text "Kisama, orewa no"
-	line "krosearu se."
+	text "Como sea, no"
+	line "puedo encontrar"
+	cont "nada interesante"
+	cont "en esta cueva."
 	done
 
 Healingtext:

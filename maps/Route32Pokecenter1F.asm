@@ -12,93 +12,46 @@ Route32Pokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 Route32Pokecenter1FFishingGuruScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_OLD_ROD
-	iftrue .GotOldRod
-	writetext Route32Pokecenter1FFishingGuruText_Question
-	yesorno
-	iffalse .Refused
-	writetext Route32Pokecenter1FFishingGuruText_Yes
-	buttonsound
-	verbosegiveitem OLD_ROD
-	writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
-	waitbutton
-	closetext
-	setevent EVENT_GOT_OLD_ROD
-	end
-
-.Refused:
-	writetext Route32Pokecenter1FFishingGuruText_No
-	waitbutton
-	closetext
-	end
-
-.GotOldRod:
-	writetext Route32Pokecenter1FFishingGuruText_After
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route32Pokecenter1FFishingGuruText_No
 
 Route32Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
 
-Route32Pokecenter1FFishingGuruText_Question:
-	text "This is a great"
-	line "fishing spot."
-
-	para "You saw people"
-	line "fishing? How"
-	cont "about you?"
-
-	para "Would you like one"
-	line "of my RODS?"
-	done
-
-Route32Pokecenter1FFishingGuruText_Yes:
-	text "Heh, that's good"
-	line "to hear."
-
-	para "Now you're an"
-	line "angler too!"
-	done
-
-Route32Pokecenter1FFishingGuruText_GiveOldRod:
-	text "Fishing is great!"
-
-	para "If there's water,"
-	line "be it the sea or a"
-
-	para "stream, try out"
-	line "your ROD."
-	done
-
 Route32Pokecenter1FFishingGuruText_No:
-	text "Oh. That's rather"
-	line "disappointing…"
-	done
-
-Route32Pokecenter1FFishingGuruText_After:
-	text "Yo, kid. How are"
-	line "they biting?"
+	text "¿Viste algunos"
+	line "pescadores de"
+	cont "camino aquí?"
+	
+	para "Somos de un club"
+	line "de pesca de otra"
+	cont "región, vamos de"
+	cont "paso a Cloudy"
+	cont "City."
 	done
 
 Route32Pokecenter1FCooltrainerFText:
-	text "What should I make"
-	line "my #MON hold?"
+	text "La mina fue aban-"
+	line "donara hace años,"
+	cont "ya que la Profeso-"
+	cont "ra Kapok descubrió"
+	cont "el nido de un raro"
+	cont "#MON llamado"
+	cont "Voltcro muy cerca"
+	cont "de las excavacio-"
+	cont "nes."
 
-	para "Maybe an item that"
-	line "increases ATTACK"
-	cont "power…"
+	para "Aun así, desde"
+	line "hace unas semanas"
+	cont "que escucho maqui-"
+	cont "narias."
 	done
 
 Route32Pokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 2 ; warp events
 	warp_event  3,  7, ROUTE_32, 1
 	warp_event  4,  7, ROUTE_32, 1
-	warp_event  0,  7, POKECENTER_2F, 1
 
 	db 0 ; coord events
 

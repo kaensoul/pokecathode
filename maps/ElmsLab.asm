@@ -920,8 +920,8 @@ NewBarkTownRivalText_Seen:
 
 	para "Tienes suerte de"
 	line "que no cargo mi"
-	cont "#MON mas podero-"
-	cont "so conmigo,"
+	cont "#MON mas fuerte"
+	cont "conmigo,"
 
 	para "¡tal vez un bueno"
 	line "para nada tenga "
@@ -950,7 +950,7 @@ NewBarkTownRivalText_YouLost:
 	cont "lata-humana."
 	
 	para "Nos volveremos"
-	cont "a ver."
+	line "a ver."
 	done		
 
 SilverNewBarkTownLossText:

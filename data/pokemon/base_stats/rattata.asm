@@ -1,11 +1,11 @@
 	db RATTATA ; 019
 
-	db  90,  85,  130,  45,  70,  95
+	db  90,  70,  130,  30,  75,  95
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, GROUND ; type
 	db 55 ; catch rate
-	db 157 ; base exp
+	db 250 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

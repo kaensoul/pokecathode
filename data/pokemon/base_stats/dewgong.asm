@@ -1,11 +1,11 @@
 	db DEWGONG ; 087
 
-	db  90,  70,  80,  70,  70,  95
+	db  60,  80, 100,  75,  60,  65
 	;   hp  atk  def  spd  sat  sdf
 
-	db WATER, ICE ; type
+	db ROCK, FLYING ; type
 	db 75 ; catch rate
-	db 176 ; base exp
+	db 156 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/dewgong/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_1, EGG_GROUND ; egg groups
+	dn EGG_DRAGON, EGG_MINERAL ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm CONVERSION, HEADBUTT, CURSE, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, SCRATCH, HIDDEN_POWER, SUNNY_DAY, VICEGRIP, HYPER_BEAM, PROTECT, FRUSTRATION, SACRED_FIRE, EARTHQUAKE, RETURN, DIG, FISSURE, SWAGGER, SANDSTORM, FIRE_BLAST, REST, ATTRACT, THIEF, RAZOR_WIND, SCREECH, FLAMETHROWER, FLY, STRENGTH
 	; end

@@ -1,12 +1,12 @@
 	db EXEGGUTOR ; 103
 
-	db  95,  95,  85,  55, 125,  65
+	db  100,  85,  80, 05, 40,  80
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, PSYCHIC ; type
-	db 45 ; catch rate
-	db 212 ; base exp
-	db NO_ITEM, NO_ITEM ; items
+	db WATER, DRAGON ; type
+	db 85 ; catch rate
+	db 200 ; base exp
+	db NO_ITEM, DRAGON_FANG ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/exeggutor/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
-	dn EGG_PLANT, EGG_PLANT ; egg groups
+	dn EGG_WATER_1, EGG_WATER_2 ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm HEADBUTT, CURSE, ROAR, TOXIC, ROCK_SMASH, SCRATCH, HIDDEN_POWER, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, FRUSTRATION, SACRED_FIRE, EARTHQUAKE, RETURN, ICE_PUNCH, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, SCREECH, ICE_BEAM, CUT, SURF, STRENGTH, WHIRLPOOL, WATERFALL
 	; end

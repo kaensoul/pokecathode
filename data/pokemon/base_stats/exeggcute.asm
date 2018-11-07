@@ -1,9 +1,9 @@
 	db EXEGGCUTE ; 102
 
-	db  60,  40,  80,  40,  60,  45
+	db  90,  160, 80,  35,  15,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, PSYCHIC ; type
+	db STEEL, DARK ; type
 	db 90 ; catch rate
 	db 98 ; base exp
 	db NO_ITEM, NO_ITEM ; items
@@ -14,8 +14,8 @@
 	INCBIN "gfx/pokemon/exeggcute/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
-	dn EGG_PLANT, EGG_PLANT ; egg groups
+	dn EGG_GROUND, EGG_GROUND ; egg groups
 
 	; tm/hm learnset
-	tmhm 
+	tmhm HEADBUTT, CURSE, ROAR, TOXIC, HYPER_FANG, ROCK_SMASH, SCRATCH, HIDDEN_POWER, PROTECT, FRUSTRATION, IRON_TAIL, SACRED_FIRE, EARTHQUAKE, RETURN, DIG, SHADOW_BALL, SWAGGER, SLEEP_TALK, FIRE_BLAST, SHARPEN, REST, ATTRACT, THIEF, FLAMETHROWER, GUILLOTINE, CUT, STRENGTH
 	; end

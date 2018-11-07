@@ -1,9 +1,9 @@
 	db RHYHORN ; 111
 
-	db  80,  85,  95,  25,  30,  30
+	db  60,  90,  60,  129,  100,  60
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, ROCK ; type
+	db FIGHTING, FIRE ; type
 	db 120 ; catch rate
 	db 135 ; base exp
 	db NO_ITEM, NO_ITEM ; items
@@ -13,9 +13,9 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/rhyhorn/front.dimensions"
 	db 0, 0, 0, 0 ; padding
-	db GROWTH_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_GROUND ; egg groups
+	db GROWTH_MEDIUM_FAST ; growth rate
+	dn EGG_HUMANSHAPE, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
-	tmhm
+	tmhm HEADBUTT, MEGA_PUNCH, TOXIC, HYPER_FANG, ROCK_SMASH, HIDDEN_POWER, HYPER_BEAM, PROTECT, FRUSTRATION, SOLARBEAM, IRON_TAIL, SACRED_FIRE, EARTHQUAKE, RETURN, DIG, SWAGGER, SLEEP_TALK, FIRE_BLAST, RAGE, THUNDERPUNCH, REST, ATTRACT, THIEF, FIRE_PUNCH, SCREECH, FLAMETHROWER, STRENGTH
 	; end
